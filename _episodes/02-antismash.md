@@ -30,9 +30,55 @@ Some applications are on gene finding, construction of genetic linkage maps (Tur
 
 ![profile Markov Hidden Models](https://upload.wikimedia.org/wikipedia/commons/7/71/A_profile_HMM_modelling_a_multiple_sequence_alignment.png)
 
-| Command     | Description |
-| :---        |    :----:   |
-| Header      | Title       |
-| Paragraph   | Text        |
+| Command               | Description |
+| :---                  |    :----:   |
+| -h, --help            | Show this help text. |
+| --help-showall        | Show full lists of arguments on this help text. |
+|  -c CPUS, --cpus CPUS |  How many CPUs to use in parallel. (default: 1) |
+
+
+| Analysis option | Description |
+| :----: | :----: |
+| --taxon {bacteria,fungi}      | Taxonomic classification of input sequence. (default: bacteria) |
+| --fullhmmer                   | Run a whole-genome HMMer analysis. |  
+| --cassis                      | Motif based prediction of SM gene cluster regions. |
+| --clusterhmmer                | Run a cluster-limited HMMer analysis. |
+| --tigrfam                     | Annotate clusters using TIGRFam profiles. |
+| --smcog-trees                 | Generate phylogenetic trees of sec. met. cluster orthologous groups. |
+| --tta-threshold TTA_THRESHOLD | Lowest GC content to annotate TTA codons at (default: 0.65). |
+| --cb-general                  | Compare identified clusters against a database of antiSMASH-predicted clusters. |
+| --cb-subclusters              | Compare identified clusters against known subclusters responsible for synthesising precursors. |
+| --cb-knownclusters            | Compare identified clusters against known gene clusters from the MIBiG database. |
+| --asf                         | Run active site finder analysis. |
+| --pfam2go                     | Run Pfam to Gene Ontology mapping module. |
+| --rre                         | Run RREFinder precision mode on all RiPP gene clusters. |
+| --cc-mibig                    | Run a comparison against the MIBiG dataset |
+
+arguments:
+  SEQUENCE  GenBank/EMBL/FASTA file(s) containing DNA.
+
+
+Output options:
+
+  --output-dir OUTPUT_DIR
+                        Directory to write results to.
+  --output-basename OUTPUT_BASENAME
+                        Base filename to use for output files within the output directory.
+  --html-title HTML_TITLE
+                        Custom title for the HTML output page (default is input filename).
+  --html-description HTML_DESCRIPTION
+                        Custom description to add to the output.
+  --html-start-compact  Use compact view by default for overview page.
+
+Gene finding options (ignored when ORFs are annotated):
+
+  --genefinding-tool {glimmerhmm,prodigal,prodigal-m,none,error}
+                        Specify algorithm used for gene finding: GlimmerHMM, Prodigal,
+                        Prodigal Metagenomic/Anonymous mode, or none. The 'error' option
+                        will raise an error if genefinding is attempted. The 'none' option
+                        will not run genefinding. (default: error).
+  --genefinding-gff3 GFF3_FILE
+                        Specify GFF3 file to extract features from.
+
 
 {% include links.md %}
