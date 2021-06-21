@@ -28,13 +28,6 @@ Profile Hidden Markov's models are computational algorithms that predict protein
 
 Some applications are on gene finding, construction of genetic linkage maps (Turn multiple sequence alignment into a position-specific scoring system suitable for searching databases for remotely homologous sequences), and construction of physical maps. The most highlighted advantage is that this model has better gap dealing methods in proteins families.
 
-![profile Markov Hidden Models](G:/Documentos/Axel/ITESM/Academic/DCC/1st_Semester/Pre-proposal/image.jpeg)
-
-~
-pwd
-~
-{: .source}
-
-FIXME
+![profile Markov Hidden Models](https://upload.wikimedia.org/wikipedia/commons/7/71/A_profile_HMM_modelling_a_multiple_sequence_alignment.png)
 
 {% include links.md %}
