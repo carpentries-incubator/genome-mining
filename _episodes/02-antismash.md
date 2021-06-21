@@ -30,4 +30,9 @@ Some applications are on gene finding, construction of genetic linkage maps (Tur
 
 ![profile Markov Hidden Models](https://upload.wikimedia.org/wikipedia/commons/7/71/A_profile_HMM_modelling_a_multiple_sequence_alignment.png)
 
+| Command     | Description |
+| :---        |    :----:   |
+| Header      | Title       |
+| Paragraph   | Text        |
+
 {% include links.md %}
