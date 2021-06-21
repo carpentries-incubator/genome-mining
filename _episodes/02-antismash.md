@@ -54,8 +54,15 @@ Some applications are on gene finding, construction of genetic linkage maps (Tur
 | --rre                         | Run RREFinder precision mode on all RiPP gene clusters. |
 | --cc-mibig                    | Run a comparison against the MIBiG dataset |
 
+## Arguments
+
+antismash can work with three different
 arguments:
   SEQUENCE  GenBank/EMBL/FASTA file(s) containing DNA.
+
+  anti smash package can work with three different file formats GenBank,  FASTA and EMBL. 
+
+GenBank consists of two main sections, annotation and a sequence. The annotation section begins at the "Locus" header and the sequence sections at the "origin" word
 
 
 Output options:
