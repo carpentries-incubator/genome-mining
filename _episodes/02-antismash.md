@@ -11,7 +11,7 @@ objectives:
 - "Understand the importance of metadata and potential metadata standards."
 - "Explore common formatting challenges in spreadsheet data."
 keypoints:
-- "First key point. Brief Answer to questions. (FIXME)"
+- "First key point. Brief Answer to questions. (antismash, genome mining, secondary metabolism, bacteria, bioactive coumpounds)"
 ---
 
 # antiSMASH
