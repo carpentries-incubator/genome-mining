@@ -15,3 +15,15 @@ keypoints:
 ---
 
 # DeepBGC
+
+Para poner codigo
+~~~
+$ codigo
+~~~
+{: .bash}
+
+Using output
+~~~
+$ output
+~~~
+{: .output}
