@@ -1,5 +1,5 @@
 ---
-title: "BiGSlice/BiGFAM "
+title: "BiGSlice / BiGFAM "
 teaching: 0
 exercises: 0
 questions:
