@@ -62,7 +62,27 @@ arguments:
 
   anti smash package can work with three different file formats GenBank,  FASTA and EMBL. 
 
-GenBank consists of two main sections, annotation and a sequence. The annotation section begins at the "Locus" header and the sequence sections at the "origin" word
+1. GenBank format consists of two main sections, annotation and a sequence. The annotation section begins at the "Locus" header and the sequence sections at the "origin" word. Finally, the end section can be recognized due to the mark "//".
+
+1. Fasta format consists of one line which starts with a ">" sign, followed by a textual description of sequence. Since it is not part of the official of the format, softwre can choose to ignore this, when it is present. One or more lines containing the sequences itself.
+
+### FASTA format example
+---
+>BTBSCRYR
+tgcaccaaacatgtctaaagctggaaccaaaattactttctttgaagacaaaaactttca
+aggccgccactatgacagcgattgcgactgtgcagatttccacatgtacctgagccgctg
+caactccatcagagtggaaggaggcacctgggctgtgtatgaaaggcccaattttgctgg
+gtacatgtacatcctaccccggggcgagtatcctgagtaccagcactggatgggcctcaa
+cgaccgcctcagctcctgcagggctgttcacctgtctagtggaggccagtataagcttca
+gatctttgagaaaggggattttaatggtcagatgcatgagaccacggaagactgcccttc
+catcatggagcagttccacatgcgggaggtccactcctgtaaggtgctggagggcgcctg
+gatcttctatgagctgcccaactaccgaggcaggcagtacctgctggacaagaaggagta
+ccggaagcccgtcgactggggtgcagcttccccagctgtccagtctttccgccgcattgt
+ggagtgatgatacagatgcggccaaacgctggctggccttgtcatccaaataagcattat
+aaataaaacaattggcatgc
+---
+
+
 
 
 Output options:
