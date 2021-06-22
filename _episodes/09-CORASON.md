@@ -1,5 +1,5 @@
 ---
-title: "Introduction 1"
+title: "CORASON"
 teaching: 0
 exercises: 0
 questions:
