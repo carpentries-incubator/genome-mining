@@ -23,7 +23,7 @@ generation sequencing, genomes have been explored as a source of discovering for
 <a href="{{ page.root }}/fig/episode1-fig1.PNG">
   <img src="{{ page.root }}/fig/episode1-fig1.PNG" alt="Cuatro Cienegas " />
 </a>
-https://mibig.secondarymetabolites.org/repository/BGC0000893/index.html#r1c1
+[Explore the BGC](https://mibig.secondarymetabolites.org/repository/BGC0000893/index.html#r1c1)
 # Some metadata 
 
 # What is genome mining?
