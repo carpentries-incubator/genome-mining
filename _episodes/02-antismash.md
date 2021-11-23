@@ -121,7 +121,7 @@ Output options:
   --html-start-compact  Use compact view by default for overview page.
 
 
-##Webpage
+## Webpage
 AntiSMASH can be also used through this web: https://antismash.secondarymetabolites.org/#!/start 
 You will be asked to give your email. Then, the results will be sent to you and you will be allowed to donwload a folder with the annotations.
 
