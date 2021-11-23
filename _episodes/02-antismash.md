@@ -18,7 +18,7 @@ keypoints:
 
 ## Introduction
 
-<div style="text-align: justify"> Many microbial genomes contain several gene clusters around 30-40, which encode the biosynthesis of secondary metabolites. These molecules have shown some relevance. Their active compounds have shown: antimicrobials, antitumor, cholesterol-lowering, immunosuppressant, antiprotozoal, antihelminth, antiviral and anti-ageing activities. The genes encoding the biosynthetic pathway responsible for the production of such a secondary metabolite are clustered together at a certain chromosome position (secondary metabolite biosynthesis gene cluster). The genetic architecture lets the possibility to detect secondary metabolite biosynthesis pathways by locating their gene clusters. Nowadays many genome sequences are available online. Based on profile hidden Markov models of genes that are specific for certain types of gene clusters, antiSMASH can accurately identify the gene clusters encoding secondary metabolites of all known broad chemical classes. antiSMASH not only detects the gene clusters, but also offers detailed sequence analysis.</div>
+<div style="text-align: justify"> Many microbial genomes contain several biosynthetic gene clusters, which encode the biosynthesis of secondary metabolites. These molecules have shown some relevance. Their active compounds have shown: antimicrobials, antitumor, cholesterol-lowering, immunosuppressant, antiprotozoal, antihelminth, antiviral and anti-ageing activities, amongst others. The genes encoding the biosynthetic pathway responsible for the production of such a secondary metabolite are clustered together at a certain chromosome position (secondary metabolite biosynthesis gene cluster). The genetic architecture lets the possibility to detect secondary metabolite biosynthesis pathways by locating their gene clusters. Nowadays many genome sequences are available online. Based on profile hidden Markov models of genes that are specific for certain types of gene clusters, antiSMASH can accurately identify the gene clusters encoding secondary metabolites of all known broad chemical classes. antiSMASH not only detects the gene clusters, but also offers detailed sequence analysis.</div>
  
 # Profile Hidden Markov Models
 
@@ -32,6 +32,48 @@ Some applications are on gene finding, construction of genetic linkage maps (Tur
 
 ![profile Markov Hidden Models](https://upload.wikimedia.org/wikipedia/commons/7/71/A_profile_HMM_modelling_a_multiple_sequence_alignment.png)
 
+# run AntiSMASH 
+
+The commandline usage of antismash is detailed in the following repositories: https://docs.antismash.secondarymetabolites.org/command_line/ and https://github.com/antismash/antismash
+
+In sum, you will need to use your genome as the input (see "Arguments" section). Then, antiSMASH will create an output folder for each of your genomes. Within this folder, you will find a single .gbk file for each of the detected Biosynthetic Gene Clusters (we will use these files for subsequent analyses) and a .html file, among others files. By clicking in the .html file you can explore the antiSMASH annotations.
+
+An example of a basic usage is:
+`antismash genome.gbk`
+
+However, there are many extra analyses that can be done. See the following sections to understand all the posibilities.
+
+## Arguments
+
+antiSMASH can work with three different
+arguments:
+  SEQUENCE  GenBank/EMBL/FASTA file(s) containing DNA.
+
+  antiSMASH package can work with three different file formats GenBank,  FASTA and EMBL. 
+
+1. GenBank format consists of two main sections, annotation and a sequence. The annotation section begins at the "Locus" header and the sequence sections at the "origin" word. Finally, the end section can be recognized due to the mark "//". AntiSMASH developers recomend using RAST (https://rast.nmpdr.org/) genome annotations as input file
+
+2. Fasta format consists of one line which starts with a ">" sign, followed by a textual description of sequence. Since it is not part of the official of the format, softwares can choose to ignore this, when it is present. One or more lines containing the sequences itself. In case you use your un-annotated genome in fasta file format, antiSMASH will perform a gene calling through the software selected with "--genefinding-tool".
+
+### FASTA format example
+---
+>BTBSCRYR
+tgcaccaaacatgtctaaagctggaaccaaaattactttctttgaagacaaaaactttca
+aggccgccactatgacagcgattgcgactgtgcagatttccacatgtacctgagccgctg
+caactccatcagagtggaaggaggcacctgggctgtgtatgaaaggcccaattttgctgg
+gtacatgtacatcctaccccggggcgagtatcctgagtaccagcactggatgggcctcaa
+cgaccgcctcagctcctgcagggctgttcacctgtctagtggaggccagtataagcttca
+gatctttgagaaaggggattttaatggtcagatgcatgagaccacggaagactgcccttc
+catcatggagcagttccacatgcgggaggtccactcctgtaaggtgctggagggcgcctg
+gatcttctatgagctgcccaactaccgaggcaggcagtacctgctggacaagaaggagta
+ccggaagcccgtcgactggggtgcagcttccccagctgtccagtctttccgccgcattgt
+ggagtgatgatacagatgcggccaaacgctggctggccttgtcatccaaataagcattat
+aaataaaacaattggcatgc
+---
+
+--------
+Options
+--------
 | Command               | Description |
 | :---                  |    :----:   |
 | -h, --help            | Show this help text. |
@@ -56,36 +98,15 @@ Some applications are on gene finding, construction of genetic linkage maps (Tur
 | --rre                         | Run RREFinder precision mode on all RiPP gene clusters. |
 | --cc-mibig                    | Run a comparison against the MIBiG dataset |
 
-## Arguments
+Gene finding options (ignored when ORFs are annotated):
 
-antismash can work with three different
-arguments:
-  SEQUENCE  GenBank/EMBL/FASTA file(s) containing DNA.
-
-  anti smash package can work with three different file formats GenBank,  FASTA and EMBL. 
-
-1. GenBank format consists of two main sections, annotation and a sequence. The annotation section begins at the "Locus" header and the sequence sections at the "origin" word. Finally, the end section can be recognized due to the mark "//".
-
-1. Fasta format consists of one line which starts with a ">" sign, followed by a textual description of sequence. Since it is not part of the official of the format, softwre can choose to ignore this, when it is present. One or more lines containing the sequences itself.
-
-### FASTA format example
----
->BTBSCRYR
-tgcaccaaacatgtctaaagctggaaccaaaattactttctttgaagacaaaaactttca
-aggccgccactatgacagcgattgcgactgtgcagatttccacatgtacctgagccgctg
-caactccatcagagtggaaggaggcacctgggctgtgtatgaaaggcccaattttgctgg
-gtacatgtacatcctaccccggggcgagtatcctgagtaccagcactggatgggcctcaa
-cgaccgcctcagctcctgcagggctgttcacctgtctagtggaggccagtataagcttca
-gatctttgagaaaggggattttaatggtcagatgcatgagaccacggaagactgcccttc
-catcatggagcagttccacatgcgggaggtccactcctgtaaggtgctggagggcgcctg
-gatcttctatgagctgcccaactaccgaggcaggcagtacctgctggacaagaaggagta
-ccggaagcccgtcgactggggtgcagcttccccagctgtccagtctttccgccgcattgt
-ggagtgatgatacagatgcggccaaacgctggctggccttgtcatccaaataagcattat
-aaataaaacaattggcatgc
----
-
-
-
+  --genefinding-tool {glimmerhmm,prodigal,prodigal-m,none,error}
+                        Specify algorithm used for gene finding: GlimmerHMM, Prodigal,
+                        Prodigal Metagenomic/Anonymous mode, or none. The 'error' option
+                        will raise an error if genefinding is attempted. The 'none' option
+                        will not run genefinding. (default: error).
+  --genefinding-gff3 GFF3_FILE
+                        Specify GFF3 file to extract features from.
 
 Output options:
 
@@ -99,15 +120,11 @@ Output options:
                         Custom description to add to the output.
   --html-start-compact  Use compact view by default for overview page.
 
-Gene finding options (ignored when ORFs are annotated):
 
-  --genefinding-tool {glimmerhmm,prodigal,prodigal-m,none,error}
-                        Specify algorithm used for gene finding: GlimmerHMM, Prodigal,
-                        Prodigal Metagenomic/Anonymous mode, or none. The 'error' option
-                        will raise an error if genefinding is attempted. The 'none' option
-                        will not run genefinding. (default: error).
-  --genefinding-gff3 GFF3_FILE
-                        Specify GFF3 file to extract features from.
+##Webpage
+AntiSMASH can be also used through this web: https://antismash.secondarymetabolites.org/#!/start 
+You will be asked to give your email. Then, the results will be sent to you and you will be allowed to donwload a folder with the annotations.
+
 
 
 {% include links.md %}
