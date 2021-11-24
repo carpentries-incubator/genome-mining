@@ -35,7 +35,108 @@ BiG-SCAPE can be executed in different ways, depending on the installation mode 
 
 To know all the possibilities of this program, just write down `run_bigscape -h`
 
+optional arguments:
 
+|  -h, --help           | show this help message and exit
+|  -l LABEL, --label LABEL
+                       | An extra label for this run (will be used as part of
+                        the folder name within the network_files results)
+|  -i INPUTDIR, --inputdir INPUTDIR
+                       | Input directory of gbk files, if left empty, all gbk
+                        files in current and lower directories will be used.
+|  -o OUTPUTDIR, --outputdir OUTPUTDIR
+                       | Output directory, this will contain all output data
+                        files.
+|  --pfam_dir PFAM_DIR  | Location of hmmpress-processed Pfam files. Default is
+                        same location of BiG-SCAPE
+|  -c CORES, --cores CORES
+                       | Set the number of cores the script may use (default:
+                        use all available cores)
+|  --include_gbk_str INCLUDE_GBK_STR [INCLUDE_GBK_STR ...]
+                       | Only gbk files with this string(s) will be used for
+                        the analysis (default: 'cluster', 'region'). Use an
+                        asterisk to accept every file (overrides '--
+                        exclude_gbk_str')
+|  --exclude_gbk_str EXCLUDE_GBK_STR [EXCLUDE_GBK_STR ...]
+                       | If any string in this list occurs in the gbk filename,
+                        this file will not be used for the analysis (default:
+                        final).
+  -v, --verbose         Prints more detailed information. Toggle to activate.
+  --include_singletons  Include nodes that have no edges to other nodes from
+                        the network. Toggle to activate.
+  -d DOMAIN_OVERLAP_CUTOFF, --domain_overlap_cutoff DOMAIN_OVERLAP_CUTOFF
+                        Specify at which overlap percentage domains are
+                        considered to overlap. Domain with the best score is
+                        kept (default=0.1).
+  -m MIN_BGC_SIZE, --min_bgc_size MIN_BGC_SIZE
+                        Provide the minimum size of a BGC to be included in
+                        the analysis. Default is 0 base pairs
+  --mix                 By default, BiG-SCAPE separates the analysis according
+                        to the BGC product (PKS Type I, NRPS, RiPPs, etc.) and
+                        will create network directories for each class. Toggle
+                        to include an analysis mixing all classes
+  --no_classify         By default, BiG-SCAPE classifies the output files
+                        analysis based on the BGC product. Toggle to
+                        deactivate (note that if the --mix parameter is not
+                        activated, BiG-SCAPE will not create any network
+                        file).
+  --banned_classes {PKSI,PKSother,NRPS,RiPPs,Saccharides,Terpene,PKS-NRP_Hybrids,Others} [{PKSI,PKSother,NRPS,RiPPs,Saccharides,Terpene,PKS-NRP_Hybrids,Others} ...]
+                        Classes that should NOT be included in the
+                        classification. E.g. "--banned_classes PKSI PKSOther"
+  --cutoffs CUTOFFS [CUTOFFS ...]
+                        Generate networks using multiple raw distance cutoff
+                        values. Values should be in the range [0.0, 1.0].
+                        Example: --cutoffs 0.1 0.25 0.5 1.0. Default: c=0.3.
+  --clans-off           Toggle to deactivate a second layer of clustering to
+                        attempt to group families into clans
+  --clan_cutoff CLAN_CUTOFF CLAN_CUTOFF
+                        Cutoff Parameters for which clustering families into
+                        clans will be performed in raw distance. First value
+                        is the cutoff value family assignments for BGCs used
+                        in clan clustering (default: 0.3). Second value is the
+                        cutoff value for clustering families into clans
+                        (default: 0.7). Average linkage for BGCs in a family
+                        is used for distances between families. Valid values
+                        are in the range [0.0, 1.0]. Example: --clan_cutoff
+                        0.3 0.7)
+  --hybrids-off         Toggle to also add BGCs with hybrid predicted products
+                        from the PKS/NRPS Hybrids and Others classes to each
+                        subclass (e.g. a 'terpene-nrps' BGC from Others would
+                        be added to the Terpene and NRPS classes)
+  --mode {global,glocal,auto}
+                        Alignment mode for each pair of gene clusters.
+                        'global': the whole list of domains of each BGC are
+                        compared; 'glocal': Longest Common Subcluster mode.
+                        Redefine the subset of the domains used to calculate
+                        distance by trying to find the longest slice of common
+                        domain content per gene in both BGCs, then expand each
+                        slice. 'auto': use glocal when at least one of the
+                        BGCs in each pair has the 'contig_edge' annotation
+                        from antiSMASH v4+, otherwise use global mode on that
+                        pair
+  --anchorfile ANCHORFILE
+                        Provide a custom location for the anchor domains file,
+                        default is anchor_domains.txt.
+  --force_hmmscan       Force domain prediction using hmmscan even if BiG-
+                        SCAPE finds processed domtable files (e.g. to use a
+                        new version of PFAM).
+  --skip_ma             Skip multiple alignment of domains' sequences. Use if
+                        alignments have been generated in a previous run.
+  --mibig               Use included BGCs from then MIBiG database. Only
+                        relevant (i.e. those with distance < max(cutoffs)
+                        against the input set) will be used. Currently uses
+                        version 2.1 of MIBiG. See
+                        https://mibig.secondarymetabolites.org/
+  --mibig14             Include BGCs from version 1.4 of MIBiG
+  --mibig13             Include BGCs from version 1.3 of MIBiG
+  --query_bgc QUERY_BGC
+                        Instead of making an all-VS-all comparison of all the
+                        input BGCs, choose one BGC to compare with the rest of
+                        the set (one-VS-all). The query BGC does not have to
+                        be within inputdir
+  --domain_includelist  Only analyze BGCs that include domains with the pfam
+                        accessions found in the domain_includelist.txt file
+  --version             show program's version number and exit
 
 
 ### References
