@@ -15,7 +15,7 @@ FIXME
 
 ## Introduction
 
-We learnt how to study the BGCs encoded by each of the genomes of our analyses. In case you are interested in the study of a certain BGC or a certain strain, this may be enough. However, sometimes the researcher aim to compare the biosynthetic potential of tens or hundreds of genomes. To perform this kind of analysis, we will use BiG-SCAPE, a workflow that will compare all the BGCs detected by antiSMASH to find their relateness. BiG-SCAPE will search for Pfam domains (Mistry et al., 2021) in the protein sequences of each BGC. Then, the Pfam domains will be linearized compared, creating different similarity networks and scoring the similarity of each pair of clusters. Based on this, the diverse BGCs will be classified on Gene Cluster Families (GCFs) to facilitate their study. A single GCF is supposed to encompass BGCs that produce chemically related metabolites (molecular families).
+We learnt how to study the BGCs encoded by each of the genomes of our analyses. In case you are interested in the study of a certain BGC or a certain strain, this may be enough. However, sometimes the researcher aims to compare the biosynthetic potential of tens or hundreds of genomes. To perform this kind of analysis, we will use BiG-SCAPE, a workflow that will compare all the BGCs detected by antiSMASH to find their relatedness. BiG-SCAPE will search for Pfam domains (Mistry et al., 2021) in the protein sequences of each BGC. Then, the Pfam domains will be linearized compared, creating different similarity networks and scoring the similarity of each pair of clusters. Based on this, the diverse BGCs will be classified on Gene Cluster Families (GCFs) to facilitate their study. A single GCF is supposed to encompass BGCs that produce chemically related metabolites (molecular families).
 
 Let's see how this analysis can be done:
 
@@ -25,11 +25,15 @@ First, we need to create a folder with all the BGC files annotated by antiSMASH.
 
 `mkdir BGCs_antiSMASH`
 
-In each of the antiSMASH output folders, we will find a single .gbk file for each BGC that include "region" within its filename. Thus, we will copy all those files to the new folder.
+In each of the antiSMASH output folders, we will find a single .gbk file for each BGC that includes "region" within its filename. Thus, we will copy all those files to the new folder.
 
 `cp */*.region*.gbk BGCs_antiSMASH/`
 
 ## Executing BiG-SCAPE
+
+BiG-SCAPE can be executed in different ways, depending on the installation mode that you applied. You could call the program through `bigscape`, `run_bigscape`or `run_bigscape.py`. Here, based on our installation (see Setup section) we will use `run_bigscape`. 
+
+To know all the possibilities of this program, just write down `run_bigscape -h`
 
 
 
