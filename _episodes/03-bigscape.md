@@ -15,7 +15,7 @@ FIXME
 
 ## Introduction
 
-We learnt how to study the BGCs encoded by each of the genomes of our analyses. In case you are interested in the study of a certain BGC or a certain strain, this may be enough. However, sometimes the researcher aims to compare the biosynthetic potential of tens or hundreds of genomes. To perform this kind of analysis, we will use BiG-SCAPE, a workflow that will compare all the BGCs detected by antiSMASH to find their relatedness. BiG-SCAPE will search for Pfam domains (Mistry et al., 2021) in the protein sequences of each BGC. Then, the Pfam domains will be linearized compared, creating different similarity networks and scoring the similarity of each pair of clusters. Based on this, the diverse BGCs will be classified on Gene Cluster Families (GCFs) to facilitate their study. A single GCF is supposed to encompass BGCs that produce chemically related metabolites (molecular families).
+In the previous section, we learnt how to study the BGCs encoded by each of the genomes of our analyses. In case you are interested in the study of a certain BGC or a certain strain, this may be enough. However, sometimes the researcher aims to compare the biosynthetic potential of tens or hundreds of genomes. To perform this kind of analysis, we will use BiG-SCAPE, a workflow that will compare all the BGCs detected by antiSMASH to find their relatedness. BiG-SCAPE will search for Pfam domains (Mistry et al., 2021) in the protein sequences of each BGC. Then, the Pfam domains will be linearized compared, creating different similarity networks and scoring the similarity of each pair of clusters. Based on this, the diverse BGCs will be classified on Gene Cluster Families (GCFs) to facilitate their study. A single GCF is supposed to encompass BGCs that produce chemically related metabolites (molecular families).
 
 Let's see how this analysis can be done:
 
@@ -57,44 +57,17 @@ optional arguments:
 |  --cutoffs CUTOFFS [CUTOFFS ...] |Generate networks using multiple raw distance cutoff values. Values should be in the range [0.0, 1.0]. Example: --cutoffs 0.1 0.25 0.5 1.0. Default: c=0.3.
 |  --clans-off          | Toggle to deactivate a second layer of clustering to attempt to group families into clans
 |  --clan_cutoff CLAN_CUTOFF CLAN_CUTOFF | Cutoff Parameters for which clustering families into  clans will be performed in raw distance. First value is the cutoff value family assignments for BGCs used in clan clustering (default: 0.3). Second value is the cutoff value for clustering families into clans (default: 0.7). Average linkage for BGCs in a family is used for distances between families. Valid values are in the range [0.0, 1.0]. Example: --clan_cutoff 0.3 0.7)
- | --hybrids-off        | Toggle to also add BGCs with hybrid predicted products
-                        from the PKS/NRPS Hybrids and Others classes to each
-                        subclass (e.g. a 'terpene-nrps' BGC from Others would
-                        be added to the Terpene and NRPS classes)
- | --mode {global,glocal,auto}
-                        Alignment mode for each pair of gene clusters.
-                        'global': the whole list of domains of each BGC are
-                        compared; 'glocal': Longest Common Subcluster mode.
-                        Redefine the subset of the domains used to calculate
-                        distance by trying to find the longest slice of common
-                        domain content per gene in both BGCs, then expand each
-                        slice. 'auto': use glocal when at least one of the
-                        BGCs in each pair has the 'contig_edge' annotation
-                        from antiSMASH v4+, otherwise use global mode on that
-                        pair
- | --anchorfile ANCHORFILE
-                        Provide a custom location for the anchor domains file,
-                        default is anchor_domains.txt.
- | --force_hmmscan       Force domain prediction using hmmscan even if BiG-
-                        SCAPE finds processed domtable files (e.g. to use a
-                        new version of PFAM).
- | --skip_ma             Skip multiple alignment of domains' sequences. Use if
-                        alignments have been generated in a previous run.
- | --mibig               Use included BGCs from then MIBiG database. Only
-                        relevant (i.e. those with distance < max(cutoffs)
-                        against the input set) will be used. Currently uses
-                        version 2.1 of MIBiG. See
-                        https://mibig.secondarymetabolites.org/
- | --mibig14             Include BGCs from version 1.4 of MIBiG
- | --mibig13             Include BGCs from version 1.3 of MIBiG
- | --query_bgc QUERY_BGC
-                        Instead of making an all-VS-all comparison of all the
-                        input BGCs, choose one BGC to compare with the rest of
-                        the set (one-VS-all). The query BGC does not have to
-                        be within inputdir
- | --domain_includelist  Only analyze BGCs that include domains with the pfam
-                        accessions found in the domain_includelist.txt file
- | --version             show program's version number and exit
+ | --hybrids-off        | Toggle to also add BGCs with hybrid predicted products from the PKS/NRPS Hybrids and Others classes to each subclass (e.g. a 'terpene-nrps' BGC from Others would be added to the Terpene and NRPS classes)
+ | --mode {global,glocal,auto} | Alignment mode for each pair of gene clusters. 'global': the whole list of domains of each BGC are compared; 'glocal': Longest Common Subcluster mode. Redefine the subset of the domains used to calculate distance by trying to find the longest slice of common domain content per gene in both BGCs, then expand each slice. 'auto': use glocal when at least one of the BGCs in each pair has the 'contig_edge' annotation from antiSMASH v4+, otherwise use global mode on that pair.
+ | --anchorfile ANCHORFILE |Provide a custom location for the anchor domains file, default is anchor_domains.txt.
+ | --force_hmmscan      | Force domain prediction using hmmscan even if BiG-SCAPE finds processed domtable files (e.g. to use a new version of PFAM).
+ | --skip_ma            | Skip multiple alignment of domains' sequences. Use if alignments have been generated in a previous run.
+ | --mibig              | Use included BGCs from then MIBiG database. Only relevant (i.e. those with distance < max(cutoffs) against the input set) will be used. Currently uses version 2.1 of MIBiG. See https://mibig.secondarymetabolites.org/
+ | --mibig14            | Include BGCs from version 1.4 of MIBiG
+ | --mibig13            | Include BGCs from version 1.3 of MIBiG
+ | --query_bgc QUERY_BGC |Instead of making an all-VS-all comparison of all the input BGCs, choose one BGC to compare with the rest of the set (one-VS-all). The query BGC does not have to be within inputdir
+ | --domain_includelist  Only analyze BGCs that include domains with the pfam accessions found in the domain_includelist.txt file
+ | --version           |  Show program's version number and exit
 
 
 
