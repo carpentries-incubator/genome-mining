@@ -28,7 +28,7 @@ First, we need to create a folder with all the BGC files annotated by antiSMASH.
 In each of the antiSMASH output folders, we will find a single .gbk file for each BGC that includes "region" within its filename. Thus, we will copy all those files to the new folder.
 
 `cp */*.region*.gbk BGCs_antiSMASH/`
-
+---
 ## Executing BiG-SCAPE
 
 BiG-SCAPE can be executed in different ways, depending on the installation mode that you applied. You could call the program through `bigscape`, `run_bigscape`or `run_bigscape.py`. Here, based on our installation (see Setup section) we will use `run_bigscape`. 
@@ -36,31 +36,17 @@ BiG-SCAPE can be executed in different ways, depending on the installation mode 
 To know all the possibilities of this program, just write down `run_bigscape -h`
 
 optional arguments:
-
+--------
+| Command               | Description |
+| :---                  |    :----:   |
 |  -h, --help           | show this help message and exit
-|  -l LABEL, --label LABEL
-                       | An extra label for this run (will be used as part of
-                        the folder name within the network_files results)
-|  -i INPUTDIR, --inputdir INPUTDIR
-                       | Input directory of gbk files, if left empty, all gbk
-                        files in current and lower directories will be used.
-|  -o OUTPUTDIR, --outputdir OUTPUTDIR
-                       | Output directory, this will contain all output data
-                        files.
-|  --pfam_dir PFAM_DIR  | Location of hmmpress-processed Pfam files. Default is
-                        same location of BiG-SCAPE
-|  -c CORES, --cores CORES
-                       | Set the number of cores the script may use (default:
-                        use all available cores)
-|  --include_gbk_str INCLUDE_GBK_STR [INCLUDE_GBK_STR ...]
-                       | Only gbk files with this string(s) will be used for
-                        the analysis (default: 'cluster', 'region'). Use an
-                        asterisk to accept every file (overrides '--
-                        exclude_gbk_str')
-|  --exclude_gbk_str EXCLUDE_GBK_STR [EXCLUDE_GBK_STR ...]
-                       | If any string in this list occurs in the gbk filename,
-                        this file will not be used for the analysis (default:
-                        final).
+|  -l LABEL, --label LABEL | An extra label for this run (will be used as part of the folder name within the network_files results)
+|  -i INPUTDIR, --inputdir INPUTDIR | Input directory of gbk files, if left empty, all gbk files in current and lower directories will be used.
+|  -o OUTPUTDIR, --outputdir OUTPUTDIR  | Output directory, this will contain all output data files.
+|  --pfam_dir PFAM_DIR  | Location of hmmpress-processed Pfam files. Default is same location of BiG-SCAPE
+|  -c CORES, --cores CORES | Set the number of cores the script may use (default: use all available cores)
+|  --include_gbk_str INCLUDE_GBK_STR [INCLUDE_GBK_STR ...] | Only gbk files with this string(s) will be used for the analysis (default: 'cluster', 'region'). Use an asterisk to accept every file (overrides '--exclude_gbk_str')
+|  --exclude_gbk_str EXCLUDE_GBK_STR [EXCLUDE_GBK_STR ...] | If any string in this list occurs in the gbk filename, this file will not be used for the analysis (default: final).
   -v, --verbose         Prints more detailed information. Toggle to activate.
   --include_singletons  Include nodes that have no edges to other nodes from
                         the network. Toggle to activate.
