@@ -125,6 +125,8 @@ Output options:
 AntiSMASH can be also used through this web: https://antismash.secondarymetabolites.org/#!/start 
 You will be asked to give your email. Then, the results will be sent to you and you will be allowed to donwload a folder with the annotations.
 
+# Understanding the output
 
+The visualization of the results includes many diverse options. To understand everything, we suggest to read the following tutorial: https://docs.antismash.secondarymetabolites.org/understanding_output/ 
 
 {% include links.md %}
