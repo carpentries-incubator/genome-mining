@@ -25,7 +25,7 @@ First, we need to create a folder with all the BGC files annotated by antiSMASH.
 
 In each of the antiSMASH output folders, we will find a single .gbk file for each BGC that include "region" within its filename. Thus, we will copy all those files to the new folder.
 
-`cp */*.region*.gbk BGCs_antiSMASH`
+`cp */*.region*.gbk BGCs_antiSMASH/`
 
 ## Executing BiG-SCAPE
 
