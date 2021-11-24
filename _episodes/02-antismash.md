@@ -127,6 +127,8 @@ You will be asked to give your email. Then, the results will be sent to you and 
 
 # Understanding the output
 
-The visualization of the results includes many diverse options. To understand everything, we suggest to read the following tutorial: https://docs.antismash.secondarymetabolites.org/understanding_output/ 
+The visualization of the results includes many diverse options. To understand all the possibilities, we suggest to read the following tutorial: https://docs.antismash.secondarymetabolites.org/understanding_output/ 
+
+Briefly, on the "overview" page you will find the number and type of BGCs annotated in your genome. By clicking on a specific BGC, you will find its gene structure (Figure Xa), its module composition (only for somy BGC types) (Figure Xb), and the similarity of your cluster with already described BGCs and published in the antiSMASH database (Figure Xc) or in the MiBIG database (Figure Xd)
 
 {% include links.md %}
