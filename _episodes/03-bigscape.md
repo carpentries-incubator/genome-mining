@@ -13,6 +13,8 @@ FIXME
 
 # BiG-SCAPE
 
+## Introduction
+
 We learnt how to study the BGCs encoded by each of the genomes of our analyses. In case you are interested in the study of a certain BGC or a certain strain, this may be enough. However, sometimes the researcher aim to compare the biosynthetic potential of tens or hundreds of genomes. To perform this kind of analysis, we will use BiG-SCAPE, a workflow that will compare all the BGCs detected by antiSMASH and it will create similarity networks among them. Also, the diverse BGCs will be classified on Gene Cluster Families (GCFs) to facilitate their study. Let's see how this analysis can be done:
 
 ## Preparing the input
