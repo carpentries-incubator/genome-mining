@@ -131,7 +131,7 @@ The visualization of the results includes many diverse options. To understand al
 
 Briefly, on the "overview" page you will find the number and type of BGCs annotated in your genome. By clicking on a specific BGC, you will find its gene structure (Figure Xa), its module composition (only for somy BGC types) (Figure Xb), and the similarity of your cluster with already described BGCs and published in the antiSMASH database (Figure Xc) or in the MiBIG database (Figure Xd). 
 
-(https://github.com/AxelRamosGarcia/Genome-Mining/blob/gh-pages/fig/antismash_cluster.png)
+![antismash] (https://github.com/AxelRamosGarcia/Genome-Mining/blob/gh-pages/fig/antismash_cluster.png)
 Figure X
 
 {% include links.md %}
