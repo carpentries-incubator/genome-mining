@@ -33,6 +33,10 @@ In each of the antiSMASH output folders, we will find a single .gbk file for eac
 
 BiG-SCAPE can be executed in different ways, depending on the installation mode that you applied. You could call the program through `bigscape`, `run_bigscape`or `run_bigscape.py`. Here, based on our installation (see Setup section) we will use `run_bigscape`. 
 
+A minimal run just requires to include the input and the output folder names. For example:
+
+`run_bigscape BGCs_antiSMASH output_BiG-SCAPE`
+
 To know all the possibilities of this program, just write down `run_bigscape -h`
 
 optional arguments:
@@ -69,7 +73,9 @@ optional arguments:
  | --domain_includelist  Only analyze BGCs that include domains with the pfam accessions found in the domain_includelist.txt file
  | --version           |  Show program's version number and exit
 
+We will include the `--mix`label to create a similarity network with all the different type of BGCs together. Since none of the our BGCs is on a contig edge, we could use the global mode. However, frequently, when analyzing draft genomes, this is not the case. Thus, the auto mode will be the most appropriate, which will use the global mode to align domains except for those cases in which the BGC is located near to a contig end, for which the glocal mode is automatically selected. Thus, we could also use the auto mode. 
 
+`run_bigscape BGCs_antiSMASH output_BiG-SCAPE --mix --mode auto`
 
 
 (Include some explanation of MiBIG)
