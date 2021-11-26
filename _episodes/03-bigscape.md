@@ -86,7 +86,11 @@ When you click on any of the options of the upper bar (Fig. Xd) it will appear a
 
 ![Network](https://github.com/AxelRamosGarcia/Genome-Mining/blob/gh-pages/fig/BiG-SCAPE_network.png)
 
-Here, it is represented a single network for each GCF or each Gene Cluster Clan (GCC), which may comprise several GCFs. Each dot represent a BGC. Those dots with bold circles have been recruited from the MiBIG database (Kautsar et al., 2020)
+Here, it is represented a single network for each GCF or each Gene Cluster Clan (GCC), which may comprise several GCFs. Each dot represent a BGC. Those dots with bold circles are already described BGCs that have been recruited from the MiBIG database (Kautsar et al., 2020) because of its similarity with some BGC of the analysis. When you click on a BGC (dot), it appears its GCF at the right. You can click on the GCF name to see the phylogenetic distances among all the BGCs comprised by a single GCF (Figure X)
+
+![Tree](https://github.com/AxelRamosGarcia/Genome-Mining/blob/gh-pages/fig/BiG-SCAPE_tree.png)
+
+
 
 (Include some explanation of MiBIG)
 (Include cytoscape options)
