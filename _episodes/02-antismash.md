@@ -20,9 +20,9 @@ keypoints:
 
 <div style="text-align: justify"> Many microbial genomes contain several biosynthetic gene clusters, which encode the biosynthesis of secondary metabolites. These molecules have shown some relevance. Their active compounds have shown: antimicrobials, antitumor, cholesterol-lowering, immunosuppressant, antiprotozoal, antihelminth, antiviral and anti-ageing activities, amongst others. The genes encoding the biosynthetic pathway responsible for the production of such a secondary metabolite are clustered together at a certain chromosome position (secondary metabolite biosynthesis gene cluster). The genetic architecture lets the possibility to detect secondary metabolite biosynthesis pathways by locating their gene clusters. Nowadays many genome sequences are available online. Based on profile hidden Markov models of genes that are specific for certain types of gene clusters, antiSMASH can accurately identify the gene clusters encoding secondary metabolites of all known broad chemical classes. antiSMASH not only detects the gene clusters, but also offers detailed sequence analysis.</div>
  
-# Profile Hidden Markov Models
+## Profile Hidden Markov Models
 
-## Definition
+### Definition
 
 Profile Hidden Markov's models are computational algorithms that predict protein structure identifying significant protein similarities letting a homologs detection. These probabilistic models:
 
