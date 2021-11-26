@@ -90,6 +90,11 @@ Here, it is represented a single network for each GCF or each Gene Cluster Clan 
 
 ![Tree](https://github.com/AxelRamosGarcia/Genome-Mining/blob/gh-pages/fig/BiG-SCAPE_tree.png)
 
+ Here, the BGC that represents the "centre" of the GCF is labelled in red. These trees will be useful to prioritize the search of secondary metabolites, for example, by focusing on the most divergent BGC clade or those that are distant to already described BGCs.
+
+-------------
+
+## MiBIG
 
 
 (Include some explanation of MiBIG)
