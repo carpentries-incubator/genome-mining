@@ -94,11 +94,17 @@ Here, it is represented a single network for each GCF or each Gene Cluster Clan 
 
 -------------
 
-## MiBIG
+## MiBIG database
 
+As commented before, both antiSMASH and BiG-SCAPE will compare our BGCs with those already described and included in the MiBIG database. This is a curated repository for BGCs of known function also available through this link: https://mibig.secondarymetabolites.org/ 
 
-(Include some explanation of MiBIG)
-(Include cytoscape options)
+-------------
+
+## Cytoscape visualization of the results
+
+You can also customize and re-renderize the similarity networks of your results with Cytoscape (https://cytoscape.org/). To do so, you will need some files included in the ouput directory of BiG-SCAPE. Both are located in the same folder. You can choose any folder included in the Network_files/(date)hybrids_auto/ directory, depdending on your intereset. The "Mix/" folder represents the complete network, including all the BGCs of the analysis. There, you will need a the files "mix_c0.30.network" and "mix_clans_0.30_0.70.tsv". When you upload the ".network" file, it is needed that you select as "source" the first column and as "target" the second one. Then, you can upload the ".tsv" and just select the first column as "source". Finally, you need to click on Tools -> merge -> Networks -> Union to combine both GCFs and singletons. Now you can change colors, labels, etc. according to your specific requirements.
+
+-------------
 
 ### References
 Navarro-Muñoz, J.C., Selem-Mojica, N., Mullowney, M.W. et al. "A computational framework to explore large-scale biosynthetic diversity". Nature Chemical Biology (2019)
