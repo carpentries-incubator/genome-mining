@@ -15,7 +15,7 @@ FIXME
 
 ## Introduction
 
-In the previous section, we learnt how to study the BGCs encoded by each of the genomes of our analyses. In case you are interested in the study of a certain BGC or a certain strain, this may be enough. However, sometimes the researcher aims to compare the biosynthetic potential of tens or hundreds of genomes. To perform this kind of analysis, we will use BiG-SCAPE, a workflow that will compare all the BGCs detected by antiSMASH to find their relatedness. BiG-SCAPE will search for Pfam domains (Mistry et al., 2021) in the protein sequences of each BGC. Then, the Pfam domains will be linearized compared, creating different similarity networks and scoring the similarity of each pair of clusters. Based on this, the diverse BGCs will be classified on Gene Cluster Families (GCFs) to facilitate their study. A single GCF is supposed to encompass BGCs that produce chemically related metabolites (molecular families).
+In the previous section, we learnt how to study the BGCs encoded by each of the genomes of our analyses. In case you are interested in the study of a certain BGC or a certain strain, this may be enough. However, sometimes the researcher aims to compare the biosynthetic potential of tens or hundreds of genomes. To perform this kind of analysis, we will use BiG-SCAPE (Navarro-Muñoz et al., 2019), a workflow that will compare all the BGCs detected by antiSMASH to find their relatedness. BiG-SCAPE will search for Pfam domains (Mistry et al., 2021) in the protein sequences of each BGC. Then, the Pfam domains will be linearized compared, creating different similarity networks and scoring the similarity of each pair of clusters. Based on this, the diverse BGCs will be classified on Gene Cluster Families (GCFs) to facilitate their study. A single GCF is supposed to encompass BGCs that produce chemically related metabolites (molecular families).
 
 Let's see how this analysis can be done:
 
@@ -78,8 +78,23 @@ We will include the `--mix`label to create a similarity network with all the dif
 
 `run_bigscape BGCs_antiSMASH output_BiG-SCAPE --mix --mode auto`
 
+Once the process end, you will find in your terminal screen some basic results, such as the number of BGCs included in each type of network. In the output folder you will find all the data. An easy way to prospect your results is by opening the "index.html" file with a browser (Firefox, Chrome, Safari, etc.). There are diverse sections in the visualization. At the left it is represented the number of BGCs per genome and BGC-type (Fig. Xa). At the right side it is represented a clustered heatmap of your genomes based on the presence/absence of GCFs (Fig. Xb). You can customize this heatmap and select the clustering method (Fig. Xb1) or the number of GCFs represented. Also, there are some summary statistics included the at the top right of the overciew screen (Fig. Xc). 
+
+https://github.com/AxelRamosGarcia/Genome-Mining/blob/gh-pages/fig/BiG-SCAPE.png
+
+When you click on any of the options of the upper bar (Fig. Xd) it will appear a similarity network of BGCs (Fig. X). It may take some time to charge the network.
+
+https://github.com/AxelRamosGarcia/Genome-Mining/blob/gh-pages/fig/BiG-SCAPE_network.png
+
+Here, it is represented a single network for each GCF or each Gene Cluster Clan (GCC), which may comprise several GCFs. Each dot represent a BGC. Those dots with bold circles have been recruited from the MiBIG database (Kautsar et al., 2020)
 
 (Include some explanation of MiBIG)
+(Include cytoscape options)
+
 ### References
+Navarro-Muñoz, J.C., Selem-Mojica, N., Mullowney, M.W. et al. "A computational framework to explore large-scale biosynthetic diversity". Nature Chemical Biology (2019)
 Mistry, J., Chuguransky, S., Williams, L., Qureshi, M., Salazar, G. A., Sonnhammer, E. L., ... & Bateman, A. (2021). Pfam: The protein families database in 2021. Nucleic Acids Research, 49(D1), D412-D419.
+Kautsar, S. A., Blin, K., Shaw, S., Navarro-Muñoz, J. C., Terlouw, B. R., van der Hooft, J. J., ... & Medema, M. H. (2020). MIBiG 2.0: a repository for biosynthetic gene clusters of known function. Nucleic acids research, 48(D1), D454-D458.
+
 {% include links.md %}
+
