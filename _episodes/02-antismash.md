@@ -49,15 +49,17 @@ antiSMASH can work with three different
 arguments:
   SEQUENCE  GenBank/EMBL/FASTA file(s) containing DNA.
 
-  antiSMASH package can work with three different file formats GenBank,  FASTA and EMBL. 
+  antiSMASH package can work with three different file formats GenBank, FASTA and EMBL. Both GeneBank nad EMBL formats include genome annotations, while a FASTA file just comprises the nucleotides of each genome contig. 
 
-1. GenBank format consists of two main sections, annotation and a sequence. The annotation section begins at the "Locus" header and the sequence sections at the "origin" word. Finally, the end section can be recognized due to the mark "//". AntiSMASH developers recomend using RAST (https://rast.nmpdr.org/) genome annotations as input file
+1. GenBank format consists of two main sections, annotation and a sequence. The annotation section begins at the "Locus" header and the sequence sections at the "origin" word. Finally, the end section can be recognized due to the mark "//". AntiSMASH developers recomend using RAST (https://rast.nmpdr.org/) genome annotations as input file.
 
-2. Fasta format consists of one line which starts with a ">" sign, followed by a textual description of sequence. Since it is not part of the official of the format, softwares can choose to ignore this, when it is present. One or more lines containing the sequences itself. In case you use your un-annotated genome in fasta file format, antiSMASH will perform a gene calling through the software selected with "--genefinding-tool".
+2. EMBL format also includes gene annotations. Each entry starts with its identifier ("ID "), then the sequence is preceded by a line starting with "SQ", and again, the end of the sequence is recognized by two slashes ("//"). 
+
+3. Fasta format consists of one line which starts with a ">" sign, followed by a textual description of sequence (nucleotides). Since it is not part of the official of the format, softwares can choose to ignore this, when it is present. One or more lines containing the sequences itself. In case you use your un-annotated genome in fasta file format, antiSMASH will perform a gene calling through the software selected with "--genefinding-tool".
 
 ### FASTA format example
 ---
->BTBSCRYR
+> BTBSCRYR
 tgcaccaaacatgtctaaagctggaaccaaaattactttctttgaagacaaaaactttca
 aggccgccactatgacagcgattgcgactgtgcagatttccacatgtacctgagccgctg
 caactccatcagagtggaaggaggcacctgggctgtgtatgaaaggcccaattttgctgg
