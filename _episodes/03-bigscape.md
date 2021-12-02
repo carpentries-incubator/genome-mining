@@ -23,11 +23,15 @@ Let's see how this analysis can be done:
 
 First, we need to create a folder with all the BGC files annotated by antiSMASH. 
 
-`mkdir BGCs_antiSMASH`
+~~~
+$ mkdir BGCs_antiSMASH
+~~~
 
 In each of the antiSMASH output folders, we will find a single .gbk file for each BGC that includes "region" within its filename. Thus, we will copy all those files to the new folder.
 
-`cp */*.region*.gbk BGCs_antiSMASH/`
+~~~
+$ cp */*.region*.gbk BGCs_antiSMASH/
+~~~
 
 ---
 ## Executing BiG-SCAPE
@@ -36,7 +40,9 @@ BiG-SCAPE can be executed in different ways, depending on the installation mode 
 
 A minimal run just requires to include the input and the output folder names. For example:
 
-`run_bigscape BGCs_antiSMASH output_BiG-SCAPE`
+~~~
+$ run_bigscape BGCs_antiSMASH output_BiG-SCAPE
+~~~
 
 To know all the possibilities of this program, just write down `run_bigscape -h`
 
@@ -76,7 +82,9 @@ optional arguments:
 
 We will include the `--mix`label to create a similarity network with all the different type of BGCs together. Since none of the our BGCs is on a contig edge, we could use the global mode. However, frequently, when analyzing draft genomes, this is not the case. Thus, the auto mode will be the most appropriate, which will use the global mode to align domains except for those cases in which the BGC is located near to a contig end, for which the glocal mode is automatically selected. Thus, we could also use the auto mode. 
 
-`run_bigscape BGCs_antiSMASH output_BiG-SCAPE --mix --mode auto`
+~~~
+$ run_bigscape BGCs_antiSMASH output_BiG-SCAPE --mix --mode auto
+~~~
 
 Once the process end, you will find in your terminal screen some basic results, such as the number of BGCs included in each type of network. In the output folder you will find all the data. An easy way to prospect your results is by opening the "index.html" file with a browser (Firefox, Chrome, Safari, etc.). There are diverse sections in the visualization. At the left it is represented the number of BGCs per genome and BGC-type (Fig. Xa). At the right side it is represented a clustered heatmap of your genomes based on the presence/absence of GCFs (Fig. Xb). You can customize this heatmap and select the clustering method (Fig. Xb1) or the number of GCFs represented. Also, there are some summary statistics included the at the top right of the overciew screen (Fig. Xc). 
 
