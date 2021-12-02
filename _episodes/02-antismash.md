@@ -59,24 +59,9 @@ arguments:
 
 3. Fasta format consists of one line which starts with a ">" sign, followed by a textual description of sequence (nucleotides). Since it is not part of the official of the format, softwares can choose to ignore this, when it is present. One or more lines containing the sequences itself. In case you use your un-annotated genome in fasta file format, antiSMASH will perform a gene calling through the software selected with "--genefinding-tool".
 
-### FASTA format example
----
-> BTBSCRYR
-tgcaccaaacatgtctaaagctggaaccaaaattactttctttgaagacaaaaactttca
-aggccgccactatgacagcgattgcgactgtgcagatttccacatgtacctgagccgctg
-caactccatcagagtggaaggaggcacctgggctgtgtatgaaaggcccaattttgctgg
-gtacatgtacatcctaccccggggcgagtatcctgagtaccagcactggatgggcctcaa
-cgaccgcctcagctcctgcagggctgttcacctgtctagtggaggccagtataagcttca
-gatctttgagaaaggggattttaatggtcagatgcatgagaccacggaagactgcccttc
-catcatggagcagttccacatgcgggaggtccactcctgtaaggtgctggagggcgcctg
-gatcttctatgagctgcccaactaccgaggcaggcagtacctgctggacaagaaggagta
-ccggaagcccgtcgactggggtgcagcttccccagctgtccagtctttccgccgcattgt
-ggagtgatgatacagatgcggccaaacgctggctggccttgtcatccaaataagcattat
-aaataaaacaattggcatgc
----
 
 --------
-Options
+### Options
 --------
 
 | Command               | Description |
