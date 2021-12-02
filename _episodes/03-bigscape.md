@@ -48,6 +48,7 @@ To know all the possibilities of this program, just write down `run_bigscape -h`
 
 optional arguments:
 --------
+
 | Command               | Description |
 | :---                  |    :----:   |
 |  -h, --help           | show this help message and exit
