@@ -78,6 +78,7 @@ aaataaaacaattggcatgc
 --------
 Options
 --------
+
 | Command               | Description |
 | :---                  |    :----:   |
 | -h, --help            | Show this help text. |
