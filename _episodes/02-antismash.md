@@ -39,7 +39,9 @@ The commandline usage of antismash is detailed in the following repositories: ht
 In sum, you will need to use your genome as the input (see "Arguments" section). Then, antiSMASH will create an output folder for each of your genomes. Within this folder, you will find a single .gbk file for each of the detected Biosynthetic Gene Clusters (we will use these files for subsequent analyses) and a .html file, among others files. By clicking in the .html file you can explore the antiSMASH annotations.
 
 An example of a basic usage is:
-`antismash genome.gbk`
+~~~
+$ antismash genome.gbk
+~~~
 
 However, there are many extra analyses that can be done. See the following sections to understand all the posibilities.
 
