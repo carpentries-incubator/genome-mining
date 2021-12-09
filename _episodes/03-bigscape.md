@@ -89,15 +89,15 @@ $ run_bigscape BGCs_antiSMASH output_BiG-SCAPE --mix --mode auto
 
 Once the process end, you will find in your terminal screen some basic results, such as the number of BGCs included in each type of network. In the output folder you will find all the data. An easy way to prospect your results is by opening the "index.html" file with a browser (Firefox, Chrome, Safari, etc.). There are diverse sections in the visualization. At the left it is represented the number of BGCs per genome and BGC-type (Fig. Xa). At the right side it is represented a clustered heatmap of your genomes based on the presence/absence of GCFs (Fig. Xb). You can customize this heatmap and select the clustering method (Fig. Xb1) or the number of GCFs represented. Also, there are some summary statistics included the at the top right of the overciew screen (Fig. Xc). 
 
-![BiG-SCAPE](https://github.com/AxelRamosGarcia/Genome-Mining/blob/gh-pages/fig/BiG-SCAPE.png)
+![BiG-SCAPE](https://github.com/AxelRamosGarcia/Genome-Mining/fig/BiG-SCAPE.png)
 
 When you click on any of the options of the upper bar (Fig. Xd) it will appear a similarity network of BGCs (Fig. X). It may take some time to charge the network.
 
-![Network](https://github.com/AxelRamosGarcia/Genome-Mining/blob/gh-pages/fig/BiG-SCAPE_network.png)
+![Network](https://github.com/AxelRamosGarcia/Genome-Mining/fig/BiG-SCAPE_network.png)
 
 Here, it is represented a single network for each GCF or each Gene Cluster Clan (GCC), which may comprise several GCFs. Each dot represent a BGC. Those dots with bold circles are already described BGCs that have been recruited from the MiBIG database (Kautsar et al., 2020) because of its similarity with some BGC of the analysis. When you click on a BGC (dot), it appears its GCF at the right. You can click on the GCF name to see the phylogenetic distances among all the BGCs comprised by a single GCF (Figure X)
 
-![Tree](https://github.com/AxelRamosGarcia/Genome-Mining/blob/gh-pages/fig/BiG-SCAPE_tree.png)
+![Tree](https://github.com/AxelRamosGarcia/Genome-Mining/fig/BiG-SCAPE_tree.png)
 
  Here, the BGC that represents the "centre" of the GCF is labelled in red. These trees will be useful to prioritize the search of secondary metabolites, for example, by focusing on the most divergent BGC clade or those that are distant to already described BGCs.
 
