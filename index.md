@@ -3,15 +3,16 @@ layout: lesson
 root: .  # Is the only page that doesn't follow the pattern /:path/index.html
 permalink: index.html  # Is the only page that doesn't follow the pattern /:path/index.html
 ---
-FIXME: home page introduction
+Hackaton 06-10 Nov 2022
 
 <!-- this is an html comment -->
 
 {% comment %} This is a comment in Liquid {% endcomment %}
 
 > ## Prerequisites
->
-> FIXME
+> BetterLab
+> Tec de Monterrey
+> ENES
 {: .prereq}
 
 {% include links.md %}
