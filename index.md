@@ -3,7 +3,7 @@ layout: lesson
 root: .  # Is the only page that doesn't follow the pattern /:path/index.html
 permalink: index.html  # Is the only page that doesn't follow the pattern /:path/index.html
 ---
-Hackaton de desarrollo 06-10 Nov 2022 Morelia Michoacan UNAM Centro de Ciencias Matemáticas Morelia
+<h2> Hackaton de desarrollo 06-10 Nov 2022 Morelia Michoacan UNAM Centro de Ciencias Matemáticas Morelia</h2>
 
 <!-- this is an html comment -->
 
