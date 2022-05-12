@@ -10,8 +10,8 @@ permalink: index.html  # Is the only page that doesn't follow the pattern /:path
 {% comment %} This is a comment in Liquid {% endcomment %}
 
 > ## Empresas y universidades invitadas
-> BetterLab
-> Tec de Monterrey
+> BetterLab,
+> Tec de Monterrey,
 > ENES-León UNAM
 {: .prereq}
 
