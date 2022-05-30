@@ -27,12 +27,11 @@ This workshop is designed to be taught over two full days of instruction.
 
 > ## Data
 > 
-> This worksop uses data from experiment: [Genome analysis of multiple pathogenic
-> isolates of Streptococcus agalactiae: Implications for the microbial “pan
-> genome”](https://www.pnas.org/doi/10.1073/pnas.0506758102), by Hervé Tettelin,
-> Vega Masignani, Michael J. Cieslewicz, Claire M et al.
+> This worksop uses data from experiment: [Genome analysis of multiple pathogenic isolates of Streptococcus agalactiae: Implications for the microbial “pan genome”](https://www.pnas.org/doi/10.1073/pnas.0506758102), by Hervé Tettelin, Vega Masignani, Michael J. Cieslewicz, Claire M et al.
+> 
 > All of the data used in this workshop can be downloaded from:
 > [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6595388.svg)](https://doi.org/10.5281/zenodo.6595388)
-> 
+> More information about this data is available on the [Data page](https://carpentries-incubator.github.io/metagenomics-workshop/data/index.html).
+ 
 {% include links.md %}
 
