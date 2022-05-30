@@ -34,6 +34,9 @@ This workshop is designed to be taught over two full days of instruction.
 > [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6595388.svg)](https://doi.org/10.5281/zenodo.6595388)
 > More information about this data is available on the [Data page](https://carpentries-incubator.github.io/metagenomics-workshop/data/index.html).
 {: .prereq}
- 
+
+
+# Workshop Overview 
+
 {% include links.md %}
 
