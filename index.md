@@ -31,10 +31,8 @@ This workshop is designed to be taught over two full days of instruction.
 > isolates of Streptococcus agalactiae: Implications for the microbial “pan
 > genome”](https://www.pnas.org/doi/10.1073/pnas.0506758102), by Hervé Tettelin,
 > Vega Masignani, Michael J. Cieslewicz, Claire M et al.
-> All of the data used in this workshop can be downloaded from
-> [![DOI](https://zenodo.org/record/6595388#.YpU9uu5BzIV)](https://zenodo.org/record/6595388#.YpU9uu5BzIV)
-
-
-
+> All of the data used in this workshop can be downloaded from:
+> [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6595388.svg)](https://doi.org/10.5281/zenodo.6595388)
+> 
 {% include links.md %}
 
