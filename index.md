@@ -14,6 +14,8 @@ permalink: index.html  # Is the only page that doesn't follow the pattern /:path
 > Instituto Tecnológico de Estudios Superiores de Monterrey.  
 > Escuela Nacional de Estudios Superiores-León UNAM.
 
+{% comment %} This is a comment in Liquid {% endcomment %}
+
 > ## Data
 > This worksop uses data from experiment: Genome analysis of multiple pathogenic isolates of Streptococcus agalactiae: Implications for the microbial “pan-genome”, by Hervé Tettelin, Vega Masignani, Michael J. Cieslewicz, Claire M et al. 
 
