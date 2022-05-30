@@ -11,12 +11,13 @@ permalink: index.html  # Is the only page that doesn't follow the pattern /:path
 
 > ## Empresas y universidades invitadas
 > BetterLab: Empresa dedicada al analisis genomico y creación de software para problemas biologicos.   
-> Tecnológico de Monterrey.  
-> ENES-León UNAM.
-{: .prereq}
+> Instituto Tecnológico de Estudios Superiores de Monterrey.  
+> Escuela Nacional de Estudios Superiores-León UNAM.
 
 > ## Data
 > This worksop uses data from experiment: Genome analysis of multiple pathogenic isolates of Streptococcus agalactiae: Implications for the microbial “pan-genome”, by Hervé Tettelin, Vega Masignani, Michael J. Cieslewicz, Claire M et al. 
 
+
+{: .prereq}
 {% include links.md %}
 
