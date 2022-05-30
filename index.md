@@ -16,3 +16,7 @@ permalink: index.html  # Is the only page that doesn't follow the pattern /:path
 {: .prereq}
 
 {% include links.md %}
+
+> ## Data
+> This worksop uses data from experiment: Genome analysis of multiple pathogenic isolates of Streptococcus agalactiae: Implications for the microbial “pan-genome”, by Hervé Tettelin, Vega Masignani, Michael J. Cieslewicz, Claire M et al. 
+
