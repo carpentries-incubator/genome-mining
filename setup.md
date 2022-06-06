@@ -52,7 +52,7 @@ name: GenomeMining
 dependencies:                                      
   - antismash=6.0.0
   - deepbgc=0.1.29             
-  - BiG-SLiCE version 1.1.0
+  - BiG-SLiCE=1.1.0
 ~~~
 {: .output}
 
