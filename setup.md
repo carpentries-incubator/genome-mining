@@ -35,7 +35,28 @@ Follow these [instructions on creating an Amazon instance](https://carpentries-i
 If you're an Instructor or Maintainer or want to contribute to these lessons, please get in touch with us [team@carpentries.org](mailto:team@carpentries.org) and we will start instances for you. 
 
 After the basic software of the genomic instace is setup you need to add the metagenomics environment. 
-Here is a link to [specifications file](https://github.com/AxelRamosGarcia/Genome-Mining/blob/gh-pages/files/GenomeMining.yml)  with the exact versions of each tool in this environment. You can use the spec file as follows:  
+Here is a link to [specifications file](https://github.com/AxelRamosGarcia/Genome-Mining/blob/gh-pages/files/GenomeMining.yml)  with the exact versions of each tool in this environment. You can use the spec file as follows:
+> ~~~
+> $ conda create --name myenv --file spec-file.txt
+> ~~~
+>{: .bash}
+
+This environment can be modified by adding or deleting tools in a file `metagenomics.yml`, 
+original metagenomics.yml file had the following content:  
+~~~
+$ cat GenomeMining.yml
+~~~
+{: .bash}
+~~~
+name: GenomeMining                                                                
+dependencies:                                      
+  - antismash=6.0.0
+  - deepbgc=0.1.29             
+  - BiG-SLiCE version 1.1.0
+~~~
+{: .output}
+
+Then you can create your own metagenomics conda environment using the metagenomics.yml file.  
 > ~~~
 > $ conda env create -f GenomeMining.yml
 > ~~~
