@@ -1,7 +1,7 @@
 FIXME 💢 Example: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4285900.svg)](https://doi.org/10.5281/zenodo.4285900)
 
 
-# Genome Mining
+# Genome Mining Lesson
 
 This lesson is part of the [Comparative Genomics Workshop](https://czirion.github.io/comparative-genomics-workshop/).
 
