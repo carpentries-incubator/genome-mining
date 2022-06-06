@@ -34,6 +34,13 @@ Follow these [instructions on creating an Amazon instance](https://carpentries-i
 
 If you're an Instructor or Maintainer or want to contribute to these lessons, please get in touch with us [team@carpentries.org](mailto:team@carpentries.org) and we will start instances for you. 
 
+After the basic software of the genomic instace is setup you need to add the metagenomics environment. 
+Here is a link to [specifications file](https://github.com/AxelRamosGarcia/Genome-Mining/blob/gh-pages/files/GenomeMining.yml)  with the exact versions of each tool in this environment. You can use the spec file as follows:  
+> ~~~
+> $ conda env create -f GenomeMining.yml
+> ~~~
+>{: .bash}
+
 ### Data
 
 The data used in this workshop are available on Zenodo. Because this workshop works with real data, be aware that file sizes for the data are large. Please read the Zenodo page linked below for information about the data and access to the data files. 
