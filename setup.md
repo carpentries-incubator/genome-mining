@@ -41,6 +41,8 @@ Here is a link to [specifications file](https://github.com/AxelRamosGarcia/Genom
 > ~~~
 >{: .bash}
 
+More information about how to use environments and spec file is available at [conda documentation](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
+
 ### Data
 
 The data used in this workshop are available on Zenodo. Because this workshop works with real data, be aware that file sizes for the data are large. Please read the Zenodo page linked below for information about the data and access to the data files. 
