@@ -25,4 +25,5 @@ Description
 
 The data used in this workshop are available on Zenodo. Because this workshop works with real data, be aware that file sizes for the data are large. Please read the Zenodo page linked below for information about the data and access to the data files. 
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6617709.svg)](https://doi.org/10.5281/zenodo.6617709)
 {% include links.md %}
