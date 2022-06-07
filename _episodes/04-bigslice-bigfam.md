@@ -18,8 +18,8 @@ keypoints:
 ---
 
 > ## Ejercicio `.challenge`
-> Consider the following directory structure: </br>
-> 
+> Consider the following directory structure:
+> ```
 >    ├── input folder                    
 >    │   ├── datasets.tsv           
 >    │   ├── dataset_1
@@ -47,6 +47,7 @@ keypoints:
 >    |   |   └── ...     
 >    │   |                
 >    └── ...
+> ```
 > > ## Solution
 > {: .solution}
 {: .challenge}
