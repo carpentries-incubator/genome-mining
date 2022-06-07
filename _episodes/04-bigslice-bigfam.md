@@ -29,14 +29,14 @@ keypoints:
 >        |   ├── genome_1B
 >        |   |   ├── genome_1B.region001.gbk
 >        |   |   └── genome_1B.region002.gbk
->        └──dataset_2
->            ├── genome_2A
->            |   ├── genome_2A.region001.gbk
->            |   └── genome_2A.region002.gbk
->            ├── genome_2B
->            |   ├── genome_2B.region001.gbk
->            |   └── genome_2B.region002.gbk
->            └── taxonomy
+>        ├── dataset_2
+>        |   ├── genome_2A
+>        |   |   ├── genome_2A.region001.gbk
+>        |   |   └── genome_2A.region002.gbk
+>        |   ├── genome_2B
+>        |   |   ├── genome_2B.region001.gbk
+>        |   |   └── genome_2B.region002.gbk
+>        └── taxonomy
 >            ├── taxonomy_dataset_1.tsv
 >            └── taxonomy_dataset_2.tsv                     
 > ```
