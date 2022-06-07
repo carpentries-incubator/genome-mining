@@ -1,15 +1,21 @@
 ---
-title: "BiGSlice / BiGFAM "
-teaching: 0
-exercises: 0
+source: md
+title: "BiGSlice / BiGFAM"
+teaching: --
+exercises: --
 questions:
-- "Key question (FIXME)"
+- "?"
+- "?"
 objectives:
-- "First learning objective. (FIXME)"
+- "Understand why we want to run `BiGSLICE` and `BiGFAM` "
+- "Learn what input do we need to run `BiGSLICE` and `BiGFAM`"
+- "Run an example with our _Streptococcus_ data on both softwares"
+- "Understand the obtained results"
 keypoints:
-- "First key point. Brief Answer to questions. (FIXME)"
+- ""  
+- ""
+- ""
 ---
-FIXME
 
 > ## Ejercicio `.challenge`
 > Consider the following directory structure:
