@@ -73,10 +73,17 @@ You will be asked to give your email. Then, the results will be sent to you and 
 
 The visualization of the results includes many diverse options. To understand all the possibilities, we suggest to read the following [tutorial:](https://docs.antismash.secondarymetabolites.org/understanding_output/)
 
-Briefly, on the "overview" page you will find the number and type of BGCs annotated in your genome. By clicking on a specific BGC, you will find its gene structure (Figure Xa), its module composition (only for somy BGC types) (Figure Xb), and the similarity of your cluster with already described BGCs and published in the antiSMASH database (Figure Xc) or in the MiBIG database (Figure Xd). 
+Briefly, on the "overview" page ´.HTML´ you can find all the regions found within every analyzed record/contig (antiSMASH inputs), and summarized all these information in five main features:
 
-![Antismash](https://github.com/AxelRamosGarcia/Genome-Mining/blob/gh-pages/fig/antismash_cluster.png)
-Figure X
+* **Region:** The region number.
+* **Type:** Type of the product detected by antiSMASH.
+* **From,To:** The location of the reagion (nucleotides).
+* **Most similar known cluster:** The closest compund from th MIBiG database.
+* **Similarity:** Percentage of genes within the closest known compound that have significant BLAS hit (The last two columns containing comparisons to the MiBIG database will only be shown if antiSMASH was run with the KnownClusterBlast option).
+
+## Webpage
+AntiSMASH can be also used through its [web platform version:](https://antismash.secondarymetabolites.org/#!/start)
+You will be asked to give your email. Then, the results will be sent to you and you will be allowed to donwload a folder with the annotations.
 
 > ## Exercise 2. Regions `.challenge`
 > How can you calculate the size of a region?
