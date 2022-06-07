@@ -51,7 +51,7 @@ $ antismash --cb-general --cb-knownclusters --cb-subclusters --asf --pfam2go --s
 There are some extra analyses that can be done adn information that can be obtained.
 
 ## Webpage
-AntiSMASH can be also used through this [web:](https://antismash.secondarymetabolites.org/#!/start)
+antiSMASH can be also used through this [web:](https://antismash.secondarymetabolites.org/#!/start)
 You will be asked to give your email. Then, the results will be sent to you and you will be allowed to donwload a folder with the annotations.
 
 # Understanding the output
@@ -67,7 +67,7 @@ Briefly, on the "overview" page ´.HTML´ you can find all the regions found wit
 * **Similarity:** Percentage of genes within the closest known compound that have significant BLAS hit (The last two columns containing comparisons to the MiBIG database will only be shown if antiSMASH was run with the KnownClusterBlast option ´--cc-mibig´).
 
 ## Webpage
-AntiSMASH can be also used through its [web platform version:](https://antismash.secondarymetabolites.org/#!/start)
+antiSMASH can be also used through its [web platform version:](https://antismash.secondarymetabolites.org/#!/start)
 You will be asked to give your email. Then, the results will be sent to you and you will be allowed to donwload a folder with the annotations.
 
 > ## Exercise 1: Regions
