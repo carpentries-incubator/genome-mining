@@ -70,7 +70,7 @@ Briefly, on the "overview" page ´.HTML´ you can find all the regions found wit
 AntiSMASH can be also used through its [web platform version:](https://antismash.secondarymetabolites.org/#!/start)
 You will be asked to give your email. Then, the results will be sent to you and you will be allowed to donwload a folder with the annotations.
 
-> ## Exercise 2. Regions
+> ## Exercise 1: Regions
 > How can you calculate the size of a region?
 > 
 > > ## Solution
