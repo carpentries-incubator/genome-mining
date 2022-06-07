@@ -40,6 +40,29 @@ keypoints:
 >            ├── taxonomy_dataset_1.tsv
 >            └── taxonomy_dataset_2.tsv                     
 > ```
+> Which would be the commands to copy the directory structure without the files (just the folders)?
+> a)
+> ```
+> cp -r input_folder input_folder_copy
+> ```
+> b)
+> ```
+> mv -r input_folder input_folder_copy
+> rm input_folder_copy/dataset_1/genome_1A/*
+> rm input_folder_copy/dataset_1/genome_1B/*
+> rm input_folder_copy/dataset_2/genome_2A/*
+> rm input_folder_copy/dataset_2/genome_2B/*
+> rm input_folder_copy/taxonomy/*
+> ```
+> c)
+> ```
+> cp -r input_folder input_folder_copy
+> rm input_folder_copy/dataset_1/genome_1A/*
+> rm input_folder_copy/dataset_1/genome_1B/*
+> rm input_folder_copy/dataset_2/genome_2A/*
+> rm input_folder_copy/dataset_2/genome_2B/*
+> rm input_folder_copy/taxonomy/*
+> ```
 > > ## Solution
 > {: .solution}
 {: .challenge}
