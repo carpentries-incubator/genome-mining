@@ -1,5 +1,5 @@
 ---
-title: "Antismash"
+title: "antiSMASH"
 teaching: 20
 exercises: 30
 questions:
