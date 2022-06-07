@@ -78,4 +78,13 @@ Briefly, on the "overview" page you will find the number and type of BGCs annota
 ![Antismash](https://github.com/AxelRamosGarcia/Genome-Mining/blob/gh-pages/fig/antismash_cluster.png)
 Figure X
 
+> ## Exercise 2. Regions `.challenge`
+> How can you calculate the size of a region?
+> 
+> > ## Solution
+> > By calculating the difference between the initial position and the final position of the region.
+> {: .solution}
+{: .challenge}
+
+
 {% include links.md %}
