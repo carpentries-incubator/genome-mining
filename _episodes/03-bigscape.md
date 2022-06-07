@@ -318,8 +318,9 @@ generate_network took 0.102 seconds
 
 
 	Main function took 17.353 s
-	~~~
+~~~
 {: .output}
+
 
 Move your `bigscape/` folder to the parent folder:
 ~~~
@@ -341,7 +342,6 @@ Open your `index.html` with a browser:
 firefox output_070622/index.html # If you have Firefox available
 ~~~
 {: .bash}
-
 
 {% include links.md %}
 
