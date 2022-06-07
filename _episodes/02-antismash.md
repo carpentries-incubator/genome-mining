@@ -20,7 +20,7 @@ keypoints:
 
 Within microbial genoms we can find some specific regions that take part of the biosynthesis of secondary metabolites, these sections are know as biosynthetic gene clusters, which are relevant due to the possible applications that they may have, for example: antimicrobials, antitumor, cholesterol-lowering, immunosuppressant, antiprotozoal, antihelminth, antiviral and anti-ageing activities.
 
-antiSMASH is a pipline based on [profile hidden Markov models](https://www.cs.princeton.edu/~mona/Lecture/HMM1.pdf) that allow us to identify the gene clusters contained within genome sequences that encode secondary metabolites of all known broad chemical classes.
+antiSMASH is a pipline based on [profile hidden Markov models](https://www.ebi.ac.uk/training/online/courses/pfam-creating-protein-families/what-are-profile-hidden-markov-models-hmms/#:~:text=Profile%20HMMs%20are%20probabilistic%20models,the%20alignment%2C%20see%20Figure%202) that allow us to identify the gene clusters contained within genome sequences that encode secondary metabolites of all known broad chemical classes.
 
 # antiSMASH input files
 
