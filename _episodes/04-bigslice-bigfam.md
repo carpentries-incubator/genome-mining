@@ -44,23 +44,28 @@ keypoints:
 > a)
 > ```
 > cp -r input_folder input_folder_copy
+> cd input_foder_copy
+> rm -r
 > ```
 > b)
 > ```
 > mv -r input_folder input_folder_copy
-> rm input_folder_copy/dataset_1/genome_1A/*
-> rm input_folder_copy/dataset_1/genome_1B/*
-> rm input_folder_copy/dataset_2/genome_2A/*
-> rm input_folder_copy/dataset_2/genome_2B/*
+> rm input_folder_copy/dataset_1/genome_1A/* input_folder_copy/dataset_1/genome_1B/*
+> rm input_folder_copy/dataset_2/genome_2A/* input_folder_copy/dataset_2/genome_2B/*
 > rm input_folder_copy/taxonomy/*
 > ```
 > c)
 > ```
 > cp -r input_folder input_folder_copy
-> rm input_folder_copy/dataset_1/genome_1A/*
-> rm input_folder_copy/dataset_1/genome_1B/*
-> rm input_folder_copy/dataset_2/genome_2A/*
-> rm input_folder_copy/dataset_2/genome_2B/*
+> rm input_folder_copy/dataset_1/genome_1A/* input_folder_copy/dataset_1/genome_1B/*
+> rm input_folder_copy/dataset_2/genome_2A/* input_folder_copy/dataset_2/genome_2B/*
+> rm input_folder_copy/taxonomy/*
+> ```
+> d)
+> ```
+> cp -r input_folder input_folder_copy
+> rm input_folder_copy/dataset_1/genome_1A/* /genome_1B/*
+> rm input_folder_copy/dataset_2/genome_2A/* /genome_2B/*
 > rm input_folder_copy/taxonomy/*
 > ```
 > > ## Solution
