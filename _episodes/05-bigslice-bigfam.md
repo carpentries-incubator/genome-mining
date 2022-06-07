@@ -18,7 +18,7 @@ keypoints:
 ---
 
 > ## Ejercicio `.challenge`
-> As we have seen the structure of the input folder for BigSlice is quite difficult to get. Imagine "Sekiro" wants to copy the directory structure to use it for future BigSlice inputs.
+> As we have seen the structure of the input folder for BiGSLICE is quite difficult to get. Imagine "Sekiro" wants to copy the directory structure to use it for future BigSlice inputs.
 > Consider the following directory structure:
 > ```
 >    └── input_folder/                    
@@ -77,6 +77,18 @@ keypoints:
 > > rm input_folder_copy/dataset_2/genome_2A/* input_folder_copy/dataset_2/genome_2B/*
 > > rm input_folder_copy/taxonomy/*
 > > ```
+> {: .solution}
+{: .challenge}
+
+> ## Exercise 2. `.challenge`  
+> Fill in the blank spaces to complete the command that would get the organism information from the .gbk file. 
+> 
+> grep ___________ -m1 ___________ .gbk 
+>  <p style="text-align: center;"> WORDS </p>
+> 
+>  
+> 
+> > ## Solution
 > {: .solution}
 {: .challenge}
 
