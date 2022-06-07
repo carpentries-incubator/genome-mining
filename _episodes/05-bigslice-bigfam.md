@@ -84,8 +84,8 @@ keypoints:
 > Fill in the blank spaces to complete the command that would get the organism information from the .gbk file. 
 > 
 > grep ___________ -m1 ____________ .gbk 
->  <p style="text-align: center;"> -------------------WORDS--------------------- </p>
->  <p> -B 3 &nbsp; --help </p>
+>  <p style="text-align: center;"> ------------------------------------WORDS-------------------------------------- </p>
+>  <p> -B 3 &nbsp; &nbsp; &nbsp; --help </p>
 >  
 > 
 > > ## Solution
