@@ -50,21 +50,6 @@ $ antismash --cb-general --cb-knownclusters --cb-subclusters --asf --pfam2go --s
 
 There are some extra analyses that can be done adn information that can be obtained.
 
---------
-### Options
---------
-
-| Command               | Description |
-| :---                  |    :----:   |
-| -h, --help            | Show this help text. |
-| --help-showall        | Show full lists of arguments on this help text. |
-|  -c CPUS, --cpus CPUS |  How many CPUs to use in parallel. (default: 1) |
-
-
-| Analysis option | Description |
-| :----: | :----: |
-| --cc-mibig                    | Run a comparison against the MIBiG dataset |
-
 ## Webpage
 AntiSMASH can be also used through this [web:](https://antismash.secondarymetabolites.org/#!/start)
 You will be asked to give your email. Then, the results will be sent to you and you will be allowed to donwload a folder with the annotations.
@@ -79,7 +64,7 @@ Briefly, on the "overview" page ´.HTML´ you can find all the regions found wit
 * **Type:** Type of the product detected by antiSMASH.
 * **From,To:** The location of the reagion (nucleotides).
 * **Most similar known cluster:** The closest compund from th MIBiG database.
-* **Similarity:** Percentage of genes within the closest known compound that have significant BLAS hit (The last two columns containing comparisons to the MiBIG database will only be shown if antiSMASH was run with the KnownClusterBlast option).
+* **Similarity:** Percentage of genes within the closest known compound that have significant BLAS hit (The last two columns containing comparisons to the MiBIG database will only be shown if antiSMASH was run with the KnownClusterBlast option ´--cc-mibig´).
 
 ## Webpage
 AntiSMASH can be also used through its [web platform version:](https://antismash.secondarymetabolites.org/#!/start)
@@ -92,6 +77,5 @@ You will be asked to give your email. Then, the results will be sent to you and 
 > > By calculating the difference between the initial position and the final position of the region.
 > {: .solution}
 {: .challenge}
-
 
 {% include links.md %}
