@@ -187,12 +187,12 @@ run_bigscape bigscape/bgcs_gbks/ bigscape/output_070622 --mix --hybrids-off --mo
 ~~~
 {: .bash}
 
-Once the process end, you will find in your terminal screen some basic results, 
+Once the process ends, you will find in your terminal screen some basic results, 
 such as the number of BGCs included in each type of network. In the output folder 
 you will find all the data.  
 Since BiG-SCAPE does not produce a file with the run information, it is useful 
 to copy the text printed on the screen to a file. Use `nano` to paste all the text 
-that BiG-SCAPE generated in a file named `bigscape.log` inside the folder `/output_060722/logs/`.
+that BiG-SCAPE generated in a file named `bigscape.log` inside the folder `output_060722/logs/`.
 
 
 To keep order in you directories move your `bigscape/` folder to the parent folder:
