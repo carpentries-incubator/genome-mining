@@ -18,6 +18,7 @@ keypoints:
 ---
 
 > ## Ejercicio `.challenge`
+> As we have seen the structure of the input folder for BigSlice is quite difficult to get. Imagine "Sekiro" wants to copy the directory structure to use it for future BigSlice inputs.
 > Consider the following directory structure:
 > ```
 >    └── input_folder/                    
