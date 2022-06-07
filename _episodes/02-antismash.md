@@ -62,7 +62,7 @@ Briefly, on the "overview" page ´.HTML´ you can find all the regions found wit
 
 * **Region:** The region number.
 * **Type:** Type of the product detected by antiSMASH.
-* **From,To:** The location of the reagion (nucleotides).
+* **From,To:** The location of the region (nucleotides).
 * **Most similar known cluster:** The closest compund from th MIBiG database.
 * **Similarity:** Percentage of genes within the closest known compound that have significant BLAS hit (The last two columns containing comparisons to the MiBIG database will only be shown if antiSMASH was run with the KnownClusterBlast option ´--cc-mibig´).
 
