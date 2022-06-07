@@ -3,7 +3,7 @@ title: "DeepBGC"
 teaching: 20
 exercises: 30
 questions:
-- "What is antiSMASH?"
+- "What is DeepBGC?"
 - "Which kind of analysis antiSMASH can perform?"
 - "Which files extension accepts antiSMASH?"
 objectives:
