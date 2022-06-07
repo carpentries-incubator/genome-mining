@@ -9,7 +9,7 @@ questions:
 objectives:
 - "Understand antiSMASH applications."
 - "Perform a Minimal antiSMASH run analysis."
-- "Explore several Streptococcus genomes by identifying their BGCs and types of their produced secondary metabolites."
+- "Explore several Streptococcus genomes by identifying their BGCs and types of secondary metabolites produced."
 keypoints:
 - "First key point. Brief Answer to questions. (antismash, genome mining, secondary metabolism, bacteria, bioactive coumpounds)"
 ---
