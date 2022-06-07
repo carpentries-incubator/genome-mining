@@ -81,14 +81,40 @@ keypoints:
 {: .challenge}
 
 > ## Exercise 2. `.challenge`  
+> If you use the head -n20 on one of your .gbk files, you will obtain an output like this
+>```
+>LOCUS       AAJO01000169.1          2501 bp    DNA     linear   UNK
+>DEFINITION  Streptococcus agalactiae 18RS21
+>ACCESSION   AAJO01000169.1
+>KEYWORDS    .
+>SOURCE      Streptococcus agalactiae 18RS21.
+>  ORGANISM  Streptococcus agalactiae 18RS21
+>            Bacteria; Terrabacteria group; Firmicutes; Bacilli;
+>            Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus
+>            agalactiae.
+>FEATURES             Location/Qualifiers
+>     source          1..2501
+>                     /mol_type="genomic DNA"
+>                     /db_xref="taxon:342613"
+>                     /genome_md5=""
+>                     /project="nselem35_342613"
+>                     /genome_id="342613.37"
+>                     /organism="Streptococcus agalactiae 18RS21"
+>     CDS             1..213
+>                     /db_xref="SEED:fig|342613.37.peg.1973"
+>                     /db_xref="GO:0003735"
+> ```
 > Fill in the blank spaces to complete the command that would get the organism information from the .gbk file. 
 > 
-> <p style="text-align: center;"> grep ___________ -m1 ____________ .gbk </p>
+> <p style="text-align: center;"> grep ___________ -m1 ____________ Streptococcus_agalactiae_18RS21.gbk </p>
 <!-- >  <p style="text-align: center;"> -------------------------------------------WORDS---------------------------------------------- </p> -->
 >  <p style="text-align: center;"> -B 3 &nbsp; &nbsp; &nbsp; -A 3 &nbsp; &nbsp; &nbsp; -a  &nbsp; &nbsp; &nbsp; 'Streptococcus' &nbsp; &nbsp; &nbsp; 'ORGANISM' &nbsp; &nbsp; &nbsp; 'gbk'</p>
 >  
 > 
 > > ## Solution
+> > ```
+> > grep 'ORGANISM' -m1 -A3 Streptococcus_agalactiae_18RS21.gbk
+> > ```
 > {: .solution}
 {: .challenge}
 
