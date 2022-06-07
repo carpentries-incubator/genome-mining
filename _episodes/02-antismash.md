@@ -18,19 +18,9 @@ keypoints:
 
 ## Introduction
 
-<div style="text-align: justify"> Many microbial genomes contain several biosynthetic gene clusters, which encode the biosynthesis of secondary metabolites. These molecules have shown some relevance. Their active compounds have shown: antimicrobials, antitumor, cholesterol-lowering, immunosuppressant, antiprotozoal, antihelminth, antiviral and anti-ageing activities, amongst others. The genes encoding the biosynthetic pathway responsible for the production of such a secondary metabolite are clustered together at a certain chromosome position (secondary metabolite biosynthesis gene cluster). The genetic architecture lets the possibility to detect secondary metabolite biosynthesis pathways by locating their gene clusters. Nowadays many genome sequences are available online. Based on profile hidden Markov models of genes that are specific for certain types of gene clusters, antiSMASH can accurately identify the gene clusters encoding secondary metabolites of all known broad chemical classes. antiSMASH not only detects the gene clusters, but also offers detailed sequence analysis.</div>
- 
-## Profile Hidden Markov Models
+<div style="text-align: justify"> Within microbial genoms we can find some specific regions that take part of the biosynthesis of secondary metabolites, these sections are know as biosynthetic gene clusters, which are relevant due to the possible applications that they may have, for example: antimicrobials, antitumor, cholesterol-lowering, immunosuppressant, antiprotozoal, antihelminth, antiviral and anti-ageing activities.
 
-### Definition
-
-Profile Hidden Markov's models are computational algorithms that predict protein structure identifying significant protein similarities letting a homologs detection. These probabilistic models:
-
-- Encapsulate evolutionary changes that occurred in a set of related sequences.
-
-Some applications are on gene finding, construction of genetic linkage maps (Turn multiple sequence alignment into a position-specific scoring system suitable for searching databases for remotely homologous sequences), and construction of physical maps. The most highlighted advantage is that this model has better gap dealing methods in proteins families.
-
-![profile Markov Hidden Models](https://upload.wikimedia.org/wikipedia/commons/7/71/A_profile_HMM_modelling_a_multiple_sequence_alignment.png)
+ Antismash is a pipline based on [profile hidden Markov models](https://en.wikipedia.org/wiki/Hidden_Markov_model#:~:text=A%20hidden%20Markov%20model%20(HMM,of%20in%20a%20known%20way.) that allow us to identify the gene clusters contained within genome sequences that encode secondary metabolites of all known broad chemical classes. </div>
 
 # run AntiSMASH 
 
