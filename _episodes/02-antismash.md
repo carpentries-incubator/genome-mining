@@ -38,13 +38,17 @@ You can run antiSMASH in two main ways **Minimal and Full-features run**, as fol
 ~~~
 $ antismash genome.gbk
 ~~~
+{: .language-bash}
 
 ## Full-featured run
 ~~~
 $ antismash --cb-general --cb-knownclusters --cb-subclusters --asf --pfam2go --smcog-trees genome.gbk
 ~~~
+{: .language-bash}
 
-However, there are many extra analyses that can be done. See the following sections to understand all the posibilities.
+# antiSMASH extra parameters
+
+There are some extra analyses that can be done adn information that can be obtained.
 
 --------
 ### Options
@@ -61,27 +65,13 @@ However, there are many extra analyses that can be done. See the following secti
 | :----: | :----: |
 | --cc-mibig                    | Run a comparison against the MIBiG dataset |
 
-
-Output options:
-
-  --output-dir OUTPUT_DIR
-                        Directory to write results to.
-  --output-basename OUTPUT_BASENAME
-                        Base filename to use for output files within the output directory.
-  --html-title HTML_TITLE
-                        Custom title for the HTML output page (default is input filename).
-  --html-description HTML_DESCRIPTION
-                        Custom description to add to the output.
-  --html-start-compact  Use compact view by default for overview page.
-
-
 ## Webpage
-AntiSMASH can be also used through this web: https://antismash.secondarymetabolites.org/#!/start 
+AntiSMASH can be also used through this [web:](https://antismash.secondarymetabolites.org/#!/start)
 You will be asked to give your email. Then, the results will be sent to you and you will be allowed to donwload a folder with the annotations.
 
 # Understanding the output
 
-The visualization of the results includes many diverse options. To understand all the possibilities, we suggest to read the following tutorial: https://docs.antismash.secondarymetabolites.org/understanding_output/ 
+The visualization of the results includes many diverse options. To understand all the possibilities, we suggest to read the following [tutorial:](https://docs.antismash.secondarymetabolites.org/understanding_output/)
 
 Briefly, on the "overview" page you will find the number and type of BGCs annotated in your genome. By clicking on a specific BGC, you will find its gene structure (Figure Xa), its module composition (only for somy BGC types) (Figure Xb), and the similarity of your cluster with already described BGCs and published in the antiSMASH database (Figure Xc) or in the MiBIG database (Figure Xd). 
 
