@@ -46,10 +46,6 @@ $ antismash --cb-general --cb-knownclusters --cb-subclusters --asf --pfam2go --s
 ~~~
 {: .language-bash}
 
-# antiSMASH extra parameters
-
-There are some extra analyses that can be done adn information that can be obtained.
-
 ## Webpage
 antiSMASH can be also used through this [web:](https://antismash.secondarymetabolites.org/#!/start)
 You will be asked to give your email. Then, the results will be sent to you and you will be allowed to donwload a folder with the annotations.
