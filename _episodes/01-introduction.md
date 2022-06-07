@@ -1,13 +1,13 @@
 ---
-title: "Introduction 1"
-teaching: 0
+title: "Introduction to genome Mining"
+teaching: 10
 exercises: 0
 questions:
-- "Key question (FIXME)"
+- "What is genome Mining?"
 objectives:
-- "First learning objective. (FIXME)"
+- "FIXME"
 keypoints:
-- "First key point. Brief Answer to questions. (FIXME)"
+- "Natural products are encoded in Biosynthetical Gene Clusters"
 ---
 FIXME
 
