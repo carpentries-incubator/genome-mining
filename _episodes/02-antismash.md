@@ -18,37 +18,33 @@ keypoints:
 
 ## Introduction
 
-<div style="text-align: justify"> Within microbial genoms we can find some specific regions that take part of the biosynthesis of secondary metabolites, these sections are know as biosynthetic gene clusters, which are relevant due to the possible applications that they may have, for example: antimicrobials, antitumor, cholesterol-lowering, immunosuppressant, antiprotozoal, antihelminth, antiviral and anti-ageing activities.
+Within microbial genoms we can find some specific regions that take part of the biosynthesis of secondary metabolites, these sections are know as biosynthetic gene clusters, which are relevant due to the possible applications that they may have, for example: antimicrobials, antitumor, cholesterol-lowering, immunosuppressant, antiprotozoal, antihelminth, antiviral and anti-ageing activities.
 
- Antismash is a pipline based on [profile hidden Markov models](https://en.wikipedia.org/wiki/Hidden_Markov_model#:~:text=A%20hidden%20Markov%20model%20(HMM,of%20in%20a%20known%20way.) that allow us to identify the gene clusters contained within genome sequences that encode secondary metabolites of all known broad chemical classes. </div>
+antiSMASH is a pipline based on [profile hidden Markov models](https://en.wikipedia.org/wiki/Hidden_Markov_model#:~:text=A%20hidden%20Markov%20model%20(HMM,of%20in%20a%20known%20way.) that allow us to identify the gene clusters contained within genome sequences that encode secondary metabolites of all known broad chemical classes.
 
-# run AntiSMASH 
+# antiSMASH input files
 
-The commandline usage of antismash is detailed in the following repositories: https://docs.antismash.secondarymetabolites.org/command_line/ and https://github.com/antismash/antismash
+  antiSMASH pipeline can work with three different file formats ´GenBank´, ´FASTA´ and ´EMBL´. Both ´GeneBank´ and ´EMBL´ formats include genome annotations, while a ´FASTA´ file just comprises the nucleotides of each genome contig. 
 
-In sum, you will need to use your genome as the input (see "Arguments" section). Then, antiSMASH will create an output folder for each of your genomes. Within this folder, you will find a single .gbk file for each of the detected Biosynthetic Gene Clusters (we will use these files for subsequent analyses) and a .html file, among others files. By clicking in the .html file you can explore the antiSMASH annotations.
 
-An example of a basic usage is:
+# run antiSMASH 
+
+The commandline usage of antismash is detailed in the following [repositories:](https://docs.antismash.secondarymetabolites.org/command_line/)
+
+In summary, you will need to use your genome as the input. Then, antiSMASH will create an output folder for each of your genomes. Within this folder, you will find a single ´.gbk´ file for each of the detected Biosynthetic Gene Clusters (we will use these files for subsequent analyses) and a ´.html´ file, among others files. By openning the ´.html´ file you can explore the antiSMASH annotations.
+
+You can run antiSMASH in two main ways **Minimal and Full-features run**, as follows:
+## Minimal run
 ~~~
 $ antismash genome.gbk
 ~~~
 
+## Full-featured run
+~~~
+$ antismash --cb-general --cb-knownclusters --cb-subclusters --asf --pfam2go --smcog-trees genome.gbk
+~~~
+
 However, there are many extra analyses that can be done. See the following sections to understand all the posibilities.
-
-## Arguments
-
-antiSMASH can work with three different
-arguments:
-  SEQUENCE  GenBank/EMBL/FASTA file(s) containing DNA.
-
-  antiSMASH package can work with three different file formats GenBank, FASTA and EMBL. Both GeneBank nad EMBL formats include genome annotations, while a FASTA file just comprises the nucleotides of each genome contig. 
-
-1. GenBank format consists of two main sections, annotation and a sequence. The annotation section begins at the "Locus" header and the sequence sections at the "origin" word. Finally, the end section can be recognized due to the mark "//". AntiSMASH developers recomend using RAST (https://rast.nmpdr.org/) genome annotations as input file.
-
-2. EMBL format also includes gene annotations. Each entry starts with its identifier ("ID "), then the sequence is preceded by a line starting with "SQ", and again, the end of the sequence is recognized by two slashes ("//"). 
-
-3. Fasta format consists of one line which starts with a ">" sign, followed by a textual description of sequence (nucleotides). Since it is not part of the official of the format, softwares can choose to ignore this, when it is present. One or more lines containing the sequences itself. In case you use your un-annotated genome in fasta file format, antiSMASH will perform a gene calling through the software selected with "--genefinding-tool".
-
 
 --------
 ### Options
@@ -63,30 +59,8 @@ arguments:
 
 | Analysis option | Description |
 | :----: | :----: |
-| --taxon {bacteria,fungi}      | Taxonomic classification of input sequence. (default: bacteria) |
-| --fullhmmer                   | Run a whole-genome HMMer analysis. |  
-| --cassis                      | Motif based prediction of SM gene cluster regions. |
-| --clusterhmmer                | Run a cluster-limited HMMer analysis. |
-| --tigrfam                     | Annotate clusters using TIGRFam profiles. |
-| --smcog-trees                 | Generate phylogenetic trees of sec. met. cluster orthologous groups. |
-| --tta-threshold TTA_THRESHOLD | Lowest GC content to annotate TTA codons at (default: 0.65). |
-| --cb-general                  | Compare identified clusters against a database of antiSMASH-predicted clusters. |
-| --cb-subclusters              | Compare identified clusters against known subclusters responsible for synthesising precursors. |
-| --cb-knownclusters            | Compare identified clusters against known gene clusters from the MIBiG database. |
-| --asf                         | Run active site finder analysis. |
-| --pfam2go                     | Run Pfam to Gene Ontology mapping module. |
-| --rre                         | Run RREFinder precision mode on all RiPP gene clusters. |
 | --cc-mibig                    | Run a comparison against the MIBiG dataset |
 
-Gene finding options (ignored when ORFs are annotated):
-
-  --genefinding-tool {glimmerhmm,prodigal,prodigal-m,none,error}
-                        Specify algorithm used for gene finding: GlimmerHMM, Prodigal,
-                        Prodigal Metagenomic/Anonymous mode, or none. The 'error' option
-                        will raise an error if genefinding is attempted. The 'none' option
-                        will not run genefinding. (default: error).
-  --genefinding-gff3 GFF3_FILE
-                        Specify GFF3 file to extract features from.
 
 Output options:
 
