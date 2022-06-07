@@ -11,6 +11,20 @@ keypoints:
 ---
 FIXME
 
-# Ola ke ase?
+# CORASON
+CORASON is a visual tool that identifies gene clusters that share a common genomic core and reconstructs multi-locus phylogenies of these gene clusters to explore their evolutionary relatioinships.
+
+Input: query gene and RAST genome database.
+Output: SVG graph with clusters sorted according to the multi-locus phylogeny of the common core.
+
+CORASON was developed to find and prioritize biosynthetic gene clusters, but can be used for any kind of clusters.
+
+Advantages
+-SVG graphs Scalable graphs that allows metadata easy display.
+-Interactive CORASON is not a static database, it allows you to explore your own genomes.
+-Reproducibility CORASON runs on docker, which allows to always perform the same analysis even if you change your Linux/perl/blast/muscle/Gblocks/quicktree distributions.
+## CORASON conda 
+Here we are testing a new stand-alone corason in a conda environment: https://github.com/miguel-mx/corason-conda
+with gbk files
 
 {% include links.md %}
