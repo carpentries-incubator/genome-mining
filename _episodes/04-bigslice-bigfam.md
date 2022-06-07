@@ -69,6 +69,13 @@ keypoints:
 > rm input_folder_copy/taxonomy/*
 > ```
 > > ## Solution
+> > c)
+> > ```
+> > cp -r input_folder input_folder_copy
+> > rm input_folder_copy/dataset_1/genome_1A/* input_folder_copy/dataset_1/genome_1B/*
+> > rm input_folder_copy/dataset_2/genome_2A/* input_folder_copy/dataset_2/genome_2B/*
+> > rm input_folder_copy/taxonomy/*
+> > ```
 > {: .solution}
 {: .challenge}
 
