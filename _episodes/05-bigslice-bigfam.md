@@ -85,7 +85,7 @@ keypoints:
 > 
 > grep ___________ -m1 ____________ .gbk 
 >  <p style="text-align: center;"> ------------------------------------WORDS-------------------------------------- </p>
->  <p style="text-align: center;"> -B 3 &nbsp; &nbsp; &nbsp; --help </p>
+>  <p style="text-align: center;"> -B 3 &nbsp; &nbsp; &nbsp; --help &nbsp; &nbsp; &nbsp; -a  &nbsp; &nbsp; &nbsp; 'Streptococcus &nbsp; &nbsp; &nbsp; 'ORGANISM' &nbsp; &nbsp; &nbsp; 'gbk'</p>
 >  
 > 
 > > ## Solution
