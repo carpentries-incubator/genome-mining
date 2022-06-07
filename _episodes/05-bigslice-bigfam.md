@@ -85,7 +85,7 @@ keypoints:
 > 
 > grep ___________ -m1 ____________ .gbk 
 >  <p style="text-align: center;"> ------------------------------------WORDS-------------------------------------- </p>
->  <p> -B 3 &nbsp; &nbsp; &nbsp; --help </p>
+>  <p style="text-align: center;"> -B 3 &nbsp; &nbsp; &nbsp; --help </p>
 >  
 > 
 > > ## Solution
