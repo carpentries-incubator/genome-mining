@@ -116,11 +116,7 @@ keypoints:
 >            Bacteria; Terrabacteria group; Firmicutes; Bacilli;
 >            Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus
 >            agalactiae.
-> ```
-> 
-<!-- >  <p style="text-align: center;"> -------------------------------------------WORDS---------------------------------------------- </p> -->
-
->  
+> ```  
 > 
 > > ## Solution
 > > ```
@@ -128,6 +124,5 @@ keypoints:
 > > ```
 > {: .solution}
 {: .challenge}
-
 
 {% include links.md %}
