@@ -122,5 +122,226 @@ You can also customize and re-renderize the similarity networks of your results 
 
 - Kautsar, S. A., Blin, K., Shaw, S., Navarro-Muñoz, J. C., Terlouw, B. R., van der Hooft, J. J., ... & Medema, M. H. (2020). MIBiG 2.0: a repository for biosynthetic gene clusters of known function. Nucleic acids research, 48(D1), D454-D458.
 
+## Corrida de BiG-SCAPE hecha por Clau el 070622
+
+~~~
+pwd
+~~~
+{: .bash}
+
+~~~
+/home/betterlab/GenomeMining/datos/copia-antis-output
+~~~
+{: .output}
+
+
+~~~
+ls Streptococcus_agalactiae_*/*region*gbk | wc -l
+~~~
+{: .bash}
+
+~~~
+13
+~~~
+{: .output}
+
+Copy the following script to a file named `change-name.sh` using `nano`:
+~~~
+# This script is to rename the AntiSMASH GBKs for them to include the species and strain names, taken from the folder name.
+# The argument it requires is the name of the folder with the AntiSMASH output, which must NOT contain a slash at the end.
+
+# Usage for one AntiSMASH output folder:
+# 	sh change-names.sh <folder>
+
+# Usage for multiple AntiSMASH output folders:
+# 	for species in <output folder pattern*>
+# 		do
+# 			sh change-names.sh $species
+# 		done
+
+
+
+ls -1 "$1"/*region*gbk | while read line # enlist the gbks of all regions in the folder and start a while loop
+ do
+	dir=$(echo $line | cut -d'/' -f1) # save the folder name in a variable 
+	file=$(echo $line | cut -d'/' -f2) # save the file name in a variable
+    for directory in $dir
+        do
+        	cd $directory # enter the folder
+            newfile=$(echo $dir-$file) # make a new variable that fuses the folder name with the file name
+ 			echo "Renaming" $file " to" $newfile # print a message showing the old and new file names
+ 			mv $file $newfile # rename
+ 			cd .. # return to main folder befor it beggins again
+ 		done
+ done
+~~~
+{: .bash}
+
+~~~
+for species in Streptococcus_agalactiae_*
+	do
+ 		sh change-names.sh $species
+ 	done
+
+~~~
+{: .bash}
+
+~~~
+ls Streptococcus_agalactiae_*/*region*gbk | wc -l
+~~~
+{: .bash}
+
+~~~
+13
+~~~
+{: .output}
+
+~~~
+mkdir -p bigscape/bgcs_gbks/
+~~~
+{: .bash}
+
+~~~
+scp Streptococcus_agalactiae_*/*region*gbk bigscape/bgcs_gbks/
+~~~
+{: .bash}
+
+~~~
+ls bigscape/bgcs_gbks/
+~~~
+{: .bash}
+
+~~~
+Streptococcus_agalactiae_18RS21-AAJO01000016.1.region001.gbk
+Streptococcus_agalactiae_18RS21-AAJO01000043.1.region001.gbk
+Streptococcus_agalactiae_18RS21-AAJO01000226.1.region001.gbk
+Streptococcus_agalactiae_515-AAJP01000027.1.region001.gbk
+Streptococcus_agalactiae_515-AAJP01000037.1.region001.gbk
+Streptococcus_agalactiae_A909-CP000114.1.region001.gbk
+Streptococcus_agalactiae_A909-CP000114.1.region002.gbk
+Streptococcus_agalactiae_CJB111-AAJQ01000010.1.region001.gbk
+Streptococcus_agalactiae_CJB111-AAJQ01000025.1.region001.gbk
+Streptococcus_agalactiae_COH1-AAJR01000002.1.region001.gbk
+Streptococcus_agalactiae_COH1-AAJR01000044.1.region001.gbk
+Streptococcus_agalactiae_H36B-AAJS01000020.1.region001.gbk
+Streptococcus_agalactiae_H36B-AAJS01000117.1.region001.gbk
+~~~
+{: .bash}
+
+Run bigscape:
+
+~~~
+run_bigscape bigscape/bgcs_gbks/ bigscape/output_070622 --mix --hybrids-off --mode auto
+~~~
+{: .bash}
+
+~~~
+input bgcs_gbks
+output output_070622
+Running BiG-SCAPE
+
+
+   - - Processing input files - -
+ Including files with one or more of the following strings in their filename: 'cluster', 'region'
+ Skipping files with one or more of the following strings in their filename: 'final'
+
+Importing GenBank files
+
+ Starting with 13 files
+ Files that had its sequence extracted: 13
+
+Creating output directories
+
+Trying threading on 32 cores
+
+Predicting domains using hmmscan
+ Predicting domains for 13 fasta files
+ Finished generating domtable files.
+
+Parsing hmmscan domtable files
+ Processing 13 domtable files
+  No domains where found in Streptococcus_agalactiae_18RS21-AAJO01000226.1.region001.domtable. Removing it from further analysis
+ New domain sequences to be added; cleaning domains folder
+ Finished generating pfs and pfd files.
+
+Processing domains sequence files
+ Adding sequences to corresponding domains file
+ Reading the ordered list of domains from the pfs files
+ Creating arrower-like figures for each BGC
+  Parsing hmm file for domain information
+    Done
+  Found file with domains colors
+  Reading BGC information and writing SVG
+ Finished creating figures
+
+
+   - - Calculating distance matrix - -
+Performing multiple alignment of domain sequences
+
+ Using hmmalign
+launch_hmmalign took 1.050 seconds
+ Trying to read domain alignments (*.algn files)
+
+Generating distance network files with ALL available input files
+   Writing the complete Annotations file for the complete set
+
+ Mixing all BGC classes
+
+  Mix (12 BGCs)
+  Calculating all pairwise distances
+Ignored unknown character X (seen 1 times)
+generate_network took 0.055 seconds
+  Writing output files
+  Calling Gene Cluster Families
+  Cutoff: 0.3
+
+ Working for each BGC class
+  Sorting the input BGCs
+
+
+  Others (6 BGCs)
+   Writing annotation files
+   Calculating all pairwise distances
+Ignored unknown character X (seen 1 times)
+generate_network took 0.046 seconds
+   Writing output files
+  Calling Gene Cluster Families
+  Cutoff: 0.3
+
+  PKSother (6 BGCs)
+   Writing annotation files
+   Calculating all pairwise distances
+generate_network took 0.102 seconds
+   Writing output files
+  Calling Gene Cluster Families
+  Cutoff: 0.3
+
+
+	Main function took 17.353 s
+	~~~
+{: .output}
+
+Move your `bigscape/` folder to the parent folder:
+~~~
+mv bigscape/ ../
+~~~
+{: .bash}
+
+Go to your local machine and locate in a folder where you want to store your BiG-SCAPE results.
+
+Copy your `output_070622/` folder to your local machine:
+
+~~~
+scp -r betterlab@132.248.196.38:/home/betterlab/GenomeMining/datos/bigscape/output_070622/ .
+~~~
+{: .bash}
+
+Open your `index.html` with a browser:
+~~~
+firefox output_070622/index.html # If you have Firefox available
+~~~
+{: .bash}
+
+
 {% include links.md %}
 
