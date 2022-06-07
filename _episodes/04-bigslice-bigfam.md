@@ -11,6 +11,16 @@ keypoints:
 ---
 FIXME
 
-# Ola ke ase?
+> ## Ejercicio `.challenge`
+> Consider the following directory structure:
+>    ├── data_training                    
+>    │   ├── data.csv          
+>    │   ├── labels.csv         
+>    │   └── samples.csv                
+>    └── ...
+> > ## Solution
+> {: .solution}
+{: .challenge}
+
 
 {% include links.md %}
