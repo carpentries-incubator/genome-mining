@@ -20,7 +20,7 @@ keypoints:
 > ## Ejercicio `.challenge`
 > Consider the following directory structure:
 > ```
->    └── input folder/                    
+>    └── input_folder/                    
 >        ├── datasets.tsv           
 >        ├── dataset_1/
 >        |   ├── genome_1A/
