@@ -1,5 +1,5 @@
 ---
-title: "antiSMASH"
+title: "Secondary metabolite biosynthesis gene cluster identification"
 teaching: 20
 exercises: 30
 questions:
@@ -14,7 +14,7 @@ keypoints:
 - "First key point. Brief Answer to questions. (antismash, genome mining, secondary metabolism, bacteria, bioactive coumpounds)"
 ---
 
-# antiSMASH
+# Secondary metabolite biosynthesis gene cluster identification
 
 ## Introduction
 
@@ -22,25 +22,25 @@ Within microbial genoms we can find some specific regions that take part of the 
 
 antiSMASH is a pipline based on [profile hidden Markov models](https://www.ebi.ac.uk/training/online/courses/pfam-creating-protein-families/what-are-profile-hidden-markov-models-hmms/#:~:text=Profile%20HMMs%20are%20probabilistic%20models,the%20alignment%2C%20see%20Figure%202) that allow us to identify the gene clusters contained within genome sequences that encode secondary metabolites of all known broad chemical classes.
 
-# antiSMASH input files
+## antiSMASH input files
 
   antiSMASH pipeline can work with three different file formats ´GenBank´, ´FASTA´ and ´EMBL´. Both ´GeneBank´ and ´EMBL´ formats include genome annotations, while a ´FASTA´ file just comprises the nucleotides of each genome contig. 
 
 
-# run antiSMASH 
+## run antiSMASH 
 
 The commandline usage of antismash is detailed in the following [repositories:](https://docs.antismash.secondarymetabolites.org/command_line/)
 
 In summary, you will need to use your genome as the input. Then, antiSMASH will create an output folder for each of your genomes. Within this folder, you will find a single ´.gbk´ file for each of the detected Biosynthetic Gene Clusters (we will use these files for subsequent analyses) and a ´.html´ file, among others files. By openning the ´.html´ file you can explore the antiSMASH annotations.
 
 You can run antiSMASH in two main ways **Minimal and Full-features run**, as follows:
-## Minimal run
+### Minimal run
 ~~~
 $ antismash genome.gbk
 ~~~
 {: .language-bash}
 
-## Full-featured run
+### Full-featured run
 ~~~
 $ antismash --cb-general --cb-knownclusters --cb-subclusters --asf --pfam2go --smcog-trees genome.gbk
 ~~~
@@ -65,7 +65,7 @@ $ antismash --cb-general --cb-knownclusters --cb-subclusters --asf --pfam2go --s
 antiSMASH can be also used through this [web:](https://antismash.secondarymetabolites.org/#!/start)
 You will be asked to give your email. Then, the results will be sent to you and you will be allowed to donwload a folder with the annotations.
 
-# Understanding the output
+## Understanding the output
 
 The visualization of the results includes many diverse options. To understand all the possibilities, we suggest to read the following [tutorial:](https://docs.antismash.secondarymetabolites.org/understanding_output/)
 
@@ -76,10 +76,6 @@ Briefly, on the "overview" page ´.HTML´ you can find all the regions found wit
 * **From,To:** The location of the region (nucleotides).
 * **Most similar known cluster:** The closest compund from th MIBiG database.
 * **Similarity:** Percentage of genes within the closest known compound that have significant BLAS hit (The last two columns containing comparisons to the MiBIG database will only be shown if antiSMASH was run with the KnownClusterBlast option ´--cc-mibig´).
-
-## Webpage
-antiSMASH can be also used through its [web platform version:](https://antismash.secondarymetabolites.org/#!/start)
-You will be asked to give your email. Then, the results will be sent to you and you will be allowed to donwload a folder with the annotations.
 
 > ## Exercise 2: Regions
 > How can you calculate the size of a region?
