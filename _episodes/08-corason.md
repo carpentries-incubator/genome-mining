@@ -27,12 +27,12 @@ Advantages
 Here we are testing a new stand-alone [corason in a conda environment](https://github.com/miguel-mx/corason-conda)  
 with gbk input-files
 `conda activate corason`  
-`git clone https://github.com/miguel-mx/corason-conda.git`  
-`cd corason-conda/EXAMPLE2`    
-`cp  ~/GenomeMining/datos/gbk/ CORASON_GENOMES`     
+`git clone https://github.com/miguel-mx/corason-conda.git`    
+`cd corason-conda/EXAMPLE2`      
+`cp   ~/dc_workshop/results/annotated/*gbk CORASON_GENOMES`       
 cpsG query from [polysaccharide BGC](https://mibig.secondarymetabolites.org/repository/BGC0000744/index.html#r1c1) 
-`../CORASON/corason.pl -q cpsg.query -gbk -s GBKS/agalactiae_COH1_prokka.gbk `
-` mv output/* . `
+`../CORASON/corason.pl -q cpsg.query -gbk -s GBKS/agalactiae_COH1_prokka.gbk `  
+` mv output/* . `   
 `../CORASON/corason.pl -q cpsg.query -s 100006  -rast_ids Corason_Rast.IDs`
 `scp (remoto)/corason-conda/EXAMPLE2/output/cpsg.query-output  Downloads/.`
 
