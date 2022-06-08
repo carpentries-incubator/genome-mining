@@ -45,9 +45,9 @@ perl startevominig
 `perl startevomining.pl -g GENOMES -r  Corason_Rast.IDs`
 
 ## GEtting results
-`scp ~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ ALL_curado.fasta_MiBIG_DB.faa_GENOMES/1.tree ~/Downloads/.`  
+`scp betterlab@132.248.196.38:~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ ALL_curado.fasta_MiBIG_DB.faa_GENOMES/1.tree ~/Downloads/.`  
 
-`scp ~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ ALL_curado.fasta_MiBIG_DB.faa_GENOMES/1.csv ~/Downloads`   
+`scp betterlab@132.248.196.38:~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ ALL_curado.fasta_MiBIG_DB.faa_GENOMES/1.csv ~/Downloads`   
 
 To explore EvoMining outputs upload 1.tree and 1.csv files to [microReact](https://microreact.org/)  
 
