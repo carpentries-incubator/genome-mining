@@ -1,10 +1,10 @@
 ---
-title: "EvoMining"
+title: "Evolutionary Genome Mining"
 teaching: 20
 exercises: 30
 questions:
-- "What is antiSMASH?"
-- "Which kind of analysis antiSMASH can perform?"
+- "What is Evolutionary Genome Mining?"
+- "Which kind of BGCs can EvoMining find?"
 - "Which files extension accepts antiSMASH?"
 objectives:
 - "Understand how antiSMASH applications."
