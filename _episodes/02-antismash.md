@@ -25,14 +25,14 @@ antiSMASH is a pipline based on [profile hidden Markov models](https://www.ebi.a
 
 ## antiSMASH input files
 
-  antiSMASH pipeline can work with three different file formats ´GenBank´, ´FASTA´ and ´EMBL´. Both ´GeneBank´ and ´EMBL´ formats include genome annotations, while a ´FASTA´ file just comprises the nucleotides of each genome contig. 
+  antiSMASH pipeline can work with three different file formats `GenBank`, `FASTA` and `EMBL`. Both `GeneBank` and `EMBL` formats include genome annotations, while a `FASTA` file just comprises the nucleotides of each genome contig. 
 
 
 ## How to run antiSMASH 
 
 The commandline usage of antismash is detailed in the following [repositories:](https://docs.antismash.secondarymetabolites.org/command_line/)
 
-In summary, you will need to use your genome as the input. Then, antiSMASH will create an output folder for each of your genomes. Within this folder, you will find a single ´.gbk´ file for each of the detected Biosynthetic Gene Clusters (we will use these files for subsequent analyses) and a ´.html´ file, among others files. By openning the ´.html´ file you can explore the antiSMASH annotations.
+In summary, you will need to use your genome as the input. Then, antiSMASH will create an output folder for each of your genomes. Within this folder, you will find a single `.gbk` file for each of the detected Biosynthetic Gene Clusters (we will use these files for subsequent analyses) and a `.html` file, among others files. By openning the `.html` file you can explore the antiSMASH annotations.
 
 You can run antiSMASH in two main ways **Minimal and Full-features run**, as follows:
 ### Minimal run
@@ -69,7 +69,7 @@ $ conda activate GenomeMining
 ~~~
 {: .source}
 
-Second, run the antiSMASH command shown earlier in this lesson on the data ´.gbk´ or ´.fasta´ files. The command can be executed on one single files, all the files contained within a folder and on specific list of files, we showed you how you can perform these different cases:
+Second, run the antiSMASH command shown earlier in this lesson on the data `.gbk` or `.fasta` files. The command can be executed on one single files, all the files contained within a folder and on specific list of files, we showed you how you can perform these different cases:
 
 #### Case I - One single files
 Let's choose the ´Streptococcus_agalactiae_18RS21.gbk´ file
@@ -79,7 +79,7 @@ $ antismash Streptococcus_agalactiae_18RS21.gbk
 {: .source}
 
 #### Case II - Specific files
-Let's imagine you want to run antismash only on following three specific files ´Streptococcus_agalactiae_18RS21.gbk´, ´Streptococcus_agalactiae_515.gbk´ and ´Streptococcus_agalactiae_A909.gbk´, so you could make use of ´for´ tool. As the following example.
+Let's imagine you want to run antismash only on following three specific files `Streptococcus_agalactiae_18RS21.gbk`, `Streptococcus_agalactiae_515.gbk` and `Streptococcus_agalactiae_A909.gbk`, so you could make use of `for` tool. As the following example.
 ~~~
 for gbk_file in Streptococcus_agalactiae_18RS21.gbk Streptococcus_agalactiae_515.gbk Streptococcus_agalactiae_A909.gbk
 do
@@ -96,6 +96,13 @@ do
 done
 ~~~
 {: .source}
+
+For these lesson we will use the third case code. As outcomes you should get a folder comprised mainly by the following files:
+* **`.gbk` files** For each Biosynthetic Gene cluster region found.
+* **`.json` file** To know the input file name, the antiSMASH used version and the regions data (id,sequence_data)
+* **`index.html` file** To visualize the outcomes from the analysis.
+
+
 
 ## Webpage
 antiSMASH can be also used through this [web:](https://antismash.secondarymetabolites.org/#!/start)
