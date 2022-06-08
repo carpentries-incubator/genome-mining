@@ -359,7 +359,7 @@ $ tree -F
 > ~~~
 > {: .bash}
 > > ## Solution
-> > First we need to copy the whole directory to make an input_folder_copy. After that we want to erase the files inside the directories dataset_1/genome_1A, dataset_1/genome_1B, dataset_2/genome_2A, dataset2/genome_2B and taxonomy/
+> > First we need to copy the whole directory to make an input_folder_copy. After that we want to erase the files inside the directories dataset_1/genome_1A, dataset_1/genome_1B, dataset_2/genome_2A, dataset2/genome_2B and taxonomy/ <br>
 > > c)
 > > ~~~
 > > $ cp -r input_folder input_folder_copy
