@@ -71,14 +71,14 @@ $ conda activate GenomeMining
 
 Second, run the antiSMASH command shown earlier in this lesson on the data `.gbk` or `.fasta` files. The command can be executed on one single files, all the files contained within a folder and on specific list of files, we showed you how you can perform these different cases:
 
-#### Case I - One single files
+#### **Case I** - One single files
 Let's choose the ´Streptococcus_agalactiae_18RS21.gbk´ file
 ~~~
-$ antismash Streptococcus_agalactiae_18RS21.gbk
+$ antismash Streptococcus_agalactiae_A909.gbk
 ~~~
 {: .source}
 
-#### Case II - Specific files
+#### **Case II** - Specific files
 Let's imagine you want to run antismash only on following three specific files `Streptococcus_agalactiae_18RS21.gbk`, `Streptococcus_agalactiae_515.gbk` and `Streptococcus_agalactiae_A909.gbk`, so you could make use of `for` tool. As the following example.
 ~~~
 for gbk_file in Streptococcus_agalactiae_18RS21.gbk Streptococcus_agalactiae_515.gbk Streptococcus_agalactiae_A909.gbk
@@ -88,7 +88,7 @@ done
 ~~~
 {: .source}
 
-#### Case III - All files in a folder
+#### **Case III** - All files in a folder
 ~~~
 for gbk_file in *.gbk
 do
