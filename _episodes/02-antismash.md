@@ -28,7 +28,7 @@ antiSMASH is a pipline based on [profile hidden Markov models](https://www.ebi.a
   antiSMASH pipeline can work with three different file formats ´GenBank´, ´FASTA´ and ´EMBL´. Both ´GeneBank´ and ´EMBL´ formats include genome annotations, while a ´FASTA´ file just comprises the nucleotides of each genome contig. 
 
 
-## run antiSMASH 
+## How to run antiSMASH 
 
 The commandline usage of antismash is detailed in the following [repositories:](https://docs.antismash.secondarymetabolites.org/command_line/)
 
@@ -61,6 +61,9 @@ $ antismash --cb-general --cb-knownclusters --cb-subclusters --asf --pfam2go --s
 > {: .solution}
 {: .challenge}
 
+## Run your own antiSMASH analysis :smiley:
+
+First, we need to activate our conda environment
 
 ## Webpage
 antiSMASH can be also used through this [web:](https://antismash.secondarymetabolites.org/#!/start)
