@@ -15,7 +15,7 @@ keypoints:
 - "First key point. Brief Answer to questions. (antismash, genome mining, secondary metabolism, bacteria, bioactive coumpounds)"
 ---
 
-# Secondary metabolite biosynthesis gene cluster identification
+# antiSMASH
 
 ## Introduction
 
