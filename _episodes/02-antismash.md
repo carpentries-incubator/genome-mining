@@ -6,10 +6,11 @@ questions:
 - "What is antiSMASH?"
 - "Which kind of analysis antiSMASH can perform?"
 - "Which files extension accepts antiSMASH?"
+- "How can I perform an antiSMASH analysis?"
 objectives:
 - "Understand antiSMASH applications."
 - "Perform a Minimal antiSMASH run analysis."
-- "Explore several Streptococcus genomes by identifying their BGCs and types of secondary metabolites produced."
+- "Explore several *Streptococcus* genomes by identifying the BGCs presece and the types of secondary metabolites produced."
 keypoints:
 - "First key point. Brief Answer to questions. (antismash, genome mining, secondary metabolism, bacteria, bioactive coumpounds)"
 ---
@@ -18,7 +19,7 @@ keypoints:
 
 ## Introduction
 
-Within microbial genoms we can find some specific regions that take part of the biosynthesis of secondary metabolites, these sections are know as biosynthetic gene clusters, which are relevant due to the possible applications that they may have, for example: antimicrobials, antitumor, cholesterol-lowering, immunosuppressant, antiprotozoal, antihelminth, antiviral and anti-ageing activities.
+Within microbial genomes we can find some specific regions that take part of the biosynthesis of secondary metabolites, these sections are know as biosynthetic gene clusters, which are relevant due to the possible applications that they may have, for example: antimicrobials, antitumor, cholesterol-lowering, immunosuppressant, antiprotozoal, antihelminth, antiviral and anti-ageing activities.
 
 antiSMASH is a pipline based on [profile hidden Markov models](https://www.ebi.ac.uk/training/online/courses/pfam-creating-protein-families/what-are-profile-hidden-markov-models-hmms/#:~:text=Profile%20HMMs%20are%20probabilistic%20models,the%20alignment%2C%20see%20Figure%202) that allow us to identify the gene clusters contained within genome sequences that encode secondary metabolites of all known broad chemical classes.
 
