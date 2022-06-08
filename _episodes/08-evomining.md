@@ -34,8 +34,8 @@ output:
  
  Run docker container  
 `docker run --rm -i -t -v $(pwd):/var/www/html/EvoMining/exchange -p 8080:80 nselem/evomining:latest /bin/bash   `    
-    <a href="../fig/02_04_01.png">
-  <img src="../fig/02_04_01.png" alt="Aquí va el texto que describe a la imagen." />
+    <a href="../fig/tree.png">
+  <img src="../fig/tree.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
 However, sometimes the port 80 is bussy, on that case you can use other ports like 8080 or 8084:    
 `$ docker run --rm -i -t -v $(pwd):/var/www/html/EvoMining/exchange -p 8080:80 nselem/evomining:latest /bin/bash`  
