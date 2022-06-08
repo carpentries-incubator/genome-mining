@@ -19,6 +19,15 @@ The antiSMASH database provides researchers with an easy to use, up-to-date coll
 
 > ![Forking Repositories]({{ page.root }}/fig/antiSMASH_query.png)
 
+## Browsing and Querying the antiSMASH database
+
+1. Select “Browse“ on the top menu bar 
+2. Either select “Query”
+
+For simple queries, such as “Streptococcus agalactiae” or searching for a specific strain 
+you can use the “Simple search”  functionality.
+
+
 
 # MIBiG Database
 The Minimum Information about a Biosynthetic Gene cluster (MIBiG) is a database that facilitates consistent and systematic deposition and retrieval of data on biosynthetic gene clusters. MIBiG provides a robust community standard for annotations and metadata on biosynthetic gene clusters and their molecular products. It will empower next-generation research on the biosynthesis, chemistry and ecology of broad classes of societally relevant bioactive secondary metabolites, guided by robust experimental evidence and rich metadata components.
