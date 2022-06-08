@@ -44,40 +44,45 @@ keypoints:
 > {: .output}
 > Which would be the commands to copy the directory structure without the files (just the folders)? <br>
 > a)
-> ```
+> ~~~
 > cp -r input_folder input_folder_copy
 > cd input_foder_copy
 > rm -r
-> ```
+> ~~~
+> {: .laguage-bash}
 > b)
-> ```
+> ~~~
 > mv -r input_folder input_folder_copy
 > rm input_folder_copy/dataset_1/genome_1A/* input_folder_copy/dataset_1/genome_1B/*
 > rm input_folder_copy/dataset_2/genome_2A/* input_folder_copy/dataset_2/genome_2B/*
 > rm input_folder_copy/taxonomy/*
-> ```
+> ~~~
+> {: .laguage-bash}
 > c)
-> ```
+> ~~~
 > cp -r input_folder input_folder_copy
 > rm input_folder_copy/dataset_1/genome_1A/* input_folder_copy/dataset_1/genome_1B/*
 > rm input_folder_copy/dataset_2/genome_2A/* input_folder_copy/dataset_2/genome_2B/*
 > rm input_folder_copy/taxonomy/*
-> ```
+> ~~~
+> {: .laguage-bash}
 > d)
-> ```
+> ~~~
 > cp -r input_folder input_folder_copy
 > rm input_folder_copy/dataset_1/genome_1A/* /genome_1B/*
 > rm input_folder_copy/dataset_2/genome_2A/* /genome_2B/*
 > rm input_folder_copy/taxonomy/*
-> ```
+> ~~~
+> {: .laguage-bash}
 > > ## Solution
 > > c)
-> > ```
+> > ~~~
 > > cp -r input_folder input_folder_copy
 > > rm input_folder_copy/dataset_1/genome_1A/* input_folder_copy/dataset_1/genome_1B/*
 > > rm input_folder_copy/dataset_2/genome_2A/* input_folder_copy/dataset_2/genome_2B/*
 > > rm input_folder_copy/taxonomy/*
-> > ```
+> > ~~~
+> > {: .laguage-bash}
 > {: .solution}
 {: .challenge}
 
