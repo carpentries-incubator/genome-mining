@@ -125,7 +125,26 @@ For these lesson we will use the third case code. As outcomes you should get a f
 * **`.json` file** To know the input file name, the antiSMASH used version and the regions data (id,sequence_data)
 * **`index.html` file** To visualize the outcomes from the analysis.
 
+## Visualizing your analysis outcomes
 
+To see the results after antiSMASH run, we need to access to the `index.html` file, in order to acces to that, we will run the following command:
+~~~
+$ cd Streptococcus_agalactiae_A909/
+$ pwd
+~~~ 
+{: .source}
+~~~
+~/Streptococcus_agalactiae_A909
+~~~
+{: .output}
+
+On your local machine, open a GIT bash terminal in the **destiny** folder and execture the following command:
+~~~
+$ scp -r user@ip_dir:~/Streptococcus_agalactiae_A909/* /destiny_folder
+~~~ 
+{: .source}
+
+And finally, you can open the `index.html` file on your **Local** web browser.
 
 ## Webpage
 antiSMASH can be also used through this [web:](https://antismash.secondarymetabolites.org/#!/start)
