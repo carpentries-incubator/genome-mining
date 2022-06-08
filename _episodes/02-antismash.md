@@ -39,13 +39,13 @@ You can run antiSMASH in two main ways **Minimal and Full-features run**, as fol
 ~~~
 $ antismash genome.gbk
 ~~~
-{: .language-bash}
+{: .source}
 
 ### Full-featured run
 ~~~
 $ antismash --cb-general --cb-knownclusters --cb-subclusters --asf --pfam2go --smcog-trees genome.gbk
 ~~~
-{: .language-bash}
+{: .source}
 
 > ## Exercise 1: 
 > If we run an Streptococcus agalactiae annotated sequence using antiSMASH, what results are we expected to get?
@@ -83,7 +83,7 @@ To see the antiSMASH generated outcomes do:
 $ cd Streptococcus_agalactiae_A909/
 $ tree -L 1
 ~~~
-{: .bash}
+{: .source}
 
 ~~~
 .
@@ -109,7 +109,7 @@ do
     antismash $gbk_file
 done
 ~~~
-{: .source}
+{: .language-bash}
 
 #### **Case III** - All files in a folder
 ~~~
@@ -118,7 +118,7 @@ do
     antismash $gbk_file
 done
 ~~~
-{: .source}
+{: .language-bash}
 
 For these lesson we will use the third case code. As outcomes you should get a folder comprised mainly by the following files:
 * **`.gbk` files** For each Biosynthetic Gene cluster region found.
