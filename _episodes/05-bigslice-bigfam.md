@@ -20,7 +20,7 @@ keypoints:
 > ## Ejercicio `.challenge`
 > As we have seen the structure of the input folder for BiGSLICE is quite difficult to get. Imagine "Sekiro" wants to copy the directory structure to use it for future BigSlice inputs.
 > Consider the following directory structure:
-> ```
+> ~~~
 >    └── input_folder/                    
 >        ├── datasets.tsv           
 >        ├── dataset_1/
@@ -40,7 +40,8 @@ keypoints:
 >        └── taxonomy/
 >            ├── taxonomy_dataset_1.tsv
 >            └── taxonomy_dataset_2.tsv                     
-> ```
+> ~~~
+> {: .output}
 > Which would be the commands to copy the directory structure without the files (just the folders)? <br>
 > a)
 > ```
