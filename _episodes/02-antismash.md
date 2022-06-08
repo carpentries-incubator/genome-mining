@@ -48,8 +48,11 @@ $ antismash --cb-general --cb-knownclusters --cb-subclusters --asf --pfam2go --s
 
 > ## Exercise 1: 
 > If we run an Streptococcus agalactiae annotated sequence using antiSMASH, what results are we expected to get?
+> 
 > a. The substance that cluster produces
+> 
 > b. A prediction of the metabolite that cluster can produce
+> 
 > c. A prediction of the genes cluster that produces a metabolite 
 >  
 > > ## Solution
