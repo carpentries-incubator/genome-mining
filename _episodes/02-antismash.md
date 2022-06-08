@@ -78,6 +78,29 @@ $ antismash Streptococcus_agalactiae_A909.gbk
 ~~~
 {: .source}
 
+To see the antiSMASH generated outcomes do:
+~~~
+$ cd Streptococcus_agalactiae_A909/
+$ tree -L 1
+~~~
+{: .bash}
+
+~~~
+.
+├── CP000114.1.region001.gbk
+├── CP000114.1.region002.gbk
+├── css
+├── images
+├── index.html
+├── js
+├── regions.js
+├── Streptococcus_agalactiae_A909.gbk
+├── Streptococcus_agalactiae_A909.json
+├── Streptococcus_agalactiae_A909.zip
+└── svg
+~~~
+{: .output}
+
 #### **Case II** - Specific files
 Let's imagine you want to run antismash only on following three specific files `Streptococcus_agalactiae_18RS21.gbk`, `Streptococcus_agalactiae_515.gbk` and `Streptococcus_agalactiae_A909.gbk`, so you could make use of `for` tool. As the following example.
 ~~~
