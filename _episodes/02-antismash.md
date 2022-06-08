@@ -46,6 +46,18 @@ $ antismash --cb-general --cb-knownclusters --cb-subclusters --asf --pfam2go --s
 ~~~
 {: .language-bash}
 
+> ## Exercise 1: 
+> If we run an Streptococcus agalactiae annotated sequence using antiSMASH, what results are we expected to get?
+>  a. The substance that cluster produces
+>  b. A prediction of the metabolite that cluster can produce
+>  c. A prediction of the genes cluster that produces a metabolite 
+> > ## Solution
+> > c. A prediction of the genes cluster that produces a metabolite 
+
+> {: .solution}
+{: .challenge}
+
+
 ## Webpage
 antiSMASH can be also used through this [web:](https://antismash.secondarymetabolites.org/#!/start)
 You will be asked to give your email. Then, the results will be sent to you and you will be allowed to donwload a folder with the annotations.
@@ -66,7 +78,7 @@ Briefly, on the "overview" page ´.HTML´ you can find all the regions found wit
 antiSMASH can be also used through its [web platform version:](https://antismash.secondarymetabolites.org/#!/start)
 You will be asked to give your email. Then, the results will be sent to you and you will be allowed to donwload a folder with the annotations.
 
-> ## Exercise 1: Regions
+> ## Exercise 2: Regions
 > How can you calculate the size of a region?
 > 
 > > ## Solution
