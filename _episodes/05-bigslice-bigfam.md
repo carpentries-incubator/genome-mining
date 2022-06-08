@@ -651,6 +651,10 @@ input_folder/
 > |-------------------+--------------------------------------------------------|
 > 
 >  What can we infer about the metabolite diversity?
+>  
+> > ## Solution
+> > As most of the organism have a gene cluster in the gene cluster family, we can infer that most of them have the same secondary metabolites which means that theres few metabolite diversity between them.
+> {: .solution}
 {: .discussion}  
 
 
