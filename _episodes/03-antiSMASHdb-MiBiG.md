@@ -16,7 +16,8 @@ keypoints:
 
 # antiSMASH database
 The antiSMASH database provides researchers with an easy to use, up-to-date collection of state-of the art annotated BGC data, which enable them to easily perform cross-genome analyses by offering complex queries on the data sets
-![Forking Repositories]({{ page.root }}/fig/antiSMASH_query.png)
+
+> ![Forking Repositories]({{ page.root }}/fig/antiSMASH_query.png)
 
 
 # MIBiG Database
