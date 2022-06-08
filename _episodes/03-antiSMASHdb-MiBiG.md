@@ -19,7 +19,7 @@ The antiSMASH database provides researchers with an easy to use, up-to-date coll
 
 > ![Forking Repositories]({{ page.root }}/fig/antiSMASH_query.png)
 
-## Browsing and Querying the antiSMASH database
+## Browsing and Querying in the antiSMASH database
 
 1. Select “Browse“ on the top menu bar 
 2. Either select “Query”
