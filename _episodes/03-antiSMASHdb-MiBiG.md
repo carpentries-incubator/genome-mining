@@ -15,8 +15,11 @@ keypoints:
 ---
 
 # antiSMASH database
+The antiSMASH database provides researchers with an easy to use, up-to-date collection of state-of the art annotated BGC data, which enable them to easily perform cross-genome analyses by offering complex queries on the data sets
 
 
+# MIBiG Database
+The Minimum Information about a Biosynthetic Gene cluster (MIBiG) is a database that facilitates consistent and systematic deposition and retrieval of data on biosynthetic gene clusters. MIBiG provides a robust community standard for annotations and metadata on biosynthetic gene clusters and their molecular products. It will empower next-generation research on the biosynthesis, chemistry and ecology of broad classes of societally relevant bioactive secondary metabolites, guided by robust experimental evidence and rich metadata components.
 
-# MIBiG database
 
+What antiSMASH does is predict who would be the antibiotic producers of each organism, and what mibig shows us are organisms that have been tested with an experiment.
