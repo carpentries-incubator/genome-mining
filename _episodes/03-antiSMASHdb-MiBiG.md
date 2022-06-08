@@ -27,6 +27,8 @@ The antiSMASH database provides researchers with an easy to use, up-to-date coll
 For simple queries, such as “Streptococcus agalactiae” or searching for a specific strain 
 you can use the “Simple search”  functionality.
 
+For complex queries the database also provides a sophisticated query builder that allows querying on all antiSMASH annotations. To enable this function, click on “Build a query”
+
 
 
 # MIBiG Database
