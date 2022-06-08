@@ -24,6 +24,8 @@ The antiSMASH database provides researchers with an easy to use, up-to-date coll
 1. Select “Browse“ on the top menu bar 
 2. Either select “Query”
 
+> ![Forking Repositories]({{ page.root }}/fig/antiSMASH_db.png)
+
 For simple queries, such as “Streptococcus agalactiae” or searching for a specific strain 
 you can use the “Simple search”  functionality.
 
