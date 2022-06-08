@@ -126,7 +126,7 @@ keypoints:
 {: .challenge}
 
 > Discusión `{: .discussion}`
-> 
+> Esta es una caja de discusión
 {: .discussion}  
 
 {% include links.md %}
