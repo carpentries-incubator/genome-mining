@@ -88,7 +88,7 @@ keypoints:
 
 > ## Exercise 2. `.challenge`  
 > If you use the head -n20 on one of your .gbk files, you will obtain an output like this
->```
+>~~~
 >LOCUS       AAJO01000169.1          2501 bp    DNA     linear   UNK
 >DEFINITION  Streptococcus agalactiae 18RS21
 >ACCESSION   AAJO01000169.1
@@ -109,7 +109,8 @@ keypoints:
 >     CDS             1..213
 >                     /db_xref="SEED:fig|342613.37.peg.1973"
 >                     /db_xref="GO:0003735"
-> ```
+>~~~
+>{: .output}
 > As you can see, in the gbk file we can find the taxonomic information that we need to fill the taxonomic information of each genome.
 > Fill in the blank spaces to complete the command that would get the organism information from the .gbk file. 
 > 
@@ -117,17 +118,19 @@ keypoints:
 >  <p style="text-align: center;"> -B 3 &nbsp; &nbsp; &nbsp; -A 3 &nbsp; &nbsp; &nbsp; -a  &nbsp; &nbsp; &nbsp; 'Streptococcus' &nbsp; &nbsp; &nbsp; 'ORGANISM' &nbsp; &nbsp; &nbsp; 'gbk'</p>
 > To obtain the next result:
 > 
-> ```
+> ~~~
 >  ORGANISM  Streptococcus agalactiae 18RS21
 >            Bacteria; Terrabacteria group; Firmicutes; Bacilli;
 >            Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus
 >            agalactiae.
-> ```  
+> ~~~
+> {: .output}  
 > 
 > > ## Solution
-> > ```
+> > ~~~
 > > grep 'ORGANISM' -m1 -A3 Streptococcus_agalactiae_18RS21.gbk
-> > ```
+> > ~~~
+> > {: .bash}
 > {: .solution}
 {: .challenge}
 
