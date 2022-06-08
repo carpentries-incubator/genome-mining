@@ -29,6 +29,7 @@ with gbk input-files
 `conda activate corason`  
 `git clone https://github.com/miguel-mx/corason-conda.git`    
 `cd corason-conda/EXAMPLE2`      
+`mkdir  CORASON_GENOMES`
 `cp   ~/dc_workshop/results/annotated/*gbk CORASON_GENOMES`       
 cpsG query from [polysaccharide BGC](https://mibig.secondarymetabolites.org/repository/BGC0000744/index.html#r1c1) 
 `../CORASON/corason.pl -q cpsg.query -gbk -s GBKS/agalactiae_COH1_prokka.gbk `  
