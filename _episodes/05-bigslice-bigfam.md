@@ -142,7 +142,8 @@ keypoints:
 
 
 > ## Discussion
-> Suppose we get the following results from a sample of 6 organisms. 
+> Suppose we get the following results from a sample of 6 organisms.
+>  
 > |-------------------+--------------------------------------------------------|
 > |        GCF        |                     #core members                      |
 > |:-----------------:+:------------------------------------------------------:|
