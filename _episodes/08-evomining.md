@@ -50,6 +50,7 @@ perl startevominig
 >> scp betterlab@132.248.196.38:~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree/1.csv ~/Downloads  
 
 To explore EvoMining outputs upload 1.tree and 1.csv files to [microReact](https://microreact.org/)  
+Here is a [MicroReact visualization](https://microreact.org/project/e8b7wWZkovtavPFFpBXRPp-evomining-streptococcus-example) of this EvoMining run.  
 
-To run EvoMining with a bigget centralmetabolite DB you can use Zenodo data.
+To run EvoMining with a biggest centralmetabolite DB you can use [EvoMining Zenodo](https://zenodo.org/record/1219709#.YqEsFqjMLrc) data.
 
