@@ -125,8 +125,9 @@ keypoints:
 > {: .solution}
 {: .challenge}
 
-> ## Discusiones
-> Considering the results in in the run runs tab, we can see that there are a lot of Gene Cluster Families that have only one cluster associated to it (GCF_1, GCF_2, GCF_5, GCF_7). What does this tell us about the metabolites diversity of the Streptococcus sample?
+> ## Discussion
+> Considering the results in the runs tab, we can see that there are a lot of Gene Cluster Families that have only one cluster associated to it (GCF_1, GCF_2, GCF_5, GCF_7). 
+> What does this tell us about the metabolites diversity of the Streptococcus sample?
 > 
 {: .discussion}   
 
