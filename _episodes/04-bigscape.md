@@ -261,6 +261,88 @@ BGCs comprised by a single GCF (Figure X).
 
 You can also customize and re-renderize the similarity networks of your results with Cytoscape (https://cytoscape.org/). To do so, you will need some files included in the output directory of BiG-SCAPE. Both are located in the same folder. You can choose any folder included in the Network_files/(date)hybrids_auto/ directory, depending on your interest. The "Mix/" folder represents the complete network, including all the BGCs of the analysis. There, you will need a the files "mix_c0.30.network" and "mix_clans_0.30_0.70.tsv". When you upload the ".network" file, it is needed that you select as "source" the first column and as "target" the second one. Then, you can upload the ".tsv" and just select the first column as "source". Finally, you need to click on Tools -> merge -> Networks -> Union to combine both GCFs and singletons. Now you can change colors, labels, etc. according to your specific requirements.
 
+Questions
+
+- How can I measure similarity between BGCs?
+
+Objectives
+
+- Understand how BiG-SCAPE measures similarity between BGCs.
+- Take an antiSMASH output to perform a BiG-SCAPE analysis.
+- Interpret BiG-SCAPE similarity networks and GCF phylogenies.
+
+Key points
+
+- BGC similarity is measured by BiG-SCAPE according to protein domain content, adjacency and sequence identity.
+- The `gbks` of the regions identified by antiSMASH are the input for BiG-SCAPE.
+- BiG-SCAPE delivers BGCs similarity networks with which it delimits Gene Cluster Families and creates a phylogeny of the BGCs in each GCF.
+
+
+Discussion 1: Reading the GCF networks.
+
+1. The BGC that is part of a GCF that has only one member corresponds to which strain?
+
+
+Solution:
+
+The strain **Streptococcus agalactiae** H36B has a BGC that is not connected to other BGCs, being the only member of it's GCF.
+
+2. Exercise 1: Using the text output.
+
+Use one of the commands from the list to make and save a reduced version of the 
+`Network_Annotations_full.tsv` that should only contain the information of the 
+type of product, the BGC class of each BGC, and its name.
+
+`grep` `cut` `ls` `cat` `mv`
+
+Tip: The file is inside `network_files/`
+
+Solution:
+
+We will first look at the contents of the file:
+
+~~~
+head -n 5 network_files/2022-06-07_20-32-32_auto/Network_Annotations_Full.tsv 
+~~~
+{: .language-bash}
+
+~~~
+BGC Accession ID    Description Product Prediction  BiG-SCAPE class Organism    Taxonomy
+Streptococcus_agalactiae_18RS21-AAJO01000016.1.region001    AAJO01000016.1  Streptococcus agalactiae 18RS21 arylpolyene Others  Streptococcus agalactiae 18RS21 Bacteria,Terrabacteria group,Firmicutes,Bacilli,Lactobacillales,Streptococcaceae,Streptococcus,Streptococcus agalactiae
+Streptococcus_agalactiae_18RS21-AAJO01000043.1.region001    AAJO01000043.1  Streptococcus agalactiae 18RS21 T3PKS   PKSother    Streptococcus agalactiae 18RS21 Bacteria,Terrabacteria group,Firmicutes,Bacilli,Lactobacillales,Streptococcaceae,Streptococcus,Streptococcus agalactiae
+Streptococcus_agalactiae_515-AAJP01000027.1.region001   AAJP01000027.1  Streptococcus agalactiae 515    arylpolyene Others  Streptococcus agalactiae 515    Bacteria,Terrabacteria group,Firmicutes,Bacilli,Lactobacillales,Streptococcaceae,Streptococcus,Streptococcus agalactiae
+Streptococcus_agalactiae_515-AAJP01000037.1.region001   AAJP01000037.1  Streptococcus agalactiae 515    T3PKS   PKSother    Streptococcus agalactiae 515    Bacteria,Terrabacteria group,Firmicutes,Bacilli,Lactobacillales,Streptococcaceae,Streptococcus,Streptococcus agalactiae
+~~~
+{: .output}
+
+We can see that the table is difficult to read because of the amount of information it has. 
+The first line has the names of the columns; `BGC`, `Product Prediction` and `BiG-SCAPE class` 
+are the once we are interested in. So we will extract obtain those.
+
+~~~
+cut -f 1,4,5 network_files/2022-06-07_20-32-32_auto/Network_Annotations_Full.tsv > type_of_BGCs.tsv
+
+cat type_of_BGCs.tsv
+~~~
+{: .language-bash}
+
+~~~
+BGC Product Prediction  BiG-SCAPE class
+Streptococcus_agalactiae_18RS21-AAJO01000016.1.region001    arylpolyene Others
+Streptococcus_agalactiae_18RS21-AAJO01000043.1.region001    T3PKS   PKSother
+Streptococcus_agalactiae_515-AAJP01000027.1.region001   arylpolyene Others
+Streptococcus_agalactiae_515-AAJP01000037.1.region001   T3PKS   PKSother
+Streptococcus_agalactiae_A909-CP000114.1.region001  arylpolyene Others
+Streptococcus_agalactiae_A909-CP000114.1.region002  T3PKS   PKSother
+Streptococcus_agalactiae_CJB111-AAJQ01000010.1.region001    T3PKS   PKSother
+Streptococcus_agalactiae_CJB111-AAJQ01000025.1.region001    arylpolyene Others
+Streptococcus_agalactiae_COH1-AAJR01000002.1.region001  arylpolyene Others
+Streptococcus_agalactiae_COH1-AAJR01000044.1.region001  T3PKS   PKSother
+Streptococcus_agalactiae_H36B-AAJS01000020.1.region001  arylpolyene Others
+Streptococcus_agalactiae_H36B-AAJS01000117.1.region001  T3PKS   PKSother
+~~~
+{: .output}
+
 ### References
 - Navarro-Muñoz, J.C., Selem-Mojica, N., Mullowney, M.W. et al. "A computational framework to explore large-scale biosynthetic diversity". Nature Chemical Biology (2019).
 
