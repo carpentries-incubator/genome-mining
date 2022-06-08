@@ -1,11 +1,12 @@
 ---
-title: "CORASON"
-teaching: 0
-exercises: 0
+title: "Finding variation on genomic vicinities"
+teaching: 30
+exercises: 30
 questions:
-- "Key question (FIXME)"
+- "How can I follow variation in genomic vicinities given a reference BGC?"
+- "Which gene families are the conserved part of a BGC family?"
 objectives:
-- "First learning objective. (FIXME)"
+- "Lear "
 keypoints:
 - "First key point. Brief Answer to questions. (FIXME)"
 ---
