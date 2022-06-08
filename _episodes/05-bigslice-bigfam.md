@@ -115,7 +115,7 @@ keypoints:
 > Fill in the blank spaces to complete the command that would get the organism information from the .gbk file. 
 > 
 > <p style="text-align: center;"> $ grep ___________ -m1 ____________ Streptococcus_agalactiae_18RS21.gbk </p>
->  <p style="text-align: center;"> `-B 3` &nbsp; &nbsp; &nbsp; `-A 3` &nbsp; &nbsp; &nbsp; -a  &nbsp; &nbsp; &nbsp; `'Streptococcus'` &nbsp; &nbsp; &nbsp; `'ORGANISM'` &nbsp; &nbsp; &nbsp; `'gbk'`</p>
+>  <p style="text-align: center;"> -B 3 &nbsp; &nbsp; &nbsp; -A 3 &nbsp; &nbsp; &nbsp; -a  &nbsp; &nbsp; &nbsp; 'Streptococcus' &nbsp; &nbsp; &nbsp; 'ORGANISM' &nbsp; &nbsp; &nbsp; 'gbk'</p>
 > To obtain the next result:
 > 
 > ~~~
