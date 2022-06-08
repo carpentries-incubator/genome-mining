@@ -17,7 +17,7 @@ keypoints:
 - ""
 ---
 
-> ## Ejercicio `.challenge`
+> ## Exercise 1
 > As we have seen the structure of the input folder for BiGSLICE is quite difficult to get. Imagine "Sekiro" wants to copy the directory structure to use it for future BigSlice inputs.
 > Consider the following directory structure:
 > ~~~
@@ -86,7 +86,7 @@ keypoints:
 > {: .solution}
 {: .challenge}
 
-> ## Exercise 2. `.challenge`  
+> ## Exercise 2 
 > If you use the head -n20 on one of your .gbk files, you will obtain an output like this
 >~~~
 >LOCUS       AAJO01000169.1          2501 bp    DNA     linear   UNK
@@ -115,7 +115,7 @@ keypoints:
 > Fill in the blank spaces to complete the command that would get the organism information from the .gbk file. 
 > 
 > <p style="text-align: center;"> $ grep ___________ -m1 ____________ Streptococcus_agalactiae_18RS21.gbk </p>
->  <p style="text-align: center;"> -B 3 &nbsp; &nbsp; &nbsp; -A 3 &nbsp; &nbsp; &nbsp; -a  &nbsp; &nbsp; &nbsp; 'Streptococcus' &nbsp; &nbsp; &nbsp; 'ORGANISM' &nbsp; &nbsp; &nbsp; 'gbk'</p>
+>  <p style="text-align: center;"> `-B 3` &nbsp; &nbsp; &nbsp; `-A 3` &nbsp; &nbsp; &nbsp; -a  &nbsp; &nbsp; &nbsp; `'Streptococcus'` &nbsp; &nbsp; &nbsp; `'ORGANISM'` &nbsp; &nbsp; &nbsp; `'gbk'`</p>
 > To obtain the next result:
 > 
 > ~~~
@@ -140,20 +140,9 @@ keypoints:
 > 
 {: .discussion}   
 
-<!-- |-------------------+--------------------------------------------------------|
-|        GCF        |                     #core members                      |
-|:-----------------:+:------------------------------------------------------:|
-|       GCF_1       |                            6                           |
-|-------------------+--------------------------------------------------------|
-|       GCF_2       |                            5                           |
-|-------------------+--------------------------------------------------------|
-|       GCF_3       |                            5                           |
-|-------------------+--------------------------------------------------------|
-|       GCF_4       |                            6                           |
-|-------------------+--------------------------------------------------------| -->
 
 > ## Discussion
->
+> Suppose we get the following results from a sample of 6 organisms. 
 > |-------------------+--------------------------------------------------------|
 > |        GCF        |                     #core members                      |
 > |:-----------------:+:------------------------------------------------------:|
@@ -165,7 +154,8 @@ keypoints:
 > |-------------------+--------------------------------------------------------|
 > |       GCF_4       |                            6                           |
 > |-------------------+--------------------------------------------------------|
->  
+> 
+>  What can we infer about the metabolite diversity?
 {: .discussion}   
 
 {% include links.md %}
