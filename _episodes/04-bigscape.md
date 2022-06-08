@@ -240,20 +240,20 @@ BGCs comprised by a single GCF (Figure X).
  useful to prioritize the search of secondary metabolites, for example, by focusing on the most 
  divergent BGC clade or those that are distant to already described BGCs.
 
-<a href="../fig/02-04-01.png">
-  <img src="../fig/02-04-01.png" alt="Aquí va el texto que describe a la imagen." />
+<a href="../fig/02_04_01.png">
+  <img src="../fig/02_04_01.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
 
-<a href="../fig/02-04-02.png">
-  <img src="../fig/02-04-02.png" alt="Aquí va el texto que describe a la imagen." />
+<a href="../fig/02_04_02.png">
+  <img src="../fig/02_04_02.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
 
-<a href="../fig/02-04-03.png">
-  <img src="../fig/02-04-03.png" alt="Aquí va el texto que describe a la imagen." />
+<a href="../fig/02_04_03.png">
+  <img src="../fig/02_04_03.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
 
-<a href="../fig/02-04-04.png">
-  <img src="../fig/02-04-04.png" alt="Aquí va el texto que describe a la imagen." />
+<a href="../fig/02_04_04.png">
+  <img src="../fig/02_04_04.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
 
 
