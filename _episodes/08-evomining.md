@@ -25,12 +25,30 @@ This tool looks for protein expansions that may have evolved from the central me
 
 ## Run evomining image
 
-Place yourself at your working directory.    
- `$ docker run --rm -i -t -v $(pwd):/var/www/html/EvoMining/exchange -p 80:80 nselem/evomining:latest /bin/bash`
+Place yourself at your working directory.
+`cd   ~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2 `  
 
+`ls `   
+output:
+ CORASON_GENOMES  Corason_Rast.IDs  cpsg.query  GENOMES  output 
+ 
+ Run docker container  
+`docker run --rm -i -t -v $(pwd):/var/www/html/EvoMining/exchange -p 8080:80 nselem/evomining:latest /bin/bash   `    
+    
 However, sometimes the port 80 is bussy, on that case you can use other ports like 8080 or 8084:    
 `$ docker run --rm -i -t -v $(pwd):/var/www/html/EvoMining/exchange -p 8080:80 nselem/evomining:latest /bin/bash`  
 `$ docker run --rm -i -t -v $(pwd):/var/www/html/EvoMining/exchange -p 8084:80 nselem/evomining:latest /bin/bash`  
 
+perl startevominig
+
 ## Set EvoMining databases
+`perl startevomining.pl -g GENOMES -r  Corason_Rast.IDs`
+
+## GEtting results
+`scp ~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ ALL_curado.fasta_MiBIG_DB.faa_GENOMES/1.tree ~/Downloads/.`  
+
+`scp ~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ ALL_curado.fasta_MiBIG_DB.faa_GENOMES/1.csv ~/Downloads`   
+
+Upload to microReact https://microreact.org/  
+
 
