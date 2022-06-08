@@ -45,44 +45,44 @@ keypoints:
 > Which would be the commands to copy the directory structure without the files (just the folders)? <br>
 > a)
 > ~~~
-> cp -r input_folder input_folder_copy
-> cd input_foder_copy
-> rm -r
+> $ cp -r input_folder input_folder_copy
+> $ cd input_foder_copy
+> $ rm -r
 > ~~~
-> {: .laguage-bash}
+> {: .bash}
 > b)
 > ~~~
-> mv -r input_folder input_folder_copy
-> rm input_folder_copy/dataset_1/genome_1A/* input_folder_copy/dataset_1/genome_1B/*
-> rm input_folder_copy/dataset_2/genome_2A/* input_folder_copy/dataset_2/genome_2B/*
-> rm input_folder_copy/taxonomy/*
+> $ mv -r input_folder input_folder_copy
+> $ rm input_folder_copy/dataset_1/genome_1A/* input_folder_copy/dataset_1/genome_1B/*
+> $ rm input_folder_copy/dataset_2/genome_2A/* input_folder_copy/dataset_2/genome_2B/*
+> $ rm input_folder_copy/taxonomy/*
 > ~~~
-> {: .laguage-bash}
+> {: .bash}
 > c)
 > ~~~
-> cp -r input_folder input_folder_copy
-> rm input_folder_copy/dataset_1/genome_1A/* input_folder_copy/dataset_1/genome_1B/*
-> rm input_folder_copy/dataset_2/genome_2A/* input_folder_copy/dataset_2/genome_2B/*
-> rm input_folder_copy/taxonomy/*
+> $ cp -r input_folder input_folder_copy
+> $ rm input_folder_copy/dataset_1/genome_1A/* input_folder_copy/dataset_1/genome_1B/*
+> $ rm input_folder_copy/dataset_2/genome_2A/* input_folder_copy/dataset_2/genome_2B/*
+> $ rm input_folder_copy/taxonomy/*
 > ~~~
-> {: .laguage-bash}
+> {: .bash}
 > d)
 > ~~~
-> cp -r input_folder input_folder_copy
-> rm input_folder_copy/dataset_1/genome_1A/* /genome_1B/*
-> rm input_folder_copy/dataset_2/genome_2A/* /genome_2B/*
-> rm input_folder_copy/taxonomy/*
+> $ cp -r input_folder input_folder_copy
+> $ rm input_folder_copy/dataset_1/genome_1A/* /genome_1B/*
+> $ rm input_folder_copy/dataset_2/genome_2A/* /genome_2B/*
+> $ rm input_folder_copy/taxonomy/*
 > ~~~
-> {: .laguage-bash}
+> {: .bash}
 > > ## Solution
 > > c)
 > > ~~~
-> > cp -r input_folder input_folder_copy
-> > rm input_folder_copy/dataset_1/genome_1A/* input_folder_copy/dataset_1/genome_1B/*
-> > rm input_folder_copy/dataset_2/genome_2A/* input_folder_copy/dataset_2/genome_2B/*
-> > rm input_folder_copy/taxonomy/*
+> > $ cp -r input_folder input_folder_copy
+> > $ rm input_folder_copy/dataset_1/genome_1A/* input_folder_copy/dataset_1/genome_1B/*
+> > $ rm input_folder_copy/dataset_2/genome_2A/* input_folder_copy/dataset_2/genome_2B/*
+> > $ rm input_folder_copy/taxonomy/*
 > > ~~~
-> > {: .laguage-bash}
+> > {: .bash}
 > {: .solution}
 {: .challenge}
 
@@ -114,7 +114,7 @@ keypoints:
 > As you can see, in the gbk file we can find the taxonomic information that we need to fill the taxonomic information of each genome.
 > Fill in the blank spaces to complete the command that would get the organism information from the .gbk file. 
 > 
-> <p style="text-align: center;"> grep ___________ -m1 ____________ Streptococcus_agalactiae_18RS21.gbk </p>
+> <p style="text-align: center;"> $ grep ___________ -m1 ____________ Streptococcus_agalactiae_18RS21.gbk </p>
 >  <p style="text-align: center;"> -B 3 &nbsp; &nbsp; &nbsp; -A 3 &nbsp; &nbsp; &nbsp; -a  &nbsp; &nbsp; &nbsp; 'Streptococcus' &nbsp; &nbsp; &nbsp; 'ORGANISM' &nbsp; &nbsp; &nbsp; 'gbk'</p>
 > To obtain the next result:
 > 
@@ -128,7 +128,7 @@ keypoints:
 > 
 > > ## Solution
 > > ~~~
-> > grep 'ORGANISM' -m1 -A3 Streptococcus_agalactiae_18RS21.gbk
+> > $ grep 'ORGANISM' -m1 -A3 Streptococcus_agalactiae_18RS21.gbk
 > > ~~~
 > > {: .bash}
 > {: .solution}
