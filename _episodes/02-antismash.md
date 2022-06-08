@@ -63,7 +63,36 @@ $ antismash --cb-general --cb-knownclusters --cb-subclusters --asf --pfam2go --s
 
 ## Run your own antiSMASH analysis :smiley:
 
-First, we need to activate our conda environment
+First, activate GenomeMining conda environment:
+~~~
+$ conda activate GenomeMining
+~~~
+{: .language-code}
+
+Second, run the antiSMASH command shown earlier in this lesson on the data ´.gbk´ or ´.fasta´ files. The command can be executed on one single files, all the files contained within a folder and on specific list of files, we showed you how you can perform these different cases:
+
+### Case I - One single files
+Let's choose the ´Streptococcus_agalactiae_18RS21.gbk´ file
+~~~
+$ antismash Streptococcus_agalactiae_18RS21.gbk
+~~~
+{: .language-code}
+
+### Case II - Specific files
+Let's imagine you want to run antismash only on following three specific files ´Streptococcus_agalactiae_18RS21.gbk´, ´Streptococcus_agalactiae_515.gbk´ and ´Streptococcus_agalactiae_A909.gbk´, so you could make use of ´for´ tool. As the following example.
+
+for gbk_file in Streptococcus_agalactiae_18RS21.gbk Streptococcus_agalactiae_515.gbk Streptococcus_agalactiae_A909.gbk
+do
+    antismash $gbk_file
+done
+
+## Case III - All files in a folder
+
+for gbk_file in *.gbk
+do
+    antismash $gbk_file
+done
+
 
 ## Webpage
 antiSMASH can be also used through this [web:](https://antismash.secondarymetabolites.org/#!/start)
