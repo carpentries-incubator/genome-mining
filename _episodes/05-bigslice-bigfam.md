@@ -359,6 +359,7 @@ $ tree -F
 > ~~~
 > {: .bash}
 > > ## Solution
+> > First we need to copy the whole directory to make an input_folder_copy. After that we want to erase the files inside the directories dataset_1/genome_1A, dataset_1/genome_1B, dataset_2/genome_2A, dataset2/genome_2B and taxonomy/
 > > c)
 > > ~~~
 > > $ cp -r input_folder input_folder_copy
@@ -607,6 +608,7 @@ input_folder/
 > {: .output}  
 > 
 > > ## Solution
+> > We need to use the grep command to search for the word "ORGANISM" in the file. Once located we just want to get the first instance of the word that is why we use the -m1 flag. Then we want the 3 next lines of the file after the instance, because that's where the information is. So the final command would be:
 > > ~~~
 > > $ grep 'ORGANISM' -m1 -A3 Streptococcus_agalactiae_18RS21.gbk
 > > ~~~
