@@ -38,35 +38,35 @@ Let's see how this analysis can be done:
 ## Preparing the input
 
 In each of the antiSMASH output folders, we will find a single `.gbk`
- file for each BGC that includes "region" within its filename. Thus, 
+ file for each BGC, which includes "region" within its filename. Thus, 
  we will copy all those files to the new folder.
 
 Let's locate in the folder that has the antiSMASH results of each genome:
 ~~~
 pwd
 ~~~
-{: .bash}
+{: .language-bash}
 
 ~~~
 /home/betterlab/GenomeMining/datos/copia-antis-output
 ~~~
 {: .output}
 
-We will count all the `gbk` files of all the genomes.
+Since we will mix in a folder many files with similar names we want to 
+be sure that nothing will get left behind or overwritten. For this, we
+ will count all the `gbk` files of all the genomes.
 ~~~
 ls Streptococcus_agalactiae_*/*region*gbk | wc -l
 ~~~
-{: .bash}
+{: .language-bash}
 
 ~~~
 13
 ~~~
 {: .output}
 
-
-Because the names are somewhat cryptic and they could be repeated,
- and because having the genome name at sight can be useful, we will
-  rename the `gbks` for them to include the genome name.
+And because the names are somewhat cryptic, they could be repeated,
+ and we will rename the `gbks`, for them to include the genome name.
 
 Copy the following script to a file named `change-name.sh` using `nano`:
 ~~~
@@ -98,7 +98,7 @@ ls -1 "$1"/*region*gbk | while read line # enlist the gbks of all regions in the
  		done
  done
 ~~~
-{: .bash}
+{: .language-bash}
 
 Run the script for all the folders:
 ~~~
@@ -108,7 +108,7 @@ for species in Streptococcus_agalactiae_*
  	done
 
 ~~~
-{: .bash}
+{: .language-bash}
 
 Now make a folder for all of your BiG-SCAPE analysis and inside it 
 make a folder that will contain all of the `gbks` of all of our genomes. 
@@ -116,17 +116,14 @@ This folder will be the input for BiG-SCAPE.
 ~~~
 mkdir -p bigscape/bgcs_gbks/
 ~~~
-{: .bash}
+{: .language-bash}
 
+Now copy all the region `gbks`to this new folder, and look at the contents inside it:
 ~~~
 scp Streptococcus_agalactiae_*/*region*gbk bigscape/bgcs_gbks/
-~~~
-{: .bash}
-
-~~~
 ls bigscape/bgcs_gbks/
 ~~~
-{: .bash}
+{: .language-bash}
 
 ~~~
 Streptococcus_agalactiae_18RS21-AAJO01000016.1.region001.gbk
@@ -145,9 +142,11 @@ Streptococcus_agalactiae_H36B-AAJS01000117.1.region001.gbk
 ~~~
 {: .bash}
 
-## Executing BiG-SCAPE
+## Running BiG-SCAPE
 
-BiG-SCAPE can be executed in different ways, depending on the installation mode that you applied. You could call the program through `bigscape`, `run_bigscape`or `run_bigscape.py`. Here, based on our installation (see Setup section) we will use `run_bigscape`. 
+BiG-SCAPE can be executed in different ways, depending on the installation mode that you applied.
+You could call the program through `bigscape`, `run_bigscape`or `run_bigscape.py`. Here, based on our
+installation (see [Setup](setup.html)) we will use `run_bigscape`. 
 
 The options that we will use are described in the help page:
 
@@ -156,15 +155,15 @@ The options that we will use are described in the help page:
                         Input directory of gbk files, if left empty, all gbk
                         files in current and lower directories will be used.
 
-  -o OUTPUTDIR, --outputdir OUTPUTDIR
+-o OUTPUTDIR, --outputdir OUTPUTDIR
                         Output directory, this will contain all output data
                         files.
 
- --mix                 By default, BiG-SCAPE separates the analysis according
-                        to the BGC product (PKS Type I, NRPS, RiPPs, etc.) and
-                        will create network directories for each class. Toggle
-                        to include an analysis mixing all classes
-
+--mix                 By default, BiG-SCAPE separates the analysis according
+                       to the BGC product (PKS Type I, NRPS, RiPPs, etc.) and
+                       will create network directories for each class. Toggle
+                       to include an analysis mixing all classes
+                       
 --hybrids-off         Toggle to also add BGCs with hybrid predicted products
                         from the PKS/NRPS Hybrids and Others classes to each
                         subclass (e.g. a 'terpene-nrps' BGC from Others would
@@ -183,13 +182,32 @@ The options that we will use are described in the help page:
                         pair
 
 ~~~
-{: .bash}
+{: .language-bash}
 
-Run BiG-SCAPE:
+We will use the option `--mix` to have an analysis of all of the BGCs together besides 
+the analyses of the BGCs separated by class. The `--hybrids-off` option will prevent us 
+from having the same BGC twice (in the case of hybrid BGCs that could belong to two classes)
+in our results. And since none of the our BGCs is on a contig 
+edge, we could use the global mode. However, frequently, when analyzing draft genomes, this 
+is not the case. Thus, the auto mode will be the most appropriate, which will use the global 
+mode to align domains except for those cases in which the BGC is located near to a contig end, 
+for which the glocal mode is automatically selected.
+
+Now we are ready to run BiG-SCAPE:
 ~~~
 run_bigscape bigscape/bgcs_gbks/ bigscape/output_070622 --mix --hybrids-off --mode auto
 ~~~
 {: .bash}
+
+> ## Output names
+>
+> Most of the times you will need to re-run a software once you have explored the results; 
+> maybe you will want to change parameters or add some more samples. Because of this, you will need 
+> a flexible way to organize your proyect, including the names of the outputs.
+> A usually good idea is to put the date in the name of the folder 
+> and keep track of what analysis you are running in your research notes.> 
+>
+{: .callout}
 
 Once the process ends, you will find in your terminal screen some basic results, 
 such as the number of BGCs included in each type of network. In the output folder 
