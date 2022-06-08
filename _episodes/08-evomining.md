@@ -49,6 +49,7 @@ perl startevominig
 
 `scp ~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ ALL_curado.fasta_MiBIG_DB.faa_GENOMES/1.csv ~/Downloads`   
 
-Upload to microReact https://microreact.org/  
+To explore EvoMining outputs upload 1.tree and 1.csv files to [microReact](https://microreact.org/)  
 
+To run EvoMining with a bigget centralmetabolite DB you can use Zenodo data.
 
