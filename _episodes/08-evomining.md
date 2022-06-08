@@ -15,8 +15,6 @@ keypoints:
 ---
 {% include links.md %}
 
-# EvoMining
-
 ## Introduction
 
  Usually, bioinformatics tools related to the prediction of Natural Products (NP) biosynthetic genes try to find metabolic pathways of enzymes that are known to be related with the synthesis of a secondary metabolites. However, these approaches fail for the discovery of novel biosynthetic systems. Thus, EvoMining try to solve this problem to detect novel enzymes that may be implicated in the synthesis of new natural products in Bacteria (_Referencia Evomining_).  
