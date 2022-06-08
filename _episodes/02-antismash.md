@@ -67,7 +67,7 @@ First, activate GenomeMining conda environment:
 ~~~
 $ conda activate GenomeMining
 ~~~
-{: .language-code}
+{: .source}
 
 Second, run the antiSMASH command shown earlier in this lesson on the data ´.gbk´ or ´.fasta´ files. The command can be executed on one single files, all the files contained within a folder and on specific list of files, we showed you how you can perform these different cases:
 
