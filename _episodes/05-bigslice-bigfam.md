@@ -4,7 +4,7 @@ title: "BiGSlice / BiGFAM"
 teaching: --
 exercises: --
 questions:
-- "Why to use BiGSlice / BiGFAM?"
+- "Why to use BiGSLICE / BiGFAM?"
 - "How to run a BGC analysis with BiGSlice / BiGFAM?"
 objectives:
 - "Understand why we want to run `BiGSLICE` and `BiGFAM` "
@@ -17,10 +17,7 @@ keypoints:
 - ""
 ---
 
-# BiGSLICE and BiGFAM a set of tools to compare the microbial metabolic diversity
-
-
-## BiGSLICE 
+## BiGSLICE and BiGFAM a set of tools to compare the microbial metabolic diversity
 
 Around the curriculum, we have been learning about the metabolic 
 capability of bacteria lineages encoded in BGCs. Before we start this 
@@ -30,7 +27,7 @@ the role of "tools" that offer some ecological and physiological
 advantage to the bacterial lineage producing it. 
 
 <a href="../fig/02-05-01.png">
-  <img src="../fig/01-05-01.png" alt="Aquí va el texto que describe a la imagen." />
+  <img src="../fig/02-05-01.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
 
 The presence/abscence of a set of BGCs in a genome, can be associated 
@@ -40,7 +37,7 @@ The counterpart of this can be taked as how biosynthetically diverse
 a bacterial lineage can be because of its environment.
 
 <a href="../fig/02-05-02.png">
-  <img src="../fig/01-05-02.png" alt="Aquí va el texto que describe a la imagen." />
+  <img src="../fig/02-05-02.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
 
 To answer some of this questions, we need a way to compare the metabolic 
@@ -112,7 +109,7 @@ main components:
 each dataset (BGCs from a group of genomes) must be specified.
 
 <a href="../fig/02-05-03.png">
-  <img src="../fig/01-05-03.png" alt="Aquí va el texto que describe a la imagen." />
+  <img src="../fig/02-05-03.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
 
 
@@ -141,10 +138,20 @@ input-folder:
 Here, we have an example of the structure of the `input-folder`:
 
 <a href="../fig/02-05-04.png">
-  <img src="../fig/01-05-04.png" alt="Aquí va el texto que describe a la imagen." />
+  <img src="../fig/02-05-04.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
 
 ### Creating the input-folder
+
+First, we will create a `bigslice` folder inside the 
+`results` directory. 
+
+ ~~~
+$ cd ~/dc_workshop/results
+$ mkdir bigslice
+$ bigslice
+~~~
+{: .bash}
 
 Now that we now what input `BiGSLICE` requires, we will do our 
 input-folder step by step. First, let's remeber how much genomes 
@@ -618,13 +625,129 @@ input_folder/
 
 ### Running BiGSLICE
 
-~~~
+We are ready to run `BiG-SLICE`. After we type the next line 
+of commmand, it will take close to 3 minutes to end the 
+process:
 
+~~~
+$ bigslice -i input_folder output_bigslice
+~~~
+{: .bash}
+
+~~~
+[0.2398824691772461s] clustering
+run_status is now CLUSTERING_FINISHED
+Assigning GCF membership...
+[0.03762388229370117s] membership_assignment
+run_status is now MEMBERSHIPS_ASSIGNED
+[7.152557373046875e-07s] preparing_output
+run_status is now RUN_FINISHED
+Dumping in-memory database content into /home/betterlab/GenomeMining/bigSlice/output_bigslice/result/data.db... 0.1546s
+BiG-SLiCE run complete!
+~~~
+{: .output}
+
+In order to see the results, we need to download the 
+`output_bigslice` to out local computer. We will use 
+the `scp` command to accomplish this. 
+
+Let's open another terminal and **without connecting it to 
+the remote computer** (_i.e._ in your own computer), move to 
+a directory where you know you can save the folder. In this 
+example we will copy it to the `Documents` folder of our 
+computer.
+
+~~~
+$ cd Documents/
+$ scp -r betterlab@132.248.196.38/home/betterlab/dc_workshop/results/bigslice/output_bigslice .
+$ ls -F
+~~~
+{: .bash}
+
+~~~
+output_bigslice/
+~~~
+{: .output}
+
+The `BiG-SLICE` prepared the code so that in each output 
+folder we will obtain the output files and some scripts that 
+will generate a way to visualize the data. 
+
+~~~
+$ ls output_bigslice/
+~~~
+{: .bash}
+
+~~~
+app  LICENSE.txt  requirements.txt  result  start_server.sh
+~~~
+{: .output}
+
+The file `requirements.txt` contains the names of two 
+softwares that need to be installed to use the visualization: 
+`SQLite3` and `flask`. We will install these with the next 
+command:
+
+~~~
+$ pip install -r output_bigslice/requirements.txt
 ~~~
 {: .bash}
 
 ~~~
 
+~~~
+{: .output}
+
+After the installation, we can use the `start_server.sh` to 
+generate a 
+
+~~~
+$ bash output_bigslice/start_server.sh
+~~~
+{: .bash}
+
+~~~
+$  * Serving Flask app "/home/betterlab/GenomeMining/bigSlice/try/app/run.py"
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://132.248.196.38:5000/ (Press CTRL+C to quit)
+~~~
+{: .output}
+
+The result looks a little intimidating, but if you obtained 
+a result that looks like the above one do not worry. Next, we 
+need to open an internet browser. In a new tab let's type 
+the next line.
+
+~~~
+http://localhost:5000/
+~~~
+{: .url}
+
+As a result, we will obtain a web-page that looks like this:
+
+<a href="../fig/02-05-05.png">
+  <img src="../fig/02-05-05.png" alt="Aquí va el texto que describe a la imagen." />
+</a>
+
+Here we have a summary of the result that we obtained. 
+
+
+<a href="../fig/02-05-06.png">
+  <img src="../fig/02-05-06.png" alt="Aquí va el texto que describe a la imagen." />
+</a>
+
+~~~
+$ 
+~~~
+{: .bash}
+
+~~~
+$ 
 ~~~
 {: .bash}
 
@@ -657,7 +780,7 @@ input_folder/
 > > ## Solution
 > > As most of the organism have a gene cluster in the gene cluster family, we can infer that most of them have the same secondary metabolites which means that theres few metabolite diversity between them.
 > {: .solution}
-{: .discussion}  
+{: .discussion}   
 
 
 
