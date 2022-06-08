@@ -26,5 +26,11 @@ Advantages
 ## CORASON conda 
 Here we are testing a new stand-alone corason in a conda environment: https://github.com/miguel-mx/corason-conda
 with gbk files
+`cd EXAMPLE2`  
+`cp  ~/GenomeMining/datos/gbk/ CORASON_GENOMES`   
+cpsG
+`../CORASON/corason.pl -q cpsg.query -gbk -s GBKS/agalactiae_COH1_prokka.gbk `
+` mv output/* . `
+`../CORASON/corason.pl -q cpsg.query -s 100006  -rast_ids Corason_Rast.IDs`
 
 {% include links.md %}
