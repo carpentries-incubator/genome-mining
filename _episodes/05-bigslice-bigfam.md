@@ -125,8 +125,9 @@ keypoints:
 > {: .solution}
 {: .challenge}
 
-> Discusión `{: .discussion}`
-> Esta es una caja de discusión
-{: .discussion}  
+> ## Discusiones
+>
+> El tipo de esta caja es: `{: .discussion}`
+{: .discussion}   
 
 {% include links.md %}
