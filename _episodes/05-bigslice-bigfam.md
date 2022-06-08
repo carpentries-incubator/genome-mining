@@ -629,7 +629,9 @@ input_folder/
 > ## Discussion
 > Considering the results in the runs tab, we can see that there are a lot of Gene Cluster Families that have only one cluster associated to it (GCF_1, GCF_2, GCF_5, GCF_7). <br>
 > What does this tell us about the metabolites diversity of the Streptococcus sample?
-> 
+> > ## Solution
+> > We can see that there are some unique gene cluster families, which mean that there are some organism that has that unique gene cluster and therefore he has some metabolite that the others don´t and that may help him in his environmente. So, as there are many singleton Gene Cluster Families, we can say that theres a big diversity from the sample because many of the organisms in the sample have unique "habilities" (metabolites).
+> {: .solution}
 {: .discussion}   
 
 
