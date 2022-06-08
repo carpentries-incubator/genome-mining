@@ -1,5 +1,5 @@
 ---
-title: "antiSMASHdb and MIBiG"
+title: "antiSMASH database and MIBiG"
 teaching: 20
 exercises: 30
 questions:
@@ -14,7 +14,9 @@ keypoints:
 - "First key point. Brief Answer to questions. (antismash, genome mining, secondary metabolism, bacteria, bioactive coumpounds)"
 ---
 
-# antiSMASHdb
+# antiSMASH database
 
-# MIBiG
+
+
+# MIBiG database
 
