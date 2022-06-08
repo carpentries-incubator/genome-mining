@@ -125,4 +125,8 @@ keypoints:
 > {: .solution}
 {: .challenge}
 
+> Discusión `{: .discussion}`
+> 
+{: .discussion}  
+
 {% include links.md %}
