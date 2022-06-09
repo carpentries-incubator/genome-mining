@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg height="510" onload="Init(evt)" onmousemove=" GetTrueCoords(evt); 
+			ShowTooltip(evt, true)" onmouseout="ShowTooltip(evt, false)" width="1200" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<script />
+<defs><style type='text/css'><![CDATA[
+ .leaf-label {font-size:medium;font-family:sans}
+ .inner-label {font-size:small;font-family:sans}
+ .edge-label {opacity:0}
+]]></style></defs>
+<!-- arguments: -b opacity:0 -v 40 -s -  -->
+<g transform='translate(0,20)'><g  style='stroke:black;fill:none;stroke-width:1;stroke-linecap:round'><line class='clade_0' x1='35.6670' y1='0.0000' x2='35.6670' y2='0.0000'/><line class='clade_0' x1='35.6670' y1='40.0000' x2='35.6670' y2='40.0000'/><line class='clade_0' x1='35.6670' y1='80.0000' x2='35.6670' y2='80.0000'/><line class='clade_0' x1='35.6670' y1='0.0000' x2='35.6670' y2='80.0000'/><line class='clade_0' x1='10.0000' y1='40.0000' x2='35.6670' y2='40.0000'/><line class='clade_0' x1='27.0569' y1='120.0000' x2='32.4178' y2='120.0000'/><line class='clade_0' x1='27.0569' y1='160.0000' x2='28.9410' y2='160.0000'/><line class='clade_0' x1='27.0569' y1='120.0000' x2='27.0569' y2='160.0000'/><line class='clade_0' x1='10.0000' y1='140.0000' x2='27.0569' y2='140.0000'/><line class='clade_0' x1='32.2369' y1='200.0000' x2='77.3956' y2='200.0000'/><line class='clade_0' x1='120.7290' y1='240.0000' x2='290.0000' y2='240.0000'/><line class='clade_0' x1='120.7290' y1='280.0000' x2='199.1874' y2='280.0000'/><line class='clade_0' x1='120.7290' y1='240.0000' x2='120.7290' y2='280.0000'/><line class='clade_0' x1='32.2369' y1='260.0000' x2='120.7290' y2='260.0000'/><line class='clade_0' x1='32.2369' y1='200.0000' x2='32.2369' y2='260.0000'/><line class='clade_0' x1='10.0000' y1='230.0000' x2='32.2369' y2='230.0000'/><line class='clade_0' x1='10.0000' y1='40.0000' x2='10.0000' y2='230.0000'/><line x1='0' y1='135.0000' x2='10.0000' y2='135.0000'/></g><g style='stroke:none'><text class='edge-label' x='35.667048' y='-4.000000'>0.0</text><text class='edge-label' x='35.667048' y='36.000000'>0.0</text><text class='edge-label' x='35.667048' y='76.000000'>0.0</text><text class='edge-label' x='22.833524' y='36.000000'>0.050437177</text><text class='edge-label' x='29.737364' y='116.000000'>0.010534572</text><text class='edge-label' x='27.998931' y='156.000000'>0.003702337</text><text class='edge-label' x='18.528443' y='136.000000'>0.033517731</text><text class='edge-label' x='54.816268' y='196.000000'>0.088739280</text><text class='edge-label' x='205.364510' y='236.000000'>0.332626883</text><text class='edge-label' x='159.958224' y='276.000000'>0.154175129</text><text class='edge-label' x='76.482979' y='256.000000'>0.173891864</text><text class='edge-label' x='21.118468' y='226.000000'>0.043696817</text></g><g transform='translate(10,330)' style='stroke:black;stroke-width:1' ><path d='M 0 0 h 280'/><path d='M 0 0 v -7'/><text style='stroke:none;text-anchor:end' x='2' y='-9'>0</text><path d='M 50.8891 0 v -7'/><text style='stroke:none;text-anchor:end' x='52.8891' y='-9'>0.1</text><path d='M 101.778 0 v -7'/><text style='stroke:none;text-anchor:end' x='103.778' y='-9'>0.2</text><path d='M 152.667 0 v -7'/><text style='stroke:none;text-anchor:end' x='154.667' y='-9'>0.3</text><path d='M 203.557 0 v -7'/><text style='stroke:none;text-anchor:end' x='205.557' y='-9'>0.4</text><path d='M 254.446 0 v -7'/><text style='stroke:none;text-anchor:end' x='256.446' y='-9'>0.5</text><text style='font-size:small;stroke:none' x='0' y='-20'>substitutions/site</text></g></g>
+
+	<polyline points="95,410 105,410 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,460 105,460 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,435 105,435 " style="stroke: rgb(250,123,23)" />
+	<polyline points="100,460 100,385 100,410 " style="stroke: rgb(250,123,23)" />
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="460">0%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="410">100%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="435">50%</text>
+	<text style="font-family: Arial; font-size: 5; font-style: italic" x="100" y="480">Percentage of BGCs that contains this gene family</text>
+	<polygon points="110,460 110,410 150,410 150,460 " style="fill: rgb(254,30,30); stroke: steelblue; stroke-opacity: 1; stroke-width: 2" >
+<title>100</title></polygon>
+	<polyline points="95,410 105,410 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,460 105,460 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,435 105,435 " style="stroke: rgb(250,123,23)" />
+	<polyline points="100,460 100,385 100,410 " style="stroke: rgb(250,123,23)" />
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="460">0%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="410">100%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="435">50%</text>
+	<text style="font-family: Arial; font-size: 5; font-style: italic" x="100" y="480">Percentage of BGCs that contains this gene family</text>
+	<polygon points="160,460 160,435 200,435 200,460 " style="fill: rgb(80,178,142); stroke: steelblue; stroke-opacity: 1; stroke-width: 2" >
+<title>50</title></polygon>
+	<polyline points="95,410 105,410 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,460 105,460 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,435 105,435 " style="stroke: rgb(250,123,23)" />
+	<polyline points="100,460 100,385 100,410 " style="stroke: rgb(250,123,23)" />
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="460">0%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="410">100%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="435">50%</text>
+	<text style="font-family: Arial; font-size: 5; font-style: italic" x="100" y="480">Percentage of BGCs that contains this gene family</text>
+	<polygon points="210,460 210,441.25 250,441.25 250,460 " style="fill: rgb(170,203,197); stroke: steelblue; stroke-opacity: 1; stroke-width: 2" >
+<title>37.5</title></polygon>
+	<polyline points="95,410 105,410 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,460 105,460 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,435 105,435 " style="stroke: rgb(250,123,23)" />
+	<polyline points="100,460 100,385 100,410 " style="stroke: rgb(250,123,23)" />
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="460">0%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="410">100%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="435">50%</text>
+	<text style="font-family: Arial; font-size: 5; font-style: italic" x="100" y="480">Percentage of BGCs that contains this gene family</text>
+	<polygon points="260,460 260,441.25 300,441.25 300,460 " style="fill: rgb(94,164,68); stroke: steelblue; stroke-opacity: 1; stroke-width: 2" >
+<title>37.5</title></polygon>
+	<polyline points="95,410 105,410 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,460 105,460 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,435 105,435 " style="stroke: rgb(250,123,23)" />
+	<polyline points="100,460 100,385 100,410 " style="stroke: rgb(250,123,23)" />
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="460">0%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="410">100%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="435">50%</text>
+	<text style="font-family: Arial; font-size: 5; font-style: italic" x="100" y="480">Percentage of BGCs that contains this gene family</text>
+	<polygon points="310,460 310,435 350,435 350,460 " style="fill: rgb(57,218,185); stroke: steelblue; stroke-opacity: 1; stroke-width: 2" >
+<title>50</title></polygon>
+	<polyline points="95,410 105,410 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,460 105,460 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,435 105,435 " style="stroke: rgb(250,123,23)" />
+	<polyline points="100,460 100,385 100,410 " style="stroke: rgb(250,123,23)" />
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="460">0%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="410">100%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="435">50%</text>
+	<text style="font-family: Arial; font-size: 5; font-style: italic" x="100" y="480">Percentage of BGCs that contains this gene family</text>
+	<polygon points="360,460 360,428.75 400,428.75 400,460 " style="fill: rgb(207,175,139); stroke: steelblue; stroke-opacity: 1; stroke-width: 2" >
+<title>62.5</title></polygon>
+	<polyline points="95,410 105,410 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,460 105,460 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,435 105,435 " style="stroke: rgb(250,123,23)" />
+	<polyline points="100,460 100,385 100,410 " style="stroke: rgb(250,123,23)" />
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="460">0%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="410">100%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="435">50%</text>
+	<text style="font-family: Arial; font-size: 5; font-style: italic" x="100" y="480">Percentage of BGCs that contains this gene family</text>
+	<polygon points="410,460 410,441.25 450,441.25 450,460 " style="fill: rgb(237,165,235); stroke: steelblue; stroke-opacity: 1; stroke-width: 2" >
+<title>37.5</title></polygon>
+	<polyline points="95,410 105,410 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,460 105,460 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,435 105,435 " style="stroke: rgb(250,123,23)" />
+	<polyline points="100,460 100,385 100,410 " style="stroke: rgb(250,123,23)" />
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="460">0%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="410">100%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="435">50%</text>
+	<text style="font-family: Arial; font-size: 5; font-style: italic" x="100" y="480">Percentage of BGCs that contains this gene family</text>
+	<polygon points="460,460 460,428.75 500,428.75 500,460 " style="fill: rgb(6,127,195); stroke: steelblue; stroke-opacity: 1; stroke-width: 2" >
+<title>62.5</title></polygon>
+	<polyline points="95,410 105,410 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,460 105,460 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,435 105,435 " style="stroke: rgb(250,123,23)" />
+	<polyline points="100,460 100,385 100,410 " style="stroke: rgb(250,123,23)" />
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="460">0%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="410">100%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="435">50%</text>
+	<text style="font-family: Arial; font-size: 5; font-style: italic" x="100" y="480">Percentage of BGCs that contains this gene family</text>
+	<polygon points="510,460 510,416.25 550,416.25 550,460 " style="fill: rgb(202,218,241); stroke: steelblue; stroke-opacity: 1; stroke-width: 2" >
+<title>87.5</title></polygon>
+	<polyline points="95,410 105,410 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,460 105,460 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,435 105,435 " style="stroke: rgb(250,123,23)" />
+	<polyline points="100,460 100,385 100,410 " style="stroke: rgb(250,123,23)" />
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="460">0%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="410">100%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="435">50%</text>
+	<text style="font-family: Arial; font-size: 5; font-style: italic" x="100" y="480">Percentage of BGCs that contains this gene family</text>
+	<polygon points="560,460 560,416.25 600,416.25 600,460 " style="fill: rgb(222,225,151); stroke: steelblue; stroke-opacity: 1; stroke-width: 2" >
+<title>87.5</title></polygon>
+	<polyline points="95,410 105,410 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,460 105,460 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,435 105,435 " style="stroke: rgb(250,123,23)" />
+	<polyline points="100,460 100,385 100,410 " style="stroke: rgb(250,123,23)" />
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="460">0%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="410">100%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="435">50%</text>
+	<text style="font-family: Arial; font-size: 5; font-style: italic" x="100" y="480">Percentage of BGCs that contains this gene family</text>
+	<polygon points="610,460 610,428.75 650,428.75 650,460 " style="fill: rgb(191,172,243); stroke: steelblue; stroke-opacity: 1; stroke-width: 2" >
+<title>62.5</title></polygon>
+	<polyline points="95,410 105,410 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,460 105,460 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,435 105,435 " style="stroke: rgb(250,123,23)" />
+	<polyline points="100,460 100,385 100,410 " style="stroke: rgb(250,123,23)" />
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="460">0%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="410">100%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="435">50%</text>
+	<text style="font-family: Arial; font-size: 5; font-style: italic" x="100" y="480">Percentage of BGCs that contains this gene family</text>
+	<polygon points="660,460 660,441.25 700,441.25 700,460 " style="fill: rgb(233,173,240); stroke: steelblue; stroke-opacity: 1; stroke-width: 2" >
+<title>37.5</title></polygon>
+	<polyline points="95,410 105,410 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,460 105,460 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,435 105,435 " style="stroke: rgb(250,123,23)" />
+	<polyline points="100,460 100,385 100,410 " style="stroke: rgb(250,123,23)" />
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="460">0%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="410">100%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="435">50%</text>
+	<text style="font-family: Arial; font-size: 5; font-style: italic" x="100" y="480">Percentage of BGCs that contains this gene family</text>
+	<polygon points="710,460 710,428.75 750,428.75 750,460 " style="fill: rgb(199,147,69); stroke: steelblue; stroke-opacity: 1; stroke-width: 2" >
+<title>62.5</title></polygon>
+	<polyline points="95,410 105,410 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,460 105,460 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,435 105,435 " style="stroke: rgb(250,123,23)" />
+	<polyline points="100,460 100,385 100,410 " style="stroke: rgb(250,123,23)" />
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="460">0%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="410">100%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="435">50%</text>
+	<text style="font-family: Arial; font-size: 5; font-style: italic" x="100" y="480">Percentage of BGCs that contains this gene family</text>
+	<polygon points="760,460 760,428.75 800,428.75 800,460 " style="fill: rgb(43,160,15); stroke: steelblue; stroke-opacity: 1; stroke-width: 2" >
+<title>62.5</title></polygon>
+	<polyline points="95,410 105,410 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,460 105,460 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,435 105,435 " style="stroke: rgb(250,123,23)" />
+	<polyline points="100,460 100,385 100,410 " style="stroke: rgb(250,123,23)" />
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="460">0%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="410">100%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="435">50%</text>
+	<text style="font-family: Arial; font-size: 5; font-style: italic" x="100" y="480">Percentage of BGCs that contains this gene family</text>
+	<polygon points="810,460 810,441.25 850,441.25 850,460 " style="fill: rgb(249,242,159); stroke: steelblue; stroke-opacity: 1; stroke-width: 2" >
+<title>37.5</title></polygon>
+	<polyline points="95,410 105,410 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,460 105,460 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,435 105,435 " style="stroke: rgb(250,123,23)" />
+	<polyline points="100,460 100,385 100,410 " style="stroke: rgb(250,123,23)" />
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="460">0%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="410">100%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="435">50%</text>
+	<text style="font-family: Arial; font-size: 5; font-style: italic" x="100" y="480">Percentage of BGCs that contains this gene family</text>
+	<polygon points="860,460 860,435 900,435 900,460 " style="fill: rgb(209,144,185); stroke: steelblue; stroke-opacity: 1; stroke-width: 2" >
+<title>50</title></polygon>
+	<polyline points="95,410 105,410 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,460 105,460 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,435 105,435 " style="stroke: rgb(250,123,23)" />
+	<polyline points="100,460 100,385 100,410 " style="stroke: rgb(250,123,23)" />
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="460">0%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="410">100%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="435">50%</text>
+	<text style="font-family: Arial; font-size: 5; font-style: italic" x="100" y="480">Percentage of BGCs that contains this gene family</text>
+	<polygon points="910,460 910,428.75 950,428.75 950,460 " style="fill: rgb(220,102,14); stroke: steelblue; stroke-opacity: 1; stroke-width: 2" >
+<title>62.5</title></polygon>
+	<polyline points="95,410 105,410 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,460 105,460 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,435 105,435 " style="stroke: rgb(250,123,23)" />
+	<polyline points="100,460 100,385 100,410 " style="stroke: rgb(250,123,23)" />
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="460">0%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="410">100%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="435">50%</text>
+	<text style="font-family: Arial; font-size: 5; font-style: italic" x="100" y="480">Percentage of BGCs that contains this gene family</text>
+	<polygon points="960,460 960,410 1000,410 1000,460 " style="fill: rgb(233,232,231); stroke: steelblue; stroke-opacity: 1; stroke-width: 2" >
+<title>100</title></polygon>
+	<polyline points="95,410 105,410 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,460 105,460 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,435 105,435 " style="stroke: rgb(250,123,23)" />
+	<polyline points="100,460 100,385 100,410 " style="stroke: rgb(250,123,23)" />
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="460">0%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="410">100%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="435">50%</text>
+	<text style="font-family: Arial; font-size: 5; font-style: italic" x="100" y="480">Percentage of BGCs that contains this gene family</text>
+	<polygon points="1010,460 1010,428.75 1050,428.75 1050,460 " style="fill: rgb(111,227,251); stroke: steelblue; stroke-opacity: 1; stroke-width: 2" >
+<title>62.5</title></polygon>
+	<polyline points="95,410 105,410 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,460 105,460 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,435 105,435 " style="stroke: rgb(250,123,23)" />
+	<polyline points="100,460 100,385 100,410 " style="stroke: rgb(250,123,23)" />
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="460">0%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="410">100%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="435">50%</text>
+	<text style="font-family: Arial; font-size: 5; font-style: italic" x="100" y="480">Percentage of BGCs that contains this gene family</text>
+	<polygon points="1060,460 1060,435 1100,435 1100,460 " style="fill: rgb(106,221,130); stroke: steelblue; stroke-opacity: 1; stroke-width: 2" >
+<title>50</title></polygon>
+	<polyline points="95,410 105,410 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,460 105,460 " style="stroke: rgb(250,123,23)" />
+	<polyline points="95,435 105,435 " style="stroke: rgb(250,123,23)" />
+	<polyline points="100,460 100,385 100,410 " style="stroke: rgb(250,123,23)" />
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="460">0%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="410">100%</text>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: start" x="50" y="435">50%</text>
+	<text style="font-family: Arial; font-size: 5; font-style: italic" x="100" y="480">Percentage of BGCs that contains this gene family</text>
+	<polyline points="100,21 900,21 " style="fill-opacity: 0; stroke: rgb(250,123,23); stroke-dasharray: 5,5; stroke-opacity: 0.5" />
+	<polyline points="100,61 900,61 " style="fill-opacity: 0; stroke: rgb(250,123,23); stroke-dasharray: 5,5; stroke-opacity: 0.5" />
+	<polyline points="100,101 900,101 " style="fill-opacity: 0; stroke: rgb(250,123,23); stroke-dasharray: 5,5; stroke-opacity: 0.5" />
+	<polyline points="100,141 900,141 " style="fill-opacity: 0; stroke: rgb(250,123,23); stroke-dasharray: 5,5; stroke-opacity: 0.5" />
+	<polyline points="100,181 900,181 " style="fill-opacity: 0; stroke: rgb(250,123,23); stroke-dasharray: 5,5; stroke-opacity: 0.5" />
+	<polyline points="100,221 900,221 " style="fill-opacity: 0; stroke: rgb(250,123,23); stroke-dasharray: 5,5; stroke-opacity: 0.5" />
+	<polyline points="100,261 900,261 " style="fill-opacity: 0; stroke: rgb(250,123,23); stroke-dasharray: 5,5; stroke-opacity: 0.5" />
+	<polyline points="100,301 900,301 " style="fill-opacity: 0; stroke: rgb(250,123,23); stroke-dasharray: 5,5; stroke-opacity: 0.5" />
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: middle" x="600" y="14">100002_2002 agalactiae_515_prokka.gbk </text>
+	<polygon points="598,16 598,26 598,26 603,21 598,16 " style="fill: rgb(94,164,68); fill-opacity: 0.99379; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.99379 Organism:agalactiae_515_prokka.gbk  Coordinates:8324 7839
+Direction:- Gen Id:fig|666666.100002.peg.1992 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="585,16 585,26 592,26 597,21 592,16 " style="fill: rgb(237,165,235); fill-opacity: 0.98789; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.98789 Organism:agalactiae_515_prokka.gbk  Coordinates:9679 8438
+Direction:- Gen Id:fig|666666.100002.peg.1993 Function N-acylneuraminate cytidylyltransferase smash:none</title></polygon>
+	<polygon points="579,16 579,26 580,26 585,21 580,16 " style="fill: rgb(111,227,251); fill-opacity: 0.99522; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.99522 Organism:agalactiae_515_prokka.gbk  Coordinates:10319 9690
+Direction:- Gen Id:fig|666666.100002.peg.1994 Function Putative acetyltransferase EpsM smash:none</title></polygon>
+	<polygon points="568,16 568,26 574,26 579,21 574,16 " style="fill: rgb(57,218,185); fill-opacity: 0.97396; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.97396 Organism:agalactiae_515_prokka.gbk  Coordinates:11470 10316
+Direction:- Gen Id:fig|666666.100002.peg.1995 Function Polysialic acid biosynthesis protein P7 smash:none</title></polygon>
+	<polygon points="558,16 558,26 563,26 568,21 563,16 " style="fill: rgb(80,178,142); fill-opacity: 0.99707; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.99707 Organism:agalactiae_515_prokka.gbk  Coordinates:12572 11547
+Direction:- Gen Id:fig|666666.100002.peg.1996 Function N,N'-diacetyllegionaminic acid synthase smash:none</title></polygon>
+	<polygon points="545,16 545,26 553,26 558,21 553,16 " style="fill: rgb(209,144,185); fill-opacity: 0.98069; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.98069 Organism:agalactiae_515_prokka.gbk  Coordinates:13972 12572
+Direction:- Gen Id:fig|666666.100002.peg.1997 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="536,16 536,26 540,26 545,21 540,16 " style="fill: rgb(220,102,14); fill-opacity: 0.5109; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.5109 Organism:agalactiae_515_prokka.gbk  Coordinates:14925 13969
+Direction:- Gen Id:fig|666666.100002.peg.1998 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="526,16 526,26 530,26 535,21 530,16 " style="fill: rgb(222,225,151); fill-opacity: 0.37727; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.37727 Organism:agalactiae_515_prokka.gbk  Coordinates:15956 15009
+Direction:- Gen Id:fig|666666.100002.peg.1999 Function Glycosyltransferase GlyG smash:none</title></polygon>
+	<polygon points="517,16 517,26 521,26 526,21 521,16 " style="fill: rgb(222,225,151); fill-opacity: 0.92593; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.92593 Organism:agalactiae_515_prokka.gbk  Coordinates:16964 15990
+Direction:- Gen Id:fig|666666.100002.peg.2000 Function Undecaprenyl-phosphate 4-deoxy-4-formamido-L-arabinose transferase smash:none</title></polygon>
+	<polygon points="505,16 505,26 512,26 517,21 512,16 " style="fill: rgb(106,221,130); fill-opacity: 0.74194; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.74194 Organism:agalactiae_515_prokka.gbk  Coordinates:18175 16964
+Direction:- Gen Id:fig|666666.100002.peg.2001 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="500,16 500,26 500,26 505,21 500,16 " style="fill: rgb(254,30,30); fill-opacity: 0.68354; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.68354 Organism:agalactiae_515_prokka.gbk  Coordinates:18681 18199
+Direction:- Gen Id:fig|666666.100002.peg.2002 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="496,16 496,26 496,16 500,21 496,26 " style="fill: rgb(233,232,231); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_515_prokka.gbk  Coordinates:19130 18681
+Direction:- Gen Id:fig|666666.100002.peg.2003 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="483,16 483,26 491,26 496,21 491,16 " style="fill: rgb(202,218,241); fill-opacity: 0.99351; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.99351 Organism:agalactiae_515_prokka.gbk  Coordinates:20542 19154
+Direction:- Gen Id:fig|666666.100002.peg.2004 Function UDP-glucose:undecaprenyl-phosphate glucose-1-phosphate transferase smash:none</title></polygon>
+	<polygon points="476,16 476,26 478,26 483,21 478,16 " style="fill: rgb(43,160,15); fill-opacity: 0.97414; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.97414 Organism:agalactiae_515_prokka.gbk  Coordinates:21253 20555
+Direction:- Gen Id:fig|666666.100002.peg.2005 Function Tyrosine-protein kinase CpsD smash:none</title></polygon>
+	<polygon points="470,16 470,26 471,26 476,21 471,16 " style="fill: rgb(6,127,195); fill-opacity: 0.99565; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.99565 Organism:agalactiae_515_prokka.gbk  Coordinates:21956 21264
+Direction:- Gen Id:fig|666666.100002.peg.2006 Function putative capsular polysaccharide biosynthesis protein YwqC smash:none</title></polygon>
+	<polygon points="463,16 463,26 465,26 470,21 465,16 " style="fill: rgb(207,175,139); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_515_prokka.gbk  Coordinates:22696 21965
+Direction:- Gen Id:fig|666666.100002.peg.2007 Function Tyrosine-protein phosphatase CpsB smash:none</title></polygon>
+	<polygon points="449,16 449,26 458,26 463,21 458,16 " style="fill: rgb(199,147,69); fill-opacity: 0.99588; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.99588 Organism:agalactiae_515_prokka.gbk  Coordinates:24159 22702
+Direction:- Gen Id:fig|666666.100002.peg.2008 Function Polyisoprenyl-teichoic acid--peptidoglycan teichoic acid transferase TagU smash:none</title></polygon>
+	<polygon points="447,16 447,26 443,26 438,21 443,16 " style="fill: rgb(233,173,240); fill-opacity: 0.99674; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.99674 Organism:agalactiae_515_prokka.gbk  Coordinates:24348 25271
+Direction:+ Gen Id:fig|666666.100002.peg.2009 Function HTH-type transcriptional regulator HdfR smash:none</title></polygon>
+	<polygon points="431,16 431,26 433,26 438,21 433,16 " style="fill: rgb(170,203,197); fill-opacity: 0.99216; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.99216 Organism:agalactiae_515_prokka.gbk  Coordinates:26063 25296
+Direction:- Gen Id:fig|666666.100002.peg.2010 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="424,16 424,26 426,26 431,21 426,16 " style="fill: rgb(191,172,243); fill-opacity: 0.99576; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.99576 Organism:agalactiae_515_prokka.gbk  Coordinates:26782 26072
+Direction:- Gen Id:fig|666666.100002.peg.2011 Function Purine nucleoside phosphorylase DeoD-type smash:none</title></polygon>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: middle" x="600" y="54">100003_1173 agalactiae_A909_prokka.gbk </text>
+	<polygon points="598,56 598,66 598,66 603,61 598,56 " style="fill: rgb(94,164,68); fill-opacity: 0.99379; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.99379 Organism:agalactiae_A909_prokka.gbk  Coordinates:1218079 1217594
+Direction:- Gen Id:fig|666666.100003.peg.1163 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="585,56 585,66 592,66 597,61 592,56 " style="fill: rgb(237,165,235); fill-opacity: 0.98789; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.98789 Organism:agalactiae_A909_prokka.gbk  Coordinates:1219434 1218193
+Direction:- Gen Id:fig|666666.100003.peg.1164 Function N-acylneuraminate cytidylyltransferase smash:none</title></polygon>
+	<polygon points="579,56 579,66 580,66 585,61 580,56 " style="fill: rgb(111,227,251); fill-opacity: 0.99522; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.99522 Organism:agalactiae_A909_prokka.gbk  Coordinates:1220074 1219445
+Direction:- Gen Id:fig|666666.100003.peg.1165 Function Putative acetyltransferase EpsM smash:none</title></polygon>
+	<polygon points="568,56 568,66 574,66 579,61 574,56 " style="fill: rgb(57,218,185); fill-opacity: 0.97135; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.97135 Organism:agalactiae_A909_prokka.gbk  Coordinates:1221225 1220071
+Direction:- Gen Id:fig|666666.100003.peg.1166 Function Polysialic acid biosynthesis protein P7 smash:none</title></polygon>
+	<polygon points="558,56 558,66 563,66 568,61 563,56 " style="fill: rgb(80,178,142); fill-opacity: 0.99707; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.99707 Organism:agalactiae_A909_prokka.gbk  Coordinates:1222327 1221302
+Direction:- Gen Id:fig|666666.100003.peg.1167 Function N,N'-diacetyllegionaminic acid synthase smash:none</title></polygon>
+	<polygon points="545,56 545,66 553,66 558,61 553,56 " style="fill: rgb(209,144,185); fill-opacity: 0.98069; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.98069 Organism:agalactiae_A909_prokka.gbk  Coordinates:1223727 1222327
+Direction:- Gen Id:fig|666666.100003.peg.1168 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="536,56 536,66 540,66 545,61 540,56 " style="fill: rgb(220,102,14); fill-opacity: 0.5109; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.5109 Organism:agalactiae_A909_prokka.gbk  Coordinates:1224680 1223724
+Direction:- Gen Id:fig|666666.100003.peg.1169 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="526,56 526,66 530,66 535,61 530,56 " style="fill: rgb(222,225,151); fill-opacity: 0.37727; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.37727 Organism:agalactiae_A909_prokka.gbk  Coordinates:1225711 1224764
+Direction:- Gen Id:fig|666666.100003.peg.1170 Function Glycosyltransferase GlyG smash:none</title></polygon>
+	<polygon points="517,56 517,66 521,66 526,61 521,56 " style="fill: rgb(222,225,151); fill-opacity: 0.92593; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.92593 Organism:agalactiae_A909_prokka.gbk  Coordinates:1226719 1225745
+Direction:- Gen Id:fig|666666.100003.peg.1171 Function Undecaprenyl-phosphate 4-deoxy-4-formamido-L-arabinose transferase smash:none</title></polygon>
+	<polygon points="505,56 505,66 512,66 517,61 512,56 " style="fill: rgb(106,221,130); fill-opacity: 0.74194; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.74194 Organism:agalactiae_A909_prokka.gbk  Coordinates:1227930 1226719
+Direction:- Gen Id:fig|666666.100003.peg.1172 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="500,56 500,66 500,66 505,61 500,56 " style="fill: rgb(254,30,30); fill-opacity: 0.68354; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.68354 Organism:agalactiae_A909_prokka.gbk  Coordinates:1228436 1227954
+Direction:- Gen Id:fig|666666.100003.peg.1173 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="496,56 496,66 496,56 500,61 496,66 " style="fill: rgb(233,232,231); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_A909_prokka.gbk  Coordinates:1228885 1228436
+Direction:- Gen Id:fig|666666.100003.peg.1174 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="483,56 483,66 491,66 496,61 491,56 " style="fill: rgb(202,218,241); fill-opacity: 0.99351; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.99351 Organism:agalactiae_A909_prokka.gbk  Coordinates:1230297 1228909
+Direction:- Gen Id:fig|666666.100003.peg.1175 Function UDP-glucose:undecaprenyl-phosphate glucose-1-phosphate transferase smash:none</title></polygon>
+	<polygon points="476,56 476,66 478,66 483,61 478,56 " style="fill: rgb(43,160,15); fill-opacity: 0.97845; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.97845 Organism:agalactiae_A909_prokka.gbk  Coordinates:1231008 1230310
+Direction:- Gen Id:fig|666666.100003.peg.1176 Function Tyrosine-protein kinase CpsD smash:none</title></polygon>
+	<polygon points="470,56 470,66 471,66 476,61 471,56 " style="fill: rgb(6,127,195); fill-opacity: 0.99565; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.99565 Organism:agalactiae_A909_prokka.gbk  Coordinates:1231711 1231019
+Direction:- Gen Id:fig|666666.100003.peg.1177 Function putative capsular polysaccharide biosynthesis protein YwqC smash:none</title></polygon>
+	<polygon points="463,56 463,66 465,66 470,61 465,56 " style="fill: rgb(207,175,139); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_A909_prokka.gbk  Coordinates:1232451 1231720
+Direction:- Gen Id:fig|666666.100003.peg.1178 Function Tyrosine-protein phosphatase CpsB smash:none</title></polygon>
+	<polygon points="449,56 449,66 458,66 463,61 458,56 " style="fill: rgb(199,147,69); fill-opacity: 0.99588; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.99588 Organism:agalactiae_A909_prokka.gbk  Coordinates:1233914 1232457
+Direction:- Gen Id:fig|666666.100003.peg.1179 Function Polyisoprenyl-teichoic acid--peptidoglycan teichoic acid transferase TagU smash:none</title></polygon>
+	<polygon points="447,56 447,66 443,66 438,61 443,56 " style="fill: rgb(233,173,240); fill-opacity: 0.99349; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.99349 Organism:agalactiae_A909_prokka.gbk  Coordinates:1234103 1235026
+Direction:+ Gen Id:fig|666666.100003.peg.1180 Function HTH-type transcriptional regulator HdfR smash:none</title></polygon>
+	<polygon points="431,56 431,66 432,66 437,61 432,56 " style="fill: rgb(170,203,197); fill-opacity: 0.98985; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.98985 Organism:agalactiae_A909_prokka.gbk  Coordinates:1235818 1235225
+Direction:- Gen Id:fig|666666.100003.peg.1181 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="424,56 424,66 426,66 431,61 426,56 " style="fill: rgb(191,172,243); fill-opacity: 0.99576; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.99576 Organism:agalactiae_A909_prokka.gbk  Coordinates:1236537 1235827
+Direction:- Gen Id:fig|666666.100003.peg.1182 Function Purine nucleoside phosphorylase DeoD-type smash:none</title></polygon>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: middle" x="600" y="94">100006_1247 agalactiae_H36B_prokka.gbk </text>
+	<polygon points="597,96 597,106 597,106 602,101 597,96 " style="fill: rgb(94,164,68); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_H36B_prokka.gbk  Coordinates:7477 6992
+Direction:- Gen Id:fig|666666.100006.peg.1237 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="584,96 584,106 591,106 596,101 591,96 " style="fill: rgb(237,165,235); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_H36B_prokka.gbk  Coordinates:8832 7591
+Direction:- Gen Id:fig|666666.100006.peg.1238 Function N-acylneuraminate cytidylyltransferase smash:none</title></polygon>
+	<polygon points="578,96 578,106 579,106 584,101 579,96 " style="fill: rgb(111,227,251); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_H36B_prokka.gbk  Coordinates:9472 8843
+Direction:- Gen Id:fig|666666.100006.peg.1239 Function Putative acetyltransferase EpsM smash:none</title></polygon>
+	<polygon points="567,96 567,106 573,106 578,101 573,96 " style="fill: rgb(57,218,185); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_H36B_prokka.gbk  Coordinates:10623 9469
+Direction:- Gen Id:fig|666666.100006.peg.1240 Function Polysialic acid biosynthesis protein P7 smash:none</title></polygon>
+	<polygon points="557,96 557,106 562,106 567,101 562,96 " style="fill: rgb(80,178,142); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_H36B_prokka.gbk  Coordinates:11725 10700
+Direction:- Gen Id:fig|666666.100006.peg.1241 Function N,N'-diacetyllegionaminic acid synthase smash:none</title></polygon>
+	<polygon points="544,96 544,106 552,106 557,101 552,96 " style="fill: rgb(209,144,185); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_H36B_prokka.gbk  Coordinates:13125 11725
+Direction:- Gen Id:fig|666666.100006.peg.1242 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="535,96 535,106 539,106 544,101 539,96 " style="fill: rgb(220,102,14); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_H36B_prokka.gbk  Coordinates:14060 13122
+Direction:- Gen Id:fig|666666.100006.peg.1243 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="526,96 526,106 530,106 535,101 530,96 " style="fill: rgb(249,242,159); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_H36B_prokka.gbk  Coordinates:14994 14053
+Direction:- Gen Id:fig|666666.100006.peg.1244 Function O-antigen biosynthesis glycosyltransferase WbnJ smash:none</title></polygon>
+	<polygon points="517,96 517,106 521,106 526,101 521,96 " style="fill: rgb(222,225,151); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_H36B_prokka.gbk  Coordinates:16021 15047
+Direction:- Gen Id:fig|666666.100006.peg.1245 Function Undecaprenyl-phosphate 4-deoxy-4-formamido-L-arabinose transferase smash:none</title></polygon>
+	<polygon points="505,96 505,106 512,106 517,101 512,96 " style="fill: rgb(106,221,130); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_H36B_prokka.gbk  Coordinates:17232 16021
+Direction:- Gen Id:fig|666666.100006.peg.1246 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="500,96 500,106 500,106 505,101 500,96 " style="fill: rgb(254,30,30); fill-opacity: 0.68354; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.68354 Organism:agalactiae_H36B_prokka.gbk  Coordinates:17738 17256
+Direction:- Gen Id:fig|666666.100006.peg.1247 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="496,96 496,106 496,96 500,101 496,106 " style="fill: rgb(233,232,231); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_H36B_prokka.gbk  Coordinates:18187 17738
+Direction:- Gen Id:fig|666666.100006.peg.1248 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="483,96 483,106 491,106 496,101 491,96 " style="fill: rgb(202,218,241); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_H36B_prokka.gbk  Coordinates:19599 18211
+Direction:- Gen Id:fig|666666.100006.peg.1249 Function UDP-glucose:undecaprenyl-phosphate glucose-1-phosphate transferase smash:none</title></polygon>
+	<polygon points="476,96 476,106 478,106 483,101 478,96 " style="fill: rgb(43,160,15); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_H36B_prokka.gbk  Coordinates:20301 19612
+Direction:- Gen Id:fig|666666.100006.peg.1250 Function Tyrosine-protein kinase CpsD smash:none</title></polygon>
+	<polygon points="470,96 470,106 471,106 476,101 471,96 " style="fill: rgb(6,127,195); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_H36B_prokka.gbk  Coordinates:21004 20312
+Direction:- Gen Id:fig|666666.100006.peg.1251 Function putative capsular polysaccharide biosynthesis protein YwqC smash:none</title></polygon>
+	<polygon points="463,96 463,106 465,106 470,101 465,96 " style="fill: rgb(207,175,139); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_H36B_prokka.gbk  Coordinates:21744 21013
+Direction:- Gen Id:fig|666666.100006.peg.1252 Function Tyrosine-protein phosphatase CpsB smash:none</title></polygon>
+	<polygon points="449,96 449,106 458,106 463,101 458,96 " style="fill: rgb(199,147,69); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_H36B_prokka.gbk  Coordinates:23207 21750
+Direction:- Gen Id:fig|666666.100006.peg.1253 Function Polyisoprenyl-teichoic acid--peptidoglycan teichoic acid transferase TagU smash:none</title></polygon>
+	<polygon points="447,96 447,106 444,106 439,101 444,96 " style="fill: rgb(233,173,240); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_H36B_prokka.gbk  Coordinates:23397 24320
+Direction:+ Gen Id:fig|666666.100006.peg.1254 Function HTH-type transcriptional regulator HdfR smash:none</title></polygon>
+	<polygon points="431,96 431,106 433,106 438,101 433,96 " style="fill: rgb(170,203,197); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_H36B_prokka.gbk  Coordinates:25112 24345
+Direction:- Gen Id:fig|666666.100006.peg.1255 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="424,96 424,106 426,106 431,101 426,96 " style="fill: rgb(191,172,243); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_H36B_prokka.gbk  Coordinates:25831 25121
+Direction:- Gen Id:fig|666666.100006.peg.1256 Function Purine nucleoside phosphorylase DeoD-type smash:none</title></polygon>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: middle" x="600" y="134">100001_666 agalactiae_18RS21_prokka.gbk </text>
+	<polygon points="486,136 486,146 490,146 495,141 490,136 " style="fill: rgb(202,218,241); fill-opacity: 0.99682; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.99682 Organism:agalactiae_18RS21_prokka.gbk  Coordinates:23 967
+Direction:+ Gen Id:fig|666666.100001.peg.664 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="495,136 495,146 495,146 500,141 495,136 " style="fill: rgb(233,232,231); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_18RS21_prokka.gbk  Coordinates:991 1440
+Direction:+ Gen Id:fig|666666.100001.peg.665 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="500,136 500,146 500,136 504,141 500,146 " style="fill: rgb(254,30,30); fill-opacity: 0.63291; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.63291 Organism:agalactiae_18RS21_prokka.gbk  Coordinates:1440 1931
+Direction:+ Gen Id:fig|666666.100001.peg.666 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="504,136 504,146 509,146 514,141 509,136 " style="fill: rgb(255,255,255); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_18RS21_prokka.gbk  Coordinates:1918 3024
+Direction:+ Gen Id:fig|666666.100001.peg.667 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="514,136 514,146 518,146 523,141 518,136 " style="fill: rgb(222,225,151); fill-opacity: 0.43789; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.43789 Organism:agalactiae_18RS21_prokka.gbk  Coordinates:3017 3988
+Direction:+ Gen Id:fig|666666.100001.peg.668 Function Undecaprenyl-phosphate 4-deoxy-4-formamido-L-arabinose transferase smash:none</title></polygon>
+	<polygon points="524,136 524,146 528,146 533,141 528,136 " style="fill: rgb(249,242,159); fill-opacity: 0.38462; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.38462 Organism:agalactiae_18RS21_prokka.gbk  Coordinates:4010 4975
+Direction:+ Gen Id:fig|666666.100001.peg.669 Function Glycosyltransferase GlyG smash:none</title></polygon>
+	<polygon points="533,136 533,146 536,146 541,141 536,136 " style="fill: rgb(255,255,255); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_18RS21_prokka.gbk  Coordinates:4977 5840
+Direction:+ Gen Id:fig|666666.100001.peg.670 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="541,136 541,146 545,146 550,141 545,136 " style="fill: rgb(255,255,255); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_18RS21_prokka.gbk  Coordinates:5856 6809
+Direction:+ Gen Id:fig|666666.100001.peg.671 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="550,136 550,146 554,146 559,141 554,136 " style="fill: rgb(220,102,14); fill-opacity: 0.38125; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.38125 Organism:agalactiae_18RS21_prokka.gbk  Coordinates:6817 7746
+Direction:+ Gen Id:fig|666666.100001.peg.672 Function hypothetical protein smash:none</title></polygon>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: middle" x="600" y="174">100004_35 agalactiae_CJB111_prokka.gbk </text>
+	<polygon points="505,176 505,186 505,176 506,181 505,186 " style="fill: rgb(255,255,255); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_CJB111_prokka.gbk  Coordinates:238 95
+Direction:- Gen Id:fig|666666.100004.peg.34 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="500,176 500,186 500,186 505,181 500,176 " style="fill: rgb(254,30,30); fill-opacity: 0.64557; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.64557 Organism:agalactiae_CJB111_prokka.gbk  Coordinates:716 225
+Direction:- Gen Id:fig|666666.100004.peg.35 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="496,176 496,186 496,176 500,181 496,186 " style="fill: rgb(233,232,231); fill-opacity: 0.99329; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.99329 Organism:agalactiae_CJB111_prokka.gbk  Coordinates:1165 716
+Direction:- Gen Id:fig|666666.100004.peg.36 Function hypothetical protein smash:none</title></polygon>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: middle" x="600" y="214">100005_912 agalactiae_COH1_prokka.gbk </text>
+	<polygon points="482,216 482,226 490,226 495,221 490,216 " style="fill: rgb(202,218,241); fill-opacity: 0.99351; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.99351 Organism:agalactiae_COH1_prokka.gbk  Coordinates:116 1504
+Direction:+ Gen Id:fig|666666.100005.peg.910 Function UDP-glucose:undecaprenyl-phosphate glucose-1-phosphate transferase smash:none</title></polygon>
+	<polygon points="495,216 495,226 495,226 500,221 495,216 " style="fill: rgb(233,232,231); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_COH1_prokka.gbk  Coordinates:1528 1977
+Direction:+ Gen Id:fig|666666.100005.peg.911 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="500,216 500,226 500,216 504,221 500,226 " style="fill: rgb(254,30,30); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_COH1_prokka.gbk  Coordinates:1977 2450
+Direction:+ Gen Id:fig|666666.100005.peg.912 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="504,216 504,226 510,226 515,221 510,216 " style="fill: rgb(106,221,130); fill-opacity: 0.26979; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.26979 Organism:agalactiae_COH1_prokka.gbk  Coordinates:2447 3592
+Direction:+ Gen Id:fig|666666.100005.peg.913 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="515,216 515,226 519,226 524,221 519,216 " style="fill: rgb(222,225,151); fill-opacity: 0.91824; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.91824 Organism:agalactiae_COH1_prokka.gbk  Coordinates:3589 4557
+Direction:+ Gen Id:fig|666666.100005.peg.914 Function Undecaprenyl-phosphate 4-deoxy-4-formamido-L-arabinose transferase smash:none</title></polygon>
+	<polygon points="524,216 524,226 528,226 533,221 528,216 " style="fill: rgb(222,225,151); fill-opacity: 0.37727; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.37727 Organism:agalactiae_COH1_prokka.gbk  Coordinates:4591 5538
+Direction:+ Gen Id:fig|666666.100005.peg.915 Function Glycosyltransferase GlyG smash:none</title></polygon>
+	<polygon points="534,216 534,226 538,226 543,221 538,216 " style="fill: rgb(220,102,14); fill-opacity: 0.51402; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.51402 Organism:agalactiae_COH1_prokka.gbk  Coordinates:5622 6578
+Direction:+ Gen Id:fig|666666.100005.peg.916 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="543,216 543,226 551,226 556,221 551,216 " style="fill: rgb(209,144,185); fill-opacity: 0.98069; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.98069 Organism:agalactiae_COH1_prokka.gbk  Coordinates:6575 7975
+Direction:+ Gen Id:fig|666666.100005.peg.917 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="556,216 556,226 561,226 566,221 561,216 " style="fill: rgb(80,178,142); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_COH1_prokka.gbk  Coordinates:7975 9000
+Direction:+ Gen Id:fig|666666.100005.peg.918 Function N,N'-diacetyllegionaminic acid synthase smash:none</title></polygon>
+	<polygon points="566,216 566,226 566,216 569,221 566,226 " style="fill: rgb(57,218,185); fill-opacity: 0.94624; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.94624 Organism:agalactiae_COH1_prokka.gbk  Coordinates:9077 9367
+Direction:+ Gen Id:fig|666666.100005.peg.919 Function UDP-N,N'-diacetylbacillosamine 2-epimerase (hydrolyzing) smash:none</title></polygon>
+	<polygon points="569,216 569,226 572,226 577,221 572,216 " style="fill: rgb(57,218,185); fill-opacity: 0.96763; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.96763 Organism:agalactiae_COH1_prokka.gbk  Coordinates:9394 10230
+Direction:+ Gen Id:fig|666666.100005.peg.920 Function Polysialic acid biosynthesis protein P7 smash:none</title></polygon>
+	<polygon points="577,216 577,226 578,226 583,221 578,216 " style="fill: rgb(111,227,251); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:agalactiae_COH1_prokka.gbk  Coordinates:10227 10856
+Direction:+ Gen Id:fig|666666.100005.peg.921 Function Putative acetyltransferase EpsM smash:none</title></polygon>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: middle" x="600" y="254">100007_1022 thermophilus_LMD-9_prokka.gbk </text>
+	<polygon points="603,256 603,266 602,266 597,261 602,256 " style="fill: rgb(255,255,255); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:thermophilus_LMD-9_prokka.gbk  Coordinates:977864 978439
+Direction:+ Gen Id:fig|666666.100007.peg.1012 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="596,256 596,266 592,266 587,261 592,256 " style="fill: rgb(255,255,255); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:thermophilus_LMD-9_prokka.gbk  Coordinates:978603 979493
+Direction:+ Gen Id:fig|666666.100007.peg.1013 Function ISL3 family transposase IS1193 smash:none</title></polygon>
+	<polygon points="584,256 584,266 584,256 585,261 584,266 " style="fill: rgb(255,255,255); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:thermophilus_LMD-9_prokka.gbk  Coordinates:979825 979709
+Direction:- Gen Id:fig|666666.100007.peg.1014 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="566,256 566,266 574,266 579,261 574,256 " style="fill: rgb(255,255,255); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:thermophilus_LMD-9_prokka.gbk  Coordinates:981743 980328
+Direction:- Gen Id:fig|666666.100007.peg.1015 Function Putative O-antigen transporter smash:none</title></polygon>
+	<polygon points="562,256 562,266 562,256 559,261 562,266 " style="fill: rgb(255,255,255); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:thermophilus_LMD-9_prokka.gbk  Coordinates:982214 982495
+Direction:+ Gen Id:fig|666666.100007.peg.1016 Function IS6 family transposase ISS1E smash:none</title></polygon>
+	<polygon points="545,256 545,266 550,266 555,261 550,256 " style="fill: rgb(249,242,159); fill-opacity: 0.3913; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.3913 Organism:thermophilus_LMD-9_prokka.gbk  Coordinates:983924 982944
+Direction:- Gen Id:fig|666666.100007.peg.1017 Function Undecaprenyl-phosphate 4-deoxy-4-formamido-L-arabinose transferase smash:none</title></polygon>
+	<polygon points="534,256 534,266 541,266 546,261 541,256 " style="fill: rgb(255,255,255); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:thermophilus_LMD-9_prokka.gbk  Coordinates:985101 983917
+Direction:- Gen Id:fig|666666.100007.peg.1018 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="524,256 524,266 529,266 534,261 529,256 " style="fill: rgb(255,255,255); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:thermophilus_LMD-9_prokka.gbk  Coordinates:986170 985118
+Direction:- Gen Id:fig|666666.100007.peg.1019 Function D-inositol-3-phosphate glycosyltransferase smash:none</title></polygon>
+	<polygon points="516,256 516,266 519,266 524,261 519,256 " style="fill: rgb(222,225,151); fill-opacity: 0.27358; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.27358 Organism:thermophilus_LMD-9_prokka.gbk  Coordinates:987093 986185
+Direction:- Gen Id:fig|666666.100007.peg.1020 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="505,256 505,266 510,266 515,261 510,256 " style="fill: rgb(255,255,255); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:thermophilus_LMD-9_prokka.gbk  Coordinates:988193 987114
+Direction:- Gen Id:fig|666666.100007.peg.1021 Function Putative glycosyltransferase EpsF smash:none</title></polygon>
+	<polygon points="500,256 500,266 500,266 505,261 500,256 " style="fill: rgb(254,30,30); fill-opacity: 0.48466; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.48466 Organism:thermophilus_LMD-9_prokka.gbk  Coordinates:988703 988212
+Direction:- Gen Id:fig|666666.100007.peg.1022 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="496,256 496,266 496,256 500,261 496,266 " style="fill: rgb(233,232,231); fill-opacity: 0.74497; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.74497 Organism:thermophilus_LMD-9_prokka.gbk  Coordinates:989191 988715
+Direction:- Gen Id:fig|666666.100007.peg.1023 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="490,256 490,266 490,256 492,261 490,266 " style="fill: rgb(255,255,255); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:thermophilus_LMD-9_prokka.gbk  Coordinates:989798 989562
+Direction:- Gen Id:fig|666666.100007.peg.1024 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="476,256 476,266 484,266 489,261 484,256 " style="fill: rgb(202,218,241); fill-opacity: 0.51168; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.51168 Organism:thermophilus_LMD-9_prokka.gbk  Coordinates:991314 989947
+Direction:- Gen Id:fig|666666.100007.peg.1025 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="468,256 468,266 470,266 475,261 470,256 " style="fill: rgb(43,160,15); fill-opacity: 0.62264; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.62264 Organism:thermophilus_LMD-9_prokka.gbk  Coordinates:992111 991371
+Direction:- Gen Id:fig|666666.100007.peg.1026 Function Tyrosine-protein kinase CpsD smash:none</title></polygon>
+	<polygon points="462,256 462,266 463,266 468,261 463,256 " style="fill: rgb(6,127,195); fill-opacity: 0.53043; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.53043 Organism:thermophilus_LMD-9_prokka.gbk  Coordinates:992813 992121
+Direction:- Gen Id:fig|666666.100007.peg.1027 Function Capsular polysaccharide type 8 biosynthesis protein cap8A smash:none</title></polygon>
+	<polygon points="455,256 455,266 457,266 462,261 457,256 " style="fill: rgb(207,175,139); fill-opacity: 0.69547; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.69547 Organism:thermophilus_LMD-9_prokka.gbk  Coordinates:993553 992822
+Direction:- Gen Id:fig|666666.100007.peg.1028 Function Tyrosine-protein phosphatase CpsB smash:none</title></polygon>
+	<polygon points="441,256 441,266 450,266 455,261 450,256 " style="fill: rgb(199,147,69); fill-opacity: 0.56701; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.56701 Organism:thermophilus_LMD-9_prokka.gbk  Coordinates:995014 993554
+Direction:- Gen Id:fig|666666.100007.peg.1029 Function Polyisoprenyl-teichoic acid--peptidoglycan teichoic acid transferase TagU smash:none</title></polygon>
+	<polygon points="431,256 431,266 433,266 438,261 433,256 " style="fill: rgb(191,172,243); fill-opacity: 0.83475; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.83475 Organism:thermophilus_LMD-9_prokka.gbk  Coordinates:996065 995355
+Direction:- Gen Id:fig|666666.100007.peg.1030 Function Purine nucleoside phosphorylase DeoD-type smash:none</title></polygon>
+	<polygon points="425,256 425,266 425,256 428,261 425,266 " style="fill: rgb(255,255,255); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:thermophilus_LMD-9_prokka.gbk  Coordinates:996678 996448
+Direction:- Gen Id:fig|666666.100007.peg.1031 Function hypothetical protein smash:none</title></polygon>
+	<text style="font-family: Arial; font-size: 10; font-style: italic; text-anchor: middle" x="600" y="294">100008_1024 thermophilus_LMG_18311_prokka.gbk </text>
+	<polygon points="553,296 553,306 557,306 562,301 557,296 " style="fill: rgb(255,255,255); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:thermophilus_LMG_18311_prokka.gbk  Coordinates:969957 968965
+Direction:- Gen Id:fig|666666.100008.peg.1014 Function O-antigen biosynthesis glycosyltransferase WbnK smash:none</title></polygon>
+	<polygon points="546,296 546,306 548,306 553,301 548,296 " style="fill: rgb(255,255,255); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:thermophilus_LMG_18311_prokka.gbk  Coordinates:970707 969982
+Direction:- Gen Id:fig|666666.100008.peg.1015 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="540,296 540,306 540,306 545,301 540,296 " style="fill: rgb(111,227,251); fill-opacity: 0.29508; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.29508 Organism:thermophilus_LMG_18311_prokka.gbk  Coordinates:971332 970775
+Direction:- Gen Id:fig|666666.100008.peg.1016 Function 2,3,4,5-tetrahydropyridine-2,6-dicarboxylate N-acetyltransferase smash:none</title></polygon>
+	<polygon points="535,296 535,306 535,306 540,301 535,296 " style="fill: rgb(255,255,255); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:thermophilus_LMG_18311_prokka.gbk  Coordinates:971844 971344
+Direction:- Gen Id:fig|666666.100008.peg.1017 Function Putative glycosyltransferase EpsF smash:none</title></polygon>
+	<polygon points="529,296 529,306 531,306 536,301 531,296 " style="fill: rgb(255,255,255); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:thermophilus_LMG_18311_prokka.gbk  Coordinates:972445 971804
+Direction:- Gen Id:fig|666666.100008.peg.1018 Function Putative glycosyltransferase EpsF smash:none</title></polygon>
+	<polygon points="526,296 526,306 526,296 529,301 526,306 " style="fill: rgb(255,255,255); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:thermophilus_LMG_18311_prokka.gbk  Coordinates:972820 972488
+Direction:- Gen Id:fig|666666.100008.peg.1019 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="520,296 520,306 520,296 522,301 520,306 " style="fill: rgb(222,225,151); fill-opacity: 0.49206; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.49206 Organism:thermophilus_LMG_18311_prokka.gbk  Coordinates:973465 973241
+Direction:- Gen Id:fig|666666.100008.peg.1020 Function Glycosyltransferase GlyG smash:none</title></polygon>
+	<polygon points="512,296 512,306 515,306 520,301 515,296 " style="fill: rgb(255,255,255); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:thermophilus_LMG_18311_prokka.gbk  Coordinates:974307 973462
+Direction:- Gen Id:fig|666666.100008.peg.1021 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="511,296 511,306 511,296 512,301 511,306 " style="fill: rgb(222,225,151); fill-opacity: 0.52381; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.52381 Organism:thermophilus_LMG_18311_prokka.gbk  Coordinates:974422 974261
+Direction:- Gen Id:fig|666666.100008.peg.1022 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="506,296 506,306 506,306 511,301 506,296 " style="fill: rgb(255,255,255); fill-opacity: 1; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:1 Organism:thermophilus_LMG_18311_prokka.gbk  Coordinates:974935 974456
+Direction:- Gen Id:fig|666666.100008.peg.1023 Function 2,3,4,5-tetrahydropyridine-2,6-dicarboxylate N-acetyltransferase smash:none</title></polygon>
+	<polygon points="500,296 500,306 500,306 505,301 500,296 " style="fill: rgb(254,30,30); fill-opacity: 0.5283; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.5283 Organism:thermophilus_LMG_18311_prokka.gbk  Coordinates:975523 975038
+Direction:- Gen Id:fig|666666.100008.peg.1024 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="496,296 496,306 496,296 500,301 496,306 " style="fill: rgb(233,232,231); fill-opacity: 0.85906; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.85906 Organism:thermophilus_LMG_18311_prokka.gbk  Coordinates:975972 975523
+Direction:- Gen Id:fig|666666.100008.peg.1025 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="492,296 492,306 492,296 496,301 492,306 " style="fill: rgb(202,218,241); fill-opacity: 0.74691; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.74691 Organism:thermophilus_LMG_18311_prokka.gbk  Coordinates:976478 975981
+Direction:- Gen Id:fig|666666.100008.peg.1026 Function putative sugar transferase EpsL smash:none</title></polygon>
+	<polygon points="487,296 487,306 487,306 492,301 487,296 " style="fill: rgb(202,218,241); fill-opacity: 0.40945; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.40945 Organism:thermophilus_LMG_18311_prokka.gbk  Coordinates:976917 976420
+Direction:- Gen Id:fig|666666.100008.peg.1027 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="472,296 472,306 480,306 485,301 480,296 " style="fill: rgb(202,218,241); fill-opacity: 0.49573; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.49573 Organism:thermophilus_LMG_18311_prokka.gbk  Coordinates:978573 977206
+Direction:- Gen Id:fig|666666.100008.peg.1028 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="464,296 464,306 466,306 471,301 466,296 " style="fill: rgb(43,160,15); fill-opacity: 0.60849; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.60849 Organism:thermophilus_LMG_18311_prokka.gbk  Coordinates:979370 978630
+Direction:- Gen Id:fig|666666.100008.peg.1029 Function Tyrosine-protein kinase CpsD smash:none</title></polygon>
+	<polygon points="458,296 458,306 459,306 464,301 459,296 " style="fill: rgb(6,127,195); fill-opacity: 0.53478; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.53478 Organism:thermophilus_LMG_18311_prokka.gbk  Coordinates:980072 979380
+Direction:- Gen Id:fig|666666.100008.peg.1030 Function hypothetical protein smash:none</title></polygon>
+	<polygon points="451,296 451,306 453,306 458,301 453,296 " style="fill: rgb(207,175,139); fill-opacity: 0.68724; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.68724 Organism:thermophilus_LMG_18311_prokka.gbk  Coordinates:980812 980081
+Direction:- Gen Id:fig|666666.100008.peg.1031 Function Tyrosine-protein phosphatase CpsB smash:none</title></polygon>
+	<polygon points="437,296 437,306 446,306 451,301 446,296 " style="fill: rgb(199,147,69); fill-opacity: 0.56701; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.56701 Organism:thermophilus_LMG_18311_prokka.gbk  Coordinates:982267 980813
+Direction:- Gen Id:fig|666666.100008.peg.1032 Function Polyisoprenyl-teichoic acid--peptidoglycan teichoic acid transferase TagU smash:none</title></polygon>
+	<polygon points="427,296 427,306 429,306 434,301 429,296 " style="fill: rgb(191,172,243); fill-opacity: 0.82203; stroke: black; stroke-opacity: 1; stroke-width: 1" >
+<title>Identity:0.82203 Organism:thermophilus_LMG_18311_prokka.gbk  Coordinates:983323 982613
+Direction:- Gen Id:fig|666666.100008.peg.1033 Function Purine nucleoside phosphorylase DeoD-type smash:none</title></polygon>
+	<!--
+	Generated using the Perl SVG Module V2.84
+	by Ronan Oger
+	Info: http://www.roitsystems.com/
+	-->
+</svg>
