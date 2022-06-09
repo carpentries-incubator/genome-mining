@@ -4,8 +4,8 @@ teaching: 20
 exercises: 30
 questions:
 - "What is DeepBGC?"
-- "Which kind of analysis antiSMASH can perform?"
-- "Which files extension accepts antiSMASH?"
+- "Which kind of model does DeepBGC train?"
+- "Which files extension does DeepBGC accept?"
 objectives:
 - "Understand how antiSMASH applications."
 - "Understand the importance of metadata and potential metadata standards."
@@ -18,7 +18,9 @@ keypoints:
 
 ## Introduction
 
-As studied in previous sections, several BGC prediction algorithms have been developed. However their ability to identify novel BGC classes could be improved. DeepBGC(Hannigan, G. D., et al. 2019) represents a [Natural Language Processing](https://www.techtarget.com/searchenterpriseai/definition/natural-language-processing-NLP) and deep learning strategy for BGC prediction with reduced false positive rates and improved ability to identify novel BGC classes. We will use DeepBGC to uncover BGC not predicted by non-deep learning strategies. Annotated genomes whose domains are identified using HMMER and the Pfam database are embedded in a 100-dimensional vector space with NLP algorithm Pfam2vec. 
+As studied in previous sections, several BGC prediction algorithms have been developed. However their ability to identify novel BGC classes could be improved. DeepBGC(Hannigan, G. D., et al. 2019) represents a [Natural Language Processing](https://www.techtarget.com/searchenterpriseai/definition/natural-language-processing-NLP) and Deep Learning strategy for BGC prediction with reduced false positive rates and improved ability to identify novel BGC classes. DeepBGC helps uncover BGC not predicted by non-deep learning strategies. 
+
+DeepBGC trains a model from a set of reference genomes whose protein family domains are identified by HMMER and the Pfam database. The genomes are embedded in a 100-dimensional vector space with NLP algorithm Pfam2vec. 
 
 Para poner codigo
 ~~~
