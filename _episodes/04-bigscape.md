@@ -140,7 +140,7 @@ Streptococcus_agalactiae_COH1-AAJR01000044.1.region001.gbk
 Streptococcus_agalactiae_H36B-AAJS01000020.1.region001.gbk
 Streptococcus_agalactiae_H36B-AAJS01000117.1.region001.gbk
 ~~~
-{: .bash}
+{: .language-bash}
 
 ## Running BiG-SCAPE
 
@@ -205,7 +205,7 @@ run_bigscape bigscape/bgcs_gbks/ bigscape/output_070622 --mix --hybrids-off --mo
 > maybe you will want to change parameters or add some more samples. Because of this, you will need 
 > a flexible way to organize your proyect, including the names of the outputs.
 > A usually good idea is to put the date in the name of the folder 
-> and keep track of what analysis you are running in your research notes.> 
+> and keep track of what analysis you are running in your research notes.
 >
 {: .callout}
 
@@ -216,76 +216,72 @@ Since BiG-SCAPE does not produce a file with the run information, it is useful
 to copy the text printed on the screen to a file. Use `nano` to paste all the text 
 that BiG-SCAPE generated in a file named `bigscape.log` inside the folder `output_060722/logs/`.
 
-
 To keep order in you directories move your `bigscape/` folder to the parent folder:
 ~~~
 mv bigscape/ ../
 ~~~
-{: .bash}
+{: .language-bash}
 
-Go to your local machine and locate yourself in a folder where you want to store your BiG-SCAPE results.
-
-Copy your `output_070622/` folder to your local machine:
+An easy way to prospect your results is by opening the `index.html` file with a browser 
+(Firefox, Chrome, Safari, etc.). For this you need to go to your local machine and locate 
+yourself in a folder where you want to store your BiG-SCAPE results. Now copy your `output_070622/` 
+folder to your local machine:
 
 ~~~
 scp -r betterlab@132.248.196.38:/home/betterlab/GenomeMining/datos/bigscape/output_070622/ .
 ~~~
-{: .bash}
-
-
+{: .language-bash}
 
 Open your `index.html` with a browser:
 ~~~
-firefox output_070622/index.html # If you have Firefox available
+firefox output_070622/index.html # If you have Firefox available, otherwise open it using the GUI.
 ~~~
-{: .bash}
+{: .language-bash}
 
-An easy way to prospect your results is by opening the `index.html` file with a browser 
-(Firefox, Chrome, Safari, etc.). There are diverse sections in the visualization. At the 
-left it is represented the number of BGCs per genome and BGC-type (Fig. Xa). At the right 
-side it is represented a clustered heatmap of your genomes based on the presence/absence of 
-GCFs (Fig. Xb). You can customize this heatmap and select the clustering method (Fig. Xb1) 
-or the number of GCFs represented. Also, there are some summary statistics included the at 
-the top right of the overview screen (Fig. Xc).  
-
-When you click on any of the options of the upper bar (Fig. Xd) it will appear a similarity 
-network of BGCs (Fig. X). It may take some time to charge the network.  
-
-Here, it is represented a single network for each GCF or each Gene Cluster Clan (GCC), which 
-may comprise several GCFs. Each dot represents a BGC. Those dots with bold circles are already 
-described BGCs that have been recruited from the MiBIG database (Kautsar et al., 2020) because 
-of its similarity with some BGC of the analysis. When you click on a BGC (dot), it appears its 
-GCF at the right. You can click on the GCF name to see the phylogenetic distances among all the 
-BGCs comprised by a single GCF (Figure X).  
-
- Here, the BGC that represents the "center" of the GCF is labelled in red. These trees will be 
- useful to prioritize the search of secondary metabolites, for example, by focusing on the most 
- divergent BGC clade or those that are distant to already described BGCs.
+There are diverse sections in the visualization. In the next image we can see the overview page. 
+At the left there is the run information and there are pie chart representations of the number of BGCs 
+per genome and per class. At the right there is the Network Overview for each of the BGC classes found and
+the mix categorie. They show the Number of Families, 
+Average number of BGCs per family, Max number of BGCs in a family and the Families with MIBiG Reference
+BGCs. You can click on the name of the class to see its Network Overview.
 
 <a href="../fig/02_04_01.png">
-  <img src="../fig/02_04_01.png" alt="Aquí va el texto que describe a la imagen." />
+  <img src="../fig/02_04_01.png" alt="" />
 </a>
+
+Below this, there is a clustered heatmap of the presence/absence of the
+GCFs in each genome for each class. You can customize this heatmap and select the clustering methods, 
+or the number of GCFs represented. 
 
 <a href="../fig/02_04_02.png">
-  <img src="../fig/02_04_02.png" alt="Aquí va el texto que describe a la imagen." />
+  <img src="../fig/02_04_02.png" alt="" />
 </a>
+
+When you click on any of the class names of the upper left bar it will appear a similarity 
+network of BGCs. It may take some time to charge the network. Here, it is represented a single 
+network for each GCF or each Gene Cluster Clan (GCC), which 
+may comprise several GCFs. Each dot represents a BGC. Those dots with bold circles are already 
+described BGCs that have been recruited from the MiBIG database (Kautsar et al., 2020) because 
+of its similarity with some BGC of the analysis. 
 
 <a href="../fig/02_04_03.png">
-  <img src="../fig/02_04_03.png" alt="Aquí va el texto que describe a la imagen." />
+  <img src="../fig/02_04_03.png" alt="" />
 </a>
+
+When you click on a BGC (dot), it appears its GCF at the right. You can click on the GCF name to see the
+phylogenetic distances among all the BGCs comprised by a single GCF. Within the tree there is a 
+arrow representation of the genes in the BGCs and the protein domains in the genes.
+These trees will be useful to prioritize the search of secondary metabolites, for example, by focusing on 
+the most divergent BGC clade or those that are distant to already described BGCs.
 
 <a href="../fig/02_04_04.png">
-  <img src="../fig/02_04_04.png" alt="Aquí va el texto que describe a la imagen." />
+  <img src="../fig/02_04_04.png" alt="" />
 </a>
 
-
-## Cytoscape visualization of the results
-
-You can also customize and re-renderize the similarity networks of your results with Cytoscape (https://cytoscape.org/). To do so, you will need some files included in the output directory of BiG-SCAPE. Both are located in the same folder. You can choose any folder included in the Network_files/(date)hybrids_auto/ directory, depending on your interest. The "Mix/" folder represents the complete network, including all the BGCs of the analysis. There, you will need a the files "mix_c0.30.network" and "mix_clans_0.30_0.70.tsv". When you upload the ".network" file, it is needed that you select as "source" the first column and as "target" the second one. Then, you can upload the ".tsv" and just select the first column as "source". Finally, you need to click on Tools -> merge -> Networks -> Union to combine both GCFs and singletons. Now you can change colors, labels, etc. according to your specific requirements.
 
 > ## Discussion 1: Reading the GCF networks.
 > 
-> Observe that there is a BGC that is part of a GCF with only one member. Which strain does this BGC correspond to?
+> Observe that there a GCF with only one member. Which strain does this BGC correspond to?
 > 
 > > ## Solution
 > > 
@@ -296,7 +292,8 @@ You can also customize and re-renderize the similarity networks of your results 
 
 > ## Exercise 1: Using the text output.
 > 
-> Use one of the commands from the following list to make and save a reduced version of the `Network_Annotations_full.tsv` that should only contain the information of the type of product, the BGC class of each BGC, and its name.
+> Use one of the commands from the following list to make a reduced version of the `Network_Annotations_full.tsv` 
+> that should only contain the information of the type of product, the BGC class of each BGC, and its name. And save it in a file.
 > 
 > `grep` `cut` `ls` `cat` `mv`
 > 
@@ -313,14 +310,19 @@ You can also customize and re-renderize the similarity networks of your results 
 > > 
 > > ~~~
 > > BGC Accession ID    Description Product Prediction  BiG-SCAPE class Organism    Taxonomy
-> > Streptococcus_agalactiae_18RS21-AAJO01000016.1.region001    AAJO01000016.1  Streptococcus agalactiae 18RS21 arylpolyene Others  Streptococcus agalactiae 18RS21 Bacteria,Terrabacteria group,Firmicutes,Bacilli,Lactobacillales,Streptococcaceae,Streptococcus,Streptococcus agalactiae
-> > Streptococcus_agalactiae_18RS21-AAJO01000043.1.region001    AAJO01000043.1  Streptococcus agalactiae 18RS21 T3PKS   PKSother    Streptococcus agalactiae 18RS21 Bacteria,Terrabacteria group,Firmicutes,Bacilli,Lactobacillales,Streptococcaceae,Streptococcus,Streptococcus agalactiae
-> > Streptococcus_agalactiae_515-AAJP01000027.1.region001   AAJP01000027.1  Streptococcus agalactiae 515    arylpolyene Others  Streptococcus agalactiae 515    Bacteria,Terrabacteria group,Firmicutes,Bacilli,Lactobacillales,Streptococcaceae,Streptococcus,Streptococcus agalactiae
-> > Streptococcus_agalactiae_515-AAJP01000037.1.region001   AAJP01000037.1  Streptococcus agalactiae 515    T3PKS   PKSother    Streptococcus agalactiae 515    Bacteria,Terrabacteria group,Firmicutes,Bacilli,Lactobacillales,Streptococcaceae,Streptococcus,Streptococcus agalactiae
+> > Streptococcus_agalactiae_18RS21-AAJO01000016.1.region001    AAJO01000016.1  Streptococcus agalactiae 18RS21 arylpolyene Others  Streptococcus 
+> > agalactiae 18RS21 Bacteria,Terrabacteria group,Firmicutes,Bacilli,Lactobacillales,Streptococcaceae,Streptococcus,Streptococcus agalactiae
+> > Streptococcus_agalactiae_18RS21-AAJO01000043.1.region001    AAJO01000043.1  Streptococcus agalactiae 18RS21 T3PKS   PKSother    Streptococcus 
+> > agalactiae 18RS21 Bacteria,Terrabacteria group,Firmicutes,Bacilli,Lactobacillales,Streptococcaceae,Streptococcus,Streptococcus agalactiae
+> > Streptococcus_agalactiae_515-AAJP01000027.1.region001   AAJP01000027.1  Streptococcus agalactiae 515    arylpolyene Others  Streptococcus agalactiae 
+> > 515    Bacteria,Terrabacteria group,Firmicutes,Bacilli,Lactobacillales,Streptococcaceae,Streptococcus,Streptococcus agalactiae
+> > Streptococcus_agalactiae_515-AAJP01000037.1.region001   AAJP01000037.1  Streptococcus agalactiae 515    T3PKS   PKSother    Streptococcus agalactiae 
+> > 515    Bacteria,Terrabacteria group,Firmicutes,Bacilli,Lactobacillales,Streptococcaceae,Streptococcus,Streptococcus agalactiae
 > > ~~~
 > > {: .output}
 > > 
-> > We can see that the table is difficult to read because of the amount of information it has. The first line has the names of the columns; `BGC`, `Product Prediction` and `BiG-SCAPE class` are the once we are interested in. So we will extract obtain those.
+> > We can see that the table is difficult to read because of the amount of information it has. The first line has the names of the 
+> > columns; `BGC`, `Product Prediction` and `BiG-SCAPE class` are the once we are interested in. So we will extract obtain those.
 > > 
 > > ~~~
 > > cut -f 1,4,5 network_files/2022-06-07_20-32-32_auto/Network_Annotations_Full.tsv > type_of_BGCs.tsv
@@ -347,6 +349,11 @@ You can also customize and re-renderize the similarity networks of your results 
 > > {: .output}
 > {: .solution}
 {: .challenge}
+
+
+## Cytoscape visualization of the results
+
+You can also customize and re-renderize the similarity networks of your results with Cytoscape (https://cytoscape.org/). To do so, you will need some files included in the output directory of BiG-SCAPE. Both are located in the same folder. You can choose any folder included in the Network_files/(date)hybrids_auto/ directory, depending on your interest. The "Mix/" folder represents the complete network, including all the BGCs of the analysis. There, you will need a the files "mix_c0.30.network" and "mix_clans_0.30_0.70.tsv". When you upload the ".network" file, it is needed that you select as "source" the first column and as "target" the second one. Then, you can upload the ".tsv" and just select the first column as "source". Finally, you need to click on Tools -> merge -> Networks -> Union to combine both GCFs and singletons. Now you can change colors, labels, etc. according to your specific requirements.
 
 ### References
 - Navarro-Muñoz, J.C., Selem-Mojica, N., Mullowney, M.W. et al. "A computational framework to explore large-scale biosynthetic diversity". Nature Chemical Biology (2019).
