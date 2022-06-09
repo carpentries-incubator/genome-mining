@@ -35,7 +35,7 @@ ls
 ~~~ 
 CORASON_GENOMES  Corason_Rast.IDs  cpsg.query  GENOMES  output 
 ~~~
-{: output}  
+{: .output}  
 
  Run docker container  
 ~~~
@@ -43,9 +43,11 @@ docker run --rm -i -t -v $(pwd):/var/www/html/EvoMining/exchange -p 8080:80 nsel
 ~~~
 {: bash}  
 
-However, sometimes the port 80 is bussy, on that case you can use other ports like 8080 or 8084:    
->> $ docker run --rm -i -t -v $(pwd):/var/www/html/EvoMining/exchange -p 8080:80 nselem/evomining:latest /bin/bash  
->> $ docker run --rm -i -t -v $(pwd):/var/www/html/EvoMining/exchange -p 8084:80 nselem/evomining:latest /bin/bash  
+However, sometimes the port 80 is bussy, on that case you can use other ports like 8080 or 8084:  
+```
+$ docker run --rm -i -t -v $(pwd):/var/www/html/EvoMining/exchange -p 8080:80 nselem/evomining:latest /bin/bash  
+$ docker run --rm -i -t -v $(pwd):/var/www/html/EvoMining/exchange -p 8084:80 nselem/evomining:latest /bin/bash  
+```
 
 ~~~
 # perl startevomining.pl  
@@ -63,14 +65,14 @@ However, sometimes the port 80 is bussy, on that case you can use other ports li
 </a>
 
 ## Getting results
-
->> scp betterlab@132.248.196.38:~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree/1.tree ~/Downloads/.
->>
->> scp betterlab@132.248.196.38:~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree/1.csv ~/Downloads  
-
+```
+scp betterlab@132.248.196.38:~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree/1.tree ~/Downloads/.
+scp betterlab@132.248.196.38:~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree/1.csv ~/Downloads  
+```
+  
 To explore EvoMining outputs upload 1.tree and 1.csv files to [microReact](https://microreact.org/)  
 
-    <a href="../fig/EvoMiningMicroReact.png">
+<a href="../fig/EvoMiningMicroReact.png">
   <img src="../fig/EvoMiningMicroReact.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
 
