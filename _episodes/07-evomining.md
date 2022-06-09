@@ -32,7 +32,7 @@ Place yourself at your working directory.
 cd   ~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2  
 ls
 ~~~
-{: bash}
+{: .language-bash}
 
 ~~~ 
 CORASON_GENOMES  Corason_Rast.IDs  cpsg.query  GENOMES  output 
@@ -43,7 +43,7 @@ CORASON_GENOMES  Corason_Rast.IDs  cpsg.query  GENOMES  output
 ~~~
 docker run --rm -i -t -v $(pwd):/var/www/html/EvoMining/exchange -p 8080:80 nselem/evomining:latest /bin/bash   
 ~~~
-{: bash}  
+{: .language-bash}  
 
 However, sometimes the port 80 is bussy, on that case you can use other ports like 8080 or 8084:  
 ```
@@ -54,13 +54,14 @@ $ docker run --rm -i -t -v $(pwd):/var/www/html/EvoMining/exchange -p 8084:80 ns
 ~~~
 # perl startevomining.pl  
 ~~~
-{: .bash}
+{: .¿.language-bash}
+
 
 ## Set EvoMining databases
 ~~~
 # perl startevomining.pl -g GENOMES -r  Corason_Rast.IDs
 ~~~
-{: bash}  
+{: .language-bash}  
 
 <a href="../fig/tree.png">
   <img src="../fig/tree.png" alt="Aquí va el texto que describe a la imagen." />
