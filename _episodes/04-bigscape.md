@@ -222,6 +222,8 @@ mv bigscape/ ../
 ~~~
 {: .language-bash}
 
+## Viewing the results
+
 An easy way to prospect your results is by opening the `index.html` file with a browser 
 (Firefox, Chrome, Safari, etc.). For this you need to go to your local machine and locate 
 yourself in a folder where you want to store your BiG-SCAPE results. Now copy your `output_070622/` 
