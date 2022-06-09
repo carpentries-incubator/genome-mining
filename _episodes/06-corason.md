@@ -38,7 +38,7 @@ with gbk as input-files. Lets first activate the corason-conda environment.
 ~~~
 conda activate corason  
 ~~~
-{: bash}
+{: .language-bash}
 
 ~~~
 (corason) user@server:~$
@@ -53,7 +53,7 @@ place yourself at the results directory and then clone CORASON-code.
 git clone https://github.com/miguel-mx/corason-conda.git 
 ls
 ~~~
-{: bash}
+{: .language-bash}
 
 The GitHub CORASON repository must be now in your directory. 
 ~~~
@@ -71,7 +71,7 @@ produced by some _S. agalactie_
 cd corason-conda/EXAMPLE2      
 ls
 ~~~
-{: .code}
+{: .language-bash}
 
 ~~~
 cpsg.query
@@ -85,7 +85,7 @@ This database will be stored in the reserved directory `CORASON_GENOMES`.
 mkdir  CORASON_GENOMES
 cp   ~/dc_workshop/results/annotated/*gbk CORASON_GENOMES
 ~~~
-{: .code}
+{: .language-bash}
 
 CORASON was written to be used with RAST annotation as input files, in this case
 we are using a genome database composed of `.gbk` files. So, we first need to convert
@@ -94,7 +94,7 @@ gbk files into a CORASON-compatibles input files.
 ~~~
 ../CORASON/gbkIndex.pl CORASON_GENOMES ../CORASONDirectory CORASON_GENOMES 
 ~~~
-{: bash}  
+{: .language-bash}  
 
 ~~~
 Directory CORASON_GENOMES                                                                                                
@@ -116,7 +116,7 @@ one level up outside output.
 mv output/* . 
 ls
 ~~~
-{: bash}  
+{: .language-bash}  
 
 ~~~
 CORASON_GENOMES  Corason_Rast.IDs  cpsg.query  GENOMES  output 
@@ -129,7 +129,7 @@ cpsg.query as query with 1000006 as an example of reference BGC.
 ~~~
 ../CORASON/corason.pl -q cpsg.query -s 100006  -rast_ids Corason_Rast.IDs
 ~~~
-{: bash}
+{: .language-bash}
 
 ~~~
 >> 100001_666.input  Cluster1237  Cluster1245  Cluster1253       cpsg.query_BGC.tre            cpsg.query_tree.svg        
@@ -148,7 +148,7 @@ the genes in the core-cluster. We can download the resulting svg file to our loc
 ~~~
 scp (remoto)/corason-conda/EXAMPLE2/output/cpsg.query-output  Downloads/.
 ~~~
-{: bash}
+{: .language-bash}
 
 Figure:
 
