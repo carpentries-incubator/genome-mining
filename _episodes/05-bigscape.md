@@ -247,16 +247,16 @@ the mix categorie. They show the Number of Families,
 Average number of BGCs per family, Max number of BGCs in a family and the Families with MIBiG Reference
 BGCs. You can click on the name of the class to see its Network Overview.
 
-<a href="../fig/02_04_01.png">
-  <img src="../fig/02_04_01.png" alt="" />
+<a href="../fig/02_05_01.png">
+  <img src="../fig/02_05_01.png" alt="" />
 </a>
 
 Below this, there is a clustered heatmap of the presence/absence of the
 GCFs in each genome for each class. You can customize this heatmap and select the clustering methods, 
 or the number of GCFs represented. 
 
-<a href="../fig/02_04_02.png">
-  <img src="../fig/02_04_02.png" alt="" />
+<a href="../fig/02_05_02.png">
+  <img src="../fig/02_05_02.png" alt="" />
 </a>
 
 When you click on any of the class names of the upper left bar it will appear a similarity 
@@ -266,8 +266,8 @@ may comprise several GCFs. Each dot represents a BGC. Those dots with bold circl
 described BGCs that have been recruited from the MiBIG database (Kautsar et al., 2020) because 
 of its similarity with some BGC of the analysis. 
 
-<a href="../fig/02_04_03.png">
-  <img src="../fig/02_04_03.png" alt="" />
+<a href="../fig/02_05_03.png">
+  <img src="../fig/02_05_03.png" alt="" />
 </a>
 
 When you click on a BGC (dot), it appears its GCF at the right. You can click on the GCF name to see the
@@ -276,8 +276,8 @@ arrow representation of the genes in the BGCs and the protein domains in the gen
 These trees will be useful to prioritize the search of secondary metabolites, for example, by focusing on 
 the most divergent BGC clade or those that are distant to already described BGCs.
 
-<a href="../fig/02_04_04.png">
-  <img src="../fig/02_04_04.png" alt="" />
+<a href="../fig/02_05_04.png">
+  <img src="../fig/02_05_04.png" alt="" />
 </a>
 
 
