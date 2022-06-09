@@ -61,17 +61,35 @@ corason-conda
 ~~~
 {: .output}
 
-CORASON was written to be used with RAST annotation as input files, in this case
-we are using a genome database composed of `.gbk` files. So, we first need to convert
-gbk files into a CORASON-compatibles input files.  
+Now, change directory by descending to EXAMPLE2. The file `cpsg.query`, 
+contains the reference protein cpsG, whose encoding gene 
+is part of the 
+[polysaccharide BGC](https://mibig.secondarymetabolites.org/repository/BGC0000744/index.html#r1c1) 
+produced by some _S. agalactie_   
+
 ~~~
 cd corason-conda/EXAMPLE2      
+ls
+~~~
+{: .code}
+
+~~~
+cpsg.query
+~~~
+{: .output}
+
+
+As genomic database we will use the prokka-annotated `gbk` files of _S. galactiae_.
+This database will be stored in the reserved directory `CORASON_GENOMES`.  
+~~~
 mkdir  CORASON_GENOMES
 cp   ~/dc_workshop/results/annotated/*gbk CORASON_GENOMES
 ~~~
 {: .code}
- 
-Here the reference protein is cpsG, whose encoding gene is part of the [polysaccharide BGC](https://mibig.secondarymetabolites.org/repository/BGC0000744/index.html#r1c1) produced by some _S. agalactie_   
+
+CORASON was written to be used with RAST annotation as input files, in this case
+we are using a genome database composed of `.gbk` files. So, we first need to convert
+gbk files into a CORASON-compatibles input files.  
 
 ~~~
 ../CORASON/corason.pl -q cpsg.query -gbk -s GBKS/agalactiae_COH1_prokka.gbk 
