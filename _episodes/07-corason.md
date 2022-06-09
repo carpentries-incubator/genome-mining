@@ -123,6 +123,11 @@ cpsg.query as query with 1000006 as an example of reference BGC.
 ~~~
 {: bash}
 
+~~~
+100001_666.input   Cluster1237  Cluster1245  Cluster1253       cpsg.query_BGC.tre            cpsg.query_tree.svg        100002_2002.input  Cluster1238  Cluster1246  Cluster1254       cpsg.query.BLAST              Frequency                  100003_1173.input  Cluster1239  Cluster1247  Cluster1255       cpsg.query.BLAST.pre          GBK                        100004_35.input    Cluster1240  Cluster1248  Cluster1256       cpsg.query.parser             Joined.svg                 100005_912.input   Cluster1241  Cluster1249  Cluster1257       cpsg.query.parser.pre         MINI                       100006_1247.input  Cluster1242  Cluster1250  Concatenados.faa  cpsg.query_PrincipalHits.tre  PrincipalHits.muscle       100007_1022.input  Cluster1243  Cluster1251  CORASON           cpsg.query_Report             PrincipalHits.muscle-gb    100008_1024.input  Cluster1244  Cluster1252  cpsg.query        cpsg.query.svg                TempConcatenados.faa 
+~~~
+{: .output}  
+
 Finally, we have all the genomic vicinities sorted phylogenetically according to 
 the genes in the core-cluster. We can download the resulting svg file to our local computer.
 ~~~
