@@ -5,13 +5,15 @@ exercises: 30
 questions:
 - "What is Evolutionary Genome Mining?"
 - "Which kind of BGCs can EvoMining find?"
-- "Which files extension accepts antiSMASH?"
+- "What do I need to run an evolutionary genome mining analysis?"
 objectives:
-- "Understand how antiSMASH applications."
-- "Understand the importance of metadata and potential metadata standards."
-- "Explore common formatting challenges in spreadsheet data."
+- "Understand EvoMining pipeline."
+- "Run an example of evolutionary analysis in cpsG gene family."
+- "Explore MicroReact interactive output interface."
 keypoints:
-- "First key point. Brief Answer to questions. (antismash, genome mining, secondary metabolism, bacteria, bioactive coumpounds)"
+- "EvoMining is a command-line tool that performs evolutionary genome mining over gene families"
+- "EvoMining hits can belong to new BGC"
+- "MicroReact is an interactive genomic visualizer compatible with EvoMining output"
 ---
 {% include links.md %}
 
