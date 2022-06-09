@@ -44,7 +44,8 @@ The Minimum Information about a Biosynthetic Gene cluster (MIBiG) is a database 
 
 For simple queries, such as "Streptococcus agalactiae" or searching for a specific strain you can use the "Simple search"  functionality.
 
-For complex queries the database also provides a sophisticated query builder that allows querying on all antiSMASH annotations. To enable this function, click on "Build a query"
+> ![Forking Repositories]({{ page.root }}/fig/MIBiG_query.png)
 
+For complex queries the database also provides a sophisticated query builder that allows querying on all antiSMASH annotations. To enable this function, click on "Build a query"
 
 What antiSMASH does is predict who would be the antibiotic producers of each organism, and what mibig shows us are organisms that have been tested with an experiment.
