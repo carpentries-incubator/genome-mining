@@ -422,6 +422,7 @@ $ tree -F
 
 #### datasets.tsv file - The silmaril of BiGSLICE
 
+
 The next step is to create the main file **datasets.tsv**. First we 
 put the first lines to this file. In each of these `.tsv` files, we 
 can put lines that begin with `#`. This will not be read it by the 
@@ -462,7 +463,9 @@ dataset_2       dataset_2/      taxonomy/dataset_2_taxonomy.tsv Public genomes
 
 The main file of the input-folder is finished!
 
+
 #### The taxonomy of the input-folder
+
 
 We also need to specify the taxonomic assignation of each of the 
 intup genomes BGC's. We will build one `dataset_taxonomy.tsv` file 
@@ -672,7 +675,9 @@ input-folder/
 > {: .solution}
 {: .challenge}
 
+
 ### Running BiGSLICE
+
 
 We are ready to run `BiG-SLICE`. After we type the next line 
 of commmand, it will take close to 3 minutes to end the 
@@ -791,8 +796,7 @@ regarding the BGCs GCFs that were obtained:
   <img src="../fig/02-05-06.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
 
-In this new page, we can see again some of the data that we used to run `BiGSLICE`. 
-Next, we have two bar-plots that give us information regarding if the BGCs that 
+In this new page we have two bar-plots that give us information regarding if the BGCs that 
 we sumministrated were classified as fragmented or complete by `AntiSMASH` 
 (according to the `AntiSMASH` algorithm, a BGC can be classified as fragmented 
 if it is found at the edge of a contig), and how many families were obtained 
@@ -852,6 +856,37 @@ build new ones in the light of this information.
 
 
 ## BiG-FAM 
+
+To demonstrate the funtionality of `BiG-SLICE`, the authors recopilated close to 
+1.2 million of BGCs. All this information, they put it on a great database that they 
+call `BiG-FAM`. When you get to the main [page](https://bigfam.bioinformatics.nl/home), 
+you will face a structure that looks like the one othat we saw on the `BiG-SLICE` result:
+
+<a href="../fig/02-05-08.png">
+  <img src="../fig/02-05-08.png" alt="Aquí va el texto que describe a la imagen." />
+</a>
+
+One of the options of the left is `Query`. If we click here, we will move to a new 
+page were we can insert an `antiSMASH job ID`. This will run a comparison of all 
+the BGCs found on that antiSMASH run on a single genome, agains the inmense database. 
+
+We will use the `antiSMASH job ID` from the analysis made on 
+_Streptococcus agalactiae_ A909. The `antiSMASH job ID` can be found 
+in the `URL` direction of this page in the next format:
+taxon-aaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee.
+
+We will use the job ID that we obtained:
+
+bacteria-f931deb5-509b-4f28-a210-212456c5139b
+
+And click the `submit` option.
+
+<a href="../fig/02-05-09.png">
+  <img src="../fig/02-05-09.png" alt="Aquí va el texto que describe a la imagen." />
+</a>
+
+This will generate a result page that will indicate with which BGCs from the 
+database, the BGCs from out genome is related.
 
 
 
