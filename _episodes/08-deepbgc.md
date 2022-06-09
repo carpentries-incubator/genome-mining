@@ -3,13 +3,13 @@ title: "BGC Prediction through Machine Learning"
 teaching: 20
 exercises: 30
 questions:
-- "What is DeepBGC?"
-- "Which kind of model does DeepBGC train?"
-- "Which files extension does DeepBGC accept?"
+- ""
+- ""
+- ""
 objectives:
-- "Understand how antiSMASH applications."
-- "Understand the importance of metadata and potential metadata standards."
-- "Explore common formatting challenges in spreadsheet data."
+- ""
+- ""
+- ""
 keypoints:
 - "First key point. Brief Answer to questions. (deepbgc, deep learning, natural language processing, genome mining, secondary metabolism, bacteria, bioactive coumpounds)"
 ---
