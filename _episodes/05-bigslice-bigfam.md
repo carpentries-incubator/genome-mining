@@ -1,8 +1,8 @@
 ---
 source: md
-title: "BiGSlice / BiGFAM"
-teaching: --
-exercises: --
+title: "Homologous BGC clusterization"
+teaching: 40
+exercises: 10
 questions:
 - "Why to use BiGSLICE / BiGFAM?"
 - "How to run a BGC analysis with BiGSlice / BiGFAM?"
@@ -791,26 +791,36 @@ regarding the BGCs GCFs that were obtained:
   <img src="../fig/02-05-06.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
 
+In this new page, we can see again some of the data that we used to run `BiGSLICE`. 
+Next, we have two bar-plots that give us information regarding if the BGCs that 
+we sumministrated were classified as fragmented or complete by `AntiSMASH` 
+(according to the `AntiSMASH` algorithm, a BGC can be classified as fragmented 
+if it is found at the edge of a contig), and how many families were obtained 
+with singletons (composed of just one BGC) and of 2-3 BGCs.
 
+If we go to the bottom of this page, we will found a table of all the GCFs with 
+information of the number of BGCs that compose them, the representative BGC class 
+inside each family, and which genus has more BGCs that belong to each family.
 
+Let's click on the `+` symbol of the GCF_7, and then on the `View` button that 
+is displayed. This will take us to a page with stadistics of the BGCs that 
+are part of this family. 
+
+Inside this section, we can found a great amount of information regarding the GCF_7 
+BGC's. If we jump to section called `Members`, we can click on the 
+`view BGC arrowers` button to get a visualization of the domains that are 
+part of each of the genes of these BGCs.
 
 <a href="../fig/02-05-07.png">
   <img src="../fig/02-05-07.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
 
-
-~~~
-$ 
-~~~
-{: .bash}
-
-~~~
-$ 
-~~~
-{: .bash}
+As we can see, this tool can be used to clusterize homologous BGCs that share 
+a structure. With this knowledge, we can try some hypothesis or even 
+build new ones in the light of this information.
 
 > ## Discussion
-> Considering the results in the runs tab, we can see that there are a lot of Gene Cluster Families that have only one cluster associated to it (GCF_1, GCF_2, GCF_4, GCF_5, GCF_6, GCF_8, and GCF_9). <br>
+> Considering the results in the runs tab, we can see that there are a lot of Gene Cluster Families that have only one cluster associated to it (GCF_1, GCF_2, GCF_4, GCF_5, GCF_6, GCF_8, GCF_9, GCF_13, and GCF_15). <br>
 > What does this tell us about the metabolites diversity of the Streptococcus sample?
 > > ## Solution
 > > We can see that there are some unique gene cluster families, which mean that there are some organism that has that unique gene cluster and therefore he has some metabolite that the others don´t and that may help him in his environmente. So, as there are many singleton Gene Cluster Families, we can say that theres a big diversity from the sample because many of the organisms in the sample have unique "habilities" (metabolites).
@@ -841,8 +851,8 @@ $
 {: .discussion}   
 
 
-
-
 ## BiG-FAM 
+
+
 
 {% include links.md %}
