@@ -89,7 +89,7 @@ To run EvoMining with a biggest centralmetabolite DB you can use
 
 [ARTS](https://arts.ziemertlab.com/) is another evolutionary 
 genome mining software with its corresponding database 
-[ARTS-db]((https://arts-db.ziemertlab.com/) . 
+[ARTS-db](https://arts-db.ziemertlab.com/) . 
 
 > ## `To know more about evolutionay genome mining Reference.
 > The confluence of big data and evolutionary genome mining for the discovery of natural products. DOI	https://doi.org/10.1039/D1NP00013F`
