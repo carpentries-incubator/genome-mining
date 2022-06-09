@@ -1,5 +1,5 @@
 ---
-title: "BiG-SCAPE"
+title: "BGC Similarity Networks"
 teaching: 0
 exercises: 0
 questions:
@@ -281,7 +281,7 @@ the most divergent BGC clade or those that are distant to already described BGCs
 
 > ## Discussion 1: Reading the GCF networks.
 > 
-> Observe that there a GCF with only one member. Which strain does this BGC correspond to?
+> Observe that there is a GCF with only one member. Which strain does this BGC correspond to?
 > 
 > > ## Solution
 > > 
