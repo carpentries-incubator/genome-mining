@@ -1,5 +1,5 @@
 ---
-title: "Secondary metabolite biosynthesis gene cluster identification"
+title: "Secondary metabolite biosynthetic gene cluster identification"
 teaching: 20
 exercises: 30
 questions:
