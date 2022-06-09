@@ -33,7 +33,7 @@ even if you change your Linux/perl/blast/muscle/Gblocks/quicktree local distribu
 ## CORASON conda 
 Here we are testing the new stand-alone 
 [corason in a conda environment](https://github.com/miguel-mx/corason-conda)
-with gbk as input-files   
+with gbk as input-files. Lets first activate the corason-conda environment.    
 
 ~~~
 conda activate corason  
@@ -41,10 +41,29 @@ conda activate corason
 {: bash}
 
 ~~~
+(corason) user@server:~$
+~~~
+{: .output}
+
+With the environment activated all CORASON-dependencies are ready to be used. 
+The next step is to clone CORASON-software from its GitHub repository. First,
+place yourself at the results directory and then clone CORASON-code.
+~~~
+~/dc_workshop/results/genome-mining 
 git clone https://github.com/miguel-mx/corason-conda.git 
+ls
 ~~~
 {: bash}
 
+The GitHub CORASON repository must be now in your directory. 
+~~~
+corason-conda 
+~~~
+{: .output}
+
+CORASON was written to be used with RAST annotation as input files, in this case
+we are using a genome database composed of `.gbk` files. So, we first need to convert
+gbk files into a CORASON-compatibles input files.  
 ~~~
 cd corason-conda/EXAMPLE2      
 mkdir  CORASON_GENOMES
