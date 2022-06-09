@@ -92,10 +92,18 @@ we are using a genome database composed of `.gbk` files. So, we first need to co
 gbk files into a CORASON-compatibles input files.  
 
 ~~~
-../CORASON/corason.pl -q cpsg.query -gbk -s GBKS/agalactiae_COH1_prokka.gbk 
+../CORASON/gbkIndex.pl CORASON_GENOMES ../CORASONDirectory CORASON_GENOMES 
 ~~~
-{: bash}
+{: bash}  
 
+~~~
+Directory CORASON_GENOMES                                                                                                 ../CORASON/gbk_to_fasta.pl CORASON_GENOMES agalactiae_18RS21_prokka.gbk 100001 ../CORASON                                 ../CORASON/gbk_to_fasta.pl CORASON_GENOMES agalactiae_515_prokka.gbk 100002 ../CORASON                                    ../CORASON/gbk_to_fasta.pl CORASON_GENOMES agalactiae_A909_prokka.gbk 100003 ../CORASON                                   ../CORASON/gbk_to_fasta.pl CORASON_GENOMES agalactiae_CJB111_prokka.gbk 100004 ../CORASON                               ../CORASON/gbk_to_fasta.pl CORASON_GENOMES agalactiae_COH1_prokka.gbk 100005 ../CORASON                                 ../CORASON/gbk_to_fasta.pl CORASON_GENOMES agalactiae_H36B_prokka.gbk 100006 ../CORASON                                 ../CORASON/gbk_to_fasta.pl CORASON_GENOMES thermophilus_LMD-9_prokka.gbk 100007 ../CORASON                              ../CORASON/gbk_to_fasta.pl CORASON_GENOMES thermophilus_LMG_18311_prokka.gbk 100008 ../CORASON   
+~~~
+{: .output}
+
+Now all the converted genome files, aminoacid fasta files (.faa) 
+and annotation files (.txt) shoul be placed in the 'GENOMES directory'
+one level up outside output.  
 ~~~
 mv output/* . 
 ls
@@ -103,14 +111,15 @@ ls
 {: bash}  
 
 ~~~
-test
+CORASON_GENOMES  Corason_Rast.IDs  cpsg.query  GENOMES  output 
 ~~~
 {: .output}  
 
-
-Now we will run CORASON with cpsg.query over all _S. galactiae_ genomes.  
+Finally, we have the query enzyme, the IDs file and a genomic database
+of _S. agalactiae_ in the same directory. Lets run CORASON with 
+cpsg.query as query with 1000006 as an example of reference BGC.  
 ~~~
-../CORASON/corason.pl -q cpsg.query -s 100006  -rast_ids Corason_Rast.IDs`
+../CORASON/corason.pl -q cpsg.query -s 100006  -rast_ids Corason_Rast.IDs
 ~~~
 {: bash}
 
