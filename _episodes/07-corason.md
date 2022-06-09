@@ -6,27 +6,34 @@ questions:
 - "How can I follow variation in genomic vicinities given a reference BGC?"
 - "Which gene families are the conserved part of a BGC family?"
 objectives:
-- "Lear "
+- "Learn to find BGC-families "
+- "Visualize variation in a genomic vicinity"
 keypoints:
-- "First key point. Brief Answer to questions. (FIXME)"
+- "CORASON is a command-line tool that finds BGC-families"
+- "Genomic vicinity variation is organized phylogenetically according to the conserved genes in the BGC-family"
 ---
-FIXME
 
-# CORASON
-CORASON is a visual tool that identifies gene clusters that share a common genomic core and reconstructs multi-locus phylogenies of these gene clusters to explore their evolutionary relatioinships.
+CORASON is a visual tool that identifies gene clusters that share a 
+common genomic core and reconstructs multi-locus phylogenies of these 
+gene clusters to explore their evolutionary relationships. CORASON 
+was developed to find and prioritize biosynthetic gene clusters 
+(BGC), but can be used for any kind of clusters.
 
-Input: query gene and RAST genome database.
-Output: SVG graph with clusters sorted according to the multi-locus phylogeny of the common core.
-
-CORASON was developed to find and prioritize biosynthetic gene clusters, but can be used for any kind of clusters.
+Input: query gene, reference BGC and genome database.
+Output: SVG figure with BGC in the family sorted according 
+to the multi-locus phylogeny of the core genes.
 
 Advantages
 -SVG graphs Scalable graphs that allows metadata easy display.
 -Interactive CORASON is not a static database, it allows you to explore your own genomes.
--Reproducibility CORASON runs on docker, which allows to always perform the same analysis even if you change your Linux/perl/blast/muscle/Gblocks/quicktree distributions.
+-Reproducibility CORASON runs on docker and conda, 
+this containerization which allows to always perform the same analysis 
+even if you change your Linux/perl/blast/muscle/Gblocks/quicktree local distributions.
+
 ## CORASON conda 
-Here we are testing a new stand-alone [corason in a conda environment](https://github.com/miguel-mx/corason-conda)  
-with gbk input-files   
+Here we are testing the new stand-alone 
+[corason in a conda environment](https://github.com/miguel-mx/corason-conda)  
+with gbk as input-files   
 
 ~~~
 conda activate corason  
@@ -46,6 +53,7 @@ cp   ~/dc_workshop/results/annotated/*gbk CORASON_GENOMES
 {: bash}
  
 Here the reference protein is cpsG, whose encoding gene is part of the [polysaccharide BGC](https://mibig.secondarymetabolites.org/repository/BGC0000744/index.html#r1c1) produced by some _S. agalactie_   
+
 ~~~
 ../CORASON/corason.pl -q cpsg.query -gbk -s GBKS/agalactiae_COH1_prokka.gbk 
 ~~~
@@ -53,8 +61,15 @@ Here the reference protein is cpsG, whose encoding gene is part of the [polysacc
 
 ~~~
 mv output/* . 
+ls
 ~~~
 {: bash}  
+
+~~~
+test
+~~~
+{: .output}  
+
 
 Now we will run CORASON with cpsg.query over all _S. galactiae_ genomes.  
 ~~~
