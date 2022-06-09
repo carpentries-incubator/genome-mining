@@ -1,14 +1,14 @@
 ---
 source: md
-title: "Homologous BGC clusterization"
+title: "Homologous BGC Clusterization"
 teaching: 40
 exercises: 10
 questions:
-- "Why to use BiGSLICE / BiGFAM?"
-- "How to run a BGC analysis with BiGSlice / BiGFAM?"
+- "Why to use BiG-SLiCE / BiG-FAM?"
+- "How to run a BGC analysis with BiG-SLiCE / BiG-FAM?"
 objectives:
-- "Understand why we want to run `BiGSLICE` and `BiGFAM` "
-- "Learn what input do we need to run `BiGSLICE` and `BiGFAM`"
+- "Understand why we want to run `BiG-SLiCE` and `BiG-FAM` "
+- "Learn what input do we need to run `BiG-SLiCE` and `BiG-FAM`"
 - "Run an example with our _Streptococcus_ data on both softwares"
 - "Understand the obtained results"
 keypoints:
@@ -17,7 +17,7 @@ keypoints:
 - ""
 ---
 
-## BiGSLICE and BiGFAM a set of tools to compare the microbial metabolic diversity
+## BiG-SLiCE and BiG-FAM a set of tools to compare the microbial metabolic diversity
 
 Around the curriculum, we have been learning about the metabolic 
 capability of bacteria lineages encoded in BGCs. Before we start this 
@@ -54,9 +54,9 @@ when dealing with large datasets (1.2 million BGCs). This
 characteristic makes it a good tool to compare the metabolic 
 diversity of several bacterial lineages.
 
-### The input for BiGSLICE
+### The input for BiG-SLiCE
 
-First of all, let's activate the conda environment where `BiGSLICE` 
+First of all, let's activate the conda environment where `BiG-SLiCE` 
 has been installed and all the needed softwares for its usage:
 
 ~~~
@@ -99,7 +99,7 @@ positional arguments:
 ~~~
 {: .output}
 
-`BiGSLICE` is asking for a folder as the input. First, it is 
+`BiG-SLiCE` is asking for a folder as the input. First, it is 
 important to highlight that the bones of this folder are the BGCs 
 from a group of genomes that has been obtained by `AntiSMASH`. In its [GitHub](https://github.com/medema-group/bigslice) page, we can search for 
 an input folder [template](https://github.com/medema-group/bigslice/tree/master/misc/input_folder_template). The folder needs three 
@@ -114,7 +114,7 @@ each dataset (BGCs from a group of genomes) must be specified.
 
 
 - **dataset_n:** Each dataset will be composed by the BGCs of different 
-genomes. We can give `BiGSLICE` **n** groups of BGCs. The separation 
+genomes. We can give `BiG-SLiCE` **n** groups of BGCs. The separation 
 of the BGCs in different datasets is due to the different 
 characteristics that the bacterial lineages can have. For example, if 
 we have a set of bacterial populations that came from maize roots and 
@@ -153,7 +153,7 @@ $ bigslice
 ~~~
 {: .bash}
 
-Now that we now what input `BiGSLICE` requires, we will do our 
+Now that we now what input `BiG-SLiCE` requires, we will do our 
 input-folder step by step. First, let's remeber how much genomes 
 we have:
 
@@ -350,7 +350,7 @@ $ tree -F
 {: .bash}
 
 > ## Exercise 1.
-> As we have seen, the structure of the input folder for BiGSLICE is quite difficult to get. Imagine "Sekiro" wants to copy the directory structure to use it for future BigSlice inputs.
+> As we have seen, the structure of the input folder for BiG-SLiCE is quite difficult to get. Imagine "Sekiro" wants to copy the directory structure to use it for future BiG-SLiCE inputs.
 > Consider the following directory structure:
 > ~~~
 >    └── input_folder/                    
@@ -420,7 +420,7 @@ $ tree -F
 {: .challenge}
 
 
-#### datasets.tsv file - The silmaril of BiGSLICE
+#### datasets.tsv file - The silmaril of BiG-SLiCE
 
 
 The next step is to create the main file **datasets.tsv**. First we 
@@ -676,7 +676,7 @@ input-folder/
 {: .challenge}
 
 
-### Running BiGSLICE
+### Running BiG-SLiCE
 
 
 We are ready to run `BiG-SLICE`. After we type the next line 
@@ -715,7 +715,7 @@ output-bigslice/
 ~~~
 {: .output}
 
-The `BiG-SLICE` prepared the code so that in each output 
+The `BiG-SLiCE` prepared the code so that in each output 
 folder we will obtain the output files and some scripts that 
 will generate a way to visualize the data. 
 
@@ -785,7 +785,7 @@ software, one of them is to give feedback to the developers. You can acces to th
 `Datasets` and `Runs` page also from the options that we see in the main part of 
 this summary page. The first part of this summary describes the datasets that 
 we provided as input. The second one is the information of the process (when we 
-ran the program) that `BiGSLICE` carry out with our data. 
+ran the program) that `BiG-SLiCE` carry out with our data. 
 
 If we click into the `Runs` field on the left or the `run-0001` blue button on the 
 **Runs** main section, we will jumpo to the page that give us the information 
