@@ -165,10 +165,11 @@ $ ls -F ../antismash/output/
 ~~~
 Streptococcus_agalactiae_18RS21/  Streptococcus_agalactiae_A909/    Streptococcus_agalactiae_COH1/
 Streptococcus_agalactiae_515/     Streptococcus_agalactiae_CJB111/  Streptococcus_agalactiae_H36B/
+Streptococcus_thermophilus_LMD-9/  Streptococcus_thermophilus_LMG_18311/
 ~~~
 {: .output}
 
-We have six _Streptococcus_ genomes from the original papar, and -- 
+We have six _Streptococcus_ genomes from the original papar, and two  
 public genomes. We will allocate their respective BGC `.gbk`s in 
 two `dataset`s, one for the genomes from Tettelin _et al._ paper, and 
 the another for the public ones.
@@ -180,7 +181,7 @@ begin the construction of the input.
 $ mkdir input-folder
 $ mkdir input-folder/dataset_1
 $ mkdir input-folder/dataset_2
-$ mkdir taxonomy
+$ mkdir input-folder/taxonomy
 $ tree
 ~~~
 {: .bash}
@@ -226,23 +227,29 @@ $ tree -F
 
 We will do the same for the public genomes:
 ~~~
-$ for i in -- --; 
-  do mkdir input-folder/dataset_2/Streptococcus_agalactiae_$i;
+$ for i in LMD-9 LMG_18311; 
+  do mkdir input-folder/dataset_2/Streptococcus_thermophilus_$i;
   done
 $ tree -F
 ~~~
 {: .bash}
 
 ~~~
---
---
---
---
---
---
---
---
---
+.
+└── input-folder/
+    ├── dataset_1/
+    │   ├── Streptococcus_agalactiae_18RS21/
+    │   ├── Streptococcus_agalactiae_515/
+    │   ├── Streptococcus_agalactiae_A909/
+    │   ├── Streptococcus_agalactiae_CJB111/
+    │   ├── Streptococcus_agalactiae_COH1/
+    │   └── Streptococcus_agalactiae_H36B/
+    ├── dataset_2/
+    │   ├── Streptococcus_thermophilus_LMD-9/
+    │   └── Streptococcus_thermophilus_LMG_18311/
+    └── taxonomy/
+
+12 directories, 0 files
 ~~~
 {: .bash}
 
@@ -263,28 +270,30 @@ $ tree -F
 └── input-folder/
     ├── dataset_1/
     │   ├── Streptococcus_agalactiae_18RS21/
-    │   │   ├── AAJO01000016.1.region001.gbk*
-    │   │   ├── AAJO01000043.1.region001.gbk*
-    │   │   └── AAJO01000226.1.region001.gbk*
+    │   │   ├── AAJO01000016.1.region001.gbk
+    │   │   ├── AAJO01000043.1.region001.gbk
+    │   │   └── AAJO01000226.1.region001.gbk
     │   ├── Streptococcus_agalactiae_515/
-    │   │   ├── AAJP01000027.1.region001.gbk*
-    │   │   └── AAJP01000037.1.region001.gbk*
+    │   │   ├── AAJP01000027.1.region001.gbk
+    │   │   └── AAJP01000037.1.region001.gbk
     │   ├── Streptococcus_agalactiae_A909/
-    │   │   ├── CP000114.1.region001.gbk*
-    │   │   └── CP000114.1.region002.gbk*
+    │   │   ├── CP000114.1.region001.gbk
+    │   │   └── CP000114.1.region002.gbk
     │   ├── Streptococcus_agalactiae_CJB111/
-    │   │   ├── AAJQ01000010.1.region001.gbk*
-    │   │   └── AAJQ01000025.1.region001.gbk*
+    │   │   ├── AAJQ01000010.1.region001.gbk
+    │   │   └── AAJQ01000025.1.region001.gbk
     │   ├── Streptococcus_agalactiae_COH1/
-    │   │   ├── AAJR01000002.1.region001.gbk*
-    │   │   └── AAJR01000044.1.region001.gbk*
+    │   │   ├── AAJR01000002.1.region001.gbk
+    │   │   └── AAJR01000044.1.region001.gbk
     │   └── Streptococcus_agalactiae_H36B/
-    │       ├── AAJS01000020.1.region001.gbk*
-    │       └── AAJS01000117.1.region001.gbk*
+    │       ├── AAJS01000020.1.region001.gbk
+    │       └── AAJS01000117.1.region001.gbk
     ├── dataset_2/
+    │   ├── Streptococcus_thermophilus_LMD-9/
+    │   └── Streptococcus_thermophilus_LMG_18311/
     └── taxonomy/
 
-10 directories, 13 files
+12 directories, 13 files
 ~~~
 {: .output}
 
@@ -298,13 +307,45 @@ $ tree -F
 {: .bash}
 
 ~~~
---
----
---
---
---
---
---
+.
+└── input-folder/
+    ├── dataset_1/
+    │   ├── Streptococcus_agalactiae_18RS21/
+    │   │   ├── AAJO01000016.1.region001.gbk
+    │   │   ├── AAJO01000043.1.region001.gbk
+    │   │   └── AAJO01000226.1.region001.gbk
+    │   ├── Streptococcus_agalactiae_515/
+    │   │   ├── AAJP01000027.1.region001.gbk
+    │   │   └── AAJP01000037.1.region001.gbk
+    │   ├── Streptococcus_agalactiae_A909/
+    │   │   ├── CP000114.1.region001.gbk
+    │   │   └── CP000114.1.region002.gbk
+    │   ├── Streptococcus_agalactiae_CJB111/
+    │   │   ├── AAJQ01000010.1.region001.gbk
+    │   │   └── AAJQ01000025.1.region001.gbk
+    │   ├── Streptococcus_agalactiae_COH1/
+    │   │   ├── AAJR01000002.1.region001.gbk
+    │   │   └── AAJR01000044.1.region001.gbk
+    │   └── Streptococcus_agalactiae_H36B/
+    │       ├── AAJS01000020.1.region001.gbk
+    │       └── AAJS01000117.1.region001.gbk
+    ├── dataset_2/
+    │   ├── Streptococcus_thermophilus_LMD-9/
+    │   │   ├── CP000419.1.region001.gbk
+    │   │   ├── CP000419.1.region002.gbk
+    │   │   ├── CP000419.1.region003.gbk
+    │   │   ├── CP000419.1.region004.gbk
+    │   │   └── CP000419.1.region005.gbk
+    │   └── Streptococcus_thermophilus_LMG_18311/
+    │       ├── NC_006448.1.region001.gbk
+    │       ├── NC_006448.1.region002.gbk
+    │       ├── NC_006448.1.region003.gbk
+    │       ├── NC_006448.1.region004.gbk
+    │       ├── NC_006448.1.region005.gbk
+    │       └── NC_006448.1.region006.gbk
+    └── taxonomy/
+
+12 directories, 24 files
 ~~~
 {: .bash}
 
@@ -429,9 +470,9 @@ for each one of our datasets, _i.e._ two in total. First, let's create
 the header of each one of these files using `echo`:
 
 ~~~
-$ echo -e "#Genomefolder""\t"Kingdom"\t"Phylum"\t"Class"\t"Order"\t"Family"\t"Genus"\t""Species Organism" > taxonomy/dataset_1_taxonomy.tsv
-$ echo -e "#Genomefolder""\t"Kingdom"\t"Phylum"\t"Class"\t"Order"\t"Family"\t"Genus"\t""Species Organism" > taxonomy/dataset_2_taxonomy.tsv
-$ more taxonomy/taxonomy/dataset_1_taxonomy.tsv
+$ echo -e "#Genome folder""\t"Kingdom"\t"Phylum"\t"Class"\t"Order"\t"Family"\t"Genus"\t""Species Organism" > taxonomy/dataset_1_taxonomy.tsv
+$ echo -e "#Genome folder""\t"Kingdom"\t"Phylum"\t"Class"\t"Order"\t"Family"\t"Genus"\t""Species Organism" > taxonomy/dataset_2_taxonomy.tsv
+$ more taxonomy/dataset_1_taxonomy.tsv
 ~~~
 {: .bash}
 
@@ -513,33 +554,31 @@ ae      Streptococcus   Streptococcus agalactiae H36B
 We will do the same for the `dataset_2_taxonomy.tsv` file:
 
 ~~~
---
---
---
---
---
---
+$ echo -e "Streptococcus_thermophilus_LMD-9/""\t"Bacteria"\t"Firmicutes"\t"Bacilli"\t"Lactobacillales"\t"Streptococcaceae"\t"Streptococcus"\t""Streptococcus thermophilus LMD-9" >> taxonomy/dataset_2_taxonomy.tsv
+
+$ echo -e "Streptococcus_thermophilus_LMG_18311/""\t"Bacteria"\t"Firmicutes"\t"Bacilli"\t"Lactobacillales"\t"Streptococcaceae"\t"Streptococcus"\t""Streptococcus thermophilus LMG 18311" >> taxonomy/dataset_2_taxonomy.tsv
+
+$ more taxonomy/dataset_2_taxonomy.tsv
 ~~~
 {: .bash}
 ~~~
---
---
---
---
---
---
---
+#Genome folder   Kingdom Phylum  Class   Order   Family  Genus   Species Organism
+Streptococcus_thermophilus_LMD-9/       Bacteria        Firmicutes      Bacilli Lactobacillales Strept
+ococcaceae      Streptococcus   Streptococcus thermophilus LMD-9
+Streptococcus_thermophilus_LMG_18311/   Bacteria        Firmicutes      Bacilli Lactobacillales Strept
+ococcaceae      Streptococcus   Streptococcus thermophilus LMG 18311
 ~~~
 {: .output}
 
 Now, we have the organization of our `input-folder` complete
 ~~~
-tree -F input_folder/
+$ cd ..
+$ tree -F input-folder/
 ~~~
 {: .bash}
 
 ~~~
-input_folder/
+input-folder/
 ├── dataset_1/
 │   ├── Streptococcus_agalactiae_18RS21/
 │   │   ├── AAJO01000016.1.region001.gbk
@@ -561,15 +600,25 @@ input_folder/
 │       ├── AAJS01000020.1.region001.gbk
 │       └── AAJS01000117.1.region001.gbk
 ├── dataset_2/
-│   └── Streptococcus_agalactiae_GBS_M002/
-│       ├── CP013908.1.region001.gbk
-│       └── CP013908.1.region002.gbk
+│   ├── Streptococcus_thermophilus_LMD-9/
+│   │   ├── CP000419.1.region001.gbk
+│   │   ├── CP000419.1.region002.gbk
+│   │   ├── CP000419.1.region003.gbk
+│   │   ├── CP000419.1.region004.gbk
+│   │   └── CP000419.1.region005.gbk
+│   └── Streptococcus_thermophilus_LMG_18311/
+│       ├── NC_006448.1.region001.gbk
+│       ├── NC_006448.1.region002.gbk
+│       ├── NC_006448.1.region003.gbk
+│       ├── NC_006448.1.region004.gbk
+│       ├── NC_006448.1.region005.gbk
+│       └── NC_006448.1.region006.gbk
 ├── datasets.tsv
 └── taxonomy/
     ├── dataset_1_taxonomy.tsv
     └── dataset_2_taxonomy.tsv
 
-10 directories, 18 files
+11 directories, 27 files
 ~~~
 {: .output}
 
@@ -630,25 +679,17 @@ of commmand, it will take close to 3 minutes to end the
 process:
 
 ~~~
-$ bigslice -i input_folder output_bigslice
+$ bigslice -i input-folder output-bigslice
 ~~~
 {: .bash}
 
 ~~~
-[0.2398824691772461s] clustering
-run_status is now CLUSTERING_FINISHED
-Assigning GCF membership...
-[0.03762388229370117s] membership_assignment
-run_status is now MEMBERSHIPS_ASSIGNED
-[7.152557373046875e-07s] preparing_output
-run_status is now RUN_FINISHED
-Dumping in-memory database content into /home/betterlab/GenomeMining/bigSlice/output_bigslice/result/data.db... 0.1546s
 BiG-SLiCE run complete!
 ~~~
 {: .output}
 
 In order to see the results, we need to download the 
-`output_bigslice` to out local computer. We will use 
+`output-bigslice` to out local computer. We will use 
 the `scp` command to accomplish this. 
 
 Let's open another terminal and **without connecting it to 
@@ -659,13 +700,13 @@ computer.
 
 ~~~
 $ cd Documents/
-$ scp -r betterlab@132.248.196.38/home/betterlab/dc_workshop/results/bigslice/output_bigslice .
+$ scp -r betterlab@132.248.196.38/home/betterlab/dc_workshop/results/bigslice/output-bigslice .
 $ ls -F
 ~~~
 {: .bash}
 
 ~~~
-output_bigslice/
+output-bigslice/
 ~~~
 {: .output}
 
@@ -674,7 +715,7 @@ folder we will obtain the output files and some scripts that
 will generate a way to visualize the data. 
 
 ~~~
-$ ls output_bigslice/
+$ ls output-bigslice/
 ~~~
 {: .bash}
 
@@ -689,12 +730,12 @@ softwares that need to be installed to use the visualization:
 command:
 
 ~~~
-$ pip install -r output_bigslice/requirements.txt
+$ pip install -r output-bigslice/requirements.txt
 ~~~
 {: .bash}
 
 ~~~
-
+Successfully installed pysqlite3
 ~~~
 {: .output}
 
@@ -702,19 +743,17 @@ After the installation, we can use the `start_server.sh` to
 generate a 
 
 ~~~
-$ bash output_bigslice/start_server.sh
+$ bash output-bigslice/start_server.sh
 ~~~
 {: .bash}
 
 ~~~
-$  * Serving Flask app "/home/betterlab/GenomeMining/bigSlice/try/app/run.py"
+ * Serving Flask app "/mnt/d/documentos/sideprojects/sc-mineria/bigSlice/output-bigslice/app/run.py"
  * Environment: production
-   WARNING: Do not use the development server in a production environment.
+   WARNING: This is a development server. Do not use it in a production deployment.
    Use a production WSGI server instead.
  * Debug mode: off
- * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
- * Running on http://132.248.196.38:5000/ (Press CTRL+C to quit)
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
 ~~~
 {: .output}
 
@@ -734,12 +773,31 @@ As a result, we will obtain a web-page that looks like this:
   <img src="../fig/02-05-05.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
 
-Here we have a summary of the result that we obtained. 
+Here we have a summary of the result that we obtained. In the left part, we see a 
+set of 7 fields. 3 of them have the information that we generated: `Summary`, 
+`Datasets`, and `Runs`. The other ones are for information regarding the 
+software, one of them is to give feedback to the developers. You can acces to the 
+`Datasets` and `Runs` page also from the options that we see in the main part of 
+this summary page. The first part of this summary describes the datasets that 
+we provided as input. The second one is the information of the process (when we 
+ran the program) that `BiGSLICE` carry out with our data. 
+
+If we click into the `Runs` field on the left or the `run-0001` blue button on the 
+**Runs** main section, we will jumpo to the page that give us the information 
+regarding the BGCs GCFs that were obtained:
 
 
 <a href="../fig/02-05-06.png">
   <img src="../fig/02-05-06.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
+
+
+
+
+<a href="../fig/02-05-07.png">
+  <img src="../fig/02-05-07.png" alt="Aquí va el texto que describe a la imagen." />
+</a>
+
 
 ~~~
 $ 
@@ -752,7 +810,7 @@ $
 {: .bash}
 
 > ## Discussion
-> Considering the results in the runs tab, we can see that there are a lot of Gene Cluster Families that have only one cluster associated to it (GCF_1, GCF_2, GCF_5, GCF_7). <br>
+> Considering the results in the runs tab, we can see that there are a lot of Gene Cluster Families that have only one cluster associated to it (GCF_1, GCF_2, GCF_4, GCF_5, GCF_6, GCF_8, and GCF_9). <br>
 > What does this tell us about the metabolites diversity of the Streptococcus sample?
 > > ## Solution
 > > We can see that there are some unique gene cluster families, which mean that there are some organism that has that unique gene cluster and therefore he has some metabolite that the others don´t and that may help him in his environmente. So, as there are many singleton Gene Cluster Families, we can say that theres a big diversity from the sample because many of the organisms in the sample have unique "habilities" (metabolites).
