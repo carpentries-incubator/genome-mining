@@ -167,6 +167,12 @@ Briefly, on the "overview" page ´.HTML´ you can find all the regions found wit
 > 
 > > ## Solution
 > > By calculating the difference between the initial position and the final position of the region.
+> > or command-line version
+> >
+> > ~~~
+> > $ grep LOCUS sequence.gb
+> > ~~~
+> > {: .laguage-bash}
 > {: .solution}
 {: .challenge}
 
