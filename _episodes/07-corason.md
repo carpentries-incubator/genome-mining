@@ -23,16 +23,16 @@ Input: query gene, reference BGC and genome database.
 Output: SVG figure with BGC in the family sorted according 
 to the multi-locus phylogeny of the core genes.
 
-Advantages
--SVG graphs Scalable graphs that allows metadata easy display.
--Interactive CORASON is not a static database, it allows you to explore your own genomes.
--Reproducibility CORASON runs on docker and conda, 
+Advantages  
+- SVG graphs Scalable graphs that allows metadata easy display.  
+- Interactive CORASON is not a static database, it allows you to explore your own genomes.  
+- Reproducibility CORASON runs on docker and conda, 
 this containerization which allows to always perform the same analysis 
-even if you change your Linux/perl/blast/muscle/Gblocks/quicktree local distributions.
+even if you change your Linux/perl/blast/muscle/Gblocks/quicktree local distributions.  
 
 ## CORASON conda 
 Here we are testing the new stand-alone 
-[corason in a conda environment](https://github.com/miguel-mx/corason-conda)  
+[corason in a conda environment](https://github.com/miguel-mx/corason-conda)
 with gbk as input-files   
 
 ~~~
@@ -50,7 +50,7 @@ cd corason-conda/EXAMPLE2
 mkdir  CORASON_GENOMES
 cp   ~/dc_workshop/results/annotated/*gbk CORASON_GENOMES
 ~~~
-{: bash}
+{: .code}
  
 Here the reference protein is cpsG, whose encoding gene is part of the [polysaccharide BGC](https://mibig.secondarymetabolites.org/repository/BGC0000744/index.html#r1c1) produced by some _S. agalactie_   
 
