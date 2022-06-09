@@ -26,12 +26,14 @@ BiG-SCAPE (Navarro-Muñoz et al., 2019), a workflow that will
 compare all the BGCs detected by antiSMASH to find their 
 relatedness. BiG-SCAPE will search for Pfam domains (Mistry et 
 al., 2021) in the protein sequences of each BGC. Then, the Pfam 
-domains will be linearized compared, creating different 
+domains will be linearized and compared, creating different 
 similarity networks and scoring the similarity of each pair of 
-clusters. Based on this, the diverse BGCs will be classified on 
-Gene Cluster Families (GCFs) to facilitate their study. A 
-single GCF is supposed to encompass BGCs that produce 
-chemically related metabolites (molecular families).
+clusters. Based on a cutoff value for this score, the diverse BGCs
+will be classified on Gene Cluster Families (GCFs) to facilitate 
+their study. A single GCF is supposed to encompass BGCs that produce 
+chemically related metabolites (molecular families). Lower cutoffs
+would create families of BGCs that produce identical compunds, while higher 
+cutoffs would create families of more loosely related compunds.
 
 Let's see how this analysis can be done:
 
@@ -191,7 +193,8 @@ in our results. And since none of the our BGCs is on a contig
 edge, we could use the global mode. However, frequently, when analyzing draft genomes, this 
 is not the case. Thus, the auto mode will be the most appropriate, which will use the global 
 mode to align domains except for those cases in which the BGC is located near to a contig end, 
-for which the glocal mode is automatically selected.
+for which the glocal mode is automatically selected. For this run we will use only de default 
+cutoff value (0.3).
 
 Now we are ready to run BiG-SCAPE:
 ~~~
