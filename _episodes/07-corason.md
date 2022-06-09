@@ -142,5 +142,8 @@ scp (remoto)/corason-conda/EXAMPLE2/output/cpsg.query-output  Downloads/.
 ~~~
 {: bash}
 
+<a href="../fig/corason.png">
+  <img src="../fig/corason.png" alt="" />
+</a>
 
 {% include links.md %}
