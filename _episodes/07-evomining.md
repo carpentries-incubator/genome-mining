@@ -72,16 +72,14 @@ scp betterlab@132.248.196.38:~/dc_workshop/results/genome-mining/corason-conda/E
 scp betterlab@132.248.196.38:~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree/1.csv ~/Downloads  
 ```
   
-To explore EvoMining outputs upload 1.tree and 1.csv files to [microReact](https://microreact.org/)  
+To explore EvoMining outputs upload 1.nwk and 1.csv 
+files to [microReact](https://microreact.org/)  
+Here is a [MicroReact visualization](https://microreact.org/project/e8b7wWZkovtavPFFpBXRPp-evomining-streptococcus-example) 
+of this EvoMining run.  
 
 <a href="../fig/EvoMiningMicroReact.png">
   <img src="../fig/EvoMiningMicroReact.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
-
-Here is a 
-[MicroReact visualization](https://microreact.org/project/e8b7wWZkovtavPFFpBXRPp-evomining-streptococcus-example) 
-of this EvoMining run.  
-
 
 To run EvoMining with a biggest centralmetabolite DB you can use 
 [EvoMining Zenodo](https://zenodo.org/record/1219709#.YqEsFqjMLrc) data.
@@ -93,7 +91,7 @@ genome mining software with its corresponding database
 
 > ## Callout:`To know more about evolutionay genome mining Reference.
 > Consult this references to know more about Evolutionary Genome Mining
-> The confluence of big data and evolutionary genome mining for the discovery of natural products. [Chevrette et al, 2020](https://doi.org/10.1039/D1NP00013F)`
+> The confluence of big data and evolutionary genome mining for the discovery of natural products. [Chevrette et al, 2021](https://doi.org/10.1039/D1NP00013F)`
 > Evolutionary Genome Mining for the Discovery and Engineering of Natural Product Biosynthesis. 
-[Chevrette et al, 2021](https://doi.org/10.1007/978-1-0716-2273-5_8)
+[Chevrette et al, 2022](https://doi.org/10.1007/978-1-0716-2273-5_8)
 {: .callout}
