@@ -89,9 +89,10 @@ To run EvoMining with a biggest centralmetabolite DB you can use
 genome mining software with its corresponding database 
 [ARTS-db](https://arts-db.ziemertlab.com/) . 
 
-> ## Callout:`To know more about evolutionay genome mining Reference.
-> Consult this references to know more about Evolutionary Genome Mining
-> The confluence of big data and evolutionary genome mining for the discovery of natural products. [Chevrette et al, 2021](https://doi.org/10.1039/D1NP00013F)`
-> Evolutionary Genome Mining for the Discovery and Engineering of Natural Product Biosynthesis. 
-[Chevrette et al, 2022](https://doi.org/10.1007/978-1-0716-2273-5_8)
+> ## Callout:Evolutionay Genome Mining
+> To know more about Genome Mining you can read these references:
+> - The confluence of big data and evolutionary genome mining for the discovery of natural products.
+>   [Chevrette et al, 2021](https://doi.org/10.1039/D1NP00013F)`
+> - Evolutionary Genome Mining for the Discovery and Engineering of Natural Product Biosynthesis. 
+> [Chevrette et al, 2022](https://doi.org/10.1007/978-1-0716-2273-5_8)
 {: .callout}
