@@ -9,8 +9,11 @@ objectives:
 keypoints:
 - "First key point. Brief Answer to questions. (FIXME)"
 ---
-FIXME
+In the future it will include:
+https://www.tfleao.com/general-8, 
+[Paired omics](https://pairedomicsdata.bioinformatics.nl/)
+[GNPS](https://gnps.ucsd.edu/ProteoSAFe/static/gnps-splash.jsp)
 
-# Ola ke ase?
+
 
 {% include links.md %}
