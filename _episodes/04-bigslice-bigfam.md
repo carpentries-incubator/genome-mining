@@ -17,11 +17,8 @@ keypoints:
 - "`BiG-SLiCE` and `BiG-FAM` are softwares that are useful to compare the metabolic diversity of bacterial lineages between each other and agains a big database"  
 - "A input-folder containing the BGCs from antiSMASH and the taxonomic information of each genome is needed to run `BiG-SLiCE`"
 - "The results from the antiSMASH web-tool are needed to run `BiG-FAM`"
-- "The obtetion of GCF using _Streptococcus_ lineages, "
 - "Gene Cluster Families can help us to compare the metabolic capabilities of a set of bacterial lineages"  
-- "BiGSLICE is a software designed to identify Gene Cluster Families in large datasets"
-- "BiG-FAM is the database built based on the information recopilated from BiGSLICE"
-- "We can use BiG-FAM to compare a BGC against the whole database and predit its Gene Cluster Family"
+- "We can use `BiG-FAM` to compare a BGC against the whole database and predit its Gene Cluster Family"
 ---
 
 ## BiG-SLiCE and BiG-FAM a set of tools to compare the microbial metabolic diversity
