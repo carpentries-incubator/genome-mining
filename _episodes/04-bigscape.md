@@ -197,7 +197,7 @@ Now we are ready to run BiG-SCAPE:
 ~~~
 run_bigscape bigscape/bgcs_gbks/ bigscape/output_070622 --mix --hybrids-off --mode auto
 ~~~
-{: .bash}
+{: .language-bash}
 
 > ## Output names
 >
