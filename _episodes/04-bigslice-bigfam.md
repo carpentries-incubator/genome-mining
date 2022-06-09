@@ -4,6 +4,8 @@ title: "Homologous BGC Clusterization"
 teaching: 40
 exercises: 10
 questions:
+- "How can I identify Gene CLuster Families?"
+- "How can I predict the production of similar metabolites"
 - "How can I clusterize BGCs into groups that produce similar metabolites?"
 - "How can I compare the metabolic capability of different bacterial lineages?"
 objectives:
@@ -12,9 +14,10 @@ objectives:
 - "Run an example with our _Streptococcus_ data on both softwares"
 - "Understand the obtained results"
 keypoints:
-- ""  
-- ""
-- ""
+- "`BiG-SLiCE` and `BiG-FAM` are softwares that are useful to compare the metabolic diversity of bacterial lineages between each other and agains a big database"  
+- "A input-folder containing the BGCs from antiSMASH and the taxonomic information of each genome is needed to run `BiG-SLiCE`"
+- "The results from the antiSMASH web-tool are needed to run `BiG-FAM`"
+- "The obtetion of GCF using _Streptococcus_ lineages, "
 ---
 
 ## BiG-SLiCE and BiG-FAM a set of tools to compare the microbial metabolic diversity
@@ -62,7 +65,7 @@ has been installed and all the needed softwares for its usage:
 ~~~
 $ conda activate GenomeMining
 ~~~
-{: .bash}
+{: .language-bash}
 
 You will have now a `(GenomeMining)` label at the beggining of the 
 promt line.
@@ -73,7 +76,7 @@ a first glance at the input that we need:
 ~~~
 bigslice --help | head -n20
 ~~~
-{: .bash}
+{: .language-bash}
 
 ~~~
 usage: bigslice [-i <folder_path>] [--resume] [--complete] [--threshold T]
@@ -151,7 +154,7 @@ $ cd ~/dc_workshop/results
 $ mkdir bigslice
 $ bigslice
 ~~~
-{: .bash}
+{: .language-bash}
 
 Now that we now what input `BiG-SLiCE` requires, we will do our 
 input-folder step by step. First, let's remeber how much genomes 
@@ -160,7 +163,7 @@ we have:
 ~~~
 $ ls -F ../antismash/output/
 ~~~
-{: .bash}
+{: .language-bash}
 
 ~~~
 Streptococcus_agalactiae_18RS21/  Streptococcus_agalactiae_A909/    Streptococcus_agalactiae_COH1/
@@ -184,7 +187,7 @@ $ mkdir input-folder/dataset_2
 $ mkdir input-folder/taxonomy
 $ tree
 ~~~
-{: .bash}
+{: .language-bash}
 
 ~~~
 .
@@ -206,7 +209,7 @@ $ for i in 18RS21 COH1 515 H36B A909 CJB111;
   done
 $ tree -F
 ~~~
-{: .bash}
+{: .language-bash}
 
 ~~~
 .
@@ -232,7 +235,7 @@ $ for i in LMD-9 LMG_18311;
   done
 $ tree -F
 ~~~
-{: .bash}
+{: .language-bash}
 
 ~~~
 .
@@ -251,7 +254,7 @@ $ tree -F
 
 12 directories, 0 files
 ~~~
-{: .bash}
+{: .language-bash}
 
 Next, we will copy the BGCs `.gbk` files from the dataset_1 
 genomes from each `AntiSMASH` output directory to its respective 
@@ -263,7 +266,7 @@ $ ls input-folder/dataset_1/ | while read line;
   done
 $ tree -F
 ~~~
-{: .bash}
+{: .language-bash}
 
 ~~~
 .
@@ -304,7 +307,7 @@ $ ls input-folder/dataset_2/ | while read line;
   done
 $ tree -F
 ~~~
-{: .bash}
+{: .language-bash}
 
 ~~~
 .
@@ -347,7 +350,7 @@ $ tree -F
 
 12 directories, 24 files
 ~~~
-{: .bash}
+{: .language-bash}
 
 > ## Exercise 1.
 > As we have seen, the structure of the input folder for BiG-SLiCE is quite difficult to get. Imagine "Sekiro" wants to copy the directory structure to use it for future BiG-SLiCE inputs.
@@ -381,7 +384,7 @@ $ tree -F
 > $ cd input_foder_copy
 > $ rm -r
 > ~~~
-> {: .bash}
+> {: .language-bash}
 > b)
 > ~~~
 > $ mv -r input_folder input_folder_copy
@@ -389,7 +392,7 @@ $ tree -F
 > $ rm input_folder_copy/dataset_2/genome_2A/* input_folder_copy/dataset_2/genome_2B/*
 > $ rm input_folder_copy/taxonomy/*
 > ~~~
-> {: .bash}
+> {: .language-bash}
 > c)
 > ~~~
 > $ cp -r input_folder input_folder_copy
@@ -397,7 +400,7 @@ $ tree -F
 > $ rm input_folder_copy/dataset_2/genome_2A/* input_folder_copy/dataset_2/genome_2B/*
 > $ rm input_folder_copy/taxonomy/*
 > ~~~
-> {: .bash}
+> {: .language-bash}
 > d)
 > ~~~
 > $ cp -r input_folder input_folder_copy
@@ -405,7 +408,7 @@ $ tree -F
 > $ rm input_folder_copy/dataset_2/genome_2A/* /genome_2B/*
 > $ rm input_folder_copy/taxonomy/*
 > ~~~
-> {: .bash}
+> {: .language-bash}
 > > ## Solution
 > > First we need to copy the whole directory to make an input_folder_copy. After that we want to erase the files inside the directories dataset_1/genome_1A, dataset_1/genome_1B, dataset_2/genome_2A, dataset2/genome_2B and taxonomy/ <br>
 > > c)
@@ -415,7 +418,7 @@ $ tree -F
 > > $ rm input_folder_copy/dataset_2/genome_2A/* input_folder_copy/dataset_2/genome_2B/*
 > > $ rm input_folder_copy/taxonomy/*
 > > ~~~
-> > {: .bash}
+> > {: .language-bash}
 > {: .solution}
 {: .challenge}
 
@@ -436,7 +439,7 @@ $ echo -e "#Dataset name""\t""Path to folder""\t""Path to taxonomy""\t""Descript
 $ more datasets.tsv
 
 ~~~
-{: .bash}
+{: .language-bash}
 
 ~~~
 #Dataset name   Path to folder  Path to taxonomy        Description
@@ -452,7 +455,7 @@ $ echo -e "dataset_1""\t""dataset_1/""\t""taxonomy/dataset_1_taxonomy.tsv""\t""T
 $ echo -e "dataset_2""\t""dataset_2/""\t""taxonomy/dataset_2_taxonomy.tsv""\t""Public genomes" >> datasets.tsv
 $ more datasets.tsv
 ~~~
-{: .bash}
+{: .language-bash}
 
 ~~~
 #Dataset name   Path to folder  Path to taxonomy        Description
@@ -477,7 +480,7 @@ $ echo -e "#Genome folder""\t"Kingdom"\t"Phylum"\t"Class"\t"Order"\t"Family"\t"G
 $ echo -e "#Genome folder""\t"Kingdom"\t"Phylum"\t"Class"\t"Order"\t"Family"\t"Genus"\t""Species Organism" > taxonomy/dataset_2_taxonomy.tsv
 $ more taxonomy/dataset_1_taxonomy.tsv
 ~~~
-{: .bash}
+{: .language-bash}
 
 ~~~
 #Genome folder  Kingdom Phylum  Class   Order   Family  Genus   Species Organism
@@ -490,7 +493,7 @@ searching for each lineage taxonomic identification on [NCBI](https://www.ncbi.n
 ~~~
 $ head -n20 ../../annotated/Streptococcus_agalactiae_18RS21.gbk
 ~~~
-{: .bash}
+{: .language-bash}
 
 ~~~
 LOCUS       AAJO01000169.1          2501 bp    DNA     linear   UNK
@@ -536,7 +539,7 @@ $ echo -e "Streptococcus_agalactiae_H36B/""\t"Bacteria"\t"Firmicutes"\t"Bacilli"
 
 $ more taxonomy/dataset_1_taxonomy.tsv
 ~~~
-{: .bash}
+{: .language-bash}
 ~~~
 #Genome folder   Kingdom Phylum  Class   Order   Family  Genus   Species Organism
 Streptococcus_agalactiae_18RS21/        Bacteria        Firmicutes      Bacilli Lactobacillales Strept
@@ -563,7 +566,7 @@ $ echo -e "Streptococcus_thermophilus_LMG_18311/""\t"Bacteria"\t"Firmicutes"\t"B
 
 $ more taxonomy/dataset_2_taxonomy.tsv
 ~~~
-{: .bash}
+{: .language-bash}
 ~~~
 #Genome folder   Kingdom Phylum  Class   Order   Family  Genus   Species Organism
 Streptococcus_thermophilus_LMD-9/       Bacteria        Firmicutes      Bacilli Lactobacillales Strept
@@ -578,7 +581,7 @@ Now, we have the organization of our `input-folder` complete
 $ cd ..
 $ tree -F input-folder/
 ~~~
-{: .bash}
+{: .language-bash}
 
 ~~~
 input-folder/
@@ -671,7 +674,7 @@ input-folder/
 > > ~~~
 > > $ grep 'ORGANISM' -m1 -A3 Streptococcus_agalactiae_18RS21.gbk
 > > ~~~
-> > {: .bash}
+> > {: .language-bash}
 > {: .solution}
 {: .challenge}
 
@@ -686,7 +689,7 @@ process:
 ~~~
 $ bigslice -i input-folder output-bigslice
 ~~~
-{: .bash}
+{: .language-bash}
 
 ~~~
 BiG-SLiCE run complete!
@@ -708,7 +711,7 @@ $ cd Documents/
 $ scp -r betterlab@132.248.196.38/home/betterlab/dc_workshop/results/bigslice/output-bigslice .
 $ ls -F
 ~~~
-{: .bash}
+{: .language-bash}
 
 ~~~
 output-bigslice/
@@ -722,7 +725,7 @@ will generate a way to visualize the data.
 ~~~
 $ ls output-bigslice/
 ~~~
-{: .bash}
+{: .language-bash}
 
 ~~~
 app  LICENSE.txt  requirements.txt  result  start_server.sh
@@ -737,7 +740,7 @@ command:
 ~~~
 $ pip install -r output-bigslice/requirements.txt
 ~~~
-{: .bash}
+{: .language-bash}
 
 ~~~
 Successfully installed pysqlite3
@@ -750,7 +753,7 @@ generate a
 ~~~
 $ bash output-bigslice/start_server.sh
 ~~~
-{: .bash}
+{: .language-bash}
 
 ~~~
  * Serving Flask app "/mnt/d/documentos/sideprojects/sc-mineria/bigSlice/output-bigslice/app/run.py"
