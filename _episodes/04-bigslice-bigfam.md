@@ -4,8 +4,8 @@ title: "Homologous BGC Clusterization"
 teaching: 40
 exercises: 10
 questions:
-- "Why to use BiG-SLiCE / BiG-FAM?"
-- "How to run a BGC analysis with BiG-SLiCE / BiG-FAM?"
+- "How can I clusterize BGCs into groups that produce similar metabolites?"
+- "How can I compare the metabolic capability of different bacterial lineages?"
 objectives:
 - "Understand why we want to run `BiG-SLiCE` and `BiG-FAM` "
 - "Learn what input do we need to run `BiG-SLiCE` and `BiG-FAM`"
@@ -26,8 +26,8 @@ biomolecules that are (mostly) not essential for life. They take
 the role of "tools" that offer some ecological and physiological 
 advantage to the bacterial lineage producing it. 
 
-<a href="../fig/02-05-01.png">
-  <img src="../fig/02-05-01.png" alt="Aquí va el texto que describe a la imagen." />
+<a href="../fig/02-04-01.png">
+  <img src="../fig/02-04-01.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
 
 The presence/abscence of a set of BGCs in a genome, can be associated 
@@ -36,8 +36,8 @@ to the ecological niches and (micro)environments which the linage faces.
 The counterpart of this can be taked as how biosynthetically diverse 
 a bacterial lineage can be because of its environment.
 
-<a href="../fig/02-05-02.png">
-  <img src="../fig/02-05-02.png" alt="Aquí va el texto que describe a la imagen." />
+<a href="../fig/02-04-02.png">
+  <img src="../fig/02-04-02.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
 
 To answer some of this questions, we need a way to compare the metabolic 
@@ -108,8 +108,8 @@ main components:
 - **datasets.tsv:** This is a file that **needs to have this exact name**. This must be a tabular separated file where the information of 
 each dataset (BGCs from a group of genomes) must be specified.
 
-<a href="../fig/02-05-03.png">
-  <img src="../fig/02-05-03.png" alt="Aquí va el texto que describe a la imagen." />
+<a href="../fig/02-04-03.png">
+  <img src="../fig/02-04-03.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
 
 
@@ -137,8 +137,8 @@ input-folder:
 
 Here, we have an example of the structure of the `input-folder`:
 
-<a href="../fig/02-05-04.png">
-  <img src="../fig/02-05-04.png" alt="Aquí va el texto que describe a la imagen." />
+<a href="../fig/02-04-04.png">
+  <img src="../fig/02-04-04.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
 
 ### Creating the input-folder
@@ -774,8 +774,8 @@ http://localhost:5000/
 
 As a result, we will obtain a web-page that looks like this:
 
-<a href="../fig/02-05-05.png">
-  <img src="../fig/02-05-05.png" alt="Aquí va el texto que describe a la imagen." />
+<a href="../fig/02-04-05.png">
+  <img src="../fig/02-04-05.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
 
 Here we have a summary of the result that we obtained. In the left part, we see a 
@@ -792,8 +792,8 @@ If we click into the `Runs` field on the left or the `run-0001` blue button on t
 regarding the BGCs GCFs that were obtained:
 
 
-<a href="../fig/02-05-06.png">
-  <img src="../fig/02-05-06.png" alt="Aquí va el texto que describe a la imagen." />
+<a href="../fig/02-04-06.png">
+  <img src="../fig/02-04-06.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
 
 In this new page we have two bar-plots that give us information regarding if the BGCs that 
@@ -815,8 +815,8 @@ BGC's. If we jump to section called `Members`, we can click on the
 `view BGC arrowers` button to get a visualization of the domains that are 
 part of each of the genes of these BGCs.
 
-<a href="../fig/02-05-07.png">
-  <img src="../fig/02-05-07.png" alt="Aquí va el texto que describe a la imagen." />
+<a href="../fig/02-04-07.png">
+  <img src="../fig/02-04-07.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
 
 As we can see, this tool can be used to clusterize homologous BGCs that share 
@@ -862,8 +862,8 @@ To demonstrate the funtionality of `BiG-SLICE`, the authors recopilated close to
 call `BiG-FAM`. When you get to the main [page](https://bigfam.bioinformatics.nl/home), 
 you will face a structure that looks like the one othat we saw on the `BiG-SLICE` result:
 
-<a href="../fig/02-05-08.png">
-  <img src="../fig/02-05-08.png" alt="Aquí va el texto que describe a la imagen." />
+<a href="../fig/02-04-08.png">
+  <img src="../fig/02-04-08.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
 
 One of the options of the left is `Query`. If we click here, we will move to a new 
@@ -881,13 +881,16 @@ bacteria-f931deb5-509b-4f28-a210-212456c5139b
 
 And click the `submit` option.
 
-<a href="../fig/02-05-09.png">
-  <img src="../fig/02-05-09.png" alt="Aquí va el texto que describe a la imagen." />
+<a href="../fig/02-04-09.png">
+  <img src="../fig/02-04-09.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
 
 This will generate a result page that will indicate with which BGCs from the 
 database, the BGCs from out genome is related.
 
+<a href="../fig/02-04-10.png">
+  <img src="../fig/02-04-10.png" alt="Aquí va el texto que describe a la imagen." />
+</a>
 
 
 {% include links.md %}
