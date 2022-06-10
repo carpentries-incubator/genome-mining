@@ -129,14 +129,14 @@ dataset_1 and dataset_2 respectively.
 carry the taxonomix information of each of the genomes where the 
 input BGCs were found and the path to reach these BGCs inside the 
 input-folder:
-	1. Genome folder name (ends with '/')
-	2. Kingdom / Domain name
-	3. Class name
-	4. Order name
-	5. Family name
-	6. Genus name
-	7. Species name
-	8. Organism / Strain name
+  1. Genome folder name (ends with '/')
+  2. Kingdom / Domain name
+  3. Class name
+  4. Order name
+  5. Family name
+  6. Genus name
+  7. Species name
+  8. Organism / Strain name
 
 
 Here, we have an example of the structure of the `input-folder`:
@@ -421,13 +421,13 @@ $ tree -F
 {: .challenge}
 
 
-#### **datasets.tsv file - The [silmaril](https://lotr.fandom.com/wiki/Silmarils) of BiG-SLiCE **
+**datasets.tsv file - The [silmaril](https://lotr.fandom.com/wiki/Silmarils) of  iG-SLiCE**
 
 
 The next step is to create the main file **datasets.tsv**. First we 
 put the first lines to this file. In each of these `.tsv` files, we 
 can put lines that begin with `#`. This will not be read it by the 
-code, and it can be of help to know whit information is located 
+code, and it can be of help to know which information is located 
 in those files. We will use the command `echo` with the `-e` flag 
 that will enable us to put tab separations between the text:
 
@@ -444,7 +444,7 @@ $ more datasets.tsv
 ~~~
 {: .output}
 
-We will use `echo` *One more time* to put the information of out two 
+We will use `echo` *One more time* to put the information of our two 
 datasets. But this time, we will indicate bash that we want to insert 
 this new line in the existing `datasets.tsv` with the `>>` option.
 
@@ -465,7 +465,9 @@ dataset_2       dataset_2/      taxonomy/dataset_2_taxonomy.tsv Public genomes
 The main file of the input-folder is finished!
 
 
+
 #### The taxonomy of the input-folder
+
 
 
 We also need to specify the taxonomic assignation of each of the 
@@ -476,6 +478,7 @@ the header of each one of these files using `echo`:
 ~~~
 $ echo -e "#Genome folder""\t"Kingdom"\t"Phylum"\t"Class"\t"Order"\t"Family"\t"Genus"\t""Species Organism" > taxonomy/dataset_1_taxonomy.tsv
 $ echo -e "#Genome folder""\t"Kingdom"\t"Phylum"\t"Class"\t"Order"\t"Family"\t"Genus"\t""Species Organism" > taxonomy/dataset_2_taxonomy.tsv
+
 $ more taxonomy/dataset_1_taxonomy.tsv
 ~~~
 {: .language-bash}
@@ -519,7 +522,7 @@ FEATURES             Location/Qualifiers
 
 We will use again `echo` to write this information into our 
 `dataset_taxonomy.tsv`. This is going to be a little long because 
-we have 8 genomes adn we will need to write 8 `echo` lines, but 
+we have 8 genomes and we will need to write 8 `echo` lines, but 
 bear with us. We are almost there!
 
 ~~~
@@ -683,7 +686,7 @@ input-folder/
 
 
 We are ready to run `BiG-SLICE`. After we type the next line 
-of commmand, it will take close to 3 minutes to end the 
+of commmand, it will take close to 3 minutes long to end the 
 process:
 
 ~~~
@@ -692,6 +695,8 @@ $ bigslice -i input-folder output-bigslice
 {: .language-bash}
 
 ~~~
+...
+...
 BiG-SLiCE run complete!
 ~~~
 {: .output}
@@ -708,7 +713,7 @@ computer.
 
 ~~~
 $ cd Documents/
-$ scp -r betterlab@132.248.196.38/home/betterlab/dc_workshop/results/bigslice/output-bigslice .
+$ scp -r virtual-computerbetterlab@###.###.###.##/home/virtual-User/dc_workshop/results/bigslice/output-bigslice .
 $ ls -F
 ~~~
 {: .language-bash}
@@ -743,6 +748,8 @@ $ pip install -r output-bigslice/requirements.txt
 {: .language-bash}
 
 ~~~
+...
+...
 Successfully installed pysqlite3
 ~~~
 {: .output}
