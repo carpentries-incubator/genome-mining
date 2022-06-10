@@ -109,7 +109,7 @@ for species in Streptococcus*
 
 Now make a directory for all of your BiG-SCAPE analysis and inside it 
 make a directory that will contain all of the `gbks` of all of our genomes. 
-This one will be the input for BiG-SCAPE. (For cenvenience `bigscape/` will be inside `antsimash/`
+This one will be the input for BiG-SCAPE. (For cenvenience `bigscape/` will be inside `antismash/` while we run BiG-SCAPE).
 ~~~
 mkdir -p bigscape/bgcs_gbks/
 ~~~
@@ -117,25 +117,13 @@ mkdir -p bigscape/bgcs_gbks/
 
 Now copy all the region `gbks`to this new directory, and look at the contents inside it:
 ~~~
-scp Streptococcus_agalactiae_*/*region*gbk bigscape/bgcs_gbks/
+scp Streptococcus_*/*region*gbk bigscape/bgcs_gbks/
 ls bigscape/bgcs_gbks/
 ~~~
 {: .language-bash}
 
 ~~~
-Streptococcus_agalactiae_18RS21-AAJO01000016.1.region001.gbk
-Streptococcus_agalactiae_18RS21-AAJO01000043.1.region001.gbk
-Streptococcus_agalactiae_18RS21-AAJO01000226.1.region001.gbk
-Streptococcus_agalactiae_515-AAJP01000027.1.region001.gbk
-Streptococcus_agalactiae_515-AAJP01000037.1.region001.gbk
-Streptococcus_agalactiae_A909-CP000114.1.region001.gbk
-Streptococcus_agalactiae_A909-CP000114.1.region002.gbk
-Streptococcus_agalactiae_CJB111-AAJQ01000010.1.region001.gbk
-Streptococcus_agalactiae_CJB111-AAJQ01000025.1.region001.gbk
-Streptococcus_agalactiae_COH1-AAJR01000002.1.region001.gbk
-Streptococcus_agalactiae_COH1-AAJR01000044.1.region001.gbk
-Streptococcus_agalactiae_H36B-AAJS01000020.1.region001.gbk
-Streptococcus_agalactiae_H36B-AAJS01000117.1.region001.gbk
+
 ~~~
 {: .language-bash}
 
@@ -193,7 +181,7 @@ cutoff value (0.3).
 
 Now we are ready to run BiG-SCAPE:
 ~~~
-run_bigscape bigscape/bgcs_gbks/ bigscape/output_070622 --mix --hybrids-off --mode auto
+run_bigscape bigscape/bgcs_gbks/ bigscape/output_100622 --mix --hybrids-off --mode auto
 ~~~
 {: .language-bash}
 
@@ -214,7 +202,7 @@ Since BiG-SCAPE does not produce a file with the run information, it is useful
 to copy the text printed on the screen to a file. Use `nano` to paste all the text 
 that BiG-SCAPE generated in a file named `bigscape.log` inside the folder `output_060722/logs/`.
 
-To keep order in you directories move your `bigscape/` folder to the parent folder:
+To keep order in you directories move your `bigscape/` directory to `genome_mining/`:
 ~~~
 mv bigscape/ ../
 ~~~
@@ -224,17 +212,17 @@ mv bigscape/ ../
 
 An easy way to prospect your results is by opening the `index.html` file with a browser 
 (Firefox, Chrome, Safari, etc.). For this you need to go to your local machine and locate 
-yourself in a folder where you want to store your BiG-SCAPE results. Now copy your `output_070622/` 
+yourself in a folder where you want to store your BiG-SCAPE results. Now copy your `output_100622/` 
 folder to your local machine:
 
 ~~~
-scp -r betterlab@132.248.196.38:/home/betterlab/GenomeMining/datos/bigscape/output_070622/ .
+scp -r <serveradress>:~/gm_workshop/results/genome_mining/bigscape/output_100622/ .
 ~~~
 {: .language-bash}
 
 Open your `index.html` with a browser:
 ~~~
-firefox output_070622/index.html # If you have Firefox available, otherwise open it using the GUI.
+firefox output_100622/index.html # If you have Firefox available, otherwise open it using the GUI.
 ~~~
 {: .language-bash}
 
