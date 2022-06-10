@@ -1,7 +1,7 @@
 ---
 title: "BGC Prediction through Machine Learning"
-teaching: 20
-exercises: 30
+teaching: 0
+exercises: 0
 questions:
 - ""
 - ""
