@@ -152,7 +152,7 @@ First, we will create a `bigslice` folder inside the
  ~~~
 $ cd ~/gm_workshop/results/genome_mining
 $ mkdir bigslice
-$ bigslice
+$ cd bigslice
 ~~~
 {: .language-bash}
 
@@ -161,7 +161,7 @@ input-folder step by step. First, let's remeber how much genomes
 we have:
 
 ~~~
-$ ls -F ../antismash/output/
+$ ls -F ../antismash
 ~~~
 {: .language-bash}
 
