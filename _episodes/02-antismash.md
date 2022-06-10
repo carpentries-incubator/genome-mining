@@ -72,15 +72,15 @@ Second, run the antiSMASH command shown earlier in this lesson on the data `.gbk
 #### **Case I** - One single files
 Let's choose the ´Streptococcus_agalactiae_18RS21.gbk´ file
 ~~~
-$ mkdir ~/gm_workshop/results/antismash
+$ mkdir -p ~/gm_workshop/results/antismash
 $ cd ~/gm_workshop/results/antismash
-$ antismash genefinding-tool=None ~/gm_workshop/results/annotated/agalactiae_A909.gbk
+$ antismash --genefinding-tool=none ~/gm_workshop/results/annotated/agalactiae_A909_prokka.gbk 
 ~~~
 {: .source}
 
 To see the antiSMASH generated outcomes do:
 ~~~
-$ cd Streptococcus_agalactiae_A909/
+$ cd  ~/gm_workshop/results/annotated/antismash/agalactiae_A909_prokka
 $ tree -L 1
 ~~~
 {: .source}
