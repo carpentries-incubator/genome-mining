@@ -421,7 +421,7 @@ $ tree -F
 {: .challenge}
 
 
-**datasets.tsv file - The [silmaril](https://lotr.fandom.com/wiki/Silmarils) of  iG-SLiCE**
+**datasets.tsv file - The [silmaril](https://lotr.fandom.com/wiki/Silmarils) of  BiG-SLiCE**
 
 
 The next step is to create the main file **datasets.tsv**. First we 
