@@ -150,7 +150,7 @@ First, we will create a `bigslice` folder inside the
 `results` directory. 
 
  ~~~
-$ cd ~/dc_workshop/results
+$ cd ~/gm_workshop/results/genome_mining
 $ mkdir bigslice
 $ bigslice
 ~~~
@@ -166,9 +166,9 @@ $ ls -F ../antismash/output/
 {: .language-bash}
 
 ~~~
-Streptococcus_agalactiae_18RS21/  Streptococcus_agalactiae_A909/    Streptococcus_agalactiae_COH1/
-Streptococcus_agalactiae_515/     Streptococcus_agalactiae_CJB111/  Streptococcus_agalactiae_H36B/
-Streptococcus_thermophilus_LMD-9/  Streptococcus_thermophilus_LMG_18311/
+agalactiae_18RS21/  agalactiae_A909/    agalactiae_COH1/
+agalactiae_515/     agalactiae_CJB111/  agalactiae_H36B/
+athermophilus_LMD-9/  athermophilus_LMG_18311/
 ~~~
 {: .output}
 
