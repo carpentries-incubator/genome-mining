@@ -25,9 +25,26 @@ as a source of discovering for new BGCs.
 [Explore the BGC](https://mibig.secondarymetabolites.org/repository/BGC0000893/index.html#r1c1)
 ## Starting a genome mining project
 
-## Some metadata 
+## Planning a Genome Mining project  
+First, a set of genomes from taxa should be chosen. In this lesson
+we will be working with _S. agalactiae_ genomes. This genus is not know
+for its capabilities as a Natural products producer but is good enough
+to show different approaches to genome mining. Recently metagenomes have been 
+considered in genome mining studies. Here are some considerations 
+taht may be useful for you as a genome miner: 
 
-## _Streptomyces_ are great Natural Products producers
+- Think about your research questions before start analyzing the data.  
+- Remember, raw metadata should remain intact during all Genome Mining process.
+It could be a good idea to change its file-permisions to read only.    
+- Gather as much information in the form of metadata of 
+all the genomes that you are working with.  
+- All your intermediate steps should be considered temporal 
+ and maybe removed without risk.   
+- Save your scripts using a version manager, GitHub for example.
+- Share your data in public repositories.   
+- Give time to make your science repeatible, help your community.    
+
+
 
 
 {% include links.md %}
