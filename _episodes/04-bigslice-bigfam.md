@@ -4,7 +4,7 @@ title: "Homologous BGC Clusterization"
 teaching: 40
 exercises: 10
 questions:
-- "How can I identify Gene CLuster Families?"
+- "How can I identify Gene Cluster Families?"
 - "How can I predict the production of similar metabolites"
 - "How can I clusterize BGCs into groups that produce similar metabolites?"
 - "How can I compare the metabolic capability of different bacterial lineages?"
@@ -669,7 +669,9 @@ input-folder/
 >            agalactiae.
 > ~~~
 > {: .output}  
-> 
+> > 
+>{: .keypoints} 
+> You can use the `grep --help` command to get information about the available options for the `grep` command
 > > ## Solution
 > > We need to use the grep command to search for the word "ORGANISM" in the file. Once located we just want to get the first instance of the word that is why we use the -m1 flag. Then we want the 3 next lines of the file after the instance, because that's where the information is. So the final command would be:
 > > ~~~
