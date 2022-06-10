@@ -45,25 +45,20 @@ In each of the antiSMASH output directories, we will find a single `.gbk`
 
 Let's locate in the directory that has the antiSMASH results of each genome:
 ~~~
-pwd
+~/gm_workshop/results/genome_mining/antismash/
 ~~~
 {: .language-bash}
-
-~~~
-/home/betterlab/GenomeMining/datos/copia-antis-output
-~~~
-{: .output}
 
 Since we will mix in a directory many files with similar names we want to 
 be sure that nothing will get left behind or overwritten. For this, we
  will count all the `gbk` files of all the genomes.
 ~~~
-ls Streptococcus_agalactiae_*/*region*gbk | wc -l
+ls Streptococcus*/*region*gbk | wc -l
 ~~~
 {: .language-bash}
 
 ~~~
-13
+
 ~~~
 {: .output}
 
@@ -104,7 +99,7 @@ ls -1 "$1"/*region*gbk | while read line # enlist the gbks of all regions in the
 
 Run the script for all the directory:
 ~~~
-for species in Streptococcus_agalactiae_*
+for species in Streptococcus*
 	do
  		sh change-names.sh $species
  	done
@@ -114,7 +109,7 @@ for species in Streptococcus_agalactiae_*
 
 Now make a directory for all of your BiG-SCAPE analysis and inside it 
 make a directory that will contain all of the `gbks` of all of our genomes. 
-This one will be the input for BiG-SCAPE.
+This one will be the input for BiG-SCAPE. (For cenvenience `bigscape/` will be inside `antsimash/`
 ~~~
 mkdir -p bigscape/bgcs_gbks/
 ~~~
