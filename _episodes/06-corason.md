@@ -1,7 +1,7 @@
 ---
 title: "Finding variation on genomic vicinities"
-teaching: 30
-exercises: 30
+teaching: 20
+exercises: 15
 questions:
 - "How can I follow variation in genomic vicinities given a reference BGC?"
 - "Which gene families are the conserved part of a BGC family?"
