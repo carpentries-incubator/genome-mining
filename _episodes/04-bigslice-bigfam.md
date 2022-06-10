@@ -669,6 +669,7 @@ input-folder/
 >            agalactiae.
 > ~~~
 > {: .output}  
+> > ## Hint
 > >  You can use the `grep --help` command to get information about the available options for the `grep` command
 >{: .keypoints} 
 >
