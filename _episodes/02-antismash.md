@@ -174,6 +174,7 @@ Briefly, on the "overview" page ´.HTML´ you can find all the regions found wit
 > > ~~~
 > > $ grep LOCUS region.gbk
 > > ~~~
+> > Locus contains the information of the characteristics of the sequence
 > > {: .laguage-bash}
 > {: .solution}
 {: .challenge}
