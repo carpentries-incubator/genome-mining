@@ -52,10 +52,10 @@ For complex queries the database also provides a sophisticated query builder tha
 > ![Forking Repositories]({{ page.root }}/fig/MIBiG_results.png)
 
 > ## Exercise 1: 
-> You are going to do an experiment, you have two organisms one is likely to produce themophilin 1277 and the other substances streptolysin S, based on the table, which of these organisms is more likely to produce their respective secondary metabolite?
+> You are going to do an experiment, you have two organisms one is likely to produce *themophilin 1277* and the other one *streptolysin S*, based on the table, which of these organisms is more likely to produce their respective secondary metabolite?
 > 
 > > ## Solution
-> > Todavía no hay jejjj
+> > Todavía no hay
 > {: .solution}
 {: .challenge}
 
