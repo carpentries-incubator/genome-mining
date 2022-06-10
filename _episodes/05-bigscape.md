@@ -1,7 +1,7 @@
 ---
 title: "BGC Similarity Networks"
-teaching: 0
-exercises: 0
+teaching: 30
+exercises: 15
 questions:
 - "How can I measure similarity between BGCs?"
 objectives:
