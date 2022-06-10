@@ -85,13 +85,13 @@ ls -1 "$1"/*region*gbk | while read line # enlist the gbks of all regions in the
  do
 	dir=$(echo $line | cut -d'/' -f1) # save the directory name in a variable 
 	file=$(echo $line | cut -d'/' -f2) # save the file name in a variable
-    for directory in $dir
+    for directory in $dir # start a for loop
         do
         	cd $directory # enter the directory
-            newfile=$(echo $dir-$file) # make a new variable that fuses the directory name with the file name
- 			echo "Renaming" $file " to" $newfile # print a message showing the old and new file names
- 			mv $file $newfile # rename
- 			cd .. # return to main directory befor it beggins again
+          newfile=$(echo $dir-$file) # make a new variable that fuses the directory name with the file name
+ 			    echo "Renaming" $file " to" $newfile # print a message showing the old and new file names
+ 			    mv $file $newfile # rename
+ 			    cd .. # return to main directory befor it beggins again
  		done
  done
 ~~~
