@@ -5,7 +5,10 @@ exercises: 0
 questions:
 - "What is genome Mining?"
 objectives:
-- "FIXME"
+- "Understand that Natural products are encoded in Biosynthetical Gene clusters"
+- "Understand that Biosynthetical Gene clusters can be identified in the genomic material"
+- "Discuss bioinformatic's good practices with you colleagues "
+
 keypoints:
 - "Natural products are encoded in Biosynthetical Gene Clusters"
 ---
