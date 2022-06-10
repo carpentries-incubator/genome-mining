@@ -39,11 +39,11 @@ Let's see how this analysis can be done:
 
 ## Preparing the input
 
-In each of the antiSMASH output folders, we will find a single `.gbk`
+In each of the antiSMASH output directories, we will find a single `.gbk`
  file for each BGC, which includes "region" within its filename. Thus, 
- we will copy all those files to the new folder.
+ we will copy all those files to the new directory.
 
-Let's locate in the folder that has the antiSMASH results of each genome:
+Let's locate in the directory that has the antiSMASH results of each genome:
 ~~~
 pwd
 ~~~
@@ -54,7 +54,7 @@ pwd
 ~~~
 {: .output}
 
-Since we will mix in a folder many files with similar names we want to 
+Since we will mix in a directory many files with similar names we want to 
 be sure that nothing will get left behind or overwritten. For this, we
  will count all the `gbk` files of all the genomes.
 ~~~
@@ -68,41 +68,41 @@ ls Streptococcus_agalactiae_*/*region*gbk | wc -l
 {: .output}
 
 And because the names are somewhat cryptic, they could be repeated,
- and we will rename the `gbks`, for them to include the genome name.
+ so we will rename the `gbks` for them to include the genome name.
 
 Copy the following script to a file named `change-name.sh` using `nano`:
 ~~~
-# This script is to rename the antiSMASH gbks for them to include the species and strain names, taken from the folder name.
-# The argument it requires is the name of the folder with the AntiSMASH output, which must NOT contain a slash at the end.
+# This script is to rename the antiSMASH gbks for them to include the species and strain names, taken from the directory name.
+# The argument it requires is the name of the directory with the AntiSMASH output, which must NOT contain a slash at the end.
 
-# Usage for one AntiSMASH output folder:
+# Usage for one AntiSMASH output directory:
 # 	sh change-names.sh <folder>
 
-# Usage for multiple AntiSMASH output folders:
-# 	for species in <output folder pattern*>
+# Usage for multiple AntiSMASH output directory:
+# 	for species in <output-directory-pattern*>
 # 		do
 # 			sh change-names.sh $species
 # 		done
 
 
 
-ls -1 "$1"/*region*gbk | while read line # enlist the gbks of all regions in the folder and start a while loop
+ls -1 "$1"/*region*gbk | while read line # enlist the gbks of all regions in the directory and start a while loop
  do
-	dir=$(echo $line | cut -d'/' -f1) # save the folder name in a variable 
+	dir=$(echo $line | cut -d'/' -f1) # save the directory name in a variable 
 	file=$(echo $line | cut -d'/' -f2) # save the file name in a variable
     for directory in $dir
         do
-        	cd $directory # enter the folder
-            newfile=$(echo $dir-$file) # make a new variable that fuses the folder name with the file name
+        	cd $directory # enter the directory
+            newfile=$(echo $dir-$file) # make a new variable that fuses the directory name with the file name
  			echo "Renaming" $file " to" $newfile # print a message showing the old and new file names
  			mv $file $newfile # rename
- 			cd .. # return to main folder befor it beggins again
+ 			cd .. # return to main directory befor it beggins again
  		done
  done
 ~~~
 {: .language-bash}
 
-Run the script for all the folders:
+Run the script for all the directory:
 ~~~
 for species in Streptococcus_agalactiae_*
 	do
@@ -112,15 +112,15 @@ for species in Streptococcus_agalactiae_*
 ~~~
 {: .language-bash}
 
-Now make a folder for all of your BiG-SCAPE analysis and inside it 
-make a folder that will contain all of the `gbks` of all of our genomes. 
-This folder will be the input for BiG-SCAPE.
+Now make a directory for all of your BiG-SCAPE analysis and inside it 
+make a directory that will contain all of the `gbks` of all of our genomes. 
+This one will be the input for BiG-SCAPE.
 ~~~
 mkdir -p bigscape/bgcs_gbks/
 ~~~
 {: .language-bash}
 
-Now copy all the region `gbks`to this new folder, and look at the contents inside it:
+Now copy all the region `gbks`to this new directory, and look at the contents inside it:
 ~~~
 scp Streptococcus_agalactiae_*/*region*gbk bigscape/bgcs_gbks/
 ls bigscape/bgcs_gbks/
