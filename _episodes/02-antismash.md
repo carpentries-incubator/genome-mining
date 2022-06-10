@@ -58,7 +58,7 @@ $ antismash --cb-general --cb-knownclusters --cb-subclusters --asf --pfam2go --s
 > {: .solution}
 {: .challenge}
 
-## Run your own antiSMASH analysis Wrapping up :smiley:
+## Run your own antiSMASH analysis :smiley:
 
 First, activate GenomeMining conda environment:
 ~~~
