@@ -669,9 +669,9 @@ input-folder/
 >            agalactiae.
 > ~~~
 > {: .output}  
-> > 
+> >  You can use the `grep --help` command to get information about the available options for the `grep` command
 >{: .keypoints} 
-> You can use the `grep --help` command to get information about the available options for the `grep` command
+>
 > > ## Solution
 > > We need to use the grep command to search for the word "ORGANISM" in the file. Once located we just want to get the first instance of the word that is why we use the -m1 flag. Then we want the 3 next lines of the file after the instance, because that's where the information is. So the final command would be:
 > > ~~~
