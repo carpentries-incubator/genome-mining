@@ -1,7 +1,7 @@
 ---
 title: "Secondary metabolite biosynthetic gene cluster identification"
 teaching: 20
-exercises: 30
+exercises: 10
 questions:
 - "What is antiSMASH?"
 - "Which kind of analysis antiSMASH can perform?"
