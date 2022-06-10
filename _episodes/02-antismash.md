@@ -63,7 +63,7 @@ $ antismash --cb-general --cb-knownclusters --cb-subclusters --asf --pfam2go --s
 
 First, activate GenomeMining conda environment:
 ~~~
-$ conda activate GenomeMining
+$ conda activate GenomeMining_Global
 ~~~
 {: .source}
 
@@ -72,7 +72,9 @@ Second, run the antiSMASH command shown earlier in this lesson on the data `.gbk
 #### **Case I** - One single files
 Let's choose the ´Streptococcus_agalactiae_18RS21.gbk´ file
 ~~~
-$ antismash Streptococcus_agalactiae_A909.gbk
+$ mkdir ~/gm_workshop/results/antismash
+$ cd ~/gm_workshop/results/antismash
+$ antismash genefinding-tool=None ~/gm_workshop/results/annotated/agalactiae_A909.gbk
 ~~~
 {: .source}
 
