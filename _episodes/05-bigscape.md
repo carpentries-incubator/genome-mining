@@ -200,7 +200,7 @@ such as the number of BGCs included in each type of network. In the output folde
 you will find all the data.  
 Since BiG-SCAPE does not produce a file with the run information, it is useful 
 to copy the text printed on the screen to a file. Use `nano` to paste all the text 
-that BiG-SCAPE generated in a file named `bigscape.log` inside the folder `output_060722/logs/`.
+that BiG-SCAPE generated in a file named `bigscape.log` inside the folder `output_100722/logs/`.
 
 To keep order in you directories move your `bigscape/` directory to `genome_mining/`:
 ~~~
