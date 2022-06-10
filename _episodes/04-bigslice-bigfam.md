@@ -1,5 +1,4 @@
 ---
-source: md
 title: "Homologous BGC Clusterization"
 teaching: 40
 exercises: 10
@@ -64,7 +63,7 @@ First of all, let's activate the conda environment where `BiG-SLiCE`
 has been installed and all the needed softwares for its usage:
 
 ~~~
-$ conda activate GenomeMining
+$ conda activate GenomeMining_Global
 ~~~
 {: .language-bash}
 
