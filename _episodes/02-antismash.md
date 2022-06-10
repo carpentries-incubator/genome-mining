@@ -70,7 +70,7 @@ $ conda activate GenomeMining_Global
 Second, run the antiSMASH command shown earlier in this lesson on the data `.gbk` or `.fasta` files. The command can be executed on one single files, all the files contained within a folder and on specific list of files, we showed you how you can perform these different cases:
 
 #### **Case I** - One single files
-Let's choose the ´Streptococcus_agalactiae_18RS21.gbk´ file
+Let's choose the annotated file ´agalactiae_A909_prokka.gbk´ file
 ~~~
 $ mkdir -p ~/gm_workshop/results/antismash
 $ cd ~/gm_workshop/results/antismash
