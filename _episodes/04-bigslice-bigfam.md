@@ -51,7 +51,7 @@ clusters that share a similar domain arquitecture and in consequnece
 will produce a similar metabolite, are grouped into a bigger group that 
 we call **Gene Cluster Families (GCFs)**. 
 
-As seen in BiG-SCAPE, there are some programs capable of clustering BGCs 
+There are some programs capable of clustering BGCs 
 in GCFs, _e.g._[ ClusterFinder](https://github.com/petercim/ClusterFinder) and [DeepBGC](https://github.com/Merck/deepbgc). `BiG-SLICE` is a 
 software that has been [designed](https://academic.oup.com/gigascience/article/10/1/giaa154/6092777) to do this work in less time even 
 when dealing with large datasets (1.2 million BGCs). This 
@@ -75,7 +75,7 @@ If we seek for help using the `--help` flag of `bigslice`, we can get
 a first glance at the input that we need:
 
 ~~~
-bigslice --help | head -n20
+$ bigslice --help | head -n20
 ~~~
 {: .language-bash}
 
@@ -177,9 +177,6 @@ We have six _Streptococcus_ genomes from the original papar, and two
 public genomes. We will allocate their respective BGC `.gbk`s in 
 two `dataset`s, one for the genomes from Tettelin _et al._ paper, and 
 the another for the public ones.
-
-After corroborating that we are on the `bigslice` folder, we will 
-begin the construction of the input.
 
 ~~~
 $ mkdir input-folder
@@ -424,7 +421,7 @@ $ tree -F
 {: .challenge}
 
 
-#### datasets.tsv file - The silmaril of BiG-SLiCE
+#### **datasets.tsv file - The [silmaril](https://lotr.fandom.com/wiki/Silmarils) of BiG-SLiCE **
 
 
 The next step is to create the main file **datasets.tsv**. First we 
@@ -669,7 +666,6 @@ input-folder/
 >            agalactiae.
 > ~~~
 > {: .output}  
-> > ## Hint
 > >  You can use the `grep --help` command to get information about the available options for the `grep` command
 >{: .keypoints} 
 >
