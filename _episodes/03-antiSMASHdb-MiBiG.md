@@ -1,7 +1,7 @@
 ---
 title: "antiSMASH database and MIBiG"
-teaching: 20
-exercises: 30
+teaching: 15
+exercises: 10
 questions:
 - "How can I validate my antiSMASH's outputs?"
 - "Which kind of analysis antiSMASH can perform?"
