@@ -18,9 +18,7 @@ keypoints:
 The antiSMASH database provides researchers with an easy to use, up-to-date collection of annotated BGC data, which enable them to easily perform cross-genome analyses by offering complex queries on the datasets
 
 ## Browsing and Querying in the antiSMASH database
-
-1. Select "Browse" on the top menu bar 
-2. Either select "Query"
+Select "Browse" on the top menu bar either you can select "Query" in the center
 
 > ![Forking Repositories]({{ page.root }}/fig/antiSMASH_db.png)
 
@@ -39,8 +37,7 @@ The Minimum Information about a Biosynthetic Gene cluster (MIBiG) is a database 
 
 ## Browsing and Querying in the MIBiG database
 
-1. Select "Search" on the top menu bar 
-2. Either select "Query" on the upper right corner
+Select "Search" on the upper right corner of the menu bar
 
 > ![Forking Repositories]({{ page.root }}/fig/MIBiG_search.png)
 
