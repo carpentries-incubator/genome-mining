@@ -160,13 +160,19 @@ Briefly, on the "overview" page ´.HTML´ you can find all the regions found wit
 * **Similarity:** Percentage of genes within the closest known compound that have significant BLAS hit (The last two columns containing comparisons to the MiBIG database will only be shown if antiSMASH was run with the KnownClusterBlast option ´--cc-mibig´).
 
 > ## Exercise 2
-> How can you know the size (bp) of a region?
+> order the structure of this command line, which wants to know how big the region is:
+> 
+>  `SOURCE` `ORGANISM` `LOCUS`
+>  
+> ~~~
+>  $ grep __________ region.gbk
+> ~~~
+> > {: .laguage-bash}
 > 
 > > ## Solution
-> > By calculating the difference between the initial position and the final position of the region or you can try the command-line version:
 > >
 > > ~~~
-> > $ grep LOCUS sequence.gbk
+> > $ grep LOCUS region.gbk
 > > ~~~
 > > {: .laguage-bash}
 > {: .solution}
