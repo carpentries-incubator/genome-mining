@@ -47,6 +47,10 @@ For simple queries, such as "Streptococcus agalactiae" or searching for a specif
 
 For complex queries the database also provides a sophisticated query builder that allows querying on all antiSMASH annotations. To enable this function, click on "Build a query"
 
+## Results
+
+> ![Forking Repositories]({{ page.root }}/fig/MIBiG_results.png)
+
 > ## Exercise 1: 
 > You are going to do an experiment, you have two organisms one is likely to produce themophilin 1277 and the other substances streptolysin S, based on the table, which of these organisms is more likely to produce their respective secondary metabolite?
 > 
@@ -54,5 +58,6 @@ For complex queries the database also provides a sophisticated query builder tha
 > > Todavía no hay jejjj
 > {: .solution}
 {: .challenge}
+
 
 What antiSMASH does is predict who would be the antibiotic producers of each organism, and what mibig shows us are organisms that have been tested with an experiment.
