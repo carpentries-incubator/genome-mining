@@ -45,7 +45,7 @@ In each of the antiSMASH output directories, we will find a single `.gbk`
 
 Let's locate in the directory that has the antiSMASH results of each genome:
 ~~~
-~/gm_workshop/results/genome_mining/antismash/
+$ ~/gm_workshop/results/genome_mining/antismash/
 ~~~
 {: .language-bash}
 
@@ -53,12 +53,12 @@ Since we will mix in a directory many files with similar names we want to
 be sure that nothing will get left behind or overwritten. For this, we
  will count all the `gbk` files of all the genomes.
 ~~~
-ls Streptococcus*/*region*gbk | wc -l
+$ ls Streptococcus*/*region*gbk | wc -l
 ~~~
 {: .language-bash}
 
 ~~~
-
+24
 ~~~
 {: .output}
 
@@ -99,10 +99,10 @@ ls -1 "$1"/*region*gbk | while read line # enlist the gbks of all regions in the
 
 Run the script for all the directory:
 ~~~
-for species in Streptococcus*
-	do
- 		sh change-names.sh $species
- 	done
+$ for species in Streptococcus*
+> do
+>		sh change-names.sh $species
+>	done
 
 ~~~
 {: .language-bash}
@@ -111,19 +111,42 @@ Now make a directory for all of your BiG-SCAPE analysis and inside it
 make a directory that will contain all of the `gbks` of all of our genomes. 
 This one will be the input for BiG-SCAPE. (For cenvenience `bigscape/` will be inside `antismash/` while we run BiG-SCAPE).
 ~~~
-mkdir -p bigscape/bgcs_gbks/
+$ mkdir -p bigscape/bgcs_gbks/
 ~~~
 {: .language-bash}
 
 Now copy all the region `gbks`to this new directory, and look at the contents inside it:
 ~~~
-scp Streptococcus_*/*region*gbk bigscape/bgcs_gbks/
-ls bigscape/bgcs_gbks/
+$ scp Streptococcus_*/*region*gbk bigscape/bgcs_gbks/
+$ ls bigscape/bgcs_gbks/
 ~~~
 {: .language-bash}
 
 ~~~
-
+Streptococcus_agalactiae_18RS21-AAJO01000016.1.region001.gbk
+Streptococcus_agalactiae_18RS21-AAJO01000043.1.region001.gbk
+Streptococcus_agalactiae_18RS21-AAJO01000226.1.region001.gbk
+Streptococcus_agalactiae_515-AAJP01000027.1.region001.gbk
+Streptococcus_agalactiae_515-AAJP01000037.1.region001.gbk
+Streptococcus_agalactiae_A909-CP000114.1.region001.gbk
+Streptococcus_agalactiae_A909-CP000114.1.region002.gbk
+Streptococcus_agalactiae_CJB111-AAJQ01000010.1.region001.gbk
+Streptococcus_agalactiae_CJB111-AAJQ01000025.1.region001.gbk
+Streptococcus_agalactiae_COH1-AAJR01000002.1.region001.gbk
+Streptococcus_agalactiae_COH1-AAJR01000044.1.region001.gbk
+Streptococcus_agalactiae_H36B-AAJS01000020.1.region001.gbk
+Streptococcus_agalactiae_H36B-AAJS01000117.1.region001.gbk
+Streptococcus_thermophilus_LMD-9-CP000419.1.region001.gbk
+Streptococcus_thermophilus_LMD-9-CP000419.1.region002.gbk
+Streptococcus_thermophilus_LMD-9-CP000419.1.region003.gbk
+Streptococcus_thermophilus_LMD-9-CP000419.1.region004.gbk
+Streptococcus_thermophilus_LMD-9-CP000419.1.region005.gbk
+Streptococcus_thermophilus_LMG_18311-NC_006448.1.region001.gbk
+Streptococcus_thermophilus_LMG_18311-NC_006448.1.region002.gbk
+Streptococcus_thermophilus_LMG_18311-NC_006448.1.region003.gbk
+Streptococcus_thermophilus_LMG_18311-NC_006448.1.region004.gbk
+Streptococcus_thermophilus_LMG_18311-NC_006448.1.region005.gbk
+Streptococcus_thermophilus_LMG_18311-NC_006448.1.region006.gbk
 ~~~
 {: .language-bash}
 
@@ -181,7 +204,7 @@ cutoff value (0.3).
 
 Now we are ready to run BiG-SCAPE:
 ~~~
-run_bigscape bigscape/bgcs_gbks/ bigscape/output_100622 --mix --hybrids-off --mode auto
+$ run_bigscape bigscape/bgcs_gbks/ bigscape/output_100622 --mix --hybrids-off --mode auto
 ~~~
 {: .language-bash}
 
@@ -202,9 +225,32 @@ Since BiG-SCAPE does not produce a file with the run information, it is useful
 to copy the text printed on the screen to a file. Use `nano` to paste all the text 
 that BiG-SCAPE generated in a file named `bigscape.log` inside the folder `output_100722/logs/`.
 
+~~~
+$ nano bigscape/output_100622/logs/bigscape.log
+~~~
+{: .bash}
+
+Let's look the BiG-SCAPE outputs:
+
+~~~
+$ ls -F bigscape/output_100622/
+~~~
+{: .language-bash}
+~~~
+cache/  html_content/  index.html*  logs/  network_files/  SVG/
+~~~
+{: .output}
+
 To keep order in you directories move your `bigscape/` directory to `genome_mining/`:
 ~~~
-mv bigscape/ ../
+$ mv bigscape/ ../
+~~~
+{: .language-bash}
+
+And let's make a new folder called `scripts/` in our `gm-workshop/`directory to save our little script:
+~~~
+$ mkdir ~/gm_workshop/scripts
+$ mv change-names.sh ~/gm_workshop/scripts/
 ~~~
 {: .language-bash}
 
@@ -216,7 +262,7 @@ yourself in a folder where you want to store your BiG-SCAPE results. Now copy yo
 folder to your local machine:
 
 ~~~
-scp -r <serveradress>:~/gm_workshop/results/genome_mining/bigscape/output_100622/ .
+$ scp -r <serveradress>:~/gm_workshop/results/genome_mining/bigscape/output_100622/ .
 ~~~
 {: .language-bash}
 
