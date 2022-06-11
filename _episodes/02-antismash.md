@@ -178,6 +178,10 @@ Briefly, on the "overview" page ´.HTML´ you can find all the regions found wit
 > > ~~~
 > > Locus contains the information of the characteristics of the sequence
 > > {: .laguage-bash}
+> > ~~~
+> > LOCUS       NC_006448.1            26791 bp    DNA     linear   UNK 01-JAN-1980
+> > ~~~
+> > {: .output}
 > {: .solution}
 {: .challenge}
 
