@@ -148,7 +148,7 @@ Streptococcus_thermophilus_LMG_18311-NC_006448.1.region004.gbk
 Streptococcus_thermophilus_LMG_18311-NC_006448.1.region005.gbk
 Streptococcus_thermophilus_LMG_18311-NC_006448.1.region006.gbk
 ~~~
-{: .language-bash}
+{: .output}
 
 ## Running BiG-SCAPE
 
@@ -268,7 +268,7 @@ $ scp -r <serveradress>:~/gm_workshop/results/genome_mining/bigscape/output_1006
 
 Open your `index.html` with a browser:
 ~~~
-firefox output_100622/index.html # If you have Firefox available, otherwise open it using the GUI.
+$ firefox output_100622/index.html # If you have Firefox available, otherwise open it using the GUI.
 ~~~
 {: .language-bash}
 
