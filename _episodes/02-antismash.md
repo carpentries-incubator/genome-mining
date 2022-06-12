@@ -69,13 +69,13 @@ Let's choose the annotated file ´agalactiae_A909_prokka.gbk´ file
 ~~~
 $ mkdir -p ~/gm_workshop/results/antismash
 $ cd ~/gm_workshop/results/antismash
-$antismash --genefinding-tool=none ~/gm_workshop/results/annotated/Streptococcus_agalactie_A909.prokka.gbk   
+$ antismash --genefinding-tool=none ~/gm_workshop/results/annotated/Streptococcus_agalactie_A909.prokka.gbk   
 ~~~
 {: .language-bash}
 
 To see the antiSMASH generated outcomes do:
 ~~~
-$ cd  ~/gm_workshop/results/annotated/antismash/Streptococcus_agalactiae_A909_prokka
+$ cd ~/gm_workshop/results/antismash/Streptococcus_agalactie_A909.prokka
 $ tree -L 1
 ~~~
 {: .language-bash}
