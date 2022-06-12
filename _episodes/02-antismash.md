@@ -31,18 +31,13 @@ The commandline usage of antismash is detailed in the following [repositories:](
 
 In summary, you will need to use your genome as the input. Then, antiSMASH will create an output folder for each of your genomes. Within this folder, you will find a single `.gbk` file for each of the detected Biosynthetic Gene Clusters (we will use these files for subsequent analyses) and a `.html` file, among others files. By openning the `.html` file you can explore the antiSMASH annotations.
 
-You can run antiSMASH in two main ways **Minimal and Full-features run**, as follows:
-### Minimal run
-~~~
-$ antismash genome.gbk
-~~~
-{: .source}
+You can run antiSMASH in two main ways **Minimal and Full-features run**, as follows:  
+  
+|Run type   | command                                 |  
+|-----------|-----------------------------------------|  
+|Minimal run| antismash genome.gbk|  
+|Full-featured run |antismash --cb-general --cb-knownclusters --cb-subclusters --asf --pfam2go --smcog-trees genome.gbk|  
 
-### Full-featured run
-~~~
-$ antismash --cb-general --cb-knownclusters --cb-subclusters --asf --pfam2go --smcog-trees genome.gbk
-~~~
-{: .source}
 
 > ## Exercise 1: 
 > If we run an Streptococcus agalactiae annotated sequence using antiSMASH, what results are we expected to get?
@@ -74,16 +69,16 @@ Let's choose the annotated file ´agalactiae_A909_prokka.gbk´ file
 ~~~
 $ mkdir -p ~/gm_workshop/results/antismash
 $ cd ~/gm_workshop/results/antismash
-$ antismash --genefinding-tool=none ~/gm_workshop/results/annotated/agalactiae_A909_prokka.gbk 
+$antismash --genefinding-tool=none ~/gm_workshop/results/annotated/Streptococcus_agalactie_A909.prokka.gbk   
 ~~~
-{: .source}
+{: .language-bash}
 
 To see the antiSMASH generated outcomes do:
 ~~~
 $ cd  ~/gm_workshop/results/annotated/antismash/agalactiae_A909_prokka
 $ tree -L 1
 ~~~
-{: .source}
+{: .language-bash}
 
 ~~~
 .
@@ -132,7 +127,7 @@ To see the results after antiSMASH run, we need to access to the `index.html` fi
 $ cd Streptococcus_agalactiae_A909/
 $ pwd
 ~~~ 
-{: .source}
+{: .language-bash}
 ~~~
 ~/Streptococcus_agalactiae_A909
 ~~~
@@ -142,7 +137,7 @@ On your local machine, open a GIT bash terminal in the **destiny** folder and ex
 ~~~
 $ scp -r user@ip_dir:~/Streptococcus_agalactiae_A909/* /destiny_folder
 ~~~ 
-{: .source}
+{: .language-bash}
 
 And finally, you can open the `index.html` file on your **Local** web browser.
 
