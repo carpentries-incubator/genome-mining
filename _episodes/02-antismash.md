@@ -108,22 +108,6 @@ $ for gbk_file in ~/gm_workshop/results/annotated/S*18RS21*.gbk ~/gm_workshop/re
 ~~~
 {: .language-bash}
 
-#### **Case III** - All files in a folder
-~~~
-$ for gbk_file in  ~/gm_workshop/results/annotated/*.gbk
-$ do
->    antismash --genefinding-tool=none $gbk_file
-> done
-~~~
-{: .language-bash}
-
-For these lesson we will use the third case code. As outcomes you should get a folder comprised mainly by the following files:
-* **`.gbk` files** For each Biosynthetic Gene cluster region found.
-* **`.json` file** To know the input file name, the antiSMASH used version and the regions data (id,sequence_data)
-* **`index.html` file** To visualize the outcomes from the analysis.
-
-## Visualizing your analysis outcomes
-
 To see the results after antiSMASH run, we need to access to the `index.html` file, in order to acces to that, we will run the following command:
 ~~~
 $ cd Streptococcus_agalactiae_A909/
@@ -143,7 +127,22 @@ $ scp -r user@bioinformatica.matmor.unam.mx:~/gm_workshop_results/antismash/Stre
 
 And finally, you can open the `index.html` file on your **Local** web browser.
 
-## Webpage
+
+#### **Case III** - All files in a folder
+~~~
+$ for gbk_file in  ~/gm_workshop/results/annotated/*.gbk
+$ do
+>    antismash --genefinding-tool=none $gbk_file
+> done
+~~~
+{: .language-bash}
+
+For these lesson we will use the third case code. As outcomes you should get a folder comprised mainly by the following files:
+* **`.gbk` files** For each Biosynthetic Gene cluster region found.
+* **`.json` file** To know the input file name, the antiSMASH used version and the regions data (id,sequence_data)
+* **`index.html` file** To visualize the outcomes from the analysis.
+
+## antiSMASH web services
 antiSMASH can be also used through this [web:](https://antismash.secondarymetabolites.org/#!/start)
 You will be asked to give your email. Then, the results will be sent to you and you will be allowed to donwload a folder with the annotations.
 
