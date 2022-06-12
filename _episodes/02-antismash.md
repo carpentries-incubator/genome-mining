@@ -110,10 +110,10 @@ $ for gbk_file in ~/gm_workshop/results/annotated/S*agalactiae_18RS21.gbk ~/gm_w
 
 #### **Case III** - All files in a folder
 ~~~
-for gbk_file in  ~/gm_workshop/results/annotated/*gbk
-do
-    antismash --genefinding-tool=none $gbk_file
-done
+$ for gbk_file in  ~/gm_workshop/results/annotated/*gbk
+$ do
+>    antismash --genefinding-tool=none $gbk_file
+> done
 ~~~
 {: .language-bash}
 
