@@ -3,16 +3,16 @@ title: "Secondary metabolite biosynthetic gene cluster identification"
 teaching: 20
 exercises: 10
 questions:
-- "What is antiSMASH?"
+- "How can I annotate knwon BGC?"
 - "Which kind of analysis antiSMASH can perform?"
 - "Which files extension accepts antiSMASH?"
-- "How can I perform an antiSMASH analysis?"
 objectives:
 - "Understand antiSMASH applications."
 - "Perform a Minimal antiSMASH run analysis."
 - "Explore several *Streptococcus* genomes by identifying the BGCs presece and the types of secondary metabolites produced."
 keypoints:
-- "First key point. Brief Answer to questions. (antismash, genome mining, secondary metabolism, bacteria, bioactive coumpounds)"
+- "antiSMASH is a bioinformatic tool to identify BGC"
+- "antiSMASH can be used as a web-based tool or as stand-alone command-line tool"
 ---
 ## Introduction
 
@@ -22,7 +22,7 @@ antiSMASH is a pipline based on [profile hidden Markov models](https://www.ebi.a
 
 ## antiSMASH input files
 
-  antiSMASH pipeline can work with three different file formats `GenBank`, `FASTA` and `EMBL`. Both `GeneBank` and `EMBL` formats include genome annotations, while a `FASTA` file just comprises the nucleotides of each genome contig. 
+antiSMASH pipeline can work with three different file formats `GenBank`, `FASTA` and `EMBL`. Both `GeneBank` and `EMBL` formats include genome annotations, while a `FASTA` file just comprises the nucleotides of each genome contig. 
 
 
 ## How to run antiSMASH 
@@ -62,6 +62,7 @@ $ antismash --cb-general --cb-knownclusters --cb-subclusters --asf --pfam2go --s
 
 First, activate GenomeMining conda environment:
 ~~~
+$ conda deactivate
 $ conda activate GenomeMining_Global
 ~~~
 {: .source}
