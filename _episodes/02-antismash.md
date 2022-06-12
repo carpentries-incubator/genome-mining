@@ -75,7 +75,7 @@ $antismash --genefinding-tool=none ~/gm_workshop/results/annotated/Streptococcus
 
 To see the antiSMASH generated outcomes do:
 ~~~
-$ cd  ~/gm_workshop/results/annotated/antismash/agalactiae_A909_prokka
+$ cd  ~/gm_workshop/results/annotated/antismash/Streptococcus_agalactiae_A909_prokka
 $ tree -L 1
 ~~~
 {: .language-bash}
@@ -99,7 +99,7 @@ $ tree -L 1
 #### **Case II** - Specific files
 Let's imagine you want to run antismash only on following three specific files `Streptococcus_agalactiae_18RS21.gbk`, `Streptococcus_agalactiae_515.gbk` and `agalactiae_A909.gbk`, so you could make use of `for` tool. As the following example.
 ~~~
-for gbk_file in agalactiae_18RS21.gbk agalactiae_515.gbk agalactiae_A909.gbk
+for gbk_file in S*agalactiae_18RS21.gbk S*agalactiae_515.gbk S*agalactiae_A909.gbk
 do
     antismash --genefinding-tool=none $gbk_file
 done
@@ -129,13 +129,13 @@ $ pwd
 ~~~ 
 {: .language-bash}
 ~~~
-~/Streptococcus_agalactiae_A909
+~/gm_workshop_results/antismash/Streptococcus_agalactiae_A909
 ~~~
 {: .output}
 
 On your local machine, open a GIT bash terminal in the **destiny** folder and execture the following command:
 ~~~
-$ scp -r user@ip_dir:~/Streptococcus_agalactiae_A909/* /destiny_folder
+$ scp -r user@bioinformatica.matmor.unam.mx:~/gm_workshop_results/antismash/Streptococcus_agalactiae_A909/* ~/Downloads/.
 ~~~ 
 {: .language-bash}
 
