@@ -101,7 +101,7 @@ Let's imagine you want to run antismash only on following three specific files `
 
 ~~~
 $ cd ..
-$ for gbk_file in ~/gm_workshop/results/annotated/S*agalactiae_18RS21.gbk ~/gm_workshop/results/annotated/S*agalactiae_515.gbk 
+$ for gbk_file in ~/gm_workshop/results/annotated/S*18RS21*.gbk ~/gm_workshop/results/annotated/S*515*.gbk.*. 
 > do
 >   antismash --genefinding-tool=none $gbk_file
 > done
@@ -110,7 +110,7 @@ $ for gbk_file in ~/gm_workshop/results/annotated/S*agalactiae_18RS21.gbk ~/gm_w
 
 #### **Case III** - All files in a folder
 ~~~
-$ for gbk_file in  ~/gm_workshop/results/annotated/*gbk
+$ for gbk_file in  ~/gm_workshop/results/annotated/*.gbk
 $ do
 >    antismash --genefinding-tool=none $gbk_file
 > done
