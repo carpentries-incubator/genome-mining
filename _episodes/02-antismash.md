@@ -98,11 +98,13 @@ $ tree -L 1
 
 #### **Case II** - Specific files
 Let's imagine you want to run antismash only on following three specific files `Streptococcus_agalactiae_18RS21.gbk`, `Streptococcus_agalactiae_515.gbk` and `agalactiae_A909.gbk`, so you could make use of `for` tool. As the following example.
+
 ~~~
-for gbk_file in S*agalactiae_18RS21.gbk S*agalactiae_515.gbk S*agalactiae_A909.gbk
-do
-    antismash --genefinding-tool=none $gbk_file
-done
+$ cd ..
+$ for gbk_file in ~/gm_workshop/results/annotated/S*agalactiae_18RS21.gbk ~/gm_workshop/results/annotated/S*agalactiae_515.gbk 
+> do
+>   antismash --genefinding-tool=none $gbk_file
+> done
 ~~~
 {: .language-bash}
 
