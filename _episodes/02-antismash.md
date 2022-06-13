@@ -16,20 +16,37 @@ keypoints:
 ---
 ## Introduction
 
-Within microbial genomes we can find some specific regions that take part of the biosynthesis of secondary metabolites, these sections are know as biosynthetic gene clusters, which are relevant due to the possible applications that they may have, for example: antimicrobials, antitumor, cholesterol-lowering, immunosuppressant, antiprotozoal, antihelminth, antiviral and anti-ageing activities.
+Within microbial genomes we can find some specific regions that 
+take part of the biosynthesis of secondary metabolites, these 
+sections are know as biosynthetic gene clusters, which are relevant 
+due to the possible applications that they may have, for example: 
+antimicrobials, antitumor, cholesterol-lowering, immunosuppressant, 
+antiprotozoal, antihelminth, antiviral and anti-ageing activities.
 
-antiSMASH is a pipline based on [profile hidden Markov models](https://www.ebi.ac.uk/training/online/courses/pfam-creating-protein-families/what-are-profile-hidden-markov-models-hmms/#:~:text=Profile%20HMMs%20are%20probabilistic%20models,the%20alignment%2C%20see%20Figure%202) that allow us to identify the gene clusters contained within genome sequences that encode secondary metabolites of all known broad chemical classes.
+antiSMASH is a pipline based on 
+[profile hidden Markov models](https://www.ebi.ac.uk/training/online/courses/pfam-creating-protein-families/what-are-profile-hidden-markov-models-hmms/#:~:text=Profile%20HMMs%20are%20probabilistic%20models,the%20alignment%2C%20see%20Figure%202) 
+that allow us to identify the gene clusters contained within genome 
+sequences that encode secondary metabolites of all known broad 
+chemical classes.
 
 ## antiSMASH input files
 
-antiSMASH pipeline can work with three different file formats `GenBank`, `FASTA` and `EMBL`. Both `GeneBank` and `EMBL` formats include genome annotations, while a `FASTA` file just comprises the nucleotides of each genome contig. 
+antiSMASH pipeline can work with three different file formats `GenBank`, 
+`FASTA` and `EMBL`. Both `GeneBank` and `EMBL` formats include genome 
+annotations, while a `FASTA` file just comprises the nucleotides of 
+each genome contig. 
 
 
-## How to run antiSMASH 
+## Running antiSMASH 
 
 The commandline usage of antismash is detailed in the following [repositories:](https://docs.antismash.secondarymetabolites.org/command_line/)
 
-In summary, you will need to use your genome as the input. Then, antiSMASH will create an output folder for each of your genomes. Within this folder, you will find a single `.gbk` file for each of the detected Biosynthetic Gene Clusters (we will use these files for subsequent analyses) and a `.html` file, among others files. By openning the `.html` file you can explore the antiSMASH annotations.
+In summary, you will need to use your genome as the input. Then, 
+antiSMASH will create an output folder for each of your genomes. 
+Within this folder, you will find a single `.gbk` file for each of 
+the detected Biosynthetic Gene Clusters (we will use these files 
+for subsequent analyses) and a `.html` file, among others files. 
+By openning the `.html` file you can explore the antiSMASH annotations.
 
 You can run antiSMASH in two main ways **Minimal and Full-features run**, as follows:  
   
@@ -40,20 +57,24 @@ You can run antiSMASH in two main ways **Minimal and Full-features run**, as fol
 
 
 > ## Exercise 1: 
-> If we run an Streptococcus agalactiae annotated sequence using antiSMASH, what results are we expected to get?
+> If you run an _Streptococcus agalactiae_ annotated genome using antiSMASH, what results do you expect?
 > 
-> a. The substance that cluster produces
+> a. The substances that a cluster produces
 > 
-> b. A prediction of the metabolite that cluster can produce
+> b. A prediction of the metabolites that the clusters can produce
 > 
-> c. A prediction of the genes cluster that produces a metabolite 
+> c. A prediction of genes on that belongs to a biosynthetic cluster 
 >  
 > > ## Solution
-> > c. A prediction of the genes cluster that produces a metabolite 
+> > a. False. antiSMASH is not an algorithm devoted to substances prediction  
+> > b. False. Although antiSMASH does have some information about metabolites
+> > produced by similar clusters, this is not its main purpose.
+> > c. True. AntiSMASH compares domains and performs a prediction of the genes 
+> > that belong to biosynthetic gene clusters. 
 > {: .solution}
 {: .challenge}
 
-## Run your own antiSMASH analysis :smiley:
+## Run your own antiSMASH analysis 
 
 First, activate GenomeMining conda environment:
 ~~~
@@ -62,9 +83,13 @@ $ conda activate GenomeMining_Global
 ~~~
 {: .source}
 
-Second, run the antiSMASH command shown earlier in this lesson on the data `.gbk` or `.fasta` files. The command can be executed on one single files, all the files contained within a folder and on specific list of files, we showed you how you can perform these different cases:
+Second, run the antiSMASH command shown earlier in this lesson 
+on the data `.gbk` or `.fasta` files. The command can be executed 
+on one single files, all the files contained within a folder and 
+on specific list of files, we showed you how you can perform 
+these different cases:
 
-#### **Case I** - One single files
+### Running antiSMASH in a single file
 Let's choose the annotated file ´agalactiae_A909_prokka.gbk´ file
 ~~~
 $ mkdir -p ~/gm_workshop/results/antismash
@@ -97,20 +122,12 @@ $ tree -L 1
 {: .output}
 
 
-~~~
-$ cd ..
-$ for gbk_file in ~/gm_workshop/results/annotated/S*.gbk. 
-> do
->   antismash --genefinding-tool=none $gbk_file
-> done
-~~~
-{: .language-bash}
-
-#### Runing antiSMASH over a list of files 
+### Runing antiSMASH over a list of files 
 Now, imagine that you want to run antiSMASH over all
-Streptococcus agalactiae annotated genomes. Lets use 
+_Streptococcus agalactiae_ annotated genomes. Lets use 
 a `for` cycle and `*` as a wildcard to run antiSMASH
-over all files that starts with "S" in the annotated directory.   
+over all files that starts with "S" in the annotated directory.    
+  
 ~~~
 $ for gbk_file in  ~/gm_workshop/results/annotated/S*.gbk
 $ do
@@ -119,9 +136,9 @@ $ do
 ~~~
 {: .language-bash}
 
-To see the results after antiSMASH run, we need to access to 
-the `index.html` file, in order to acces to that, we will run 
-the following command:
+## Visualizing antiSMASH results   
+To see the results after an antiSMASH run, we need to access to 
+the `index.html` file. ¿Where is this file?   
 ~~~
 $ cd Streptococcus_agalactie_A909.prokka
 $ pwd
@@ -132,25 +149,25 @@ $ pwd
 ~~~
 {: .output}
 
+As outcomes you should get a folder comprised mainly by the following files:
+* **`.gbk` files** For each Biosynthetic Gene cluster region found.
+* **`.json` file** To know the input file name, the antiSMASH used 
+      version and the regions data (id,sequence_data)
+* **`index.html` file** To visualize the outcomes from the analysis.
+
+
+In order to acces to that results, we can use scp protocol to 
+download the directory in your local computer.
+
 On your local machine, open a GIT bash terminal in the 
 **destiny** folder and execture the following command:
 ~~~
-$ scp -r user@bioinformatica.matmor.unam.mx:~/gm_workshop_results/antismash/Streptococcus_agalactie_A909.prokka/* ~/Downloads/.
+$ scp -r user@bioinformatica.matmor.unam.mx:~/gm_workshop_results/antismash/S*A909.prokka/* ~/Downloads/.
 ~~~ 
 {: .language-bash}
 
-And finally, you can open the `index.html` file on your **Local** web browser.
-
-As outcomes you should get a folder comprised mainly by the following files:
-* **`.gbk` files** For each Biosynthetic Gene cluster region found.
-* **`.json` file** To know the input file name, the antiSMASH used version and the regions data (id,sequence_data)
-* **`index.html` file** To visualize the outcomes from the analysis.
-
-## antiSMASH web services
-antiSMASH can be also used through this [web:](https://antismash.secondarymetabolites.org/#!/start)
-You will be asked to give your email. Then, the results
-will be sent to you and you will be allowed to donwload a 
-folder with the annotations.
+Once in your local machine, you can open the `index.html` 
+file on your local web browser.
 
 ## Understanding the output
 
@@ -165,46 +182,61 @@ summarized all these information in five main features:
 * **Type:** Type of the product detected by antiSMASH.
 * **From,To:** The location of the region (nucleotides).
 * **Most similar known cluster:** The closest compund from th MIBiG database.
-* **Similarity:** Percentage of genes within the closest known compound that have significant BLAS hit (The last two columns containing comparisons to the MiBIG database will only be shown if antiSMASH was run with the KnownClusterBlast option ´--cc-mibig´).
+* **Similarity:** Percentage of genes within the closest known compound that have significant BLAS hit (The last two columns containing comparisons to the MiBIG database will only be shown if antiSMASH was run with the KnownClusterBlast option ´--cc-mibig´). 
+
+## antiSMASH web services
+antiSMASH can be also used in an oline server in the 
+[antiSMASH website:](https://antismash.secondarymetabolites.org/#!/start)
+You will be asked to give your email. Then, the results
+will be sent to you and you will be allowed to donwload a 
+folder with the annotations.
 
 #### Exercise run antiSMASH over _thermpohilus_ 
 
 > ## Exercise 2 
-> Let's imagine you want to run antismash only on following three specific files `Streptococcus_agalactiae_18RS21.gbk`, `Streptococcus_agalactiae_515.gbk` and `agalactiae_A909.gbk`, so you could make use of `for` tool. As the following example.
+> Let's imagine you want to run antismash only on the _S. thermophilus_ annotated genomes. 
 >  
 > ~~~
->  $ grep __________ region.gbk
+>  done
+>    antismash --genefinding-tool=none $__
+>  for ___ in  ____________
+> do
 > ~~~
 > > {: .laguage-bash}
 > 
 > > ## Solution
+> >  First we need to start the for cycle: `for mygenome in ~/gm_workshop/results/annotated/S*.gbk`  
+> >  note that we are using the name `mygenome` as the variable name in the for cycle.  
+> >  Then you need to use the reserved word `do`  to start the cycle.   
+> >  Then you have to call antismash over your variable `mygenome`. Remember the `$` before your variable
+> >  to indicate to bash that now you are using the value of the variable. 
+> >  Finally, use the reserved word `done` to finish the cycle.  
+> > ~~~
+> >  for variable in ~/gm_workshop/results/annotated/S*.gbk
+> >    do
+> >     antismash --genefinding-tool=none $mygenome
+> >    done 
+> > ~~~ {: .laguage-bash}
 > >
-> > ~~~
-> > $ grep LOCUS region.gbk
-> > ~~~
-> > Locus contains the information of the characteristics of the sequence
-> > {: .laguage-bash}
-> > ~~~
-> >  for
-> > ~~~
-> > {: .output}
 > {: .solution}
 {: .challenge}
 
 
-> ## Exercise 3 
-> order the structure of this command line, which wants to know how big the region is:
+> ## Exercise 3 The size of a region.  
+> Sort the structure of the next commands that attempt to know the size of a region:
 > 
 >  `SOURCE` `ORGANISM` `LOCUS`
->  
+>  `head` `grep`
 > ~~~
->  $ grep __________ region.gbk
+>  $ _____  region.gbk
+>  $ _____ __________ region.gbk
 > ~~~
 > > {: .laguage-bash}
 > 
 > > ## Solution
 > >
 > > ~~~
+> > $ head region.gbk 
 > > $ grep LOCUS region.gbk
 > > ~~~
 > > Locus contains the information of the characteristics of the sequence
