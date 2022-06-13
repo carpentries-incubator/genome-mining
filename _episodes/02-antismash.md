@@ -197,9 +197,22 @@ You will be asked to give your email. Then, the results
 will be sent to you and you will be allowed to donwload a 
 folder with the annotations.
 
+> ## Exercise 2 antiSMASH web  
+> Run antiSMASH web 
+> Apply your solution to get the size of the first region of _S. agalactiae_ A909
+> 
+> > ## Solution
+> >
+> > out
+> > 
+> > {: .output}
+> {: .solution}
+{: .challenge}
+
+
 #### Exercise run antiSMASH over _thermpohilus_ 
 
-> ## Exercise 2 
+> ## Exercise 3 
 > Let's imagine you want to run antismash only on the _S. thermophilus_ annotated genomes.   
 >  
 > ~~~
@@ -221,7 +234,7 @@ folder with the annotations.
 > >      
 > >  4. Finally, use the reserved word `done` to finish the cycle.    
 > > ~~~
-> >  for variable in ~/gm_workshop/results/annotated/S*.gbk  
+> >  for variable in ~/gm_workshop/results/annotated/t*.gbk  
 > >    do  
 > >     antismash --genefinding-tool=none $mygenome  
 > >    done   
@@ -231,7 +244,7 @@ folder with the annotations.
 {: .challenge}
 
 
-> ## Exercise 3 The size of a region.  
+> ## Exercise 4 The size of a region.  
 > Sort the structure of the next commands that attempt to know the size of a region:
 > 
 >  `SOURCE` `ORGANISM` `LOCUS`  
@@ -260,14 +273,15 @@ folder with the annotations.
 > {: .solution}
 {: .challenge}
 
-> ## Discussion 1. BGC classes in _Streptococcus_  
->
->  What BGC classes does the genus _Streptococcus_ have ?   
+
+> ## Discussion 1: BGC classes in _Streptococcus_ 
+> 
+> What BGC classes does the genus _Streptococcus_ have ?   
+> 
 > > ## Solution
-> > In antiSMASH website output of A909 strain we see clusters of two classes
-> > T3PKS and arylpolyene. Nevertheless, this is only one _Streptococcus_ 
-> > in order to infer all BGC classes in the genus we need to run antiSMASH in more genomes 
-> > {: .solution}
+> > 
+> > In antiSMASH website output of A909 strain we see clusters of two classes, T3PKS and arylpolyene. Nevertheless, this is only one _Streptococcus_ in order to infer all BGC classes in the genus we need to run antiSMASH in more genomes 
+> {: .solution}
 {: .discussion}
 
 {% include links.md %}
