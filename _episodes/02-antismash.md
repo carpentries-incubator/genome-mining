@@ -159,18 +159,21 @@ As outcomes you should get a folder comprised mainly by the following files:
 In order to acces to that results, we can use scp protocol to 
 download the directory in your local computer.
 
-On your local machine, open a GIT bash terminal in the 
-**destiny** folder and execture the following command:
+If using `scp` , on your local machine, open a GIT bash terminal in the 
+**destiny** folder and execute the following command:
 ~~~
 $ scp -r user@bioinformatica.matmor.unam.mx:~/gm_workshop_results/antismash/S*A909.prokka/* ~/Downloads/.
 ~~~ 
 {: .language-bash}
 
-Once in your local machine, you can open the `index.html` 
-file on your local web browser.
+if using R-studio then in the left panel, chose the "more" option, 
+and "export" your file to your local computer. And then, decompress the 
+ Streptococcus_agalactie_A909.prokka.zip file.  
+
+Once in your local machine, in the directory Streptococcus_agalactie_A909.prokka
+open the `index.html` file on your local web browser.
 
 ## Understanding the output
-
 The visualization of the results includes many diverse options. 
 To understand all the possibilities, we suggest to read the following [tutorial:](https://docs.antismash.secondarymetabolites.org/understanding_output/)
 
