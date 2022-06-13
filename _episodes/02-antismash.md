@@ -63,14 +63,14 @@ You can run antiSMASH in two main ways **Minimal and Full-features run**, as fol
 > 
 > b. A prediction of the metabolites that the clusters can produce
 > 
-> c. A prediction of genes on that belongs to a biosynthetic cluster 
+> c. A prediction of genes that belongs to a biosynthetic cluster 
 >  
-> > ## Solution
-> > a. False. antiSMASH is not an algorithm devoted to substances prediction  
+> > ## Solution  
+> > a. False. antiSMASH is not an algorithm devoted to substances prediction    
 > > b. False. Although antiSMASH does have some information about metabolites
-> > produced by similar clusters, this is not its main purpose.
+> > produced by similar clusters, this is not its main purpose.  
 > > c. True. AntiSMASH compares domains and performs a prediction of the genes 
-> > that belong to biosynthetic gene clusters. 
+> > that belong to biosynthetic gene clusters.   
 > {: .solution}
 {: .challenge}
 
@@ -92,9 +92,9 @@ these different cases:
 ### Running antiSMASH in a single file
 Let's choose the annotated file ´agalactiae_A909_prokka.gbk´ file
 ~~~
-$ mkdir -p ~/gm_workshop/results/antismash
-$ cd ~/gm_workshop/results/antismash
-$ antismash --genefinding-tool=none ~/gm_workshop/results/annotated/Streptococcus_agalactie_A909.prokka.gbk   
+$ mkdir -p ~/gm_workshop/results/antismash  
+$ cd ~/gm_workshop/results/antismash  
+$ antismash --genefinding-tool=none ~/gm_workshop/results/annotated/Streptococcus_agalactie_A909.prokka.gbk    
 ~~~
 {: .language-bash}
 
@@ -194,28 +194,28 @@ folder with the annotations.
 #### Exercise run antiSMASH over _thermpohilus_ 
 
 > ## Exercise 2 
-> Let's imagine you want to run antismash only on the _S. thermophilus_ annotated genomes. 
+> Let's imagine you want to run antismash only on the _S. thermophilus_ annotated genomes.   
 >  
 > ~~~
->  done
->    antismash --genefinding-tool=none $__
->  for ___ in  ____________
-> do
+>  done  
+>    antismash --genefinding-tool=none $__  
+>  for ___ in  ____________  
+> do  
 > ~~~
 > > {: .laguage-bash}
 > 
 > > ## Solution
 > >  First we need to start the for cycle: `for mygenome in ~/gm_workshop/results/annotated/S*.gbk`  
-> >  note that we are using the name `mygenome` as the variable name in the for cycle.  
-> >  Then you need to use the reserved word `do`  to start the cycle.   
+> >  note that we are using the name `mygenome` as the variable name in the for cycle.    
+> >  Then you need to use the reserved word `do`  to start the cycle.     
 > >  Then you have to call antismash over your variable `mygenome`. Remember the `$` before your variable
-> >  to indicate to bash that now you are using the value of the variable. 
-> >  Finally, use the reserved word `done` to finish the cycle.  
+> >  to indicate to bash that now you are using the value of the variable.   
+> >  Finally, use the reserved word `done` to finish the cycle.    
 > > ~~~
-> >  for variable in ~/gm_workshop/results/annotated/S*.gbk
-> >    do
-> >     antismash --genefinding-tool=none $mygenome
-> >    done 
+> >  for variable in ~/gm_workshop/results/annotated/S*.gbk  
+> >    do  
+> >     antismash --genefinding-tool=none $mygenome  
+> >    done   
 > > ~~~ {: .laguage-bash}
 > >
 > {: .solution}
@@ -225,25 +225,29 @@ folder with the annotations.
 > ## Exercise 3 The size of a region.  
 > Sort the structure of the next commands that attempt to know the size of a region:
 > 
->  `SOURCE` `ORGANISM` `LOCUS`
->  `head` `grep`
+>  `SOURCE` `ORGANISM` `LOCUS`  
+>  `head` `grep`  
 > ~~~
->  $ _____  region.gbk
->  $ _____ __________ region.gbk
+>  $ _____  region.gbk  
+>  $ _____ __________ region.gbk  
 > ~~~
-> > {: .laguage-bash}
+> >{: .laguage-bash}
+> 
+> Apply your solution to get the size of the first region of _S. agalactiae_ A909
 > 
 > > ## Solution
 > >
 > > ~~~
-> > $ head region.gbk 
-> > $ grep LOCUS region.gbk
+> > $ cd ~/gm_workshop/results/antismash  
+> > $ head Streptococcus_agalactie_A909.prokka/CP000114.1.region001.gbk 
+> > $ grep LOCUS Streptococcus_agalactie_A909.prokka/CP000114.1.region001.gbk 
 > > ~~~
 > > Locus contains the information of the characteristics of the sequence
 > > {: .laguage-bash}
 > > ~~~
-> > LOCUS       NC_006448.1            26791 bp    DNA     linear   UNK 01-JAN-1980
+> > LOCUS       CP000114.1             42196 bp    DNA     linear   UNK 13-JUN-2022 
 > > ~~~
+> > In this case the size of the region is 42196 bp
 > > {: .output}
 > {: .solution}
 {: .challenge}
