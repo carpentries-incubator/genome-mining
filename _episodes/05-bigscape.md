@@ -355,7 +355,6 @@ the most divergent BGC clade or those that are distant to already described BGCs
 > > BGC	Accession ID	Description	Product Prediction	BiG-SCAPE class	Organism	Taxonomy
 Streptococcus_agalactiae_18RS21-AAJO01000016.1.region001	AAJO01000016.1	Streptococcus agalactiae 18RS21	arylpolyene	Others	Streptococcus agalactiae 18RS21	Bacteria,Terrabacteria group,Firmicutes,Bacilli,Lactobacillales,Streptococcaceae,Streptococcus,Streptococcus agalactiae
 Streptococcus_agalactiae_18RS21-AAJO01000043.1.region001	AAJO01000043.1	Streptococcus agalactiae 18RS21	T3PKS	PKSother	Streptococcus agalactiae 18RS21	Bacteria,Terrabacteria group,Firmicutes,Bacilli,Lactobacillales,Streptococcaceae,Streptococcus,Streptococcus agalactiae
-> >
 > > ~~~
 > > {: .output}
 > > 
@@ -364,7 +363,6 @@ Streptococcus_agalactiae_18RS21-AAJO01000043.1.region001	AAJO01000043.1	Streptoc
 > > 
 > > ~~~
 > > cut -f 1,4,5 network_files/2022-06-10_21-27-26_auto/Network_Annotations_Full.tsv > type_of_BGC.tsv
-> > 
 > > cat type_of_BGCs.tsv
 > > ~~~
 > > {: .language-bash}
@@ -394,7 +392,6 @@ Streptococcus_thermophilus_LMG_18311-NC_006448.1.region003	RRE-containing	RiPPs
 Streptococcus_thermophilus_LMG_18311-NC_006448.1.region004	RaS-RiPP	RiPPs
 Streptococcus_thermophilus_LMG_18311-NC_006448.1.region005	RiPP-like	RiPPs
 Streptococcus_thermophilus_LMG_18311-NC_006448.1.region006	RaS-RiPP.lanthipeptide-class-iv	RiPPs
-
 > > ~~~
 > > {: .output}
 > {: .solution}
