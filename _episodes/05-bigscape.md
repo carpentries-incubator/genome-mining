@@ -315,11 +315,20 @@ the most divergent BGC clade or those that are distant to already described BGCs
 
 > ## Discussion 1: Reading the GCF networks.
 > 
-> Observe that there is a GCF with only one member. Which strain does this BGC correspond to?
+> What can you conclude about the diversity of BGCs between _S. agalactiae_ and _S. thermophilus_? 
+> Are they equally diverse? Do they share GCFs?
 > 
+> Digging deeper: Why do you think the strain _S. agalactiae_ H36B has a BGC that is not part of the other GCF in the same class?
 > > ## Solution
+> > _S. agalactiae_ and _S. thermophilus_ seem to have no diversity in common because there is no 
+> > GCF with members from both species. 
+> > All strains of _S.agalactiae_ seem to have a very similar ser of BGCs. While _S. thermophilus_ 
+> > has several BGCs that are not related to any other BGC.
 > > 
-> > The strain **Streptococcus agalactiae** H36B has a BGC that is not connected to other BGCs, being the only member of its GCF.
+> > Digging deeper: The BGC of the class PKSother in _S. agalactiae_ H3B6 has only 3 genes, which are also present in
+> > the BGCs of the other GCF in this class. It is possible that these genes are in a fragmented part of the assembled genome, 
+> > but are actually part of a BGC that is similar to the other ones. And it is also possible that these 3 genes are present in 
+> > the genome without being part of a bigger BGC.
 > {: .solution}
 {: .challenge}
 
@@ -338,20 +347,15 @@ the most divergent BGC clade or those that are distant to already described BGCs
 > > We will first look at the contents of the file:
 > > 
 > > ~~~
-> > head -n 5 network_files/2022-06-07_20-32-32_auto/Network_Annotations_Full.tsv 
+> > $ head -n 3 network_files/2022-06-10_21-27-26_auto/Network_Annotations_Full.tsv 
 > > ~~~
 > > {: .language-bash}
 > > 
 > > ~~~
-> > BGC Accession ID    Description Product Prediction  BiG-SCAPE class Organism    Taxonomy
-> > Streptococcus_agalactiae_18RS21-AAJO01000016.1.region001    AAJO01000016.1  Streptococcus agalactiae 18RS21 arylpolyene Others  Streptococcus 
-> > agalactiae 18RS21 Bacteria,Terrabacteria group,Firmicutes,Bacilli,Lactobacillales,Streptococcaceae,Streptococcus,Streptococcus agalactiae
-> > Streptococcus_agalactiae_18RS21-AAJO01000043.1.region001    AAJO01000043.1  Streptococcus agalactiae 18RS21 T3PKS   PKSother    Streptococcus 
-> > agalactiae 18RS21 Bacteria,Terrabacteria group,Firmicutes,Bacilli,Lactobacillales,Streptococcaceae,Streptococcus,Streptococcus agalactiae
-> > Streptococcus_agalactiae_515-AAJP01000027.1.region001   AAJP01000027.1  Streptococcus agalactiae 515    arylpolyene Others  Streptococcus agalactiae 
-> > 515    Bacteria,Terrabacteria group,Firmicutes,Bacilli,Lactobacillales,Streptococcaceae,Streptococcus,Streptococcus agalactiae
-> > Streptococcus_agalactiae_515-AAJP01000037.1.region001   AAJP01000037.1  Streptococcus agalactiae 515    T3PKS   PKSother    Streptococcus agalactiae 
-> > 515    Bacteria,Terrabacteria group,Firmicutes,Bacilli,Lactobacillales,Streptococcaceae,Streptococcus,Streptococcus agalactiae
+> > BGC	Accession ID	Description	Product Prediction	BiG-SCAPE class	Organism	Taxonomy
+Streptococcus_agalactiae_18RS21-AAJO01000016.1.region001	AAJO01000016.1	Streptococcus agalactiae 18RS21	arylpolyene	Others	Streptococcus agalactiae 18RS21	Bacteria,Terrabacteria group,Firmicutes,Bacilli,Lactobacillales,Streptococcaceae,Streptococcus,Streptococcus agalactiae
+Streptococcus_agalactiae_18RS21-AAJO01000043.1.region001	AAJO01000043.1	Streptococcus agalactiae 18RS21	T3PKS	PKSother	Streptococcus agalactiae 18RS21	Bacteria,Terrabacteria group,Firmicutes,Bacilli,Lactobacillales,Streptococcaceae,Streptococcus,Streptococcus agalactiae
+> >
 > > ~~~
 > > {: .output}
 > > 
@@ -359,26 +363,38 @@ the most divergent BGC clade or those that are distant to already described BGCs
 > > columns; `BGC`, `Product Prediction` and `BiG-SCAPE class` are the once we are interested in. So we will extract obtain those.
 > > 
 > > ~~~
-> > cut -f 1,4,5 network_files/2022-06-07_20-32-32_auto/Network_Annotations_Full.tsv > type_of_BGCs.tsv
+> > cut -f 1,4,5 network_files/2022-06-10_21-27-26_auto/Network_Annotations_Full.tsv > type_of_BGC.tsv
 > > 
 > > cat type_of_BGCs.tsv
 > > ~~~
 > > {: .language-bash}
 > > 
 > > ~~~
-> > BGC Product Prediction  BiG-SCAPE class
-> > Streptococcus_agalactiae_18RS21-AAJO01000016.1.region001    arylpolyene Others
-> > Streptococcus_agalactiae_18RS21-AAJO01000043.1.region001    T3PKS   PKSother
-> > Streptococcus_agalactiae_515-AAJP01000027.1.region001   arylpolyene Others
-> > Streptococcus_agalactiae_515-AAJP01000037.1.region001   T3PKS   PKSother
-> > Streptococcus_agalactiae_A909-CP000114.1.region001  arylpolyene Others
-> > Streptococcus_agalactiae_A909-CP000114.1.region002  T3PKS   PKSother
-> > Streptococcus_agalactiae_CJB111-AAJQ01000010.1.region001    T3PKS   PKSother
-> > Streptococcus_agalactiae_CJB111-AAJQ01000025.1.region001    arylpolyene Others
-> > Streptococcus_agalactiae_COH1-AAJR01000002.1.region001  arylpolyene Others
-> > Streptococcus_agalactiae_COH1-AAJR01000044.1.region001  T3PKS   PKSother
-> > Streptococcus_agalactiae_H36B-AAJS01000020.1.region001  arylpolyene Others
-> > Streptococcus_agalactiae_H36B-AAJS01000117.1.region001  T3PKS   PKSother
+> > BGC	Product Prediction	BiG-SCAPE class
+Streptococcus_agalactiae_18RS21-AAJO01000016.1.region001	arylpolyene	Others
+Streptococcus_agalactiae_18RS21-AAJO01000043.1.region001	T3PKS	PKSother
+Streptococcus_agalactiae_515-AAJP01000027.1.region001	arylpolyene	Others
+Streptococcus_agalactiae_515-AAJP01000037.1.region001	T3PKS	PKSother
+Streptococcus_agalactiae_A909-CP000114.1.region001	arylpolyene	Others
+Streptococcus_agalactiae_A909-CP000114.1.region002	T3PKS	PKSother
+Streptococcus_agalactiae_CJB111-AAJQ01000010.1.region001	T3PKS	PKSother
+Streptococcus_agalactiae_CJB111-AAJQ01000025.1.region001	arylpolyene	Others
+Streptococcus_agalactiae_COH1-AAJR01000002.1.region001	arylpolyene	Others
+Streptococcus_agalactiae_COH1-AAJR01000044.1.region001	T3PKS	PKSother
+Streptococcus_agalactiae_H36B-AAJS01000020.1.region001	arylpolyene	Others
+Streptococcus_agalactiae_H36B-AAJS01000117.1.region001	T3PKS	PKSother
+Streptococcus_thermophilus_LMD-9-CP000419.1.region001	NRPS-like	NRPS
+Streptococcus_thermophilus_LMD-9-CP000419.1.region002	RaS-RiPP	RiPPs
+Streptococcus_thermophilus_LMD-9-CP000419.1.region003	RaS-RiPP	RiPPs
+Streptococcus_thermophilus_LMD-9-CP000419.1.region004	RiPP-like	RiPPs
+Streptococcus_thermophilus_LMD-9-CP000419.1.region005	lanthipeptide-class-iv	RiPPs
+Streptococcus_thermophilus_LMG_18311-NC_006448.1.region001	lanthipeptide-class-i	RiPPs
+Streptococcus_thermophilus_LMG_18311-NC_006448.1.region002	NRPS-like	NRPS
+Streptococcus_thermophilus_LMG_18311-NC_006448.1.region003	RRE-containing	RiPPs
+Streptococcus_thermophilus_LMG_18311-NC_006448.1.region004	RaS-RiPP	RiPPs
+Streptococcus_thermophilus_LMG_18311-NC_006448.1.region005	RiPP-like	RiPPs
+Streptococcus_thermophilus_LMG_18311-NC_006448.1.region006	RaS-RiPP.lanthipeptide-class-iv	RiPPs
+
 > > ~~~
 > > {: .output}
 > {: .solution}
