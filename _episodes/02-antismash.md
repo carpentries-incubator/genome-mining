@@ -96,19 +96,32 @@ $ tree -L 1
 ~~~
 {: .output}
 
-#### **Case II** - Specific files
-Let's imagine you want to run antismash only on following three specific files `Streptococcus_agalactiae_18RS21.gbk`, `Streptococcus_agalactiae_515.gbk` and `agalactiae_A909.gbk`, so you could make use of `for` tool. As the following example.
 
 ~~~
 $ cd ..
-$ for gbk_file in ~/gm_workshop/results/annotated/S*18RS21*.gbk ~/gm_workshop/results/annotated/S*515*.gbk.*. 
+$ for gbk_file in ~/gm_workshop/results/annotated/S*.gbk. 
 > do
 >   antismash --genefinding-tool=none $gbk_file
 > done
 ~~~
 {: .language-bash}
 
-To see the results after antiSMASH run, we need to access to the `index.html` file, in order to acces to that, we will run the following command:
+#### Runing antiSMASH over a list of files 
+Now, imagine that you want to run antiSMASH over all
+Streptococcus agalactiae annotated genomes. Lets use 
+a `for` cycle and `*` as a wildcard to run antiSMASH
+over all files that starts with "S" in the annotated directory.   
+~~~
+$ for gbk_file in  ~/gm_workshop/results/annotated/S*.gbk
+$ do
+>    antismash --genefinding-tool=none $gbk_file
+> done
+~~~
+{: .language-bash}
+
+To see the results after antiSMASH run, we need to access to 
+the `index.html` file, in order to acces to that, we will run 
+the following command:
 ~~~
 $ cd Streptococcus_agalactie_A909.prokka
 $ pwd
@@ -119,7 +132,8 @@ $ pwd
 ~~~
 {: .output}
 
-On your local machine, open a GIT bash terminal in the **destiny** folder and execture the following command:
+On your local machine, open a GIT bash terminal in the 
+**destiny** folder and execture the following command:
 ~~~
 $ scp -r user@bioinformatica.matmor.unam.mx:~/gm_workshop_results/antismash/Streptococcus_agalactie_A909.prokka/* ~/Downloads/.
 ~~~ 
@@ -127,30 +141,25 @@ $ scp -r user@bioinformatica.matmor.unam.mx:~/gm_workshop_results/antismash/Stre
 
 And finally, you can open the `index.html` file on your **Local** web browser.
 
-
-#### **Case III** - All files in a folder
-~~~
-$ for gbk_file in  ~/gm_workshop/results/annotated/*.gbk
-$ do
->    antismash --genefinding-tool=none $gbk_file
-> done
-~~~
-{: .language-bash}
-
-For these lesson we will use the third case code. As outcomes you should get a folder comprised mainly by the following files:
+As outcomes you should get a folder comprised mainly by the following files:
 * **`.gbk` files** For each Biosynthetic Gene cluster region found.
 * **`.json` file** To know the input file name, the antiSMASH used version and the regions data (id,sequence_data)
 * **`index.html` file** To visualize the outcomes from the analysis.
 
 ## antiSMASH web services
 antiSMASH can be also used through this [web:](https://antismash.secondarymetabolites.org/#!/start)
-You will be asked to give your email. Then, the results will be sent to you and you will be allowed to donwload a folder with the annotations.
+You will be asked to give your email. Then, the results
+will be sent to you and you will be allowed to donwload a 
+folder with the annotations.
 
 ## Understanding the output
 
-The visualization of the results includes many diverse options. To understand all the possibilities, we suggest to read the following [tutorial:](https://docs.antismash.secondarymetabolites.org/understanding_output/)
+The visualization of the results includes many diverse options. 
+To understand all the possibilities, we suggest to read the following [tutorial:](https://docs.antismash.secondarymetabolites.org/understanding_output/)
 
-Briefly, on the "overview" page ´.HTML´ you can find all the regions found within every analyzed record/contig (antiSMASH inputs), and summarized all these information in five main features:
+Briefly, on the "overview" page ´.HTML´ you can find all the regions 
+found within every analyzed record/contig (antiSMASH inputs), and 
+summarized all these information in five main features:
 
 * **Region:** The region number.
 * **Type:** Type of the product detected by antiSMASH.
@@ -158,7 +167,32 @@ Briefly, on the "overview" page ´.HTML´ you can find all the regions found wit
 * **Most similar known cluster:** The closest compund from th MIBiG database.
 * **Similarity:** Percentage of genes within the closest known compound that have significant BLAS hit (The last two columns containing comparisons to the MiBIG database will only be shown if antiSMASH was run with the KnownClusterBlast option ´--cc-mibig´).
 
-> ## Exercise 2
+#### Exercise run antiSMASH over _thermpohilus_ 
+
+> ## Exercise 2 
+> Let's imagine you want to run antismash only on following three specific files `Streptococcus_agalactiae_18RS21.gbk`, `Streptococcus_agalactiae_515.gbk` and `agalactiae_A909.gbk`, so you could make use of `for` tool. As the following example.
+>  
+> ~~~
+>  $ grep __________ region.gbk
+> ~~~
+> > {: .laguage-bash}
+> 
+> > ## Solution
+> >
+> > ~~~
+> > $ grep LOCUS region.gbk
+> > ~~~
+> > Locus contains the information of the characteristics of the sequence
+> > {: .laguage-bash}
+> > ~~~
+> >  for
+> > ~~~
+> > {: .output}
+> {: .solution}
+{: .challenge}
+
+
+> ## Exercise 3 
 > order the structure of this command line, which wants to know how big the region is:
 > 
 >  `SOURCE` `ORGANISM` `LOCUS`
