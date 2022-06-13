@@ -353,8 +353,12 @@ the most divergent BGC clade or those that are distant to already described BGCs
 > > 
 > > ~~~
 > > BGC	Accession ID	Description	Product Prediction	BiG-SCAPE class	Organism	Taxonomy
-Streptococcus_agalactiae_18RS21-AAJO01000016.1.region001	AAJO01000016.1	Streptococcus agalactiae 18RS21	arylpolyene	Others	Streptococcus agalactiae 18RS21	Bacteria,Terrabacteria group,Firmicutes,Bacilli,Lactobacillales,Streptococcaceae,Streptococcus,Streptococcus agalactiae
-Streptococcus_agalactiae_18RS21-AAJO01000043.1.region001	AAJO01000043.1	Streptococcus agalactiae 18RS21	T3PKS	PKSother	Streptococcus agalactiae 18RS21	Bacteria,Terrabacteria group,Firmicutes,Bacilli,Lactobacillales,Streptococcaceae,Streptococcus,Streptococcus agalactiae
+> > Streptococcus_agalactiae_18RS21-AAJO01000016.1.region001	AAJO01000016.1	Streptococcus agalactiae
+> > 18RS21	arylpolyene	Others	Streptococcus agalactiae 18RS21	Bacteria,Terrabacteria
+> > group,Firmicutes,Bacilli,Lactobacillales,Streptococcaceae,Streptococcus,Streptococcus agalactiae
+> > Streptococcus_agalactiae_18RS21-AAJO01000043.1.region001	AAJO01000043.1	Streptococcus agalactiae
+> > 18RS21	T3PKS	PKSother	Streptococcus agalactiae 18RS21	Bacteria,Terrabacteria
+> > group,Firmicutes,Bacilli,Lactobacillales,Streptococcaceae,Streptococcus,Streptococcus agalactiae
 > > ~~~
 > > {: .output}
 > > 
@@ -369,29 +373,13 @@ Streptococcus_agalactiae_18RS21-AAJO01000043.1.region001	AAJO01000043.1	Streptoc
 > > 
 > > ~~~
 > > BGC	Product Prediction	BiG-SCAPE class
-Streptococcus_agalactiae_18RS21-AAJO01000016.1.region001	arylpolyene	Others
-Streptococcus_agalactiae_18RS21-AAJO01000043.1.region001	T3PKS	PKSother
-Streptococcus_agalactiae_515-AAJP01000027.1.region001	arylpolyene	Others
-Streptococcus_agalactiae_515-AAJP01000037.1.region001	T3PKS	PKSother
-Streptococcus_agalactiae_A909-CP000114.1.region001	arylpolyene	Others
-Streptococcus_agalactiae_A909-CP000114.1.region002	T3PKS	PKSother
-Streptococcus_agalactiae_CJB111-AAJQ01000010.1.region001	T3PKS	PKSother
-Streptococcus_agalactiae_CJB111-AAJQ01000025.1.region001	arylpolyene	Others
-Streptococcus_agalactiae_COH1-AAJR01000002.1.region001	arylpolyene	Others
-Streptococcus_agalactiae_COH1-AAJR01000044.1.region001	T3PKS	PKSother
-Streptococcus_agalactiae_H36B-AAJS01000020.1.region001	arylpolyene	Others
-Streptococcus_agalactiae_H36B-AAJS01000117.1.region001	T3PKS	PKSother
-Streptococcus_thermophilus_LMD-9-CP000419.1.region001	NRPS-like	NRPS
-Streptococcus_thermophilus_LMD-9-CP000419.1.region002	RaS-RiPP	RiPPs
-Streptococcus_thermophilus_LMD-9-CP000419.1.region003	RaS-RiPP	RiPPs
-Streptococcus_thermophilus_LMD-9-CP000419.1.region004	RiPP-like	RiPPs
-Streptococcus_thermophilus_LMD-9-CP000419.1.region005	lanthipeptide-class-iv	RiPPs
-Streptococcus_thermophilus_LMG_18311-NC_006448.1.region001	lanthipeptide-class-i	RiPPs
-Streptococcus_thermophilus_LMG_18311-NC_006448.1.region002	NRPS-like	NRPS
-Streptococcus_thermophilus_LMG_18311-NC_006448.1.region003	RRE-containing	RiPPs
-Streptococcus_thermophilus_LMG_18311-NC_006448.1.region004	RaS-RiPP	RiPPs
-Streptococcus_thermophilus_LMG_18311-NC_006448.1.region005	RiPP-like	RiPPs
-Streptococcus_thermophilus_LMG_18311-NC_006448.1.region006	RaS-RiPP.lanthipeptide-class-iv	RiPPs
+> > Streptococcus_agalactiae_18RS21-AAJO01000016.1.region001	arylpolyene	Others
+> > Streptococcus_agalactiae_18RS21-AAJO01000043.1.region001	T3PKS	PKSother
+> > Streptococcus_agalactiae_515-AAJP01000027.1.region001	arylpolyene	Others
+> > Streptococcus_agalactiae_515-AAJP01000037.1.region001	T3PKS	PKSother
+> > .
+> > .
+> > .
 > > ~~~
 > > {: .output}
 > {: .solution}
