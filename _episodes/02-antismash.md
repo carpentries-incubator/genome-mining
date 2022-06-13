@@ -197,6 +197,8 @@ You will be asked to give your email. Then, the results
 will be sent to you and you will be allowed to donwload a 
 folder with the annotations.
 
+#### Exercises and discussion
+
 > ## Exercise 2 antiSMASH web  
 > Run antiSMASH web 
 > Apply your solution to get the size of the first region of _S. agalactiae_ A909
@@ -210,9 +212,7 @@ folder with the annotations.
 {: .challenge}
 
 
-#### Exercise run antiSMASH over _thermpohilus_ 
-
-> ## Exercise 3 
+> ## Exercise 3  run antiSMASH over _thermpohilus_ 
 > Let's imagine you want to run antismash only on the _S. thermophilus_ annotated genomes.   
 >  
 > ~~~
