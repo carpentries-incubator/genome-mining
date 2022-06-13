@@ -110,18 +110,18 @@ $ for gbk_file in ~/gm_workshop/results/annotated/S*18RS21*.gbk ~/gm_workshop/re
 
 To see the results after antiSMASH run, we need to access to the `index.html` file, in order to acces to that, we will run the following command:
 ~~~
-$ cd Streptococcus_agalactiae_A909/
+$ cd Streptococcus_agalactie_A909.prokka
 $ pwd
 ~~~ 
 {: .language-bash}
 ~~~
-~/gm_workshop_results/antismash/Streptococcus_agalactiae_A909
+~/gm_workshop_results/antismash/Streptococcus_agalactie_A909.prokka
 ~~~
 {: .output}
 
 On your local machine, open a GIT bash terminal in the **destiny** folder and execture the following command:
 ~~~
-$ scp -r user@bioinformatica.matmor.unam.mx:~/gm_workshop_results/antismash/Streptococcus_agalactiae_A909/* ~/Downloads/.
+$ scp -r user@bioinformatica.matmor.unam.mx:~/gm_workshop_results/antismash/Streptococcus_agalactie_A909.prokka/* ~/Downloads/.
 ~~~ 
 {: .language-bash}
 
