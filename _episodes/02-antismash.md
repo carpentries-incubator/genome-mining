@@ -185,7 +185,10 @@ summarized all these information in five main features:
 * **Type:** Type of the product detected by antiSMASH.
 * **From,To:** The location of the region (nucleotides).
 * **Most similar known cluster:** The closest compund from th MIBiG database.
-* **Similarity:** Percentage of genes within the closest known compound that have significant BLAS hit (The last two columns containing comparisons to the MiBIG database will only be shown if antiSMASH was run with the KnownClusterBlast option ´--cc-mibig´). 
+* **Similarity:** Percentage of genes within the closest known 
+compound that have significant BLAS hit (The last two columns 
+containing comparisons to the MiBIG database will only be shown 
+if antiSMASH was run with the KnownClusterBlast option ´--cc-mibig´). 
 
 ## antiSMASH web services
 antiSMASH can be also used in an oline server in the 
@@ -258,14 +261,14 @@ folder with the annotations.
 > {: .solution}
 {: .challenge}
 
-> ## Discussion 1  
-> What BGC classes does the genus Streptococcus have  
+> ## Discussion 1. BGC classes in _Streptococcus_  
+> What BGC classes does the genus _Streptococcus_ have ?  
 > 
 > > ## Solution
-> > In antiSMASH website output of A909 we see cluster of two classes
-> > T3PKS and terpene. Nevertheless, this is only one _Streptococcus_ 
-> > in order to infer all BGC classes we need to run antiSMASH in more __ 
+> > In antiSMASH website output of A909 strain we see clusters of two classes
+> > T3PKS and arylpolyene. Nevertheless, this is only one _Streptococcus_ 
+> > in order to infer all BGC classes in the genus we need to run antiSMASH in more genomes 
 > > {: .solution}
-{: .challenge}
+{: .discussion}
 
 {% include links.md %}
