@@ -199,14 +199,17 @@ folder with the annotations.
 
 #### Exercises and discussion
 
-> ## Exercise 2 antiSMASH web  
-> Run antiSMASH web 
-> Apply your solution to get the size of the first region of _S. agalactiae_ A909
+> ## Exercise 2 NCBI and antiSMASH webserver  
+> Run antiSMASH web server over _S. agalactiae_ A909. First explore the 
+> NCBI assembly database to obtain the accesion. Get the id your results.   
 > 
 > > ## Solution
-> >
-> > out
-> > 
+> > 1. Go to [NCBI](https://www.ncbi.nlm.nih.gov/) and search _S. agalactiae_ A909.  
+> > 2. Choose assembly database and copy the GenBank sequence Id in the bottom of the site.    
+> > 3. Go to [antiSMASH](https://antismash.secondarymetabolites.org/#!/start)    
+> > 4. Chose the accesion froom NCBI and paste `CP000114.1`    
+> > 5. Run antiSMASH and paste in the collaborative document your results id
+> >  example ` bacteria-cbd13a47-8095-495f-957c-dcf58c261529`  
 > > {: .output}
 > {: .solution}
 {: .challenge}
