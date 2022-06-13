@@ -241,7 +241,6 @@ folder with the annotations.
 >  $ _____ __________ region.gbk  
 > ~~~
 > >{: .laguage-bash}
-> 
 > Apply your solution to get the size of the first region of _S. agalactiae_ A909
 > 
 > > ## Solution
@@ -262,8 +261,8 @@ folder with the annotations.
 {: .challenge}
 
 > ## Discussion 1. BGC classes in _Streptococcus_  
-> What BGC classes does the genus _Streptococcus_ have ?  
-> 
+>
+>  What BGC classes does the genus _Streptococcus_ have ?   
 > > ## Solution
 > > In antiSMASH website output of A909 strain we see clusters of two classes
 > > T3PKS and arylpolyene. Nevertheless, this is only one _Streptococcus_ 
