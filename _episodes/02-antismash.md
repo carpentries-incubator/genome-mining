@@ -208,12 +208,15 @@ folder with the annotations.
 > > {: .laguage-bash}
 > 
 > > ## Solution
-> >  First we need to start the for cycle: `for mygenome in ~/gm_workshop/results/annotated/S*.gbk`  
-> >  note that we are using the name `mygenome` as the variable name in the for cycle.    
-> >  Then you need to use the reserved word `do`  to start the cycle.     
-> >  Then you have to call antismash over your variable `mygenome`. Remember the `$` before your variable
-> >  to indicate to bash that now you are using the value of the variable.   
-> >  Finally, use the reserved word `done` to finish the cycle.    
+> >  1. First, we need to start the for cycle: `for mygenome in ~/gm_workshop/results/annotated/S*.gbk`  
+> >  note that we are using the name `mygenome` as the variable name in the for cycle.
+> >        
+> >  2. Then you need to use the reserved word `do`  to start the cycle.     
+> >    
+> >  3. Then you have to call antismash over your variable `mygenome`. Remember the `$` before your variable
+> >  to indicate to bash that now you are using the value of the variable. 
+> >      
+> >  4. Finally, use the reserved word `done` to finish the cycle.    
 > > ~~~
 > >  for variable in ~/gm_workshop/results/annotated/S*.gbk  
 > >    do  
@@ -253,6 +256,16 @@ folder with the annotations.
 > > In this case the size of the region is 42196 bp
 > > {: .output}
 > {: .solution}
+{: .challenge}
+
+> ## Discussion 1  
+> What BGC classes does the genus Streptococcus have  
+> 
+> > ## Solution
+> > In antiSMASH website output of A909 we see cluster of two classes
+> > T3PKS and terpene. Nevertheless, this is only one _Streptococcus_ 
+> > in order to infer all BGC classes we need to run antiSMASH in more __ 
+> > {: .solution}
 {: .challenge}
 
 {% include links.md %}
