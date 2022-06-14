@@ -64,6 +64,12 @@ Then you can create your own metagenomics conda environment using the metagenomi
 
 More information about how to use environments and spec file is available at [conda documentation](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
 
+###
+Evomining conda  
+`git clone https://github.com/miguel-mx/evomining-conda`      
+`cd evomining-conda`    
+`conda env create -f evomining.yml --prefix="/opt/anaconda3/envs/evomining-conda`    
+
 ### Data
 
 The data used in this workshop are available on Zenodo. Because this workshop works with real data, be aware that file sizes for the data are large. Please read the Zenodo page linked below for information about the data and access to the data files. 
