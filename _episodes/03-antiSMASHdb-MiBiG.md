@@ -1,5 +1,5 @@
 ---
-title: "antiSMASH database and MIBiG"
+title: "Genome Mining databases"
 teaching: 15
 exercises: 10
 questions:
@@ -7,11 +7,10 @@ questions:
 - "Which kind of analysis antiSMASH can perform?"
 - "Which files extension accepts antiSMASH?"
 objectives:
-- "Understand how antiSMASH applications."
 - "Understand the importance of metadata and potential metadata standards."
 - "Explore common formatting challenges in spreadsheet data."
 keypoints:
-- "antiSMASH predict BGCs that are antibiotic producers of each organism"
+- "antiSMASH database comprise predicted BGCs of each organism"
 - "MIBiG show BGCs that have been tested with an experiment."
 ---
 ## MIBiG Database
@@ -67,22 +66,39 @@ library(ggplot2)
 
 df <- read.csv(file = "gm_workshop/data/antismash_db.csv", stringsAsFactors = TRUE)
 
-mm<-df %>%
+Streptococcus_antismash_df<-df %>%
   group_by(Species,BGC.type) %>%
-  summarize(se_le = n())
+  summarize(occurrences = n()) 
+  
+Streptococcus_antismash_df$species 
 
-#names(mm)[names(mm) == 'BGC.type'] <- 'BGC_type'
-ggplot(mm, aes(x = Species, y = BGC.type, fill = se_le)) + geom_tile() + theme(axis.text.x=element_text(angle = 90))#+ scale_fill_gradient(low = "white", high = "steelblue")
+ggplot(Streptococcus_antismash_df, aes(x = Species, y = BGC.type, fill = occurrences)) + geom_tile() 
 
-df2<-mm[(mm$Species=="agalactiae"),]             
-ggplot(df2, aes( x = BGC.type, y = se_le)) + geom_point() + theme(axis.text.x=element_text(angle = 90))
-
-df3<-mm[!(mm$se_le>200),]             
-
-
-ggplot(df3, aes(x = BGC.type, y = se_le)) + geom_tile() + theme(axis.text.x=element_text(angle = 90))+ scale_fill_gradient(low = "white", high = "steelblue")
-
-ggplot(df3, aes(x = Species, y = BGC.type, fill = se_le)) + geom_tile() + theme(axis.text.x=element_text(angle = 90))#+ scale_fill_gradient(low = "white", high = "steelblue")
 ~~~
-{: .r-language}
+{: .language-r}
 
+Lets improve legend legibility  
+~~~
+ggplot(Streptococcus_antismash_df, aes(x = Species, y = BGC.type, fill = occurrences)) + geom_tile() 
++ theme(axis.text.x=element_text(angle = 90))#+ scale_fill_gradient(low = "white", high = "steelblue")
+
+
+~~~
+{: .language-r}
+
+~~~
+df_agalactiae<-Streptococcus_antismash_df[(Streptococcus_antismash_df$Species=="agalactiae"),]             
+ggplot(df_agalactiae, aes( x = BGC.type, y = occurrences)) + geom_point() + theme(axis.text.x=element_text(angle = 90))
+~~~
+{: .language-r}
+
+~~~
+
+df2<-Streptococcus_antismash_df[!(Streptococcus_antismash_df$occurrences>200),]             
+
+
+ggplot(df2, aes(x = BGC.type, y = occurrences)) + geom_tile() + theme(axis.text.x=element_text(angle = 90))+ scale_fill_gradient(low = "white", high = "steelblue")
+
+ggplot(df2, aes(x = Species, y = BGC.type, fill = occurrences)) + geom_tile() + theme(axis.text.x=element_text(angle = 90))#+ scale_fill_gradient(low = "white", high = "steelblue")
+~~~
+{: .language-r}
