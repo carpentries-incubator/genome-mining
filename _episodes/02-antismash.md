@@ -162,7 +162,7 @@ download the directory in your local computer.
 If using `scp` , on your local machine, open a GIT bash terminal in the 
 **destiny** folder and execute the following command:
 ~~~
-$ scp -r user@bioinformatica.matmor.unam.mx:~/gm_workshop_results/antismash/S*A909.prokka/* ~/Downloads/.
+$ scp -r user@bioinformatica.matmor.unam.mx:~/gm_workshop/results/antismash/S*A909.prokka/* ~/Downloads/.
 ~~~ 
 {: .language-bash}
 
