@@ -3,15 +3,14 @@ title: "Genome Mining databases"
 teaching: 15
 exercises: 10
 questions:
-- "How can I validate my antiSMASH's outputs?"
-- "Which kind of analysis antiSMASH can perform?"
-- "Which files extension accepts antiSMASH?"
+- "Where can I find experimentally validated BGCs?"
+- "Where is information about all predicted BGCs?"
 objectives:
-- "Understand the importance of metadata and potential metadata standards."
-- "Explore common formatting challenges in spreadsheet data."
+- "Use MIBiG database as a source of experimentally tested BGC."
+- "Explore antiSMASH database to learn about the distribution of predicted BGC."
 keypoints:
-- "antiSMASH database comprise predicted BGCs of each organism"
 - "MIBiG show BGCs that have been tested with an experiment."
+- "antiSMASH database comprise predicted BGCs of each organism"
 ---
 ## MIBiG Database
 The Minimum Information about a Biosynthetic Gene cluster (MIBiG) is a database that facilitates consistent and systematic deposition and retrieval of data on biosynthetic gene clusters. MIBiG provides a robust community standard for annotations and metadata on biosynthetic gene clusters and their molecular products. It will empower next-generation research on the biosynthesis, chemistry and ecology of broad classes of societally relevant bioactive secondary metabolites, guided by robust experimental evidence and rich metadata components.
@@ -59,44 +58,60 @@ For complex queries the database also provides a sophisticated query builder tha
 ### Results
 
 > ![Forking Repositories]({{ page.root }}/fig/antiSMASH_query.png)
-
+Lets use antiSMASH database to know the BGC contained in 
+the _Streptococcus_ genomes. We will use R to visualize the data.  
+First, lets ativate two libraries, `dplyr` for data manipulation 
+and `ggplot2` for data visualization.     
 ~~~
 library("dplyr")
 library(ggplot2)
-
-df <- read.csv(file = "gm_workshop/data/antismash_db.csv", stringsAsFactors = TRUE)
-
-Streptococcus_antismash_df<-df %>%
-  group_by(Species,BGC.type) %>%
-  summarize(occurrences = n()) 
-  
-Streptococcus_antismash_df$species 
-
-ggplot(Streptococcus_antismash_df, aes(x = Species, y = BGC.type, fill = occurrences)) + geom_tile() 
-
 ~~~
 {: .language-r}
+
+Now, lets store in a dataframe variable the content of the
+_Strptococcus_ predicted BGC downloaded from antiSMASH-db  
+
+~~~
+df <- read.csv(file = "gm_workshop/data/antismash_db.csv", stringsAsFactors = TRUE)
+~~~
+{: .language-r}
+
+Lets group the data by the variables Species and BGC.type:  
+~~~
+Streptococcus_antismash_df<-df %>%  group_by(Species,BGC.type) %>%  summarize(occurrences = n()) 
+~~~
+{: .language-r}
+
+Now, Lets visualize the content of the Species column:  
+~~~
+Streptococcus_antismash_df$species 
+~~~
+{: .language-r}  
+
+Lets see our first visualization of the BGC content on a heatmap  .
+~~~
+ggplot(Streptococcus_antismash_df, aes(x = Species, y = BGC.type, fill = occurrences)) + geom_tile() 
+~~~
+{: .language-r}  
 
 Lets improve legend legibility  
 ~~~
 ggplot(Streptococcus_antismash_df, aes(x = Species, y = BGC.type, fill = occurrences)) + geom_tile() 
 + theme(axis.text.x=element_text(angle = 90))#+ scale_fill_gradient(low = "white", high = "steelblue")
-
-
 ~~~
 {: .language-r}
 
+Now lets restrict ourselves to _S. agalactiae_  
 ~~~
 df_agalactiae<-Streptococcus_antismash_df[(Streptococcus_antismash_df$Species=="agalactiae"),]             
 ggplot(df_agalactiae, aes( x = BGC.type, y = occurrences)) + geom_point() + theme(axis.text.x=element_text(angle = 90))
 ~~~
 {: .language-r}
 
+And finally, since _S. pneumonia_ lets restrict ourselves 
+to BGC predicted less than 200 times.   
 ~~~
-
 df2<-Streptococcus_antismash_df[!(Streptococcus_antismash_df$occurrences>200),]             
-
-
 ggplot(df2, aes(x = BGC.type, y = occurrences)) + geom_tile() + theme(axis.text.x=element_text(angle = 90))+ scale_fill_gradient(low = "white", high = "steelblue")
 
 ggplot(df2, aes(x = Species, y = BGC.type, fill = occurrences)) + geom_tile() + theme(axis.text.x=element_text(angle = 90))#+ scale_fill_gradient(low = "white", high = "steelblue")
