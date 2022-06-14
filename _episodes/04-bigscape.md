@@ -65,7 +65,7 @@ $ ls Streptococcus*/*region*gbk | wc -l
 And because the names are somewhat cryptic, they could be repeated,
  so we will rename the `gbks` for them to include the genome name.
 
-Copy the following script to a file named `change-name.sh` using `nano`:
+Copy the following script to a file named `change-names.sh` using `nano`:
 ~~~
 # This script is to rename the antiSMASH gbks for them to include the species and strain names, taken from the directory name.
 # The argument it requires is the name of the directory with the AntiSMASH output, which must NOT contain a slash at the end.
