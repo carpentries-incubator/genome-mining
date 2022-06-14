@@ -92,21 +92,25 @@ Streptococcus_antismash_df$Species
 
 Lets see our first visualization of the BGC content on a heatmap  .
 ~~~
-ggplot(Streptococcus_antismash_df, aes(x = Species, y = BGC.type, fill = occurrences)) + geom_tile() 
+Streptococcus_antismash_plot<-ggplot(Streptococcus_antismash_df, aes(x = Species, y = BGC.type, fill = occurrences)) + geom_tile() 
+ggsave(filename = "gm_workshop/results/Streptococcus_antismash_plot.png", plot = Streptococcus_antismash_plot, width = 20, height = 10, dpi = 300, units = "cm")
 ~~~
 {: .language-r}  
 
 Lets improve legend legibility  
 ~~~
-ggplot(Streptococcus_antismash_df, aes(x = Species, y = BGC.type, fill = occurrences)) + geom_tile() 
+Streptococcus_antismash_plot<-ggplot(Streptococcus_antismash_df, aes(x = Species, y = BGC.type, fill = occurrences)) + geom_tile() 
 + theme(axis.text.x=element_text(angle = 90))#+ scale_fill_gradient(low = "white", high = "steelblue")
+ggsave(filename = "gm_workshop/results/Streptococcus_antismash_plot.png", plot = Streptococcus_antismash_plot, width = 20, height = 10, dpi = 300, units = "cm")
+
 ~~~
 {: .language-r}
 
 Now lets restrict ourselves to _S. agalactiae_  
 ~~~
 df_agalactiae<-Streptococcus_antismash_df[(Streptococcus_antismash_df$Species=="agalactiae"),]             
-ggplot(df_agalactiae, aes( x = BGC.type, y = occurrences)) + geom_point() + theme(axis.text.x=element_text(angle = 90))
+agalactiae_plot<-ggplot(df_agalactiae, aes( x = BGC.type, y = occurrences)) + geom_point() + theme(axis.text.x=element_text(angle = 90))
+ggsave(filename = "gm_workshop/results/agalactiae_plot.png", plot = agalactiae_plot, width = 20, height = 10, dpi = 300, units = "cm")
 ~~~
 {: .language-r}
 
@@ -114,8 +118,10 @@ And finally, since _S. pneumonia_ lets restrict ourselves
 to BGC predicted less than 200 times.   
 ~~~
 df2<-Streptococcus_antismash_df[!(Streptococcus_antismash_df$occurrences>200),]             
-ggplot(df2, aes(x = BGC.type, y = occurrences)) + geom_tile() + theme(axis.text.x=element_text(angle = 90))+ scale_fill_gradient(low = "white", high = "steelblue")
+Streptococcus_smooth_plot<-ggplot(df2, aes(x = BGC.type, y = occurrences)) + geom_tile() + theme(axis.text.x=element_text(angle = 90))+ scale_fill_gradient(low = "white", high = "steelblue")
+ggsave(filename = "gm_workshop/results/Streptococcus_smooth_plot.png", plot = Streptococcus_smooth_plot, width = 20, height = 10, dpi = 300, units = "cm")
 
-ggplot(df2, aes(x = Species, y = BGC.type, fill = occurrences)) + geom_tile() + theme(axis.text.x=element_text(angle = 90))#+ scale_fill_gradient(low = "white", high = "steelblue")
+Streptococcus_smooth_plot2<-ggplot(df2, aes(x = Species, y = BGC.type, fill = occurrences)) + geom_tile() + theme(axis.text.x=element_text(angle = 90))#+ scale_fill_gradient(low = "white", high = "steelblue")
+ggsave(filename = "gm_workshop/results/Streptococcus_smooth_plot.png", plot = Streptococcus_smooth_plot, width = 20, height = 10, dpi = 300, units = "cm")
 ~~~
 {: .language-r}
