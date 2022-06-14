@@ -21,7 +21,7 @@ Select "Search" on the upper right corner of the menu bar
 
 > ![Forking Repositories]({{ page.root }}/fig/MIBiG_search.png)
 
-For simple queries, such as "Streptococcus agalactiae" or searching for a specific strain you can use the "Simple search"  functionality.
+For simple queries, such as _Streptococcus agalactiae_ or searching for a specific strain you can use the "Simple search"  functionality.
 
 > ![Forking Repositories]({{ page.root }}/fig/MIBiG_query.png)
 
