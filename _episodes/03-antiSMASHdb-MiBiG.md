@@ -21,7 +21,8 @@ Select "Search" on the upper right corner of the menu bar
 
 > ![Forking Repositories]({{ page.root }}/fig/MIBiG_search.png)
 
-For simple queries, such as _Streptococcus agalactiae_ or searching for a specific strain you can use the "Simple search"  functionality.
+For simple queries, such as _Streptococcus agalactiae_ or searching f
+or a specific strain you can use the "Simple search"  functionality.
 
 > ![Forking Repositories]({{ page.root }}/fig/MIBiG_query.png)
 
@@ -61,7 +62,8 @@ For complex queries the database also provides a sophisticated query builder tha
 Lets use antiSMASH database to know the BGC contained in 
 the _Streptococcus_ genomes. We will use R to visualize the data.  
 First, lets ativate two libraries, `dplyr` for data manipulation 
-and `ggplot2` for data visualization.     
+and `ggplot2` for data visualization.      
+  
 ~~~
 library("dplyr")
 library(ggplot2)
@@ -84,7 +86,7 @@ Streptococcus_antismash_df<-df %>%  group_by(Species,BGC.type) %>%  summarize(oc
 
 Now, Lets visualize the content of the Species column:  
 ~~~
-Streptococcus_antismash_df$species 
+Streptococcus_antismash_df$Species 
 ~~~
 {: .language-r}  
 
