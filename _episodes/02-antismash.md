@@ -129,7 +129,7 @@ a `for` cycle and `*` as a wildcard to run antiSMASH
 over all files that starts with "S" in the annotated directory.    
   
 ~~~
-$ for gbk_file in  ~/gm_workshop/results/annotated/S*.gbk
+$ for gbk_file in ~/gm_workshop/results/annotated/S*.gbk
 $ do
 >    antismash --genefinding-tool=none $gbk_file
 > done
@@ -145,7 +145,7 @@ $ pwd
 ~~~ 
 {: .language-bash}
 ~~~
-~/gm_workshop_results/antismash/Streptococcus_agalactie_A909.prokka
+~/gm_workshop/results/antismash/Streptococcus_agalactie_A909.prokka
 ~~~
 {: .output}
 
