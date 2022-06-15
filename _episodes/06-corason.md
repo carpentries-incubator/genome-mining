@@ -36,8 +36,8 @@ Here we are testing the new stand-alone
 with gbk as input-files. Lets first activate the corason-conda environment.    
 
 ~~~
-conda deactivate 
-conda activate corason  
+$ conda deactivate 
+$ conda activate corason  
 ~~~
 {: .language-bash}
 
@@ -76,7 +76,7 @@ $ ls
 {: .language-bash}
 
 ~~~
-$ cpsg.query  
+cpsg.query  
 ~~~
 {: .output}
 
@@ -116,13 +116,13 @@ Now all the converted genome files, aminoacid fasta files (.faa)
 and annotation files (.txt) shoul be placed in the 'GENOMES directory'
 one level up outside output.  
 ~~~
-mv output/* . 
-ls
+$ mv output/* . 
+$ ls
 ~~~
 {: .language-bash}  
 
 ~~~
-$ CORASON_GENOMES  Corason_Rast.IDs  cpsg.query  GENOMES  output 
+CORASON_GENOMES  Corason_Rast.IDs  cpsg.query  GENOMES  output 
 ~~~
 {: .output}  
 
