@@ -81,7 +81,7 @@ and `ggplot2` for data visualization.
   
 ~~~
 library("dplyr")
-library(ggplot2)
+library("ggplot2")
 ~~~
 {: .language-r}
 
