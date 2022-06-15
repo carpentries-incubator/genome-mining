@@ -47,8 +47,8 @@ Let's locate in the directory that has the antiSMASH results of each genome:
 ~~~
 $ cd ~/gm_workshop/results/antismash/
 $ ls
-$ mv  thermophilusLMD9_prokka  Streptococcus_thermophilusLMD9_prokka
-$ mv thermophilusLMG18311_prokka  Streptococcus_thermophilusLMG18311_prokka
+$ mv  thermophilusLMD9_prokka  Streptococcus_thermophilus_LMD9_prokka
+$ mv thermophilusLMG18311_prokka  Streptococcus_thermophilus_LMG18311_prokka
 ~~~
 {: .language-bash}
 
