@@ -45,7 +45,7 @@ In each of the antiSMASH output directories, we will find a single `.gbk`
 
 Let's locate in the directory that has the antiSMASH results of each genome:
 ~~~
-$ ~/gm_workshop/results/genome_mining/antismash/
+$ cd ~/gm_workshop/results/antismash/
 ~~~
 {: .language-bash}
 
@@ -58,7 +58,7 @@ $ ls Streptococcus*/*region*gbk | wc -l
 {: .language-bash}
 
 ~~~
-24
+12  
 ~~~
 {: .output}
 
