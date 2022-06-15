@@ -46,7 +46,7 @@ In each of the antiSMASH output directories, we will find a single `.gbk`
 Let's locate in the directory that has the antiSMASH results of each genome:
 ~~~
 $ conda deactivate  
-$ conda ativate bigscape  
+$ conda activate bigscape  
 $ cd ~/gm_workshop/results/antismash/
 $ ls
 $ mv  thermophilusLMD9_prokka  Streptococcus_thermophilus_LMD9_prokka
@@ -209,7 +209,7 @@ cutoff value (0.3).
 
 Now we are ready to run BiG-SCAPE:
 ~~~
-$ bigscape -i bigscape/bgcs_gbks/ -o bigscape/output_100622 --mix --hybrids-off --mode auto --pfam_dir /opt/anaconda3/envs/bigscape/
+$ bigscape -i bigscape/bgcs_gbks/ -o bigscape/output_100622 --mix --hybrids-off --mode auto --pfam_dir /opt/anaconda3/envs/bigscape/Pfam_database
 ~~~
 {: .language-bash}
 
