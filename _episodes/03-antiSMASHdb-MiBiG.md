@@ -13,7 +13,16 @@ keypoints:
 - "antiSMASH database comprise predicted BGCs of each organism"
 ---
 ## MIBiG Database
-The Minimum Information about a Biosynthetic Gene cluster (MIBiG) is a database that facilitates consistent and systematic deposition and retrieval of data on biosynthetic gene clusters. MIBiG provides a robust community standard for annotations and metadata on biosynthetic gene clusters and their molecular products. It will empower next-generation research on the biosynthesis, chemistry and ecology of broad classes of societally relevant bioactive secondary metabolites, guided by robust experimental evidence and rich metadata components.
+The Minimum Information about a Biosynthetic Gene cluster 
+[MIBiG](https://mibig.secondarymetabolites.org/repository) 
+is a database that facilitates consistent and systematic deposition 
+and retrieval of data on biosynthetic gene clusters. MIBiG provides 
+a robust community standard for annotations and metadata on 
+biosynthetic gene clusters and their molecular products. It will 
+empower next-generation research on the biosynthesis, chemistry 
+and ecology of broad classes of societally relevant bioactive 
+secondary metabolites, guided by robust experimental evidence 
+and rich metadata components.
 
 ### Browsing and Querying in the MIBiG database
 
@@ -43,18 +52,24 @@ For complex queries the database also provides a sophisticated query builder tha
 
 
 ## antiSMASH database
-The antiSMASH database provides researchers with an easy to use, up-to-date collection of annotated BGC data, which enable them to easily perform cross-genome analyses by offering complex queries on the datasets
+The [antiSMASH database](https://antismash-db.secondarymetabolites.org/) 
+provides researchers with an easy to use, up-to-date collection of 
+annotated BGC data, which enable them to easily perform cross-genome 
+analyses by offering complex queries on the datasets
 
 ### Browsing and Querying in the antiSMASH database
 Select "Browse" on the top menu bar either you can select "Query" in the center
 
 > ![Forking Repositories]({{ page.root }}/fig/antiSMASH_db.png)
 
-For simple queries, such as "Streptococcus" or searching for a specific strain you can use the "Simple search" functionality.
+For simple queries, such as "Streptococcus" or searching for a 
+specific strain you can use the "Simple search" functionality.
 
 > ![Forking Repositories]({{ page.root }}/fig/antiSMASH_search.png)
 
-For complex queries the database also provides a sophisticated query builder that allows querying on all antiSMASH annotations. To enable this function, click on "Build a query"
+For complex queries the database also provides a sophisticated query 
+builder that allows querying on all antiSMASH annotations. To enable 
+this function, click on "Build a query"
 
 ### Results
 
