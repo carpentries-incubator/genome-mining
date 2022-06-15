@@ -13,6 +13,9 @@ keypoints:
 - "Genomic vicinity variation is organized phylogenetically according to the conserved genes in the BGC-family"
 ---
 
+
+<img src = "../fig/corason.png" alt="Corason sorts phylogenetically BGC"/>
+
 CORASON is a visual tool that identifies gene clusters that share a 
 common genomic core and reconstructs multi-locus phylogenies of these 
 gene clusters to explore their evolutionary relationships. CORASON 
