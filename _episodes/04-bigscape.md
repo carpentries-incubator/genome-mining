@@ -46,6 +46,9 @@ In each of the antiSMASH output directories, we will find a single `.gbk`
 Let's locate in the directory that has the antiSMASH results of each genome:
 ~~~
 $ cd ~/gm_workshop/results/antismash/
+$ ls
+$ mv  thermophilusLMD9_prokka  Streptococcus_thermophilusLMD9_prokka
+$ mv thermophilusLMG18311_prokka  Streptococcus_thermophilusLMG18311_prokka
 ~~~
 {: .language-bash}
 
