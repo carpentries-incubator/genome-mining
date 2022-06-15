@@ -69,6 +69,8 @@ More information about how to use environments and spec file is available at [co
 `git clone https://github.com/miguel-mx/evomining-conda`       
 `cd evomining-conda`     
 `conda env create -f evomining.yml --prefix="/opt/anaconda3/envs/evomining-conda"`     
+`conda activate evomining-conda`  
+`cpanm install IO::Tee`  
 
 ### Data
 
