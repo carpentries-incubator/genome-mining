@@ -62,8 +62,13 @@ Then you can create your own metagenomics conda environment using the metagenomi
 > ~~~
 >{: .bash}
 
-More information about how to use environments and spec file is available at [conda documentation](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
 
+More information about how to use environments and spec file is available at [conda documentation](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
+### corason conda  
+`git clone https://github.com/miguel-mx/corason-conda.git `   
+`cd corason conda`  
+` conda env create -f corason.yml --prefix="/opt/anaconda3/envs/corason"  ` 
+  
 ### Evomining conda   
   
 `git clone https://github.com/miguel-mx/evomining-conda`       
