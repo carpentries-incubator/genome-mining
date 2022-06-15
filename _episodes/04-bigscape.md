@@ -61,7 +61,7 @@ $ ls Streptococcus*/*region*gbk | wc -l
 {: .language-bash}
 
 ~~~
-12  
+24
 ~~~
 {: .output}
 
@@ -120,7 +120,7 @@ $ mkdir -p bigscape/bgcs_gbks/
 
 Now copy all the region `gbks`to this new directory, and look at the contents inside it:
 ~~~
-$ scp Streptococcus_*/*region*gbk bigscape/bgcs_gbks/
+$ cp Streptococcus_*/*region*gbk bigscape/bgcs_gbks/
 $ ls bigscape/bgcs_gbks/
 ~~~
 {: .language-bash}
@@ -207,7 +207,7 @@ cutoff value (0.3).
 
 Now we are ready to run BiG-SCAPE:
 ~~~
-$ run_bigscape bigscape/bgcs_gbks/ bigscape/output_100622 --mix --hybrids-off --mode auto
+$ bigscape -i bigscape/bgcs_gbks/ -o bigscape/output_100622 --mix --hybrids-off --mode auto --pfam_dir /opt/anaconda3/envs/bigscape/
 ~~~
 {: .language-bash}
 
