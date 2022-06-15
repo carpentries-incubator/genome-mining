@@ -36,6 +36,7 @@ Here we are testing the new stand-alone
 with gbk as input-files. Lets first activate the corason-conda environment.    
 
 ~~~
+conda deactivate 
 conda activate corason  
 ~~~
 {: .language-bash}
@@ -49,9 +50,10 @@ With the environment activated all CORASON-dependencies are ready to be used.
 The next step is to clone CORASON-software from its GitHub repository. First,
 place yourself at the results directory and then clone CORASON-code.
 ~~~
-~/dc_workshop/results/genome-mining 
-git clone https://github.com/miguel-mx/corason-conda.git 
-ls
+$ mkdir ~/dc_workshop/results/genome-mining 
+$ cd ~/dc_workshop/results/genome-mining
+$ git clone https://github.com/miguel-mx/corason-conda.git 
+$ ls
 ~~~
 {: .language-bash}
 
@@ -68,13 +70,13 @@ is part of the
 produced by some _S. agalactie_   
 
 ~~~
-cd corason-conda/EXAMPLE2      
-ls
+$ cd corason-conda/EXAMPLE2        
+$ ls  
 ~~~
 {: .language-bash}
 
 ~~~
-cpsg.query
+$ cpsg.query  
 ~~~
 {: .output}
 
@@ -82,17 +84,18 @@ cpsg.query
 As genomic database we will use the prokka-annotated `gbk` files of _S. galactiae_.
 This database will be stored in the reserved directory `CORASON_GENOMES`.  
 ~~~
-mkdir  CORASON_GENOMES
-cp   ~/dc_workshop/results/annotated/*gbk CORASON_GENOMES
+$ mkdir  CORASON_GENOMES  
+$ cp ~/dc_workshop/results/annotated/*gbk CORASON_GENOMES  
 ~~~
 {: .language-bash}
 
-CORASON was written to be used with RAST annotation as input files, in this case
-we are using a genome database composed of `.gbk` files. So, we first need to convert
+CORASON was written to be used with RAST annotation as 
+input files, in this case we are using a genome database 
+composed of `.gbk` files. So, we first need to convert
 gbk files into a CORASON-compatibles input files.  
 
 ~~~
-../CORASON/gbkIndex.pl CORASON_GENOMES ../CORASONDirectory CORASON_GENOMES 
+$ ../CORASON/gbkIndex.pl CORASON_GENOMES ../CORASONDirectory CORASON_GENOMES 
 ~~~
 {: .language-bash}  
 
@@ -119,7 +122,7 @@ ls
 {: .language-bash}  
 
 ~~~
-CORASON_GENOMES  Corason_Rast.IDs  cpsg.query  GENOMES  output 
+$ CORASON_GENOMES  Corason_Rast.IDs  cpsg.query  GENOMES  output 
 ~~~
 {: .output}  
 
@@ -127,7 +130,7 @@ Finally, we have the query enzyme, the IDs file and a genomic database
 of _S. agalactiae_ in the same directory. Lets run CORASON with 
 cpsg.query as query with 1000006 as an example of reference BGC.  
 ~~~
-../CORASON/corason.pl -q cpsg.query -s 100006  -rast_ids Corason_Rast.IDs
+$ ../CORASON/corason.pl -q cpsg.query -s 100006  -rast_ids Corason_Rast.IDs
 ~~~
 {: .language-bash}
 
@@ -146,7 +149,7 @@ cpsg.query as query with 1000006 as an example of reference BGC.
 Finally, we have all the genomic vicinities sorted phylogenetically according to 
 the genes in the core-cluster. We can download the resulting svg file to our local computer.
 ~~~
-scp (remoto)/corason-conda/EXAMPLE2/output/cpsg.query-output  Downloads/.
+$ scp (remoto)/corason-conda/EXAMPLE2/output/cpsg.query-output  Downloads/.
 ~~~
 {: .language-bash}
 
