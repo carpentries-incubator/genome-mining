@@ -100,8 +100,7 @@ $ antismash --genefinding-tool=none ~/gm_workshop/results/annotated/Streptococcu
 
 To see the antiSMASH generated outcomes do:
 ~~~
-$ cd ~/gm_workshop/results/antismash/Streptococcus_agalactie_A909.prokka
-$ tree -L 1
+$ tree -L 1 ~/gm_workshop/results/antismash/Streptococcus_agalactie_A909.prokka
 ~~~
 {: .language-bash}
 
