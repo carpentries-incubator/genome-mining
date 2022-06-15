@@ -85,7 +85,7 @@ As genomic database we will use the prokka-annotated `gbk` files of _S. galactia
 This database will be stored in the reserved directory `CORASON_GENOMES`.  
 ~~~
 $ mkdir  CORASON_GENOMES  
-$ cp ~/dc_workshop/results/annotated/*gbk CORASON_GENOMES  
+$ cp ~/gm_workshop/results/annotated/*gbk CORASON_GENOMES  
 ~~~
 {: .language-bash}
 
