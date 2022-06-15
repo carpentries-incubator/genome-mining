@@ -98,7 +98,7 @@ composed of `.gbk` files. So, we first need to convert
 gbk files into a CORASON-compatibles input files.  
 
 ~~~
-$ ../CORASON/gbkIndex.pl CORASON_GENOMES ../CORASONDirectory CORASON_GENOMES 
+$ ../CORASON/gbkIndex.pl CORASON_GENOMES ../CORASON CORASON_GENOMES 
 ~~~
 {: .language-bash}  
 
