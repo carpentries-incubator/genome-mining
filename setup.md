@@ -64,11 +64,11 @@ Then you can create your own metagenomics conda environment using the metagenomi
 
 More information about how to use environments and spec file is available at [conda documentation](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
 
-###
-Evomining conda  
-`git clone https://github.com/miguel-mx/evomining-conda`      
-`cd evomining-conda`    
-`conda env create -f evomining.yml --prefix="/opt/anaconda3/envs/evomining-conda`    
+### Evomining conda   
+  
+`git clone https://github.com/miguel-mx/evomining-conda`       
+`cd evomining-conda`     
+`conda env create -f evomining.yml --prefix="/opt/anaconda3/envs/evomining-conda"`     
 
 ### Data
 
