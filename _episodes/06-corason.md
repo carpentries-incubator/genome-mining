@@ -50,7 +50,7 @@ With the environment activated all CORASON-dependencies are ready to be used.
 The next step is to clone CORASON-software from its GitHub repository. First,
 place yourself at the results directory and then clone CORASON-code.
 ~~~
-$ mkdir ~/dc_workshop/results/genome-mining 
+$ mkdir -p ~/dc_workshop/results/genome-mining 
 $ cd ~/dc_workshop/results/genome-mining
 $ git clone https://github.com/miguel-mx/corason-conda.git 
 $ ls
