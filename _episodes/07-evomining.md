@@ -17,7 +17,9 @@ keypoints:
 ---
 {% include links.md %}
 
-## Introduction
+<a href="../fig/evomining.gif">
+  <img src="../fig/evomining.gif" alt="Aquí va el texto que describe a la imagen." />
+</a>
 
  Usually, bioinformatics tools related to the prediction of Natural Products (NP) biosynthetic genes try to find metabolic pathways of enzymes that are known to be related with the synthesis of a secondary metabolites. However, these approaches fail for the discovery of novel biosynthetic systems. Thus, [EvoMining](https://www.microbiologyresearch.org/content/journal/mgen/10.1099/mgen.0.000260) try to solve this problem to detect novel enzymes that may be implicated in the synthesis of new natural products in Bacteria.
  
@@ -29,8 +31,8 @@ This tool looks for protein expansions that may have evolved from the central me
 
 Place yourself at your working directory.
 ~~~
-cd   ~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2  
-ls
+$ cd   ~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2  
+$ ls
 ~~~
 {: .language-bash}
 
@@ -41,7 +43,7 @@ CORASON_GENOMES  Corason_Rast.IDs  cpsg.query  GENOMES  output
 
  Run docker container  
 ~~~
-docker run --rm -i -t -v $(pwd):/var/www/html/EvoMining/exchange -p 8080:80 nselem/evomining:latest /bin/bash   
+$ docker run --rm -i -t -v $(pwd):/var/www/html/EvoMining/exchange -p 8080:80 nselem/evomining:latest /bin/bash   
 ~~~
 {: .language-bash}  
 
@@ -54,7 +56,7 @@ $ docker run --rm -i -t -v $(pwd):/var/www/html/EvoMining/exchange -p 8084:80 ns
 ~~~
 # perl startevomining.pl  
 ~~~
-{: .¿.language-bash}
+{: .language-bash}
 
 
 ## Set EvoMining databases
