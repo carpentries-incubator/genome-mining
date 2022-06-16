@@ -46,7 +46,7 @@ the central (primary) metabolism.
 
 First, place yourself at your working directory.
 ~~~
-$ cd   ~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2  
+$ cd   ~/gm_workshop/results/genome-mining/corason-conda/EXAMPLE2  
 $ ls
 ~~~
 {: .language-bash}
