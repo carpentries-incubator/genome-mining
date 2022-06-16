@@ -162,6 +162,9 @@ we are using the fasta files that CORASON converts from our gbk inputs.
   <img src="../fig/tree.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
 
+## Set central database 
+[EvoMining databases](https://github.com/nselem/evomining/wiki/Databases-Conformation)
+
 ## Visualize your results  
 
 First you have to run all the pipeline in the website: 
