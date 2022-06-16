@@ -81,12 +81,62 @@ a new prompt. Instead of the usual dollar sign, now there is a number
 `#` at the beggining of your terminal. This is because now you are inside
 the docker container and you have `sudo` permisions inside the docker.  
 ~~~
-# perl startEvoMining.pl  
+#  
 ~~~
 {: .language-bash}
 
+To exit container use `exit`  
+~~~ 
+# exit
+~~~ 
+{: .language-bash}  
+  
+And now your prompt must be back in the dolar sign  
+~~~ 
+# 
+~~~ 
+{: .language-bash}  
+
+
+To see the running container use `ps`  
+~~~ 
+$ docker ps
+~~~ 
+{: .language-bash}  
+
+~~~
+2f879ba6e337   nselem/evomining:latest   "/bin/bash"   11 hours ago   Up 11 hours   0.0.0.0:8014->80/tcp, :::8014->80/tcp   relaxed_dirac
+~~~
+{: .output}
+
+To stop the running container use `docker stop` and to remove them use `docker rm`  
+~~~ 
+$ docker stop relaxed_dirac
+$docker remove relaxed_dirac
+~~~ 
+{: .language-bash}  
+
+~~~
+2f879ba6e337
+~~~
+{: .output}
 
 ## Set EvoMining genomic database
+Start the container again with your corresponding port.  
+~~~
+$ docker run --rm -i -t -v $(pwd):/var/www/html/EvoMining/exchange -p 80X:80 nselem/evomining:latest /bin/bash   
+~~~
+{: .language-bash}   
+
+Though we will NOT run the test EvoMining command, it will look as follows:
+~~~
+# perl startEvoMining.pl  
+~~~
+{: .language-bash}
+  
+Instead of that, lets customize our genomic database by using the same as CORASON.  
+Note that EvoMining requires RAST-like annotated genomes and because of that 
+we are using the fasta files that CORASON converts from our gbk inputs. 
 ~~~
 # perl startEvoMining.pl -g GENOMES -r  Corason_Rast.IDs
 ~~~
@@ -113,12 +163,14 @@ of this EvoMining run.
 
 ## Set EvoMining protein database  
 nano cpsg.query 
+Discussion what happen in this case
+Ans Is like a retro EvoMining 
 
 ## Other resources    
 To run EvoMining with a biggest centralmetabolite DB you can use 
 [EvoMining Zenodo](https://zenodo.org/record/1219709#.YqEsFqjMLrc) data.
 
-To explore more EvoMining options, please explore [EvoMining wiki]()
+To explore more EvoMining options, please explore [EvoMining wiki](https://github.com/nselem/evomining/wiki)
 
 [ARTS](https://arts.ziemertlab.com/) is another evolutionary 
 genome mining software with its corresponding database 
