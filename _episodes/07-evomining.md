@@ -21,11 +21,26 @@ keypoints:
   <img src="../fig/evomining.gif" alt="Aquí va el texto que describe a la imagen." />
 </a>
 
- Usually, bioinformatics tools related to the prediction of Natural Products (NP) biosynthetic genes try to find metabolic pathways of enzymes that are known to be related with the synthesis of a secondary metabolites. However, these approaches fail for the discovery of novel biosynthetic systems. Thus, [EvoMining](https://www.microbiologyresearch.org/content/journal/mgen/10.1099/mgen.0.000260) try to solve this problem to detect novel enzymes that may be implicated in the synthesis of new natural products in Bacteria.
+ Usually, bioinformatics tools related to the prediction of Natural Products (NP) 
+ biosynthetic genes try to find metabolic pathways of enzymes that are known to be 
+ related with the synthesis of a secondary metabolites. However, these approaches 
+ fail for the discovery of novel biosynthetic systems. Thus, 
+ [EvoMining](https://www.microbiologyresearch.org/content/journal/mgen/10.1099/mgen.0.000260) try to solve this problem to detect novel enzymes that may be implicated in the synthesis of new natural products in Bacteria.
  
  To know more about EvoMining you can read [Selem et al, Microbial Genomics 2020](https://www.microbiologyresearch.org/content/journal/mgen/10.1099/mgen.0.000260).   
  
-This tool looks for protein expansions that may have evolved from the central metabolism into a specialized metabolism. For that, it builds phylogenetic trees based on all the protein copies of a certain enzyme in a given genome database. The output tree will differentiate copies that are related with the central metabolism, copies that are known to be implicated in discovered NP-producing-BGCs i.e. BGCs from [MiBIG database](https://mibig.secondarymetabolites.org/) and, optionally, protein copies that belong to BGCs predicted by [antiSMASH](https://antismash-db.secondarymetabolites.org/). Finally, some branch in the tree will be depicted as "EvoMining hits", which represent enzyme expansions that are evolutionary closer to those copies related with the secondary metabolism (MiBIG or antiSMASH BGCs) than to those related with the central (primary) metabolism.
+This tool looks for protein expansions that may have evolved from the central 
+metabolism into a specialized metabolism. For that, it builds phylogenetic 
+trees based on all the protein copies of a certain enzyme in a given genome 
+database. The output tree will differentiate copies that are related with the 
+central metabolism, copies that are known to be implicated in discovered 
+NP-producing-BGCs i.e. BGCs from [MiBIG database](https://mibig.secondarymetabolites.org/)
+and, optionally, protein copies that belong to BGCs predicted by
+[antiSMASH](https://antismash-db.secondarymetabolites.org/). Finally, 
+some branch in the tree will be depicted as "EvoMining hits", which represent 
+enzyme expansions that are evolutionary closer to those copies related with 
+the secondary metabolism (MiBIG or antiSMASH BGCs) than to those related with 
+the central (primary) metabolism.
 
 ## Run evomining image
 
@@ -146,7 +161,13 @@ we are using the fasta files that CORASON converts from our gbk inputs.
   <img src="../fig/tree.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
 
-## Getting results
+## Visualize your results  
+
+First you have to run all the pipeline in the website: 
+http://<yourip>/EvoMining/html/index.html, and then all the 
+ output files will be generated. You can use the EvoMining
+  basic interface or take your results into MicroReact.  
+  
 ```
 scp betterlab@132.248.196.38:~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree/1.tree ~/Downloads/.
 scp betterlab@132.248.196.38:~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree/1.csv ~/Downloads  
@@ -167,7 +188,7 @@ Discussion what happen in this case
 Ans Is like a retro EvoMining 
 
 
-> ## Discussion 1: BGC classes in _Streptococcus_ 
+> ## Discussion 1: Retro EvoMining in enzyme database
 > 
 > fixme
 > 
