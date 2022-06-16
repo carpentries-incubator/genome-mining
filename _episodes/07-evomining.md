@@ -166,6 +166,37 @@ nano cpsg.query
 Discussion what happen in this case
 Ans Is like a retro EvoMining 
 
+
+> ## Discussion 1: BGC classes in _Streptococcus_ 
+> 
+> fixme
+> 
+> > ## Solution
+> > 
+> > fixme 
+> {: .solution}
+{: .discussion}
+
+> ## Exercise 4 The size of a region.  
+> Fixme
+> 
+>    
+> ~~~
+>  $ _____ fixme  
+> ~~~
+> >{: .laguage-bash}
+> fixme
+> 
+> > ## Solution
+> >
+> > ~~~
+> > $ fix
+> > ~~~
+> >fix
+> > {: .laguage-bash}
+> {: .solution}
+{: .challenge}
+
 ## Other resources    
 To run EvoMining with a biggest centralmetabolite DB you can use 
 [EvoMining Zenodo](https://zenodo.org/record/1219709#.YqEsFqjMLrc) data.
