@@ -29,18 +29,18 @@ keypoints:
  
  To know more about EvoMining you can read [Selem et al, Microbial Genomics 2020](https://www.microbiologyresearch.org/content/journal/mgen/10.1099/mgen.0.000260).   
  
-This tool looks for protein expansions that may have evolved from the central 
+This tool looks for protein expansions that may have evolved from the conserved 
 metabolism into a specialized metabolism. For that, it builds phylogenetic 
 trees based on all the protein copies of a certain enzyme in a given genome 
 database. The output tree will differentiate copies that are related with the 
-central metabolism, copies that are known to be implicated in discovered 
+conserved metabolism, copies that are known to be implicated in discovered 
 NP-producing-BGCs i.e. BGCs from [MiBIG database](https://mibig.secondarymetabolites.org/)
 and, optionally, protein copies that belong to BGCs predicted by
 [antiSMASH](https://antismash-db.secondarymetabolites.org/). Finally, 
 some branch in the tree will be depicted as "EvoMining hits", which represent 
 enzyme expansions that are evolutionary closer to those copies related with 
 the secondary metabolism (MiBIG or antiSMASH BGCs) than to those related with 
-the central (primary) metabolism.
+the conserved (primary) metabolism.
 
 ## Run evomining image
 
@@ -109,7 +109,7 @@ To exit container use `exit`
   
 And now your prompt must be back in the dolar sign  
 ~~~ 
-# 
+$   
 ~~~ 
 {: .language-bash}  
 
@@ -127,8 +127,8 @@ $ docker ps
 
 To stop the running container use `docker stop` and to remove them use `docker rm`  
 ~~~ 
-$ docker stop relaxed_dirac
-$docker remove relaxed_dirac
+$ docker stop relaxed_dirac  
+$ docker remove relaxed_dirac  
 ~~~ 
 {: .language-bash}  
 
@@ -172,28 +172,7 @@ When you finish using this container, please exit it.
 ~~~
 {: .code}    
 
-## Visualize your results  
-
-First you have to run all the pipeline in the website: 
-http://<yourip>/EvoMining/html/index.html, and then all the 
-output files will be generated. You can use the EvoMining
-basic interface or take your results into MicroReact.  
-  
-```
-scp betterlab@132.248.196.38:~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree/1.tree ~/Downloads/.
-scp betterlab@132.248.196.38:~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree/1.csv ~/Downloads  
-```
-  
-To explore EvoMining outputs upload 1.nwk and 1.csv 
-files to [microReact](https://microreact.org/)  
-Here is a [MicroReact visualization](https://microreact.org/project/e8b7wWZkovtavPFFpBXRPp-evomining-streptococcus-example) 
-of this EvoMining run.  
-
-<a href="../fig/EvoMiningMicroReact.png">
-  <img src="../fig/EvoMiningMicroReact.png" alt="Aquí va el texto que describe a la imagen." />
-</a>
-
-## Set central database 
+## Set the conserved-enzymes database 
 
 When using EvoMining you often will wish to construct your own conserved enzymes database. 
 To know more about how to configure database consult the EvoMining wiki
@@ -203,15 +182,25 @@ genes that are "true positives", for example a set of regulatory genes.
 
 As an example lets transform the file `cpsg.query` into the format of this database.
 This file contains the aminoacid sequence of the _cpsG_ gene. Lets first copy this file
-into what will become our central database.  
+into what will become our conserved-enzymes database.  
 ~~~
 $ cp cpsg.query cpsg_cdb
 ~~~
 {: .language-bash}
 
-Now, we need some edition. 
+Now, we need some edition, open de nano editor and change the first line `>cpsg` to 
+`>SYSTEM1|1|phosphomannomutase|Saga `. EvoMining conserved-database needs a 
+four-field format pipe-separated tha contains the name of the metabolic system,
+that the enzyme belong (SYSTEM1), a consecutive number of the enzyme (1 in this case),
+the function of the enzyme, and finally, an abbreviation of the organism Saga, (_S. Agalactiae_).  
+Why? It was the way we needed EvoMining for its first use and we have not changed the headers.  
 ~~~
 $ nano cpsg_cdb
+~~~
+{: .language-bash}  
+
+~~~
+
 ~~~
 {: .language-bash}  
 
@@ -229,38 +218,79 @@ and inside this new container:
 
 Use again the website and think about the results. 
 
-> ## Discussion 1: Retro EvoMining in enzyme database
-> 
-> fixme
-> 
-> > ## Solution
-> > 
-> > fixme 
-> {: .solution}
-{: .discussion}
-
-> ## Exercise 4 Set EvoMining parameters    
-> Fixme
-> 
->    
+> ## Exercise 1 Set EvoMining parameters    
+> Complete the blanks in the following EvoMining run: 
+>   `actinoSMASH` A file with the ids of antiSMASH recognized genes. 
+>   `Actinos`  a directory with RAST-like fasta and annotations files
+>   `Histidine-db` A fasta file with some proteins in the histidine Pathway  
+>   `Actinos.ids` tabular files with the RAST ids and the name of the organisms.
+>   
 > ~~~
->  # perl starEvoMining.pl -g Actinos -c _____ -r  
+>  # perl starEvoMining.pl -g ____ -c _____ -r _____ -a ___________  
 > ~~~
-> >{: .laguage-bash}
+> >{: .code}
 > fixme
 > 
 > > ## Solution
 > >
 > > ~~~
-> > $ fix
+> > # perl starEvoMining.pl -g Actinos -c Histidine-db -r Actinos.ids -a actinoSMASH  
 > > ~~~
-> >fix
+> > Actinos is the genomic database, Histidine-db is the conserved-enzymes database
+> > Actinos.ids is the file that relates Rast ids with the organisms names, and actinoSMASH
+> > contains the genes identified by antiSMASH  
+> > 
 > > {: .laguage-bash}
 > {: .solution}
-{: .challenge}
+{: .challenge}  
 
+> ## Discussion 1: Retro EvoMining in enzyme database
+> 
+> What do your learn from running as conserved-enzymes database the gene _cpsG_ that is part of specialized BGC?
+> 
+> > ## Solution
+> >  _cpsG_ does not have extra copies in Streptococcus agalactie, so there are no expansions that maybe functional divergent. 
+> >  _cpsG_ single copies in the genomes looks red-colored in EvoMining output, like if it were part of conserved-metabolism.
+> >   This is not the case, the color is because there is only one copy and it is merged into the true-positives MIBiG because it was
+> >   originally a gene in the specialized metabolism. So it is important to know the seed enzymes  
+> > 
+> {: .solution}
+{: .discussion}
+
+## Visualize your results in MicroReact  
+
+First you have to run all the pipeline in the website: 
+http://<yourip>/EvoMining/html/index.html, and then all the 
+output files will be generated. You can use the EvoMining
+basic interface or take your results into MicroReact.  
+
+EvoMining outputs are stored in the directory `<conserved-db>_<natural-db>_<genomes-db>`  
+~~~
+$ ls 
+~~~
+{: .language-bash}
+
+~~~
+cpsg_cdb_MiBIG_DB.faa_GENOMES
+~~~
+{: .output}
+  
+```
+scp betterlab@132.248.196.38:~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree/1.tree ~/Downloads/.
+scp betterlab@132.248.196.38:~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree/1.csv ~/Downloads  
+```
+  
+To explore EvoMining outputs upload 1.nwk and 1.csv 
+files to [microReact](https://microreact.org/)  
+Here is a [MicroReact visualization](https://microreact.org/project/e8b7wWZkovtavPFFpBXRPp-evomining-streptococcus-example) 
+of this EvoMining run.  
+
+<a href="../fig/EvoMiningMicroReact.png">
+  <img src="../fig/EvoMiningMicroReact.png" alt="Aquí va el texto que describe a la imagen." />
+</a>
+  
 ## Other resources    
-To run EvoMining with a biggest centralmetabolite DB you can use 
+To run EvoMining with a biggest conserved-metabolite DB you can use 
 [EvoMining Zenodo](https://zenodo.org/record/1219709#.YqEsFqjMLrc) data.
 
 To explore more EvoMining options, please explore [EvoMining wiki](https://github.com/nselem/evomining/wiki)
