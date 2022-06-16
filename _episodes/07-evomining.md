@@ -72,16 +72,17 @@ $ docker run --rm -i -t -v $(pwd):/var/www/html/EvoMining/exchange -p 8080:80 ns
 ~~~
 {: .language-bash}   
 
-Lets explain the pieces of this line.  
-| comand   | explanation   |  
-|---|---|  
-|docker   | tells the system that we are runing a docker command  |  
-| run  |  the command that we are running is to run a docker container |  
-| --rm  |  this container will be removed after closed  |  
-| -i  |  this container allows user interaction  |  
-|  -t |  this interaction will be trhough a terminal | 
-| --v  | a data volume (directory) will be shared between your local machine and the container  |  
-|  -p |  a port will allow a web based app|   
+Lets explain the pieces of this line.   
+  
+| comand  |                                 Explanation                                            |    
+|:-------:|----------------------------------------------------------------------------------------|    
+|docker   | tells the system that we are runing a docker command                                   |    
+| run     |  the command that we are running is to run a docker container                          |    
+| --rm    |  this container will be removed after closed                                           |    
+| -i      |  this container allows user interaction                                                |    
+| -t      |  this interaction will be trhough a terminal                                           |   
+| -v      | a data volume (directory) will be shared between your local machine and the container  |    
+| -p      |  a port will allow a web based app                                                     |        
 
 However, sometimes the port 80 is bussy, on that case you can 
 use other ports like 8080 or 8084. In this case, please use the port `80X` 
