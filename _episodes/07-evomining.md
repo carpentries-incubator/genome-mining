@@ -29,39 +29,66 @@ This tool looks for protein expansions that may have evolved from the central me
 
 ## Run evomining image
 
-Place yourself at your working directory.
+First, place yourself at your working directory.
 ~~~
 $ cd   ~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2  
 $ ls
 ~~~
 {: .language-bash}
-
 ~~~ 
 CORASON_GENOMES  Corason_Rast.IDs  cpsg.query  GENOMES  output 
 ~~~
 {: .output}  
 
- Run docker container  
+The general structure of a docker container is shown in the next bash-box. Note that
+it requires to specify which docker containerwill be run. Opcionally
+with `-v` flag it is posible to share a directory with the container,
+with `-p` flag a port is shared and it is also posible to specify which
+program will be run inside the container.  
+~~~
+$ docker run --rm -i -t -v <your local directory>:<inside docker directory> -p <inside port>:80 <docker container> <program inside docker>    
+~~~
+{: .language-bash}   
+
+EvoMining is inside a docker container, so the general structure 
+to start your analysis will be as follows:   
 ~~~
 $ docker run --rm -i -t -v $(pwd):/var/www/html/EvoMining/exchange -p 8080:80 nselem/evomining:latest /bin/bash   
 ~~~
-{: .language-bash}  
+{: .language-bash}   
 
-However, sometimes the port 80 is bussy, on that case you can use other ports like 8080 or 8084:  
+Lets explain the pieces of this line.  
+| comand   | explanation   |  
+|---|---|  
+|docker   | tells the system that we are runing a docker command  |  
+| run  |  the command that we are running is to run a docker container |  
+| --rm  |  this container will be removed after closed  |  
+| -i  |  this container allows user interaction  |  
+|  -t |  this interaction will be trhough a terminal | 
+| --v  | a data volume (directory) will be shared between your local machine and the container  |  
+|  -p |  a port will allow a web based app|   
+
+However, sometimes the port 80 is bussy, on that case you can 
+use other ports like 8080 or 8084. In this case, please use the port `80X` 
+where X is a number between 01..30 provided by your instructor.   
 ```
 $ docker run --rm -i -t -v $(pwd):/var/www/html/EvoMining/exchange -p 8080:80 nselem/evomining:latest /bin/bash  
 $ docker run --rm -i -t -v $(pwd):/var/www/html/EvoMining/exchange -p 8084:80 nselem/evomining:latest /bin/bash  
 ```
 
+If your docker container worked, now you will see in your terminal
+a new prompt. Instead of the usual dollar sign, now there is a number
+`#` at the beggining of your terminal. This is because now you are inside
+the docker container and you have `sudo` permisions inside the docker.  
 ~~~
-# perl startevomining.pl  
+# perl startEvoMining.pl  
 ~~~
 {: .language-bash}
 
 
-## Set EvoMining databases
+## Set EvoMining genomic database
 ~~~
-# perl startevomining.pl -g GENOMES -r  Corason_Rast.IDs
+# perl startEvoMining.pl -g GENOMES -r  Corason_Rast.IDs
 ~~~
 {: .language-bash}  
 
@@ -84,9 +111,14 @@ of this EvoMining run.
   <img src="../fig/EvoMiningMicroReact.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
 
+## Set EvoMining protein database  
+nano cpsg.query 
+
+## Other resources    
 To run EvoMining with a biggest centralmetabolite DB you can use 
 [EvoMining Zenodo](https://zenodo.org/record/1219709#.YqEsFqjMLrc) data.
 
+To explore more EvoMining options, please explore [EvoMining wiki]()
 
 [ARTS](https://arts.ziemertlab.com/) is another evolutionary 
 genome mining software with its corresponding database 
