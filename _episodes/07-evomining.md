@@ -162,6 +162,11 @@ we are using the fasta files that CORASON converts from our gbk inputs.
   <img src="../fig/tree.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
 
+Finally, remember than `X` means your user-number and open your browser 
+at the adress: `http://132.248.196.38:80X/EvoMining/html/index.html`. Once there 
+just click the start button and enjoy!.
+
+
 ## Set central database 
 [EvoMining databases](https://github.com/nselem/evomining/wiki/Databases-Conformation)
 
