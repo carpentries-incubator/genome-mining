@@ -148,7 +148,7 @@ Though we will NOT run the test EvoMining command, it will look as follows:
 ~~~
 # perl startEvoMining.pl  
 ~~~
-{: .language-bash}
+{: .code}
   
 Instead of that, lets customize our genomic database by using the same as CORASON.  
 Note that EvoMining requires RAST-like annotated genomes and because of that 
@@ -156,7 +156,7 @@ we are using the fasta files that CORASON converts from our gbk inputs.
 ~~~
 # perl startEvoMining.pl -g GENOMES -r  Corason_Rast.IDs
 ~~~
-{: .language-bash}  
+{: .code}  
 
 <a href="../fig/tree.png">
   <img src="../fig/tree.png" alt="Aquí va el texto que describe a la imagen." />
@@ -166,16 +166,18 @@ Finally, remember than `X` means your user-number and open your browser
 at the adress: `http://132.248.196.38:80X/EvoMining/html/index.html`. Once there 
 just click the start button and enjoy!.
 
-
-## Set central database 
-[EvoMining databases](https://github.com/nselem/evomining/wiki/Databases-Conformation)
+When you finish using this container, please exit it. 
+~~~
+#exit
+~~~
+{: .code}    
 
 ## Visualize your results  
 
 First you have to run all the pipeline in the website: 
 http://<yourip>/EvoMining/html/index.html, and then all the 
- output files will be generated. You can use the EvoMining
-  basic interface or take your results into MicroReact.  
+output files will be generated. You can use the EvoMining
+basic interface or take your results into MicroReact.  
   
 ```
 scp betterlab@132.248.196.38:~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree/1.tree ~/Downloads/.
@@ -191,11 +193,41 @@ of this EvoMining run.
   <img src="../fig/EvoMiningMicroReact.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
 
-## Set EvoMining protein database  
-nano cpsg.query 
-Discussion what happen in this case
-Ans Is like a retro EvoMining 
+## Set central database 
 
+When using EvoMining you often will wish to construct your own conserved enzymes database. 
+To know more about how to configure database consult the EvoMining wiki
+in the [EvoMining databases](https://github.com/nselem/evomining/wiki/Databases-Conformation) part. 
+Natural products database could also be replaced for another set of 
+genes that are "true positives", for example a set of regulatory genes. 
+
+As an example lets transform the file `cpsg.query` into the format of this database.
+This file contains the aminoacid sequence of the _cpsG_ gene. Lets first copy this file
+into what will become our central database.  
+~~~
+$ cp cpsg.query cpsg_cdb
+~~~
+{: .language-bash}
+
+Now, we need some edition. 
+~~~
+$ nano cpsg_cdb
+~~~
+{: .language-bash}  
+
+Run your EvoMining docker 
+~~~
+$ docker run --rm -i -t -v $(pwd):/var/www/html/EvoMining/exchange -p 80X:80 nselem/evomining:latest /bin/bash   
+~~~
+{: .language-bash}   
+
+and inside this new container: 
+~~~
+# perl startEvoMining.pl -g GENOMES -r  Corason_Rast.IDs -c cpsg_cdb
+~~~
+{: .code}
+
+Use again the website and think about the results. 
 
 > ## Discussion 1: Retro EvoMining in enzyme database
 > 
@@ -207,12 +239,12 @@ Ans Is like a retro EvoMining
 > {: .solution}
 {: .discussion}
 
-> ## Exercise 4 The size of a region.  
+> ## Exercise 4 Set EvoMining parameters    
 > Fixme
 > 
 >    
 > ~~~
->  $ _____ fixme  
+>  # perl starEvoMining.pl -g Actinos -c _____ -r  
 > ~~~
 > >{: .laguage-bash}
 > fixme
