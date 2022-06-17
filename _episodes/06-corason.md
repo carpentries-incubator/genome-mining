@@ -1,5 +1,5 @@
 ---
-title: "Finding variation on genomic vicinities"
+title: "Finding Variation on Genomic Vicinities"
 teaching: 20
 exercises: 15
 questions:
