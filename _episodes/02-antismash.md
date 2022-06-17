@@ -81,7 +81,7 @@ First, activate GenomeMining conda environment:
 $ conda deactivate
 $ conda activate GenomeMining_Global
 ~~~
-{: .source}
+{: .language-bash}
 
 Second, run the antiSMASH command shown earlier in this lesson 
 on the data `.gbk` or `.fasta` files. The command can be executed 
@@ -223,7 +223,7 @@ folder with the annotations.
 >  for ___ in  ____________  
 > do  
 > ~~~
-> > {: .laguage-bash}
+> > {: .language-bash}
 > 
 > > ## Solution
 > >  1. First, we need to start the for cycle: `for mygenome in ~/gm_workshop/results/annotated/S*.gbk`  
@@ -240,7 +240,7 @@ folder with the annotations.
 > >    do  
 > >     antismash --genefinding-tool=none $mygenome  
 > >    done   
-> > ~~~ {: .laguage-bash}
+> > ~~~ {: .language-bash}
 > >
 > {: .solution}
 {: .challenge}
@@ -255,7 +255,8 @@ folder with the annotations.
 >  $ _____  region.gbk  
 >  $ _____ __________ region.gbk  
 > ~~~
-> >{: .laguage-bash}
+> {: .language-bash}
+> 
 > Apply your solution to get the size of the first region of _S. agalactiae_ A909
 > 
 > > ## Solution
@@ -266,10 +267,11 @@ folder with the annotations.
 > > $ grep LOCUS Streptococcus_agalactie_A909.prokka/CP000114.1.region001.gbk 
 > > ~~~
 > > Locus contains the information of the characteristics of the sequence
-> > {: .laguage-bash}
+> > {: .language-bash}
 > > ~~~
 > > LOCUS       CP000114.1             42196 bp    DNA     linear   UNK 13-JUN-2022 
 > > ~~~
+> > {: .language-bash}
 > > In this case the size of the region is 42196 bp
 > > {: .output}
 > {: .solution}
