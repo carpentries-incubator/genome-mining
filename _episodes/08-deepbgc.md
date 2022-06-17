@@ -1,5 +1,5 @@
 ---
-title: "BGC Prediction through Machine Learning"
+title: "BGC Prediction Through Machine Learning"
 teaching: 0
 exercises: 0
 questions:
