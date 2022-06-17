@@ -233,7 +233,7 @@ that BiG-SCAPE generated in a file named `bigscape.log` inside the folder `outpu
 ~~~
 $ nano bigscape/output_100622/logs/bigscape.log
 ~~~
-{: .bash}
+{: .language-bash}
 
 Let's look the BiG-SCAPE outputs:
 
