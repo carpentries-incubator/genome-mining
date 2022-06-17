@@ -1,5 +1,5 @@
 ---
-title: "Genome Mining databases"
+title: "Genome Mining Databases"
 teaching: 15
 exercises: 10
 questions:
