@@ -32,6 +32,7 @@ As an example, let's have a look into the BGC responsible of the chloramphenicol
 [Explore the BGC](https://mibig.secondarymetabolites.org/repository/BGC0000893/index.html#r1c1)
 
 ## Planning a genome mining project  
+Here we will provide tips and tricks to do plan and execute a genome minning project. Let's start!
 First, a set of genomes from taxa should be chosen. In this lesson
 we will be working with _S. agalactiae_ genomes (Tettelin et al., 2005) (https://zenodo.org/record/6595388#.YtD9LsFBxUJ). This genus is not know
 for its capabilities as a Natural products producer but is good enough
@@ -52,7 +53,6 @@ all the genomes that you are working with.
 
 ## Starting a genome mining project
 Once that you have choosen your set of genomes, you need to annotate the sequences. The process of genome annotation needs two steps. First, a gene callling approach (structural annotation), which looks for CDS or RNAs within the DNA sequences. Once these features have been detected, you need to assign a function for each CDS (functional annotation). This is usually done through the comparison against protein databases. There are tens of bioinformatic tools to annotate genomes, but some of the most broadly used ones are RAST (Aziz et al. 2008), and Prokka (Seeman, 2014). Here, we will start the genome minning lesson with  _S. agalactiae_ genomes already annotated by RAST. You can download this data from this [repository](https://zenodo.org/record/6595388#.YtD9LsFBxUJ). The annotated genomes are written in GeneBank format (extension ".gbk"). These files are also accesible in the... **Insert introduction related to the access to the server??**
-
 
 ## References
 - Aziz, R. K., Bartels, D., Best, A. A., DeJongh, M., Disz, T., Edwards, R. A., ... & Zagnitko, O. (2008). The RAST Server: rapid annotations using subsystems technology. BMC genomics, 9(1), 1-15.
