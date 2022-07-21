@@ -13,15 +13,16 @@ keypoints:
 
 We have seen how to carry on a genome mining project with some particular characteristics. However, each research project may need some deviations to these workflows. You may need to take use of RNA-Seq data, to search just for some specific domains instead of complete BGCs, or to combine metabolomics or proteomics with genomic data. Here we will provide a list of resources that are also useful for genome mining projects.
 
+First, you can use some alternative program to search for BGCs in your genomes. The [Secondary Metabolite Bioinformatics Portal](https://www.secondarymetabolites.org/) list and introduce many diverse bioinformatic tools that pursue this goal. For example, CLUSEAN and NaPDoS allow to detect PKS and NRPS domains, while BAGEL, RODEO and RiPPMiner are dedicated to find ribosomally synthesized and post-translationally modified peptides (RIPPs). Then, implementing a further step, ARTs prioritizes previously detected BGCs (with antiSMASH) and identifies drug targets from these data.
+
+You can also try to search link diverse -omics data with genome predictions. SeMa-Trap allows to use RNA-Seq data to find co-expression patterns between certain genes and BGCs. Similarly, if you need to combine metabolomic/proteomic data with putative BGCs-products, you can use Pep2Path, NRPquest or RiPPquest, amongst others. 
+
+There are also some tools and workflows that are dedicated to find new biosynthetic systems (new types of BGCs or biosynthetic genes). Among them, EvoMining raised as a promising tool to detect biosynthetic enzymes that may have evolved from developing core functions ('central' or 'primary' metabolism) to carry on specialized functions (secondary metabolism). Likewise ClusterFinder enables to predict uncharacterized BGCs in genomes.
+
+Also, to prioritize genomes or species, autoMLST allows not only to find phylogenetically closed strains/species from your input genome, but also to explore the biosynthetic potential of those relatives. 
+
 FIXME
 
-añadir:
-- http://www.secondarymetabolites.org/
-- AutoMLST
-- https://www.nature.com/articles/s41589-020-00724-z#data-availability
-- SeMa-Trap (https://academic.oup.com/nar/article/50/W1/W682/6586868?login=false)
-- BAGEL
-- Pep2Path
 
 ## Carpentries Philosophy
 A good lesson should be as complete and clear that becomes easy to teach by any instructor. 
