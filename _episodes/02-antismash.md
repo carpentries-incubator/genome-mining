@@ -129,7 +129,7 @@ over all files that starts with "S" in the annotated directory.
   
 ~~~
 $ for gbk_file in ~/gm_workshop/results/annotated/S*.gbk
-$ do
+> do
 >    antismash --genefinding-tool=none $gbk_file
 > done
 ~~~
