@@ -23,6 +23,8 @@ There are also some tools and workflows that are dedicated to finding new biosyn
 
 Finally, to prioritize genomes or species, [autoMLST](https://automlst.ziemertlab.com/) allows not only to find phylogenetically closed strains/species from your input genome, but also to explore the biosynthetic potential of those relatives. 
 
+## Visualize annotated genomes  
+[CGView](https://github.com/paulstothard/cgview)
 
 ## Carpentries Philosophy
 A good lesson should be as complete and clear that becomes easy to teach by any instructor. 
