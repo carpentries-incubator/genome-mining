@@ -34,7 +34,7 @@ advantage to the bacterial lineage producing it.
 </a>
 
 The presence/abscence of a set of BGCs in a genome, can be associated 
-to the ecological niches and (micro)environments which the linage faces. 
+to the ecological niches and (micro)environments which the lineage faces. 
 
 The counterpart of this can be taked as how biosynthetically diverse 
 a bacterial lineage can be because of its environment.
