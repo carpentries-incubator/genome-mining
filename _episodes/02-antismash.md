@@ -9,7 +9,7 @@ questions:
 objectives:
 - "Understand antiSMASH applications."
 - "Perform a Minimal antiSMASH run analysis."
-- "Explore several *Streptococcus* genomes by identifying the BGCs presece and the types of secondary metabolites produced."
+- "Explore several *Streptococcus* genomes by identifying the BGCs presence and the types of secondary metabolites produced."
 keypoints:
 - "antiSMASH is a bioinformatic tool to identify BGC"
 - "antiSMASH can be used as a web-based tool or as stand-alone command-line tool"
@@ -45,10 +45,10 @@ In summary, you will need to use your genome as the input. Then,
 antiSMASH will create an output folder for each of your genomes. 
 Within this folder, you will find a single `.gbk` file for each of 
 the detected Biosynthetic Gene Clusters (we will use these files 
-for subsequent analyses) and a `.html` file, among others files. 
+for subsequent analyses) and a `.html` file, among other files. 
 By openning the `.html` file you can explore the antiSMASH annotations.
 
-You can run antiSMASH in two main ways **Minimal and Full-features run**, as follows:  
+You can run antiSMASH in two ways **Minimal and Full-featured run**, as follows:  
   
 |Run type   | command                                 |  
 |-----------|-----------------------------------------|  
@@ -125,7 +125,7 @@ $ tree -L 1 ~/gm_workshop/results/antismash/Streptococcus_agalactie_A909.prokka
 Now, imagine that you want to run antiSMASH over all
 _Streptococcus agalactiae_ annotated genomes. Lets use 
 a `for` cycle and `*` as a wildcard to run antiSMASH
-over all files that starts with "S" in the annotated directory.    
+over all files that start with "S" in the annotated directory.    
   
 ~~~
 $ for gbk_file in ~/gm_workshop/results/annotated/S*.gbk
@@ -137,7 +137,7 @@ $ for gbk_file in ~/gm_workshop/results/annotated/S*.gbk
 
 ## Visualizing antiSMASH results   
 To see the results after an antiSMASH run, we need to access to 
-the `index.html` file. ¿Where is this file?   
+the `index.html` file. Where is this file?   
 ~~~
 $ cd Streptococcus_agalactie_A909.prokka
 $ pwd
@@ -155,7 +155,7 @@ As outcomes you should get a folder comprised mainly by the following files:
 * **`index.html` file** To visualize the outcomes from the analysis.
 
 
-In order to acces to that results, we can use scp protocol to 
+In order to acces these results, we can use scp protocol to 
 download the directory in your local computer.
 
 If using `scp` , on your local machine, open a GIT bash terminal in the 
@@ -173,7 +173,7 @@ Once in your local machine, in the directory Streptococcus_agalactie_A909.prokka
 open the `index.html` file on your local web browser.
 
 ## Understanding the output
-The visualization of the results includes many diverse options. 
+The visualization of the results includes many diferent options. 
 To understand all the possibilities, we suggest to read the following [tutorial:](https://docs.antismash.secondarymetabolites.org/understanding_output/)
 
 Briefly, on the "overview" page ´.HTML´ you can find all the regions 
@@ -200,7 +200,7 @@ folder with the annotations.
 
 > ## Exercise 2 NCBI and antiSMASH webserver  
 > Run antiSMASH web server over _S. agalactiae_ A909. First explore the 
-> NCBI assembly database to obtain the accesion. Get the id your results.   
+> NCBI assembly database to obtain the accesion. Get the id of your results.   
 > 
 > > ## Solution
 > > 1. Go to [NCBI](https://www.ncbi.nlm.nih.gov/) and search _S. agalactiae_ A909.  
