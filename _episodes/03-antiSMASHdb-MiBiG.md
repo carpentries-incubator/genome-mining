@@ -9,8 +9,8 @@ objectives:
 - "Use MIBiG database as a source of experimentally tested BGC."
 - "Explore antiSMASH database to learn about the distribution of predicted BGC."
 keypoints:
-- "MIBiG provides BGCs that have been experimentaly tested."
-- "antiSMASH database comprises predicted BGCs of each organism"
+- "MIBiG provides BGCs that have been experimentally tested."
+- "antiSMASH database comprises predicted BGCs of each organism."
 ---
 ## MIBiG Database
 The Minimum Information about a Biosynthetic Gene cluster 
