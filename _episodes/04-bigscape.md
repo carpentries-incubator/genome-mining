@@ -16,14 +16,14 @@ keypoints:
 
 ## Introduction
 
-In the previous section, we learnt how to study the BGCs 
+In the previous section, we learned how to study the BGCs 
 encoded by each of the genomes of our analyses. In case you are 
 interested in the study of a certain BGC or a certain strain, 
-this may be enough. However, sometimes the researcher aims to 
+this may be enough. However, sometimes the aim is to 
 compare the biosynthetic potential of tens or hundreds of 
 genomes. To perform this kind of analysis, we will use 
-BiG-SCAPE (Navarro-Muñoz et al., 2019), a workflow that will 
-compare all the BGCs detected by antiSMASH to find their 
+BiG-SCAPE (Navarro-Muñoz et al., 2019), a workflow that 
+compares all the BGCs detected by antiSMASH to find their 
 relatedness. BiG-SCAPE will search for Pfam domains (Mistry et 
 al., 2021) in the protein sequences of each BGC. Then, the Pfam 
 domains will be linearized and compared, creating different 
@@ -32,7 +32,7 @@ clusters. Based on a cutoff value for this score, the diverse BGCs
 will be classified on Gene Cluster Families (GCFs) to facilitate 
 their study. A single GCF is supposed to encompass BGCs that produce 
 chemically related metabolites (molecular families). Lower cutoffs
-would create families of BGCs that produce identical compunds, while higher 
+would create families of BGCs that produce identical compounds, while higher 
 cutoffs would create families of more loosely related compunds.
 
 Let's see how this analysis can be done:
@@ -41,7 +41,7 @@ Let's see how this analysis can be done:
 
 In each of the antiSMASH output directories, we will find a single `.gbk`
  file for each BGC, which includes "region" within its filename. Thus, 
- we will copy all those files to the new directory.
+ we will copy all these files to the new directory.
 
 Let's locate in the directory that has the antiSMASH results of each genome:
 ~~~
