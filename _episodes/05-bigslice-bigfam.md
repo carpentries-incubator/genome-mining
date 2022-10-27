@@ -8,8 +8,8 @@ questions:
 - "How can I clusterize BGCs into groups that produce similar metabolites?"
 - "How can I compare the metabolic capability of different bacterial lineages?"
 objectives:
-- "Understand why we want to run `BiG-SLiCE` and `BiG-FAM` "
-- "Learn what input do we need to run `BiG-SLiCE` and `BiG-FAM`"
+- "Understand the purpose of using `BiG-SLiCE` and `BiG-FAM` "
+- "Learn the inputs required to run `BiG-SLiCE` and `BiG-FAM`"
 - "Run an example with our _Streptococcus_ data on both softwares"
 - "Understand the obtained results"
 keypoints:
@@ -17,7 +17,7 @@ keypoints:
 - "A input-folder containing the BGCs from antiSMASH and the taxonomic information of each genome is needed to run `BiG-SLiCE`"
 - "The results from the antiSMASH web-tool are needed to run `BiG-FAM`"
 - "Gene Cluster Families can help us to compare the metabolic capabilities of a set of bacterial lineages"  
-- "We can use `BiG-FAM` to compare a BGC against the whole database and predit its Gene Cluster Family"
+- "We can use `BiG-FAM` to compare a BGC against the whole database and predict its Gene Cluster Family"
 ---
 
 ## BiG-SLiCE and BiG-FAM a set of tools to compare the microbial metabolic diversity
@@ -36,8 +36,8 @@ advantage to the bacterial lineage producing it.
 The presence/abscence of a set of BGCs in a genome, can be associated 
 to the ecological niches and (micro)environments which the lineage faces. 
 
-The counterpart of this can be taked as how biosynthetically diverse 
-a bacterial lineage can be because of its environment.
+The counterpart of this can be taken as how biosynthetically diverse 
+a bacterial lineage can be due of its environment.
 
 <a href="../fig/02-04-02.png">
   <img src="../fig/02-04-02.png" alt="Aquí va el texto que describe a la imagen." />
@@ -60,7 +60,7 @@ diversity of several bacterial lineages.
 ### The input for BiG-SLiCE
 
 First of all, let's activate the conda environment where `BiG-SLiCE` 
-has been installed and all the needed softwares for its usage:
+has been installed and all the softwares required for its usage:
 
 ~~~
 $ conda activate GenomeMining_Global
@@ -68,7 +68,7 @@ $ conda activate GenomeMining_Global
 {: .language-bash}
 
 You will have now a `(GenomeMining)` label at the beggining of the 
-promt line.
+prompt line.
 
 If we seek for help using the `--help` flag of `bigslice`, we can get 
 a first glance at the input that we need:
@@ -102,7 +102,7 @@ positional arguments:
 ~~~
 {: .output}
 
-`BiG-SLiCE` is asking for a folder as the input. First, it is 
+`BiG-SLiCE` is asking for a folder as the input. It is 
 important to highlight that the bones of this folder are the BGCs 
 from a group of genomes that has been obtained by `AntiSMASH`. In its [GitHub](https://github.com/medema-group/bigslice) page, we can search for 
 an input folder [template](https://github.com/medema-group/bigslice/tree/master/misc/input_folder_template). The folder needs three 
@@ -125,7 +125,7 @@ other ones that were obtained from tomato roots, we can put them into
 dataset_1 and dataset_2 respectively.
 
 - **taxonomy_n.tsv:**This is also a tabular separated file that will 
-carry the taxonomix information of each of the genomes where the 
+carry the taxonomic information of each of the genomes where the 
 input BGCs were found and the path to reach these BGCs inside the 
 input-folder:
   1. Genome folder name (ends with '/')
@@ -146,7 +146,7 @@ Here, we have an example of the structure of the `input-folder`:
 
 ### Creating the input-folder
 
-First, we will create a `bigslice` folder inside the 
+We will create a `bigslice` folder inside the 
 `results` directory. 
 
  ~~~
@@ -156,8 +156,8 @@ $ cd bigslice
 ~~~
 {: .language-bash}
 
-Now that we now what input `BiG-SLiCE` requires, we will do our 
-input-folder step by step. First, let's remeber how much genomes 
+Now that we know what input `BiG-SLiCE` requires, we will do our 
+input-folder step by step. First, let's remember how many genomes 
 we have:
 
 ~~~
@@ -172,7 +172,7 @@ athermophilus_LMD-9/  athermophilus_LMG_18311/
 ~~~
 {: .output}
 
-We have six _Streptococcus_ genomes from the original papar, and two  
+We have six _Streptococcus_ genomes from the original paper, and two  
 public genomes. We will allocate their respective BGC `.gbk`s in 
 two `dataset`s, one for the genomes from Tettelin _et al._ paper, and 
 the another for the public ones.
@@ -198,7 +198,7 @@ $ tree
 {: .output}
 
 Now we will create the folders for the BGCs of the dataset_1 genomes. 
-We will take advantage on the strain name of our _Streptococcus agalactiae_ lineajes to create their folders:
+We will take advantage on the strain name of our _Streptococcus agalactiae_ lineages to create their folders:
 
 ~~~
 $ for i in 18RS21 COH1 515 H36B A909 CJB111; 
