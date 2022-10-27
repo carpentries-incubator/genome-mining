@@ -43,7 +43,7 @@ In each of the antiSMASH output directories, we will find a single `.gbk`
  file for each BGC, which includes "region" within its filename. Thus, 
  we will copy all these files to the new directory.
 
-Let's locate in the directory that has the antiSMASH results of each genome:
+Let's locate into the directory that has the antiSMASH results of each genome:
 ~~~
 $ conda deactivate  
 $ conda activate bigscape  
@@ -54,8 +54,8 @@ $ mv thermophilusLMG18311_prokka  Streptococcus_thermophilus_LMG18311_prokka
 ~~~
 {: .language-bash}
 
-Since we will mix in a directory many files with similar names we want to 
-be sure that nothing will get left behind or overwritten. For this, we
+Since we will put together in the same directory many files with similar names, we want to 
+make sure that nothing is left behind or overwritten. For this, we
  will count all the `gbk` files of all the genomes.
 ~~~
 $ ls Streptococcus*/*region*gbk | wc -l
@@ -67,8 +67,8 @@ $ ls Streptococcus*/*region*gbk | wc -l
 ~~~
 {: .output}
 
-And because the names are somewhat cryptic, they could be repeated,
- so we will rename the `gbks` for them to include the genome name.
+Since the names are somewhat cryptic, they could be repeated,
+ so we will rename the `gbks` in such a way that they include the genome name.
 
 Copy the following script to a file named `change-names.sh` using `nano`:
 ~~~
@@ -112,15 +112,15 @@ $ for species in Streptococcus*
 ~~~
 {: .language-bash}
 
-Now make a directory for all of your BiG-SCAPE analysis and inside it 
+Now make a directory for all your BiG-SCAPE analysis and inside it 
 make a directory that will contain all of the `gbks` of all of our genomes. 
-This one will be the input for BiG-SCAPE. (For cenvenience `bigscape/` will be inside `antismash/` while we run BiG-SCAPE).
+This one will be the input for BiG-SCAPE. (For convenience `bigscape/` will be inside `antismash/` while we run BiG-SCAPE).
 ~~~
 $ mkdir -p bigscape/bgcs_gbks/
 ~~~
 {: .language-bash}
 
-Now copy all the region `gbks`to this new directory, and look at the contents inside it:
+Now copy all the region `gbks`to this new directory, and look at the content inside it:
 ~~~
 $ cp Streptococcus_*/*region*gbk bigscape/bgcs_gbks/
 $ ls bigscape/bgcs_gbks/
@@ -159,7 +159,7 @@ Streptococcus_thermophilus_LMG_18311-NC_006448.1.region006.gbk
 
 BiG-SCAPE can be executed in different ways, depending on the installation mode that you applied.
 You could call the program through `bigscape`, `run_bigscape`or `run_bigscape.py`. Here, based on our
-installation (see [Setup](setup.html)) we will use `run_bigscape`. 
+installation (see [Setup](setup.html)), we will use `run_bigscape`. 
 
 The options that we will use are described in the help page:
 
@@ -198,9 +198,9 @@ The options that we will use are described in the help page:
 {: .language-bash}
 
 We will use the option `--mix` to have an analysis of all of the BGCs together besides 
-the analyses of the BGCs separated by class. The `--hybrids-off` option will prevent us 
+the analyses of the BGCs separated by class. The `--hybrids-off` option will prevent 
 from having the same BGC twice (in the case of hybrid BGCs that could belong to two classes)
-in our results. And since none of the our BGCs is on a contig 
+in our results. And since none of the BGCs is on a contig 
 edge, we could use the global mode. However, frequently, when analyzing draft genomes, this 
 is not the case. Thus, the auto mode will be the most appropriate, which will use the global 
 mode to align domains except for those cases in which the BGC is located near to a contig end, 
@@ -216,14 +216,14 @@ $ bigscape -i bigscape/bgcs_gbks/ -o bigscape/output_100622 --mix --hybrids-off 
 > ## Output names
 >
 > Most of the times you will need to re-run a software once you have explored the results; 
-> maybe you will want to change parameters or add some more samples. Because of this, you will need 
+> maybe you want to change parameters or add more samples. For this reason, you will need 
 > a flexible way to organize your proyect, including the names of the outputs.
-> A usually good idea is to put the date in the name of the folder 
-> and keep track of what analysis you are running in your research notes.
+> Usually, a good idea is to put the date in the name of the folder 
+> and keep track of the analyses you are running in your research notes.
 >
 {: .callout}
 
-Once the process ends, you will find in your terminal screen some basic results, 
+Once the process is finished, you will find in your terminal screen some basic results, 
 such as the number of BGCs included in each type of network. In the output folder 
 you will find all the data.  
 Since BiG-SCAPE does not produce a file with the run information, it is useful 
@@ -235,7 +235,7 @@ $ nano bigscape/output_100622/logs/bigscape.log
 ~~~
 {: .language-bash}
 
-Let's look the BiG-SCAPE outputs:
+Let's take a look at the BiG-SCAPE outputs:
 
 ~~~
 $ ls -F bigscape/output_100622/
@@ -246,13 +246,13 @@ cache/  html_content/  index.html*  logs/  network_files/  SVG/
 ~~~
 {: .output}
 
-To keep order in you directories move your `bigscape/` directory to `genome_mining/`:
+To keep ordered your directories, move your `bigscape/` directory to `genome_mining/`:
 ~~~
 $ mv bigscape/ ../
 ~~~
 {: .language-bash}
 
-And let's make a new folder called `scripts/` in our `gm-workshop/`directory to save our little script:
+And make a new folder called `scripts/` in the `gm-workshop/`directory to save our little script:
 ~~~
 $ mkdir ~/gm_workshop/scripts
 $ mv change-names.sh ~/gm_workshop/scripts/
@@ -262,8 +262,8 @@ $ mv change-names.sh ~/gm_workshop/scripts/
 ## Viewing the results
 
 An easy way to prospect your results is by opening the `index.html` file with a browser 
-(Firefox, Chrome, Safari, etc.). For this you need to go to your local machine and locate 
-yourself in a folder where you want to store your BiG-SCAPE results. Now copy your `output_100622/` 
+(Firefox, Chrome, Safari, etc.). In order to to this, you need to go to your local machine 
+and locate in the folder where you want to store your BiG-SCAPE results. Now copy your `output_100622/` 
 folder to your local machine:
 
 ~~~
@@ -277,10 +277,10 @@ $ firefox output_100622/index.html # If you have Firefox available, otherwise op
 ~~~
 {: .language-bash}
 
-There are diverse sections in the visualization. In the next image we can see the overview page. 
+There are diverse sections in the visualization. The following image shows the overview page. 
 At the left there is the run information and there are pie chart representations of the number of BGCs 
 per genome and per class. At the right there is the Network Overview for each of the BGC classes found and
-the mix categorie. They show the Number of Families, 
+the mix category. They show the Number of Families, 
 Average number of BGCs per family, Max number of BGCs in a family and the Families with MIBiG Reference
 BGCs. You can click on the name of the class to see its Network Overview.
 
@@ -288,7 +288,7 @@ BGCs. You can click on the name of the class to see its Network Overview.
   <img src="../fig/02_05_01.png" alt="" />
 </a>
 
-Below this, there is a clustered heatmap of the presence/absence of the
+Below, there is a clustered heatmap of the presence/absence of the
 GCFs in each genome for each class. You can customize this heatmap and select the clustering methods, 
 or the number of GCFs represented. 
 
@@ -296,10 +296,10 @@ or the number of GCFs represented.
   <img src="../fig/02_05_02.png" alt="" />
 </a>
 
-When you click on any of the class names of the upper left bar it will appear a similarity 
-network of BGCs. It may take some time to charge the network. Here, it is represented a single 
-network for each GCF or each Gene Cluster Clan (GCC), which 
-may comprise several GCFs. Each dot represents a BGC. Those dots with bold circles are already 
+Clicking any of the class names of the upper left bar displays a similarity 
+network of BGCs. It may take some time to charge the network. A single 
+network is represented for each GCF or each Gene Cluster Clan (GCC), which 
+may comprise several GCFs. Each dot represents a BGC. These dots with bold circles are already 
 described BGCs that have been recruited from the MiBIG database (Kautsar et al., 2020) because 
 of its similarity with some BGC of the analysis. 
 
@@ -308,9 +308,9 @@ of its similarity with some BGC of the analysis.
 </a>
 
 When you click on a BGC (dot), it appears its GCF at the right. You can click on the GCF name to see the
-phylogenetic distances among all the BGCs comprised by a single GCF. Within the tree there is a 
-arrow representation of the genes in the BGCs and the protein domains in the genes.
-These trees will be useful to prioritize the search of secondary metabolites, for example, by focusing on 
+phylogenetic distances among all the BGCs comprised by a single GCF. Within the tree there is an 
+arrow diagram of the genes in the BGCs and the protein domains in the genes.
+These trees are useful to prioritize the search of secondary metabolites, for example, by focusing on 
 the most divergent BGC clade or those that are distant to already described BGCs.
 
 <a href="../fig/02_05_04.png">
@@ -327,7 +327,7 @@ the most divergent BGC clade or those that are distant to already described BGCs
 > > ## Solution
 > > _S. agalactiae_ and _S. thermophilus_ seem to have no diversity in common because there is no 
 > > GCF with members from both species. 
-> > All strains of _S.agalactiae_ seem to have a very similar ser of BGCs. While _S. thermophilus_ 
+> > All strains of _S.agalactiae_ seem to have a very similar set of BGCs. While _S. thermophilus_ 
 > > has several BGCs that are not related to any other BGC.
 > > 
 > > Digging deeper: The BGC of the class PKSother in _S. agalactiae_ H3B6 has only 3 genes, which are also present in
@@ -340,8 +340,8 @@ the most divergent BGC clade or those that are distant to already described BGCs
 
 > ## Exercise 1: Using the text output.
 > 
-> Use one of the commands from the following list to make a reduced version of the `Network_Annotations_full.tsv` 
-> that should only contain the information of the type of product, the BGC class of each BGC, and its name. And save it in a file.
+> Use one of the commands from the following list to make a reduced version of the `Network_Annotations_full.tsv`, 
+> it should only contain the information of the type of product, the BGC class of each BGC, and its name. And save it in a file.
 > 
 > `grep` `cut` `ls` `cat` `mv`
 > 
@@ -349,7 +349,7 @@ the most divergent BGC clade or those that are distant to already described BGCs
 > 
 > > ## Solution
 > > 
-> > We will first look at the contents of the file:
+> > We will first look at the content of the file:
 > > 
 > > ~~~
 > > $ head -n 3 network_files/2022-06-10_21-27-26_auto/Network_Annotations_Full.tsv 
@@ -368,7 +368,7 @@ the most divergent BGC clade or those that are distant to already described BGCs
 > > {: .output}
 > > 
 > > We can see that the table is difficult to read because of the amount of information it has. The first line has the names of the 
-> > columns; `BGC`, `Product Prediction` and `BiG-SCAPE class` are the once we are interested in. So we will extract obtain those.
+> > columns; `BGC`, `Product Prediction` and `BiG-SCAPE class` are the once we are interested in. So we will extract those.
 > > 
 > > ~~~
 > > cut -f 1,4,5 network_files/2022-06-10_21-27-26_auto/Network_Annotations_Full.tsv > type_of_BGC.tsv
@@ -393,7 +393,7 @@ the most divergent BGC clade or those that are distant to already described BGCs
 
 ## Cytoscape visualization of the results
 
-You can also customize and re-renderize the similarity networks of your results with Cytoscape (https://cytoscape.org/). To do so, you will need some files included in the output directory of BiG-SCAPE. Both are located in the same folder. You can choose any folder included in the Network_files/(date)hybrids_auto/ directory, depending on your interest. The "Mix/" folder represents the complete network, including all the BGCs of the analysis. There, you will need a the files "mix_c0.30.network" and "mix_clans_0.30_0.70.tsv". When you upload the ".network" file, it is needed that you select as "source" the first column and as "target" the second one. Then, you can upload the ".tsv" and just select the first column as "source". Finally, you need to click on Tools -> merge -> Networks -> Union to combine both GCFs and singletons. Now you can change colors, labels, etc. according to your specific requirements.
+You can also customize and re-renderize the similarity networks of your results with Cytoscape (https://cytoscape.org/). To do so, you will need some files included in the output directory of BiG-SCAPE. Both are located in the same folder. You can choose any folder included in the Network_files/(date)hybrids_auto/ directory, depending on your interest. The "Mix/" folder represents the complete network, including all the BGCs of the analysis. There, you will need the files "mix_c0.30.network" and "mix_clans_0.30_0.70.tsv". When you upload the ".network" file, it is required that you select as "source" the first column and as "target" the second one. Then, you can upload the ".tsv" and just select the first column as "source". Finally, you need to click on Tools -> merge -> Networks -> Union to combine both GCFs and singletons. Now you can change colors, labels, etc. according to your specific requirements.
 
 ### References
 - Navarro-Muñoz, J.C., Selem-Mojica, N., Mullowney, M.W. et al. "A computational framework to explore large-scale biosynthetic diversity". Nature Chemical Biology (2019).
