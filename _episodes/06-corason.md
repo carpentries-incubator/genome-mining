@@ -95,7 +95,7 @@ $ cp ~/gm_workshop/results/annotated/*gbk CORASON_GENOMES
 CORASON was written to be used with RAST annotation as 
 input files, in this case we are using a genome database 
 composed of `.gbk` files. So, we first need to convert
-gbk files into a CORASON-compatibles input files.  
+gbk files into CORASON-compatibles input files.  
 
 ~~~
 $ ../CORASON/gbkIndex.pl CORASON_GENOMES ../CORASON CORASON_GENOMES 
@@ -160,8 +160,8 @@ Figure:
 
 <img src = "../fig/Joined.svg" alt="My Happy SVG"/>
 
-> ## CORASON has several installation and a conda beta version
-> CORASON has one [docker installation](https://github.com/nselem/corason) where you have to go inside the docker container, its input are RAST files. The script [run_corason](https://bigscape-corason.secondarymetabolites.org/index.html) belongs to other installation that accepts gbk as input files. And finally, this is a beta version of a CORASON [conda container](https://github.com/miguel-mx/corason-conda).
+> ## CORASON has several installation and a conda beta versions
+> CORASON has one [docker installation](https://github.com/nselem/corason) where you have to go inside the docker container, its input are RAST files. The script [run_corason](https://bigscape-corason.secondarymetabolites.org/index.html) belongs to other installation that accepts gbk as input files. And finally, this is a beta version of CORASON [conda container](https://github.com/miguel-mx/corason-conda).
 {: .callout}
 
 
