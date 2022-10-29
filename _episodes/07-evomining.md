@@ -299,7 +299,7 @@ To explore more EvoMining options, please explore [EvoMining wiki](https://githu
 genome mining software with its corresponding database 
 [ARTS-db](https://arts-db.ziemertlab.com/) . 
 
-> ## Callout:Evolutionay Genome Mining
+> ## Evolutionay Genome Mining
 > To learn more about Genome Mining you can read these references:
 > - The confluence of big data and evolutionary genome mining for the discovery of natural products.
 >   [Chevrette et al, 2021](https://doi.org/10.1039/D1NP00013F)`
