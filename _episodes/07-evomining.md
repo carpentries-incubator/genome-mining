@@ -23,16 +23,16 @@ keypoints:
 
  Usually, bioinformatics tools related to the prediction of Natural Products (NP) 
  biosynthetic genes try to find metabolic pathways of enzymes that are known to be 
- related with the synthesis of a secondary metabolites. However, these approaches 
+ related with the synthesis of secondary metabolites. However, these approaches 
  fail for the discovery of novel biosynthetic systems. Thus, 
- [EvoMining](https://www.microbiologyresearch.org/content/journal/mgen/10.1099/mgen.0.000260) try to solve this problem to detect novel enzymes that may be implicated in the synthesis of new natural products in Bacteria.
+ [EvoMining](https://www.microbiologyresearch.org/content/journal/mgen/10.1099/mgen.0.000260) tries to circumvent this problem by detecting novel enzymes that may be implicated in the synthesis of new natural products in Bacteria.
  
  To know more about EvoMining you can read [Selem et al, Microbial Genomics 2020](https://www.microbiologyresearch.org/content/journal/mgen/10.1099/mgen.0.000260).   
  
-This tool looks for protein expansions that may have evolved from the conserved 
-metabolism into a specialized metabolism. For that, it builds phylogenetic 
+EvoMining searches protein expansions that may have evolved from the conserved 
+metabolism into a specialized metabolism. It builds phylogenetic 
 trees based on all the protein copies of a certain enzyme in a given genome 
-database. The output tree will differentiate copies that are related with the 
+database. The output tree differentiates copies that are related with the 
 conserved metabolism, copies that are known to be implicated in discovered 
 NP-producing-BGCs i.e. BGCs from [MiBIG database](https://mibig.secondarymetabolites.org/)
 and, optionally, protein copies that belong to BGCs predicted by
@@ -56,10 +56,10 @@ CORASON_GENOMES  Corason_Rast.IDs  cpsg.query  GENOMES  output
 {: .output}  
 
 The general structure of a docker container is shown in the next bash-box. Note that
-it requires to specify which docker containerwill be run. Opcionally
+it requires to specify which docker container will run. Optionally,
 with `-v` flag it is posible to share a directory with the container,
-with `-p` flag a port is shared and it is also posible to specify which
-program will be run inside the container.  
+with `-p` flag a port is shared and it is also possible to specify which
+program will run inside the container.  
 ~~~
 $ docker run --rm -i -t -v <your local directory>:<inside docker directory> -p <inside port>:80 <docker container> <program inside docker>    
 ~~~
@@ -72,20 +72,20 @@ $ docker run --rm -i -t -v $(pwd):/var/www/html/EvoMining/exchange -p 8080:80 ns
 ~~~
 {: .language-bash}   
 
-Lets explain the pieces of this line.   
+Let's explain the pieces of this line.   
   
-| comand  |                                 Explanation                                            |    
+| command  |                                 Explanation                                            |    
 |:-------:|----------------------------------------------------------------------------------------|    
 |docker   | tells the system that we are runing a docker command                                   |    
 | run     |  the command that we are running is to run a docker container                          |    
 | --rm    |  this container will be removed after closed                                           |    
 | -i      |  this container allows user interaction                                                |    
-| -t      |  this interaction will be trhough a terminal                                           |   
+| -t      |  this interaction will be through a terminal                                           |   
 | -v      | a data volume (directory) will be shared between your local machine and the container  |    
 | -p      |  a port will allow a web based app                                                     |        
 
-However, sometimes the port 80 is bussy, on that case you can 
-use other ports like 8080 or 8084. In this case, please use the port `80X` 
+However, sometimes the port 80 is busy, in that case you can 
+use other ports like 8080 or 8084. If this is the case, please use the port `80X` 
 where X is a number between 01..30 provided by your instructor.   
 ```
 $ docker run --rm -i -t -v $(pwd):/var/www/html/EvoMining/exchange -p 8080:80 nselem/evomining:latest /bin/bash  
@@ -93,7 +93,7 @@ $ docker run --rm -i -t -v $(pwd):/var/www/html/EvoMining/exchange -p 8084:80 ns
 ```
 
 If your docker container worked, now you will see in your terminal
-a new prompt. Instead of the usual dollar sign, now there is a number
+a new prompt. Instead of the usual dollar sign, there should be a number
 `#` at the beggining of your terminal. This is because now you are inside
 the docker container and you have `sudo` permisions inside the docker.  
 ~~~
@@ -107,7 +107,7 @@ To exit container use `exit`
 ~~~ 
 {: .language-bash}  
   
-And now your prompt must be back in the dolar sign  
+And now your prompt must be back in the dollar sign  
 ~~~ 
 $   
 ~~~ 
@@ -144,14 +144,14 @@ $ docker run --rm -i -t -v $(pwd):/var/www/html/EvoMining/exchange -p 80X:80 nse
 ~~~
 {: .language-bash}   
 
-Though we will NOT run the test EvoMining command, it will look as follows:
+Though we will NOT run the test EvoMining command, it looks as follows:
 ~~~
 # perl startEvoMining.pl  
 ~~~
 {: .code}
   
-Instead of that, lets customize our genomic database by using the same as CORASON.  
-Note that EvoMining requires RAST-like annotated genomes and because of that 
+Instead of that, let's customize our genomic database by using the same as CORASON.  
+Notice that EvoMining requires RAST-like annotated genomes and for this reason 
 we are using the fasta files that CORASON converts from our gbk inputs. 
 ~~~
 # perl startEvoMining.pl -g GENOMES -r  Corason_Rast.IDs
@@ -174,26 +174,26 @@ When you finish using this container, please exit it.
 
 ## Set the conserved-enzymes database 
 
-When using EvoMining you often will wish to construct your own conserved enzymes database. 
-To know more about how to configure database consult the EvoMining wiki
+When using EvoMining, oftenly you will desire to construct your own conserved enzymes database. 
+To know more about how to configure a database, consult the EvoMining wiki
 in the [EvoMining databases](https://github.com/nselem/evomining/wiki/Databases-Conformation) part. 
 Natural products database could also be replaced for another set of 
 genes that are "true positives", for example a set of regulatory genes. 
 
-As an example lets transform the file `cpsg.query` into the format of this database.
-This file contains the aminoacid sequence of the _cpsG_ gene. Lets first copy this file
+As an example let's transform the file `cpsg.query` into the format of this database.
+This file contains the aminoacid sequence of the _cpsG_ gene. Let's first copy this file
 into what will become our conserved-enzymes database.  
 ~~~
 $ cp cpsg.query cpsg_cdb
 ~~~
 {: .language-bash}
 
-Now, we need some edition, open de nano editor and change the first line `>cpsg` to 
+Now, we need some edition. Open nano editor and change the first line `>cpsg` to 
 `>SYSTEM1|1|phosphomannomutase|Saga `. EvoMining conserved-database needs a 
-four-field format pipe-separated tha contains the name of the metabolic system,
-that the enzyme belong (SYSTEM1), a consecutive number of the enzyme (1 in this case),
+four-field format pipe-separated that contains; the name of the metabolic system to which the 
+enzyme belongs (SYSTEM1), a consecutive number of the enzyme (1 in this case),
 the function of the enzyme, and finally, an abbreviation of the organism Saga, (_S. Agalactiae_).  
-Why? It was the way we needed EvoMining for its first use and we have not changed the headers.  
+The reason behind this is that this was the way we needed EvoMining for its first use and we have not changed the headers.  
 ~~~
 $ nano cpsg_cdb
 ~~~
@@ -246,20 +246,20 @@ Use again the website and think about the results.
 
 > ## Discussion 1: Retro EvoMining in enzyme database
 > 
-> What do your learn from running as conserved-enzymes database the gene _cpsG_ that is part of specialized BGC?
+> What do you learn from running in a conserved-enzymes database the gene _cpsG_ that is part of a specialized BGC?
 > 
 > > ## Solution
-> >  _cpsG_ does not have extra copies in Streptococcus agalactie, so there are no expansions that maybe functional divergent. 
-> >  _cpsG_ single copies in the genomes looks red-colored in EvoMining output, like if it were part of conserved-metabolism.
-> >   This is not the case, the color is because there is only one copy and it is merged into the true-positives MIBiG because it was
-> >   originally a gene in the specialized metabolism. So it is important to know the seed enzymes  
+> >  _cpsG_ does not have extra copies in Streptococcus agalactie, so there are no expansions that may be functional divergent. 
+> >  _cpsG_ single copies in the genomes look red-colored in EvoMining output, as if they belong to the conserved-metabolism.
+> >   However, this is not the case, the color is because there is only one copy and it is merged into the true-positives MIBiG because it was
+> >   originally a gene in the specialized metabolism. So it is important to know the seed enzymes.  
 > > 
 > {: .solution}
 {: .discussion}
 
 ## Visualize your results in MicroReact  
 
-First you have to run all the pipeline in the website: 
+Firstly, you have to run all the pipeline in the website: 
 http://<yourip>/EvoMining/html/index.html, and then all the 
 output files will be generated. You can use the EvoMining
 basic interface or take your results into MicroReact.  
@@ -280,9 +280,9 @@ scp betterlab@132.248.196.38:~/dc_workshop/results/genome-mining/corason-conda/E
 scp betterlab@132.248.196.38:~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree/1.csv ~/Downloads  
 ```
   
-To explore EvoMining outputs upload 1.nwk and 1.csv 
-files to [microReact](https://microreact.org/)  
-Here is a [MicroReact visualization](https://microreact.org/project/e8b7wWZkovtavPFFpBXRPp-evomining-streptococcus-example) 
+To explore EvoMining outputs, upload 1.nwk and 1.csv 
+files to [microReact](https://microreact.org/).  
+Here you can find the [MicroReact visualization](https://microreact.org/project/e8b7wWZkovtavPFFpBXRPp-evomining-streptococcus-example) 
 of this EvoMining run.  
 
 <a href="../fig/EvoMiningMicroReact.png">
@@ -290,17 +290,17 @@ of this EvoMining run.
 </a>
   
 ## Other resources    
-To run EvoMining with a biggest conserved-metabolite DB you can use 
+To run EvoMining with a larger conserved-metabolite DB you can use 
 [EvoMining Zenodo](https://zenodo.org/record/1219709#.YqEsFqjMLrc) data.
 
-To explore more EvoMining options, please explore [EvoMining wiki](https://github.com/nselem/evomining/wiki)
+To explore more EvoMining options, please explore [EvoMining wiki](https://github.com/nselem/evomining/wiki).
 
 [ARTS](https://arts.ziemertlab.com/) is another evolutionary 
 genome mining software with its corresponding database 
 [ARTS-db](https://arts-db.ziemertlab.com/) . 
 
 > ## Callout:Evolutionay Genome Mining
-> To know more about Genome Mining you can read these references:
+> To learn more about Genome Mining you can read these references:
 > - The confluence of big data and evolutionary genome mining for the discovery of natural products.
 >   [Chevrette et al, 2021](https://doi.org/10.1039/D1NP00013F)`
 > - Evolutionary Genome Mining for the Discovery and Engineering of Natural Product Biosynthesis. 
