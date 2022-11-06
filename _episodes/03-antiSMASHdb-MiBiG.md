@@ -61,7 +61,7 @@ Select "Browse" on the top menu bar, alternatively you can select "Query" in the
 
 > ![Forking Repositories]({{ page.root }}/fig/antiSMASH_db.png)
 
-For simple queries, such as "Streptococcus" or searching for a 
+For simple queries, such as "_Streptococcus_" or searching for a 
 specific strain you can use the "Simple search" function.
 
 > ![Forking Repositories]({{ page.root }}/fig/antiSMASH_search.png)
