@@ -49,8 +49,8 @@ $ conda deactivate
 $ conda activate bigscape  
 $ cd ~/gm_workshop/results/antismash/
 $ ls
-$ mv  thermophilusLMD9_prokka  Streptococcus_thermophilus_LMD9_prokka
-$ mv thermophilusLMG18311_prokka  Streptococcus_thermophilus_LMG18311_prokka
+$ mv  thermophilusLMD9.prokka  Streptococcus_thermophilus_LMD9.prokka
+$ mv thermophilusLMG18311.prokka  Streptococcus_thermophilus_LMG18311.prokka
 ~~~
 {: .language-bash}
 
