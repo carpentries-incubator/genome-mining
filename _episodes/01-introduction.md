@@ -27,26 +27,26 @@ as a source for discovering new BGCs.
 
 As an example, let's have a look into the BGC responsible of the chloramphenicol biosynthesis. This is a BGC described for first time in a _Streptomyces venezuelae_ genome.
 <a href="{{ page.root }}/fig/episode1-fig1.PNG">
-  <img src="{{ page.root }}/fig/episode1-fig1.PNG" alt="" />
+  <img src="{{ page.root }}/fig/episode1-fig1.PNG" alt="MIBiG layout of the Chloramphenicol gene cluster from _Streptomyces venezuelae_ comprising 17 genes" />
 </a>
 [Explore the BGC](https://mibig.secondarymetabolites.org/repository/BGC0000893/index.html#r1c1)
 
 ## Planning a genome mining project  
-Here we will provide tips and tricks to plan and execute a genome minning project. Let's start!
-First, choose a set of genomes from taxa. In this lesson
-we will be working with _S. agalactiae_ genomes (Tettelin et al., 2005) (https://zenodo.org/record/6595388#.YtD9LsFBxUJ). This genus is not know
-for its potential as a Natural products producer but is good enough
+Here we will provide tips and tricks to plan and execute a genome minning project.
+Firstly, choose a set of genomes from taxa. In this lesson
+we will be working with _S. agalactiae_ [genomes] (https://zenodo.org/record/6595388#.YtD9LsFBxUJ)(Tettelin et al., 2005). Although this genus is not know
+for its potential as a Natural products producer, it is good enough
 to show different approaches to genome mining. Recently, metagenomes have been 
 considered in genome mining studies. Here are some considerations 
-that may be useful for you as a genome miner: 
+that might be useful as a genome miner: 
 
-- Think about your research questions before start analyzing the data.  
+- Think about a research question before start analyzing the data.  
 - Remember, raw metadata should remain intact during all genome mining process.
 It could be a good idea to change its file-permisions to read only.    
 - Gather as much information in the form of metadata of 
 all the genomes that you are working with.  
 - All your intermediate steps should be considered temporal 
- and maybe removed without risk.   
+ and may be removed without risk.   
 - Save your scripts using a version manager, GitHub for example.
 - Share your data in public repositories.   
 - Give time to make your science repeatable, help your community.    
