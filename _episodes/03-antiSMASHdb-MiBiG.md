@@ -28,11 +28,16 @@ and rich metadata components.
 
 Select "Search" on the upper right corner of the menu bar
 
-> ![Forking Repositories]({{ page.root }}/fig/MIBiG_search.png)
+
+<a href="{{ page.root }}/fig/MIBiG_search.png">
+  <img src="{{ page.root }}/fig/MIBiG_search.png" alt="MIBiG website homepage highlighting the search tool" />
+</a>
 
 For simple queries, such as _Streptococcus agalactiae_ or searching for a specific strain you can use the "Simple search"  function.
 
-> ![Forking Repositories]({{ page.root }}/fig/MIBiG_query.png)
+<a href="{{ page.root }}/fig/MIBiG_query.png">
+  <img src="{{ page.root }}/fig/MIBiG_query.png" alt="MIBiG website query page" />
+</a>
 
 For complex queries, the database also provides a sophisticated query builder that allows querying on all antiSMASH annotations. To enable this function, click on "Build a query"
 
