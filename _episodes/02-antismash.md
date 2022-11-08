@@ -39,7 +39,7 @@ each genome contig.
 
 ## Running antiSMASH 
 
-The commandline usage of antismash is detailed in the following [repositories:](https://docs.antismash.secondarymetabolites.org/command_line/)
+The command line usage of antiSMASH is detailed in the following [repositories:](https://docs.antismash.secondarymetabolites.org/command_line/)
 
 In summary, you will need to use your genome as the input. Then, 
 antiSMASH will create an output folder for each of your genomes. 
@@ -50,26 +50,26 @@ By openning the `.html` file you can explore the antiSMASH annotations.
 
 You can run antiSMASH in two ways **Minimal and Full-featured run**, as follows:  
   
-|Run type   | command                                 |  
+|Run type   | Command                                 |  
 |-----------|-----------------------------------------|  
 |Minimal run| antismash genome.gbk|  
 |Full-featured run |antismash --cb-general --cb-knownclusters --cb-subclusters --asf --pfam2go --smcog-trees genome.gbk|  
 
 
-> ## Exercise 1: 
+> ## Exercise 1: antiSMASH scope
 > If you run an _Streptococcus agalactiae_ annotated genome using antiSMASH, what results do you expect?
 > 
 > a. The substances that a cluster produces
 > 
 > b. A prediction of the metabolites that the clusters can produce
 > 
-> c. A prediction of genes that belongs to a biosynthetic cluster 
+> c. A prediction of genes that belong to a biosynthetic cluster 
 >  
 > > ## Solution  
-> > a. False. antiSMASH is not an algorithm devoted to substances prediction    
+> > a. False. antiSMASH is not an algorithm devoted to substances prediction.    
 > > b. False. Although antiSMASH does have some information about metabolites
 > > produced by similar clusters, this is not its main purpose.  
-> > c. True. AntiSMASH compares domains and performs a prediction of the genes 
+> > c. True. antiSMASH compares domains and performs a prediction of the genes 
 > > that belong to biosynthetic gene clusters.   
 > {: .solution}
 {: .challenge}
@@ -85,12 +85,12 @@ $ conda activate GenomeMining_Global
 
 Second, run the antiSMASH command shown earlier in this lesson 
 on the data `.gbk` or `.fasta` files. The command can be executed 
-on one single files, all the files contained within a folder and 
-on specific list of files, we showed you how you can perform 
-these different cases:
+either in one single file, all the files contained within a folder or 
+in a specific list of files. Here we show how it can be performed in 
+these three different cases:
 
 ### Running antiSMASH in a single file
-Let's choose the annotated file ´agalactiae_A909_prokka.gbk´ file
+Choose the annotated file ´agalactiae_A909_prokka.gbk´ 
 ~~~
 $ mkdir -p ~/gm_workshop/results/antismash  
 $ cd ~/gm_workshop/results/antismash  
@@ -98,7 +98,7 @@ $ antismash --genefinding-tool=none ~/gm_workshop/results/annotated/Streptococcu
 ~~~
 {: .language-bash}
 
-To see the antiSMASH generated outcomes do:
+In order to see the antiSMASH generated outcomes do:
 ~~~
 $ tree -L 1 ~/gm_workshop/results/antismash/Streptococcus_agalactie_A909.prokka
 ~~~
@@ -123,7 +123,7 @@ $ tree -L 1 ~/gm_workshop/results/antismash/Streptococcus_agalactie_A909.prokka
 
 ### Runing antiSMASH over a list of files 
 Now, imagine that you want to run antiSMASH over all
-_Streptococcus agalactiae_ annotated genomes. Lets use 
+_Streptococcus agalactiae_ annotated genomes. Use 
 a `for` cycle and `*` as a wildcard to run antiSMASH
 over all files that start with "S" in the annotated directory.    
   
@@ -136,8 +136,8 @@ $ for gbk_file in ~/gm_workshop/results/annotated/S*.gbk
 {: .language-bash}
 
 ## Visualizing antiSMASH results   
-To see the results after an antiSMASH run, we need to access to 
-the `index.html` file. Where is this file?   
+In order to see the results after an antiSMASH run, we need to access to 
+the `index.html` file. Where is this file located?   
 ~~~
 $ cd Streptococcus_agalactie_A909.prokka
 $ pwd
@@ -151,7 +151,7 @@ $ pwd
 As outcomes you should get a folder comprised mainly by the following files:
 * **`.gbk` files** For each Biosynthetic Gene cluster region found.
 * **`.json` file** To know the input file name, the antiSMASH used 
-      version and the regions data (id,sequence_data)
+      version and the regions data (id,sequence_data).
 * **`index.html` file** To visualize the outcomes from the analysis.
 
 
@@ -165,27 +165,27 @@ $ scp -r user@bioinformatica.matmor.unam.mx:~/gm_workshop/results/antismash/S*A9
 ~~~ 
 {: .language-bash}
 
-if using R-studio then in the left panel, chose the "more" option, 
-and "export" your file to your local computer. And then, decompress the 
+iIf using R-studio then in the left panel, chose the "more" option, 
+and "export" your file to your local computer. Decompress the 
  Streptococcus_agalactie_A909.prokka.zip file.  
 
 Once in your local machine, in the directory Streptococcus_agalactie_A909.prokka
 open the `index.html` file on your local web browser.
 
 ## Understanding the output
-The visualization of the results includes many diferent options. 
+The visualization of the results includes many different options. 
 To understand all the possibilities, we suggest to read the following [tutorial:](https://docs.antismash.secondarymetabolites.org/understanding_output/)
 
-Briefly, on the "overview" page ´.HTML´ you can find all the regions 
+Briefly, in the "overview" page ´.HTML´ you can find all the regions 
 found within every analyzed record/contig (antiSMASH inputs), and 
 summarized all these information in five main features:
 
 * **Region:** The region number.
 * **Type:** Type of the product detected by antiSMASH.
 * **From,To:** The location of the region (nucleotides).
-* **Most similar known cluster:** The closest compund from th MIBiG database.
+* **Most similar known cluster:** The closest compound from th MIBiG database.
 * **Similarity:** Percentage of genes within the closest known 
-compound that have significant BLAS hit (The last two columns 
+compound that have significant BLAST hit (The last two columns 
 containing comparisons to the MiBIG database will only be shown 
 if antiSMASH was run with the KnownClusterBlast option ´--cc-mibig´). 
 
@@ -198,7 +198,7 @@ folder with the annotations.
 
 #### Exercises and discussion
 
-> ## Exercise 2 NCBI and antiSMASH webserver  
+> ## Exercise 2: NCBI and antiSMASH webserver  
 > Run antiSMASH web server over _S. agalactiae_ A909. First explore the 
 > NCBI assembly database to obtain the accesion. Get the id of your results.   
 > 
@@ -214,7 +214,7 @@ folder with the annotations.
 {: .challenge}
 
 
-> ## Exercise 3  run antiSMASH over _thermpohilus_ 
+> ## Exercise 3: Run antiSMASH over _thermpohilus_ 
 > Let's imagine you want to run antismash only on the _S. thermophilus_ annotated genomes.   
 >  
 > ~~~
@@ -246,7 +246,7 @@ folder with the annotations.
 {: .challenge}
 
 
-> ## Exercise 4 The size of a region.  
+> ## Exercise 4: The size of a region.  
 > Sort the structure of the next commands that attempt to know the size of a region:
 > 
 >  `SOURCE` `ORGANISM` `LOCUS`  
