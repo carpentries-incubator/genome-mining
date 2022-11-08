@@ -10,7 +10,8 @@ objectives:
 - "Discuss bioinformatic's good practices with your colleagues."
 
 keypoints:
-- "Natural products are encoded in Biosynthetic Gene Clusters"
+- "Natural products are encoded in Biosynthetic Gene Clusters (BGCs)"
+- "Genome mining describes the exploitation of genomic information with specialized algorithms intended to discover and study BGCs.
 ---
 
 ## Genome mining aims to find BGCs
