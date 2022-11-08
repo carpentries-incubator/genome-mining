@@ -11,8 +11,9 @@ objectives:
 - "Perform a Minimal antiSMASH run analysis."
 - "Explore several *Streptococcus* genomes by identifying the BGCs presence and the types of secondary metabolites produced."
 keypoints:
-- "antiSMASH is a bioinformatic tool to identify BGC"
+- "antiSMASH is a bioinformatic tool capable of identifying, annotating and analysing secondary metabolite BGC"
 - "antiSMASH can be used as a web-based tool or as stand-alone command-line tool"
+- "The file extensions accepted by antiSMASH are GenBank, FASTA and EMBL"
 ---
 ## Introduction
 
@@ -165,7 +166,7 @@ $ scp -r user@bioinformatica.matmor.unam.mx:~/gm_workshop/results/antismash/S*A9
 ~~~ 
 {: .language-bash}
 
-iIf using R-studio then in the left panel, chose the "more" option, 
+If using R-studio then in the left panel, chose the "more" option, 
 and "export" your file to your local computer. Decompress the 
  Streptococcus_agalactie_A909.prokka.zip file.  
 
@@ -186,11 +187,11 @@ summarized all these information in five main features:
 * **Most similar known cluster:** The closest compound from th MIBiG database.
 * **Similarity:** Percentage of genes within the closest known 
 compound that have significant BLAST hit (The last two columns 
-containing comparisons to the MiBIG database will only be shown 
+containing comparisons to the MIBiG database will only be shown 
 if antiSMASH was run with the KnownClusterBlast option ´--cc-mibig´). 
 
 ## antiSMASH web services
-antiSMASH can be also used in an oline server in the 
+antiSMASH can also be used in an online server in the 
 [antiSMASH website:](https://antismash.secondarymetabolites.org/#!/start)
 You will be asked to give your email. Then, the results
 will be sent to you and you will be allowed to donwload a 
@@ -206,7 +207,7 @@ folder with the annotations.
 > > 1. Go to [NCBI](https://www.ncbi.nlm.nih.gov/) and search _S. agalactiae_ A909.  
 > > 2. Choose assembly database and copy the GenBank sequence Id in the bottom of the site.    
 > > 3. Go to [antiSMASH](https://antismash.secondarymetabolites.org/#!/start)    
-> > 4. Chose the accesion froom NCBI and paste `CP000114.1`    
+> > 4. Choose the accesion froom NCBI and paste `CP000114.1`    
 > > 5. Run antiSMASH and paste in the collaborative document your results id
 > >  example ` bacteria-cbd13a47-8095-495f-957c-dcf58c261529`  
 > > {: .output}
@@ -214,8 +215,8 @@ folder with the annotations.
 {: .challenge}
 
 
-> ## Exercise 3: Run antiSMASH over _thermpohilus_ 
-> Let's imagine you want to run antismash only on the _S. thermophilus_ annotated genomes.   
+> ## Exercise 3: Run antiSMASH over _thermophilus_ 
+> With the following information, generate the script to run antiSMASH only on the _S. thermophilus_ annotated genomes.   
 >  
 > ~~~
 >  done  
@@ -231,7 +232,7 @@ folder with the annotations.
 > >        
 > >  2. Then you need to use the reserved word `do`  to start the cycle.     
 > >    
-> >  3. Then you have to call antismash over your variable `mygenome`. Remember the `$` before your variable
+> >  3. Then you have to call antiSMASH over your variable `mygenome`. Remember the `$` before your variable
 > >  to indicate to bash that now you are using the value of the variable. 
 > >      
 > >  4. Finally, use the reserved word `done` to finish the cycle.    
@@ -246,7 +247,7 @@ folder with the annotations.
 {: .challenge}
 
 
-> ## Exercise 4: The size of a region.  
+> ## Exercise 4: The size of a region  
 > Sort the structure of the next commands that attempt to know the size of a region:
 > 
 >  `SOURCE` `ORGANISM` `LOCUS`  
@@ -284,7 +285,7 @@ folder with the annotations.
 > 
 > > ## Solution
 > > 
-> > In antiSMASH website output of A909 strain we see clusters of two classes, T3PKS and arylpolyene. Nevertheless, this is only one _Streptococcus_ in order to infer all BGC classes in the genus we need to run antiSMASH in more genomes 
+> > In antiSMASH website output of A909 strain we see clusters of two classes, T3PKS and arylpolyene. Nevertheless, this is only one _Streptococcus_ in order to infer all BGC classes in the genus we need to run antiSMASH in more genomes. 
 > {: .solution}
 {: .discussion}
 
