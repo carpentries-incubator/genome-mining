@@ -3,7 +3,7 @@ title: "Secondary metabolite biosynthetic gene cluster identification"
 teaching: 20
 exercises: 10
 questions:
-- "How can I annotate knwon BGC?"
+- "How can I annotate known BGC?"
 - "Which kind of analysis antiSMASH can perform?"
 - "Which files extension accepts antiSMASH?"
 objectives:
@@ -18,12 +18,12 @@ keypoints:
 
 Within microbial genomes we can find some specific regions that 
 take part of the biosynthesis of secondary metabolites, these 
-sections are know as biosynthetic gene clusters, which are relevant 
+sections are know as Biosynthetic Gene Clusters, which are relevant 
 due to the possible applications that they may have, for example: 
 antimicrobials, antitumor, cholesterol-lowering, immunosuppressant, 
 antiprotozoal, antihelminth, antiviral and anti-ageing activities.
 
-antiSMASH is a pipline based on 
+antiSMASH is a pipeline based on 
 [profile hidden Markov models](https://www.ebi.ac.uk/training/online/courses/pfam-creating-protein-families/what-are-profile-hidden-markov-models-hmms/#:~:text=Profile%20HMMs%20are%20probabilistic%20models,the%20alignment%2C%20see%20Figure%202) 
 that allow us to identify the gene clusters contained within genome 
 sequences that encode secondary metabolites of all known broad 
@@ -32,7 +32,7 @@ chemical classes.
 ## antiSMASH input files
 
 antiSMASH pipeline can work with three different file formats `GenBank`, 
-`FASTA` and `EMBL`. Both `GeneBank` and `EMBL` formats include genome 
+`FASTA` and `EMBL`. Both `GenBank` and `EMBL` formats include genome 
 annotations, while a `FASTA` file just comprises the nucleotides of 
 each genome contig. 
 
