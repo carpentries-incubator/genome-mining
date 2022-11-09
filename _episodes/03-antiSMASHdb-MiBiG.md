@@ -9,8 +9,8 @@ objectives:
 - "Use MIBiG database as a source of experimentally tested BGC."
 - "Explore antiSMASH database to learn about the distribution of predicted BGC."
 keypoints:
-- "MIBiG provides BGCs that have been experimentally tested."
-- "antiSMASH database comprises predicted BGCs of each organism."
+- "MIBiG provides BGCs that have been experimentally tested"
+- "antiSMASH database comprises predicted BGCs of each organism"
 ---
 ## MIBiG Database
 The Minimum Information about a Biosynthetic Gene cluster 
@@ -43,7 +43,9 @@ For complex queries, the database also provides a sophisticated query builder th
 
 ### Results
 
-> ![Forking Repositories]({{ page.root }}/fig/MIBiG_results.png)
+<a href="{{ page.root }}/fig/MIBiG_results.png">
+  <img src="{{ page.root }}/fig/MIBiG_results.png" alt="MIBiG website displaying the results from the simple search Streptococcus" />
+</a>
 
 > ## Exercise 1: 
 > You are going to do an experiment, you have two organisms one is likely to produce *themophilin 1277* and the other one *streptolysin S*, based on the table, which of these organisms is more likely to produce their respective secondary metabolite?
@@ -57,19 +59,23 @@ For complex queries, the database also provides a sophisticated query builder th
 
 ## antiSMASH database
 The [antiSMASH database](https://antismash-db.secondarymetabolites.org/) 
-provides researchers with an easy to use, up-to-date collection of 
-annotated BGC data, which enable them to easily perform cross-genome 
-analyses by offering complex queries on the datasets
+provides an easy to use, up-to-date collection of 
+annotated BGC data. It allows to easily perform cross-genome 
+analyses by offering complex queries on the datasets.
 
 ### Browsing and Querying in the antiSMASH database
 Select "Browse" on the top menu bar, alternatively you can select "Query" in the center
 
-> ![Forking Repositories]({{ page.root }}/fig/antiSMASH_db.png)
+<a href="{{ page.root }}/fig/antiSMASH_db.png">
+  <img src="{{ page.root }}/fig/antiSMASH_db.png" alt="antiSMASH website homepage" />
+</a>
 
 For simple queries, such as "_Streptococcus_" or searching for a 
 specific strain you can use the "Simple search" function.
 
-> ![Forking Repositories]({{ page.root }}/fig/antiSMASH_search.png)
+<a href="{{ page.root }}/fig/antiSMASH_search.png">
+  <img src="{{ page.root }}/fig/antiSMASH_search.png" alt="antiSMASH website query page" />
+</a>
 
 For complex queries, the database also provides a sophisticated query 
 builder that allows querying on all antiSMASH annotations. To enable 
@@ -77,9 +83,12 @@ this function, click on "Build a query"
 
 ### Results
 
-> ![Forking Repositories]({{ page.root }}/fig/antiSMASH_query.png)
-Let's use antiSMASH database to know the BGC contained in 
-the _Streptococcus_ genomes. We will use R to visualize the data.  
+<a href="{{ page.root }}/fig/antiSMASH_query.png">
+  <img src="{{ page.root }}/fig/antiSMASH_query.png" alt="antiSMASH website displaying the results from the simple search Streptococcus" />
+</a>
+
+Use antiSMASH database to analyse the BGC contained in 
+the _Streptococcus_ genomes. Use R to visualize the data.  
 Firstly, ativate two libraries, `dplyr` for data manipulation 
 and `ggplot2` for data visualization.      
   
