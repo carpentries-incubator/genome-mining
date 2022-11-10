@@ -33,9 +33,7 @@ will be classified on Gene Cluster Families (GCFs) to facilitate
 their study. A single GCF is supposed to encompass BGCs that produce 
 chemically related metabolites (molecular families). Lower cutoffs
 would create families of BGCs that produce identical compounds, while higher 
-cutoffs would create families of more loosely related compunds.
-
-Let's see how this analysis can be done:
+cutoffs would create families of more loosely related compounds.
 
 ## Preparing the input
 
@@ -43,7 +41,7 @@ In each of the antiSMASH output directories, we will find a single `.gbk`
  file for each BGC, which includes "region" within its filename. Thus, 
  we will copy all these files to the new directory.
 
-Let's locate into the directory that has the antiSMASH results of each genome:
+Move into the directory that has the antiSMASH results of each genome:
 ~~~
 $ conda deactivate  
 $ conda activate bigscape  
@@ -112,15 +110,15 @@ $ for species in Streptococcus*
 ~~~
 {: .language-bash}
 
-Now make a directory for all your BiG-SCAPE analysis and inside it 
-make a directory that will contain all of the `gbks` of all of our genomes. 
+Now make a directory for all your BiG-SCAPE analyses and inside it 
+make a directory that contains all of the `gbks` of all of your genomes. 
 This one will be the input for BiG-SCAPE. (For convenience `bigscape/` will be inside `antismash/` while we run BiG-SCAPE).
 ~~~
 $ mkdir -p bigscape/bgcs_gbks/
 ~~~
 {: .language-bash}
 
-Now copy all the region `gbks`to this new directory, and look at the content inside it:
+Now copy all the region `gbks`to this new directory, and look at its content:
 ~~~
 $ cp Streptococcus_*/*region*gbk bigscape/bgcs_gbks/
 $ ls bigscape/bgcs_gbks/
@@ -204,7 +202,7 @@ in our results. And since none of the BGCs is on a contig
 edge, we could use the global mode. However, frequently, when analyzing draft genomes, this 
 is not the case. Thus, the auto mode will be the most appropriate, which will use the global 
 mode to align domains except for those cases in which the BGC is located near to a contig end, 
-for which the glocal mode is automatically selected. For this run we will use only de default 
+for which the glocal mode is automatically selected. For this run we will use only the default 
 cutoff value (0.3).
 
 Now we are ready to run BiG-SCAPE:
@@ -235,7 +233,7 @@ $ nano bigscape/output_100622/logs/bigscape.log
 ~~~
 {: .language-bash}
 
-Let's take a look at the BiG-SCAPE outputs:
+Take a look at the BiG-SCAPE outputs:
 
 ~~~
 $ ls -F bigscape/output_100622/
@@ -262,7 +260,7 @@ $ mv change-names.sh ~/gm_workshop/scripts/
 ## Viewing the results
 
 An easy way to prospect your results is by opening the `index.html` file with a browser 
-(Firefox, Chrome, Safari, etc.). In order to to this, you need to go to your local machine 
+(Firefox, Chrome, Safari, etc.). In order to do this, you need to go to your local machine 
 and locate in the folder where you want to store your BiG-SCAPE results. Now copy your `output_100622/` 
 folder to your local machine:
 
@@ -297,7 +295,7 @@ or the number of GCFs represented.
 </a>
 
 Clicking any of the class names of the upper left bar displays a similarity 
-network of BGCs. It may take some time to charge the network. A single 
+network of BGCs. It may take some time to load the network. A single 
 network is represented for each GCF or each Gene Cluster Clan (GCC), which 
 may comprise several GCFs. Each dot represents a BGC. These dots with bold circles are already 
 described BGCs that have been recruited from the MiBIG database (Kautsar et al., 2020) because 
