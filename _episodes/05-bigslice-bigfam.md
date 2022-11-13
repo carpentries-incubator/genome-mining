@@ -37,7 +37,7 @@ The presence/abscence of a set of BGCs in a genome, can be associated
 to the ecological niches and (micro)environments which the lineage faces. 
 
 The counterpart of this can be taken as how biosynthetically diverse 
-a bacterial lineage can be due of its environment.
+a bacterial lineage can be due to its environment.
 
 <a href="../fig/02-04-02.png">
   <img src="../fig/02-04-02.png" alt="Aquí va el texto que describe a la imagen." />
@@ -52,15 +52,15 @@ we call **Gene Cluster Families (GCFs)**.
 
 There are some programs capable of clustering BGCs 
 in GCFs, _e.g._[ ClusterFinder](https://github.com/petercim/ClusterFinder) and [DeepBGC](https://github.com/Merck/deepbgc). `BiG-SLICE` is a 
-software that has been [designed](https://academic.oup.com/gigascience/article/10/1/giaa154/6092777) to do this work in less time even 
+software that has been [designed](https://academic.oup.com/gigascience/article/10/1/giaa154/6092777) to do this work in less time, even 
 when dealing with large datasets (1.2 million BGCs). This 
 characteristic makes it a good tool to compare the metabolic 
 diversity of several bacterial lineages.
 
 ### The input for BiG-SLiCE
 
-First of all, let's activate the conda environment where `BiG-SLiCE` 
-has been installed and all the softwares required for its usage:
+Firstly, activate the conda environment, where `BiG-SLiCE` 
+has been installed as well as all the softwares required for its usage:
 
 ~~~
 $ conda activate GenomeMining_Global
