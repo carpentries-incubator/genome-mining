@@ -30,7 +30,7 @@ the role of "tools" that offer some ecological and physiological
 advantage to the bacterial lineage producing it. 
 
 <a href="../fig/02-04-01.png">
-  <img src="../fig/02-04-01.png" alt="Aquí va el texto que describe a la imagen." />
+  <img src="../fig/02-04-01.png" alt="Biosynthetic Gene Cluster encoding three different biomolecules, which might not be essential for survival. In the figure, the first gene in the cluster synthesizes a shield, the second gene is able to produce a sword. All together with the third gene, the BGC provides advantageous “tools” to the organism, represented by a warrior." />
 </a>
 
 The presence/abscence of a set of BGCs in a genome, can be associated 
