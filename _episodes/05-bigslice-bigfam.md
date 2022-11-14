@@ -40,13 +40,13 @@ The counterpart of this can be taken as how biosynthetically diverse
 a bacterial lineage can be due to its environment.
 
 <a href="../fig/02-04-02.png">
-  <img src="../fig/02-04-02.png" alt="Aquí va el texto que describe a la imagen." />
+  <img src="../fig/02-04-02.png" alt="Three biomolecules depicted in three different colors; blue, red and purple. These molecules are present in BGCs of diverse bacterial lineages and in turn grouped into Gene Cluster Families (GCFs). GF1 contains three domains related with the blue molecule and three from the red molecule. GF2 contains four domains of each of the molecules, blue, red and purple. GCF3 and GCF4 contain each three domains associated with the purple biomolecule but different from each other. Every GCF produces a different metabolite, here represented as weapons or tools." />
 </a>
 
 To answer some of this questions, we need a way to compare the metabolic 
 capabilities of a set of diverse bacterial lineages. One way to do this 
 is to compare the state (identity) of homologous BGCs. The homologous 
-clusters that share a similar domain arquitecture and in consequnece 
+clusters that share a similar domain arquitecture and in consequence 
 will produce a similar metabolite, are grouped into a bigger group that 
 we call **Gene Cluster Families (GCFs)**. 
 
