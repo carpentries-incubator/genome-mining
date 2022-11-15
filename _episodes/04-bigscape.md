@@ -283,7 +283,15 @@ Average number of BGCs per family, Max number of BGCs in a family and the Famili
 BGCs. You can click on the name of the class to see its Network Overview.
 
 <a href="../fig/02_05_01.png">
-  <img src="../fig/02_05_01.png" alt="" />
+  <img src="../fig/02_05_01.png" alt="BIG-SCAPE output as visualized in the web page. 
+                                      The overview page is displayed. At the left is the Run Information, 
+                                      indicating the date and time at which the analysis was started and completed, as well as the parameters of the run. 
+                                      Next is displayed the Input Data, specifying the total number of genomes and the total BGCs, 
+                                      in this example 8 and 23, respectively. There are two pie charts, one representing the BGC per Genome 
+                                      and the other the BGC per Class. At the right is the Network Overview, 
+                                      which allows selection between mix and the different BGC classes. 
+                                      From the mix overview it displays the Number of Families, Average number of BGCs per family, 
+                                      Max number of BGCs in a family and the Families with MIBiG Reference BGCs." />
 </a>
 
 Below, there is a clustered heatmap of the presence/absence of the
@@ -291,7 +299,10 @@ GCFs in each genome for each class. You can customize this heatmap and select th
 or the number of GCFs represented. 
 
 <a href="../fig/02_05_02.png">
-  <img src="../fig/02_05_02.png" alt="" />
+  <img src="../fig/02_05_02.png" alt="BIG-SCAPE output as visualized in the web page. 
+                                      The overview page displaying the clustered heatmap of the presence/absence of the GCFs, 
+                                      each class organized as a column at the base of the table, in each genome, 
+                                      which are organized as rows at the right side of the table. Presence is depicted in red with 1 and absence in beige with 0." />
 </a>
 
 Clicking any of the class names of the upper left bar displays a similarity 
@@ -302,7 +313,10 @@ described BGCs that have been recruited from the MiBIG database (Kautsar et al.,
 of its similarity with some BGC of the analysis. 
 
 <a href="../fig/02_05_03.png">
-  <img src="../fig/02_05_03.png" alt="" />
+  <img src="../fig/02_05_03.png" alt="BIG-SCAPE similarity network of the complete mix of BGCs 
+                                      obtained from the run. A network is represented for each GCF, each dot represents a BGC. 
+                                      In this example there is a total of 23 BGCs, of which 6 are singletons, there are 28 links and 11 families. 
+                                      Clicking over any of the dots shows the GCF at the right side and allows to explore it further." />
 </a>
 
 When you click on a BGC (dot), it appears its GCF at the right. You can click on the GCF name to see the
