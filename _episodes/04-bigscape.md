@@ -326,7 +326,10 @@ These trees are useful to prioritize the search of secondary metabolites, for ex
 the most divergent BGC clade or those that are distant to already described BGCs.
 
 <a href="../fig/02_05_04.png">
-  <img src="../fig/02_05_04.png" alt="" />
+  <img src="../fig/02_05_04.png" alt="BIG-SCAPE output as visualized in the web page, displaying a tree of phylogenetic distances 
+                                      among the BGCs comprised in a GCF. The example shows the GCF 10, comprised by six members. 
+                                      Each BGC is represented in the tree by an arrow diagram of the genes and the protein domains in the genes 
+                                      corresponding to that cluster" />
 </a>
 
 
