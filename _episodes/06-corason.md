@@ -14,7 +14,15 @@ keypoints:
 ---
 
 
-<img src = "../fig/corason.png" alt="Corason sorts phylogenetically BGC"/>
+<a href="../fig/corason.png">
+  <img src="../fig/corason.png" alt="CORASON sorts phylogenetically BGCs. Given a query gene in a reference BGC and a genomic annotated database, 
+                                     CORASON firstly searches for query gene homologues, it filters out all genomic vicinities 
+                                     not related to the reference BGC. Then, CORASON infers a phylogenetic tree and 
+                                     calculates the frequency of occurrence for each gene family from the reference BGC. 
+                                     Using the same reference BGC, if a new query gene is selected, CORASON visualizes 
+                                     a new phylogeny with families containing the same molecular modifications." />
+</a>
+
 
 CORASON is a visual tool that identifies gene clusters that share a 
 common genomic core and reconstructs multi-locus phylogenies of these 
