@@ -326,14 +326,14 @@ These trees are useful to prioritize the search of secondary metabolites, for ex
 the most divergent BGC clade or those that are distant to already described BGCs.
 
 <a href="../fig/02_05_04.png">
-  <img src="../fig/02_05_04.png" alt="BIG-SCAPE output as visualized in the web page, displaying a tree of phylogenetic distances 
+  <img src="../fig/02_05_04.png" alt="BIG-SCAPE output displaying a tree of phylogenetic distances 
                                       among the BGCs comprised in a GCF. The example shows the GCF 10, comprised by six members. 
                                       Each BGC is represented in the tree by an arrow diagram of the genes and the protein domains in the genes 
-                                      corresponding to that cluster" />
+                                      corresponding to that cluster." />
 </a>
 
 
-> ## Discussion 1: Reading the GCF networks.
+> ## Discussion 1: Reading the GCF networks
 > 
 > What can you conclude about the diversity of BGCs between _S. agalactiae_ and _S. thermophilus_? 
 > Are they equally diverse? Do they share GCFs?
@@ -353,7 +353,7 @@ the most divergent BGC clade or those that are distant to already described BGCs
 {: .challenge}
 
 
-> ## Exercise 1: Using the text output.
+> ## Exercise 1: Using the text output
 > 
 > Use one of the commands from the following list to make a reduced version of the `Network_Annotations_full.tsv`, 
 > it should only contain the information of the type of product, the BGC class of each BGC, and its name. And save it in a file.
@@ -364,7 +364,7 @@ the most divergent BGC clade or those that are distant to already described BGCs
 > 
 > > ## Solution
 > > 
-> > We will first look at the content of the file:
+> > Take a look at the content of the file:
 > > 
 > > ~~~
 > > $ head -n 3 network_files/2022-06-10_21-27-26_auto/Network_Annotations_Full.tsv 
@@ -382,7 +382,7 @@ the most divergent BGC clade or those that are distant to already described BGCs
 > > ~~~
 > > {: .output}
 > > 
-> > We can see that the table is difficult to read because of the amount of information it has. The first line has the names of the 
+> > This table is difficult to read because of the amount of information it has. The first line has the names of the 
 > > columns; `BGC`, `Product Prediction` and `BiG-SCAPE class` are the once we are interested in. So we will extract those.
 > > 
 > > ~~~
