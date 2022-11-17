@@ -44,7 +44,7 @@ even if you change your Linux/perl/blast/muscle/Gblocks/quicktree local distribu
 ## CORASON conda 
 Here we are testing the new stand-alone 
 [corason in a conda environment](https://github.com/miguel-mx/corason-conda)
-with gbk as input-files. Lets first activate the corason-conda environment.    
+with gbk as input-files. Let's first activate the corason-conda environment.    
 
 ~~~
 $ conda deactivate 
@@ -74,11 +74,11 @@ corason-conda
 ~~~
 {: .output}
 
-Now, change directory by descending to EXAMPLE2. The file `cpsg.query`, 
+Change directory by descending to EXAMPLE2. The file `cpsg.query`, 
 contains the reference protein cpsG, whose encoding gene 
 is part of the 
 [polysaccharide BGC](https://mibig.secondarymetabolites.org/repository/BGC0000744/index.html#r1c1) 
-produced by some _S. agalactie_   
+produced by some _S. agalactiae_   
 
 ~~~
 $ cd corason-conda/EXAMPLE2        
@@ -138,7 +138,7 @@ CORASON_GENOMES  Corason_Rast.IDs  cpsg.query  GENOMES  output
 {: .output}  
 
 Finally, we have the query enzyme, the IDs file and a genomic database
-of _S. agalactiae_ in the same directory. Lets run CORASON with 
+of _S. agalactiae_ in the same directory. Let's run CORASON with 
 cpsg.query as query with 1000006 as an example of reference BGC.  
 ~~~
 $ ../CORASON/corason.pl -q cpsg.query -s 100006  -rast_ids Corason_Rast.IDs
@@ -164,9 +164,11 @@ $ scp (remoto)/corason-conda/EXAMPLE2/output/cpsg.query-output  Downloads/.
 ~~~
 {: .language-bash}
 
-Figure:
 
-<img src = "../fig/Joined.svg" alt="My Happy SVG"/>
+<a href="../fig/Joined.svg">
+  <img src="../fig/Joined.svg" alt="My Happy SVG." />
+</a>
+
 
 > ## CORASON has several installation and a conda beta versions
 > CORASON has one [docker installation](https://github.com/nselem/corason) where you have to go inside the docker container, its input are RAST files. The script [run_corason](https://bigscape-corason.secondarymetabolites.org/index.html) belongs to other installation that accepts gbk as input files. And finally, this is a beta version of CORASON [conda container](https://github.com/miguel-mx/corason-conda).
