@@ -104,7 +104,7 @@ positional arguments:
 
 `BiG-SLiCE` is asking for a folder as the input. It is 
 important to highlight that the bones of this folder are the BGCs 
-from a group of genomes that has been obtained by `AntiSMASH`. In its [GitHub](https://github.com/medema-group/bigslice) page, we can search for 
+from a group of genomes that has been obtained by `antiSMASH`. In its [GitHub](https://github.com/medema-group/bigslice) page, we can search for 
 an input folder [template](https://github.com/medema-group/bigslice/tree/master/misc/input_folder_template). The folder needs three 
 main components:
 
@@ -112,7 +112,8 @@ main components:
 each dataset (BGCs from a group of genomes) must be specified.
 
 <a href="../fig/02-04-03.png">
-  <img src="../fig/02-04-03.png" alt="Aquí va el texto que describe a la imagen." />
+  <img src="../fig/02-04-03.png" alt="Example of tsv table composed by five columns and two rows. 
+                                      The first row contains the title for each column; # Dataset name, Path to folder, Path to taxonomy, Description." />
 </a>
 
 
