@@ -35,16 +35,16 @@ Output: SVG figure with BGC in the family sorted according
 to the multi-locus phylogeny of the core genes.
 
 Advantages  
-- SVG graphs Scalable graphs that allows metadata easy display.  
-- Interactive CORASON is not a static database, it allows you to explore your own genomes.  
+- SVG graphs Scalable graphs that allow metadata easy display.  
+- Interactive CORASON is not a static database, it allows to explore your own genomes.  
 - Reproducibility CORASON runs on docker and conda, 
-this containerization which allows to always perform the same analysis 
+this containerization allows to always perform the same analysis 
 even if you change your Linux/perl/blast/muscle/Gblocks/quicktree local distributions.  
 
 ## CORASON conda 
 Here we are testing the new stand-alone 
 [corason in a conda environment](https://github.com/miguel-mx/corason-conda)
-with gbk as input-files. Let's first activate the corason-conda environment.    
+with gbk as input-files. Firstly, activate the corason-conda environment.    
 
 ~~~
 $ conda deactivate 
@@ -57,7 +57,7 @@ $ conda activate corason
 ~~~
 {: .output}
 
-With the environment activated all CORASON-dependencies are ready to be used. 
+With the environment activated, all CORASON-dependencies are ready to be used. 
 The next step is to clone CORASON-software from its GitHub repository. First,
 place yourself at the results directory and then clone CORASON-code.
 ~~~
@@ -102,8 +102,8 @@ $ cp ~/gm_workshop/results/annotated/*gbk CORASON_GENOMES
 
 CORASON was written to be used with RAST annotation as 
 input files, in this case we are using a genome database 
-composed of `.gbk` files. So, we first need to convert
-gbk files into CORASON-compatibles input files.  
+composed of `.gbk` files. So, we need to convert
+gbk files into CORASON-compatible input files.  
 
 ~~~
 $ ../CORASON/gbkIndex.pl CORASON_GENOMES ../CORASON CORASON_GENOMES 
@@ -124,7 +124,7 @@ Directory CORASON_GENOMES
 {: .output}
 
 Now all the converted genome files, aminoacid fasta files (.faa) 
-and annotation files (.txt) shoul be placed in the 'GENOMES directory'
+and annotation files (.txt) should be placed in the 'GENOMES directory'
 one level up outside output.  
 ~~~
 $ mv output/* . 
@@ -138,7 +138,7 @@ CORASON_GENOMES  Corason_Rast.IDs  cpsg.query  GENOMES  output
 {: .output}  
 
 Finally, we have the query enzyme, the IDs file and a genomic database
-of _S. agalactiae_ in the same directory. Let's run CORASON with 
+of _S. agalactiae_ in the same directory. Run CORASON with 
 cpsg.query as query with 1000006 as an example of reference BGC.  
 ~~~
 $ ../CORASON/corason.pl -q cpsg.query -s 100006  -rast_ids Corason_Rast.IDs
@@ -166,7 +166,9 @@ $ scp (remoto)/corason-conda/EXAMPLE2/output/cpsg.query-output  Downloads/.
 
 
 <a href="../fig/Joined.svg">
-  <img src="../fig/Joined.svg" alt="My Happy SVG." />
+  <img src="../fig/Joined.svg" alt="CORASON phylogenetic svg reconstruction using cpsG as query gene and _S. agalactiae_ 1000006 as query cluster. 
+                                    At the bottom, it is displayed the frequency of occurrence for each gene family from the reference BGC, 
+                                    each with a different color." />
 </a>
 
 
