@@ -382,7 +382,7 @@ $ tree -F
 > a)
 > ~~~
 > $ cp -r input_folder input_folder_copy
-> $ cd input_foder_copy
+> $ cd input_folder_copy
 > $ rm -r
 > ~~~
 > {: .language-bash}
@@ -429,7 +429,7 @@ $ tree -F
 
 The next step is to create the main file **datasets.tsv**. First we 
 put the first lines to this file. In each of these `.tsv` files, we 
-can put lines that begin with `#`. This will not be read it by the 
+can put lines that begin with `#`. This will not be read by the 
 code, and it can be of help to know which information is located 
 in those files. We will use the command `echo` with the `-e` flag 
 that will enable us to put tab separations between the text:
@@ -474,8 +474,8 @@ The main file of the input-folder is finished!
 
 
 We also need to specify the taxonomic assignation of each of the 
-intup genomes BGC's. We will build one `dataset_taxonomy.tsv` file 
-for each one of our datasets, _i.e._ two in total. First, let's create 
+input genomes BGC's. We will build one `dataset_taxonomy.tsv` file 
+for each one of our datasets, _i.e._ two in total. Firstly, create 
 the header of each one of these files using `echo`:
 
 ~~~
@@ -633,7 +633,7 @@ input-folder/
 {: .output}
 
 
-> ## Exercise 2 
+> ## Exercise 2. Taxonomic information 
 > If you use the head -n20 on one of your .gbk files, you will obtain an output like this
 >~~~
 >LOCUS       AAJO01000169.1          2501 bp    DNA     linear   UNK
@@ -705,10 +705,10 @@ BiG-SLiCE run complete!
 {: .output}
 
 In order to see the results, we need to download the 
-`output-bigslice` to out local computer. We will use 
+`output-bigslice` to our local computer. We will use 
 the `scp` command to accomplish this. 
 
-Let's open another terminal and **without connecting it to 
+Open another terminal and **without connecting it to 
 the remote computer** (_i.e._ in your own computer), move to 
 a directory where you know you can save the folder. In this 
 example we will copy it to the `Documents` folder of our 
@@ -777,7 +777,7 @@ $ bash output-bigslice/start_server.sh
 
 The result looks a little intimidating, but if you obtained 
 a result that looks like the above one do not worry. Next, we 
-need to open an internet browser. In a new tab let's type 
+need to open an internet browser. In a new tab type 
 the next line.
 
 ~~~
