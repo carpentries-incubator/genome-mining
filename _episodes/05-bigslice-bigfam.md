@@ -30,7 +30,9 @@ the role of "tools" that offer some ecological and physiological
 advantage to the bacterial lineage producing it. 
 
 <a href="../fig/02-04-01.png">
-  <img src="../fig/02-04-01.png" alt="Biosynthetic Gene Cluster encoding three different biomolecules, which might not be essential for survival. In the figure, the first gene in the cluster synthesizes a shield, the second gene is able to produce a sword. All together with the third gene, the BGC provides advantageous “tools” to the organism, represented by a warrior." />
+  <img src="../fig/02-04-01.png" alt="Biosynthetic Gene Cluster encoding three different biomolecules, which might not be essential for survival. 
+                                      In the figure, the first gene in the cluster synthesizes a shield, the second gene is able to produce a sword. 
+                                      All together with the third gene, the BGC provides advantageous “tools” to the organism, represented by a warrior." />
 </a>
 
 The presence/abscence of a set of BGCs in a genome, can be associated 
@@ -122,7 +124,7 @@ genomes. We can give `BiG-SLiCE` **n** groups of BGCs. The separation
 of the BGCs in different datasets is due to the different 
 characteristics that the bacterial lineages can have. For example, if 
 we have a set of bacterial populations that came from maize roots and 
-other ones that were obtained from tomato roots, we can put them into 
+other obtained from tomato roots, we can put them into 
 dataset_1 and dataset_2 respectively.
 
 - **taxonomy_n.tsv:**This is also a tabular separated file that will 
@@ -142,7 +144,8 @@ input-folder:
 Here, we have an example of the structure of the `input-folder`:
 
 <a href="../fig/02-04-04.png">
-  <img src="../fig/02-04-04.png" alt="Aquí va el texto que describe a la imagen." />
+  <img src="../fig/02-04-04.png" alt="Example of the structure of the input-folder. 
+                                      The content of the directory input-folder is displayed in a tree-like format, listing the files and directories inside it." />
 </a>
 
 ### Creating the input-folder
@@ -176,7 +179,7 @@ athermophilus_LMD-9/  athermophilus_LMG_18311/
 We have six _Streptococcus_ genomes from the original paper, and two  
 public genomes. We will allocate their respective BGC `.gbk`s in 
 two `dataset`s, one for the genomes from Tettelin _et al._ paper, and 
-the another for the public ones.
+the other for the public ones.
 
 ~~~
 $ mkdir input-folder
@@ -199,7 +202,7 @@ $ tree
 {: .output}
 
 Now we will create the folders for the BGCs of the dataset_1 genomes. 
-We will take advantage on the strain name of our _Streptococcus agalactiae_ lineages to create their folders:
+We will take advantage of the strain name of our _Streptococcus agalactiae_ lineages to create their folders:
 
 ~~~
 $ for i in 18RS21 COH1 515 H36B A909 CJB111; 
@@ -350,7 +353,7 @@ $ tree -F
 ~~~
 {: .language-bash}
 
-> ## Exercise 1.
+> ## Exercise 1.Input-folder structure
 > As we have seen, the structure of the input folder for BiG-SLiCE is quite difficult to get. Imagine "Sekiro" wants to copy the directory structure to use it for future BiG-SLiCE inputs.
 > Consider the following directory structure:
 > ~~~
