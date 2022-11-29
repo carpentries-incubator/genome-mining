@@ -808,7 +808,7 @@ we provided as input. The second one is the information of the process (when we
 ran the program) that `BiG-SLiCE` carry out with our data. 
 
 If we click into the `Runs` field on the left or the `run-0001` blue button on the 
-**Runs** main section, we will jump into the page that give us the information 
+**Runs** main section, we will jump into the page that gives us the information 
 regarding the BGCs GCFs that were obtained:
 
 
@@ -830,7 +830,7 @@ If we go to the bottom of this page, we will found a table of all the GCFs with
 information of the number of BGCs that compose them, the representative BGC class 
 inside each family, and which genus has more BGCs that belong to each family.
 
-Let's click on the `+` symbol of the GCF_7, and then on the `View` button that 
+Click the `+` symbol of the GCF_7, and then on the `View` button that 
 is displayed. This will take us to a page with stadistics of the BGCs that 
 are part of this family. 
 
@@ -852,7 +852,7 @@ build new ones in the light of this information.
 > Considering the results in the runs tab, we can see that there are a lot of Gene Cluster Families that have only one cluster associated to it (GCF_1, GCF_2, GCF_4, GCF_5, GCF_6, GCF_8, GCF_9, GCF_13, and GCF_15). <br>
 > What does this tell us about the metabolites diversity of the Streptococcus sample?
 > > ## Solution
-> > We can see that there are some unique gene cluster families, which mean that there are some organism that has that unique gene cluster and therefore he has some metabolite that the others don´t and that may help him in his environmente. So, as there are many singleton Gene Cluster Families, we can say that theres a big diversity from the sample because many of the organisms in the sample have unique "habilities" (metabolites).
+> > We can see that there are some unique gene cluster families, which means that there are an organism that has that unique gene cluster and therefore it has some metabolite that the others don´t and that may be advantageous in its environment. Since there are many singleton Gene Cluster Families, we can say that there is a big diversity from the sample because many of the organisms in the sample have unique "habilities" (metabolites).
 > {: .solution}
 {: .discussion}   
 
@@ -875,7 +875,7 @@ build new ones in the light of this information.
 >  What can we infer about the metabolite diversity?
 >  
 > > ## Solution
-> > As most of the organism have a gene cluster in the gene cluster family, we can infer that most of them have the same secondary metabolites which means that theres few metabolite diversity between them.
+> > As most of the organisms have a gene cluster in the gene cluster family, we can infer that most of them have the same secondary metabolites, which means that there is little metabolite diversity between them.
 > {: .solution}
 {: .discussion}   
 
@@ -885,7 +885,7 @@ build new ones in the light of this information.
 To demonstrate the funtionality of `BiG-SLICE`, the authors recopilated close to 
 1.2 million of BGCs. All this information, they put it on a great database that they 
 call `BiG-FAM`. When you get to the main [page](https://bigfam.bioinformatics.nl/home), 
-you will face a structure that looks like the one othat we saw on the `BiG-SLICE` result:
+you will face a structure that looks like the one we saw on the `BiG-SLICE` results:
 
 <a href="../fig/02-04-08.png">
   <img src="../fig/02-04-08.png" alt="Aquí va el texto que describe a la imagen." />
