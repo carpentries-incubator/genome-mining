@@ -353,7 +353,7 @@ $ tree -F
 ~~~
 {: .language-bash}
 
-> ## Exercise 1.Input-folder structure
+> ## Exercise 1. Input-folder structure
 > As we have seen, the structure of the input folder for BiG-SLiCE is quite difficult to get. Imagine "Sekiro" wants to copy the directory structure to use it for future BiG-SLiCE inputs.
 > Consider the following directory structure:
 > ~~~
@@ -788,10 +788,17 @@ http://localhost:5000/
 As a result, we will obtain a web-page that looks like this:
 
 <a href="../fig/02-04-05.png">
-  <img src="../fig/02-04-05.png" alt="Aquí va el texto que describe a la imagen." />
+  <img src="../fig/02-04-05.png" alt="BiG SLiCE web page output displaying the results obtained from the example run. 
+                                      A left pannel presents the information generated, composed of seven tabs; 
+                                      Summary, Datasets, Runs, Reports, Help, Feedback, and About. 
+                                      The rest is a Summary of all datasets and runs included in the output. 
+                                      Appearing firstly, the Datasets provided as input, organized as a table with five rows; 
+                                      name, #genomes, total, with taxonomy, and description. 
+                                      Next, the information about the Runs, also organized as a table with the following rows; 
+                                      name, started, finished, status, threshold, #BGCs, and #GCFs.." />
 </a>
 
-Here we have a summary of the result that we obtained. In the left part, we see a 
+Here we have a summary of the obtained results. In the left part, we see a 
 set of 7 fields. 3 of them have the information that we generated: `Summary`, 
 `Datasets`, and `Runs`. The other ones are for information regarding the 
 software, one of them is to give feedback to the developers. You can acces to the 
