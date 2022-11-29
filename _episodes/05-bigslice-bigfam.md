@@ -808,12 +808,16 @@ we provided as input. The second one is the information of the process (when we
 ran the program) that `BiG-SLiCE` carry out with our data. 
 
 If we click into the `Runs` field on the left or the `run-0001` blue button on the 
-**Runs** main section, we will jumpo to the page that give us the information 
+**Runs** main section, we will jump into the page that give us the information 
 regarding the BGCs GCFs that were obtained:
 
 
 <a href="../fig/02-04-06.png">
-  <img src="../fig/02-04-06.png" alt="Aquí va el texto que describe a la imagen." />
+  <img src="../fig/02-04-06.png" alt="BiG SLiCE web page output displaying the information obtained from the Run-0001. 
+                                      Firstly, it is shown an Overview from the Run. Indicating the Status, when was it Started and Finished, 
+                                      as well as the Parameters, the HMM models and the Input. 
+                                      Next, the Statistics about the run are shown as two bar-plots. 
+                                      The left one, plots the average distance to GCF models, whilst the right one shows the amount of BGCs in GCFs." />
 </a>
 
 In this new page we have two bar-plots that give us information regarding if the BGCs that 
@@ -836,7 +840,8 @@ BGC's. If we jump to section called `Members`, we can click on the
 part of each of the genes of these BGCs.
 
 <a href="../fig/02-04-07.png">
-  <img src="../fig/02-04-07.png" alt="Aquí va el texto que describe a la imagen." />
+  <img src="../fig/02-04-07.png" alt="BiG SLiCE web page output displaying detailed information regarding the BGCs from GCF_7. 
+                                      The Arrowers show a gene arrow visualization of the domains that are part of each of the genes of the BGCs belonging to GCF_7." />
 </a>
 
 As we can see, this tool can be used to clusterize homologous BGCs that share 
