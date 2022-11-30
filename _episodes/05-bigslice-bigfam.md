@@ -13,8 +13,8 @@ objectives:
 - "Run an example with our _Streptococcus_ data on both softwares"
 - "Understand the obtained results"
 keypoints:
-- "`BiG-SLiCE` and `BiG-FAM` are softwares that are useful to compare the metabolic diversity of bacterial lineages between each other and agains a big database"  
-- "A input-folder containing the BGCs from antiSMASH and the taxonomic information of each genome is needed to run `BiG-SLiCE`"
+- "`BiG-SLiCE` and `BiG-FAM` are softwares that are useful to compare the metabolic diversity of bacterial lineages between each other and against a big database"  
+- "An input-folder containing the BGCs from antiSMASH and the taxonomic information of each genome is needed to run `BiG-SLiCE`"
 - "The results from the antiSMASH web-tool are needed to run `BiG-FAM`"
 - "Gene Cluster Families can help us to compare the metabolic capabilities of a set of bacterial lineages"  
 - "We can use `BiG-FAM` to compare a BGC against the whole database and predict its Gene Cluster Family"
@@ -884,16 +884,17 @@ build new ones in the light of this information.
 
 To demonstrate the funtionality of `BiG-SLICE`, the authors recopilated close to 
 1.2 million of BGCs. All this information, they put it on a great database that they 
-call `BiG-FAM`. When you get to the main [page](https://bigfam.bioinformatics.nl/home), 
+called `BiG-FAM`. When you get to the main [page](https://bigfam.bioinformatics.nl/home), 
 you will face a structure that looks like the one we saw on the `BiG-SLICE` results:
 
 <a href="../fig/02-04-08.png">
-  <img src="../fig/02-04-08.png" alt="Aquí va el texto que describe a la imagen." />
+  <img src="../fig/02-04-08.png" alt="BiG-FAM main page showing an introduction as well as a graphical representation of the database.
+                                      A left panel displays the available options; Home, GCFs, BGCs, Query, Statistics, Help, Feedback, and About. " />
 </a>
 
 One of the options of the left is `Query`. If we click here, we will move to a new 
-page were we can insert an `antiSMASH job ID`. This will run a comparison of all 
-the BGCs found on that antiSMASH run on a single genome, agains the inmense database. 
+page where we can insert an `antiSMASH job ID`. This will run a comparison of all 
+the BGCs found on that antiSMASH run on a single genome, against the inmense database. 
 
 We will use the `antiSMASH job ID` from the analysis made on 
 _Streptococcus agalactiae_ A909. The `antiSMASH job ID` can be found 
@@ -907,14 +908,18 @@ bacteria-f931deb5-509b-4f28-a210-212456c5139b
 And click the `submit` option.
 
 <a href="../fig/02-04-09.png">
-  <img src="../fig/02-04-09.png" alt="Aquí va el texto que describe a la imagen." />
+  <img src="../fig/02-04-09.png" alt="BiG-FAM query page with the option for inserting an antiSMASH job and submitting it. 
+                                      Below it is described how much of the job is Pending, Processing, and Processed." />
 </a>
 
-This will generate a result page that will indicate with which BGCs from the 
-database, the BGCs from out genome is related.
+This will generate a result page that indicates with which BGCs from the 
+database, the BGCs from the query genome are related.
 
 <a href="../fig/02-04-10.png">
-  <img src="../fig/02-04-10.png" alt="Aquí va el texto que describe a la imagen." />
+  <img src="../fig/02-04-10.png" alt="BiG-FAM result page indicating firstly an overview of the job; the query which was submitted, 
+                                      its status, as well as the time at which it was started and finished. 
+                                      Next, a table indicating the BGCs from the database which are related with the query BGCs. 
+                                      This is organized as a table with seven rows; query BGC, class, length (kb), completeness, best hit, distance and details" />
 </a>
 
 
