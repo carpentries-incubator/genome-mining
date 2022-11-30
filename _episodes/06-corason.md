@@ -15,7 +15,7 @@ keypoints:
 
 
 <a href="../fig/corason.png">
-  <img src="../fig/corason.png" alt="CORASON sorts phylogenetically BGCs. Given a query gene in a reference BGC and a genomic annotated database, 
+  <img src="../fig/corason.png" alt="CORASON's workflow for sorting phylogenetically BGCs. Given a query gene in a reference BGC and a genomic annotated database, 
                                      CORASON firstly searches for query gene homologues, it filters out all genomic vicinities 
                                      not related to the reference BGC. Then, CORASON infers a phylogenetic tree and 
                                      calculates the frequency of occurrence for each gene family from the reference BGC. 
@@ -36,9 +36,9 @@ to the multi-locus phylogeny of the core genes.
 
 Advantages  
 - SVG graphs Scalable graphs that allow metadata easy display.  
-- Interactive CORASON is not a static database, it allows to explore your own genomes.  
-- Reproducibility CORASON runs on docker and conda, 
-this containerization allows to always perform the same analysis 
+- Interactive, CORASON is not a static database, it allows to explore your own genomes.  
+- Reproducibility, since CORASON runs on docker and conda, 
+the containerization allows to always perform the same analysis 
 even if you change your Linux/perl/blast/muscle/Gblocks/quicktree local distributions.  
 
 ## CORASON conda 
@@ -58,7 +58,7 @@ $ conda activate corason
 {: .output}
 
 With the environment activated, all CORASON-dependencies are ready to be used. 
-The next step is to clone CORASON-software from its GitHub repository. First,
+The next step is to clone CORASON-software from its GitHub repository. Firstly,
 place yourself at the results directory and then clone CORASON-code.
 ~~~
 $ mkdir -p ~/gm_workshop/results/genome-mining 
@@ -102,7 +102,7 @@ $ cp ~/gm_workshop/results/annotated/*gbk CORASON_GENOMES
 
 CORASON was written to be used with RAST annotation as 
 input files, in this case we are using a genome database 
-composed of `.gbk` files. So, we need to convert
+composed of `.gbk` files. Thus, we need to convert
 gbk files into CORASON-compatible input files.  
 
 ~~~
@@ -123,7 +123,7 @@ Directory CORASON_GENOMES
 ~~~
 {: .output}
 
-Now all the converted genome files, aminoacid fasta files (.faa) 
+Now, all converted genome files, aminoacid fasta files (.faa) 
 and annotation files (.txt) should be placed in the 'GENOMES directory'
 one level up outside output.  
 ~~~
