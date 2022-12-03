@@ -5,7 +5,7 @@ exercises: 20
 questions:
 - "What is Evolutionary Genome Mining?"
 - "Which kind of BGCs can EvoMining find?"
-- "What do I need to run an evolutionary genome mining analysis?"
+- "What do I need in order to run an evolutionary genome mining analysis?"
 objectives:
 - "Understand EvoMining pipeline."
 - "Run an example of evolutionary analysis in cpsG gene family."
@@ -18,7 +18,21 @@ keypoints:
 {% include links.md %}
 
 <a href="../fig/evomining.gif">
-  <img src="../fig/evomining.gif" alt="Aquí va el texto que describe a la imagen." />
+  <img src="../fig/evomining.gif" alt="a) EvoMining expansion-and-recruitment pipeline. A group of grey stacked cylinders representing genomes in a database (DB).
+                                       Homologues and expansions of seed enzymes, represented as an orange arrow, from the enzyme DB 
+                                       are searched by blastp in the genome DB. 
+                                       The outcome is integrated as the expanded enzyme families (EFs) within the genome DB. 
+                                       Bidirectional best hits (BBH) of seed enzymes, red arrows, are marked as conserved metabolism. 
+                                       The EFs are amplified after being compared against a DB of natural products (NP) biosynthetic enzymes, 
+                                       represented by a blue cylinder, to find recruitments defined as enzymes of the family that are part of a MIBiG BGC. 
+                                       b) The genome DB, represented by the grey stacked cylinders, is searched as previously described. 
+                                       Additionally, antiSMASH predictions, cyan arrows, can be added by the user. 
+                                       antiSMASH enzyme predictions that are at the same time marked in red are defined as transition enzymes, purple arrows. 
+                                       c) EvoMining phylogenetic reconstruction and visualization. On the left side, a phylogenetic reconstruction of an EF is shown. 
+                                       On the right side it is shown the EvoMining tree displaying the EvoMining predictions (green), 
+                                       which are those extra copies closer to enzyme recruitments into BGC (blue) than to conserved metabolic enzymes (red). 
+                                       antiSMASH predicted enzymes are represented in cyan, transition enzymes in black and 
+                                       extra copies that are neither antiSMASH nor EvoMining predictions are left in grey." />
 </a>
 
  Usually, bioinformatics tools related to the prediction of Natural Products (NP) 
@@ -150,7 +164,7 @@ Though we will NOT run the test EvoMining command, it looks as follows:
 ~~~
 {: .code}
   
-Instead of that, let's customize our genomic database by using the same as CORASON.  
+Instead of that, customize the genomic database by using the same as CORASON.  
 Notice that EvoMining requires RAST-like annotated genomes and for this reason 
 we are using the fasta files that CORASON converts from our gbk inputs. 
 ~~~
@@ -162,9 +176,9 @@ we are using the fasta files that CORASON converts from our gbk inputs.
   <img src="../fig/tree.png" alt="Aquí va el texto que describe a la imagen." />
 </a>
 
-Finally, remember than `X` means your user-number and open your browser 
+Finally, remember that `X` means your user-number and open your browser 
 at the adress: `http://132.248.196.38:80X/EvoMining/html/index.html`. Once there 
-just click the start button and enjoy!.
+just click the start button and enjoy!
 
 When you finish using this container, please exit it. 
 ~~~
@@ -180,15 +194,15 @@ in the [EvoMining databases](https://github.com/nselem/evomining/wiki/Databases-
 Natural products database could also be replaced for another set of 
 genes that are "true positives", for example a set of regulatory genes. 
 
-As an example let's transform the file `cpsg.query` into the format of this database.
-This file contains the aminoacid sequence of the _cpsG_ gene. Let's first copy this file
-into what will become our conserved-enzymes database.  
+As an example, transform the file `cpsg.query` into the format of this database.
+This file contains the aminoacid sequence of the _cpsG_ gene. Firstly, copy this file
+into what will become the conserved-enzymes database.  
 ~~~
 $ cp cpsg.query cpsg_cdb
 ~~~
 {: .language-bash}
 
-Now, we need some edition. Open nano editor and change the first line `>cpsg` to 
+Now, it requires some edition. Open nano editor and change the first line `>cpsg` to 
 `>SYSTEM1|1|phosphomannomutase|Saga `. EvoMining conserved-database needs a 
 four-field format pipe-separated that contains; the name of the metabolic system to which the 
 enzyme belongs (SYSTEM1), a consecutive number of the enzyme (1 in this case),
@@ -218,11 +232,11 @@ and inside this new container:
 
 Use again the website and think about the results. 
 
-> ## Exercise 1 Set EvoMining parameters    
+> ## Exercise 1. Set EvoMining parameters    
 > Complete the blanks in the following EvoMining run: 
 >   `actinoSMASH` A file with the ids of antiSMASH recognized genes. 
->   `Actinos`  a directory with RAST-like fasta and annotations files
->   `Histidine-db` A fasta file with some proteins in the histidine Pathway  
+>   `Actinos`  a directory with RAST-like fasta and annotations files.
+>   `Histidine-db` A fasta file with some proteins in the histidine pathway  
 >   `Actinos.ids` tabular files with the RAST ids and the name of the organisms.
 >   
 > ~~~
