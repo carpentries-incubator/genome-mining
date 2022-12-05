@@ -212,7 +212,7 @@ Now, it requires some edition. Open nano editor and change the first line `>cpsg
 four-field format pipe-separated that contains; the name of the metabolic system to which the 
 enzyme belongs (SYSTEM1), a consecutive number of the enzyme (1 in this case),
 the function of the enzyme, and finally, an abbreviation of the organism Saga, (_S. Agalactiae_).  
-The reason behind this is that this was the way we needed EvoMining for its first use and we have not changed the headers.  
+The reason behind this is that this was the way we needed EvoMining for its first use and we have not changed the headers since.  
 ~~~
 $ nano cpsg_cdb
 ~~~
@@ -241,7 +241,7 @@ Use again the website and think about the results.
 > Complete the blanks in the following EvoMining run: 
 >   `actinoSMASH` A file with the ids of antiSMASH recognized genes. 
 >   `Actinos`  a directory with RAST-like fasta and annotations files.
->   `Histidine-db` A fasta file with some proteins in the histidine pathway  
+>   `Histidine-db` A fasta file with some proteins in the histidine pathway.  
 >   `Actinos.ids` tabular files with the RAST ids and the name of the organisms.
 >   
 > ~~~
@@ -255,22 +255,22 @@ Use again the website and think about the results.
 > > ~~~
 > > # perl starEvoMining.pl -g Actinos -c Histidine-db -r Actinos.ids -a actinoSMASH  
 > > ~~~
-> > Actinos is the genomic database, Histidine-db is the conserved-enzymes database
+> > Actinos is the genomic database, Histidine-db is the conserved-enzymes database,
 > > Actinos.ids is the file that relates Rast ids with the organisms names, and actinoSMASH
-> > contains the genes identified by antiSMASH  
+> > contains the genes identified by antiSMASH.  
 > > 
 > > {: .laguage-bash}
 > {: .solution}
 {: .challenge}  
 
-> ## Discussion 1: Retro EvoMining in enzyme database
+> ## Discussion 1. Retro EvoMining in enzyme database
 > 
 > What do you learn from running in a conserved-enzymes database the gene _cpsG_ that is part of a specialized BGC?
 > 
 > > ## Solution
 > >  _cpsG_ does not have extra copies in Streptococcus agalactie, so there are no expansions that may be functional divergent. 
 > >  _cpsG_ single copies in the genomes look red-colored in EvoMining output, as if they belong to the conserved-metabolism.
-> >   However, this is not the case, the color is because there is only one copy and it is merged into the true-positives MIBiG because it was
+> >   However, this is not the case, the color is because there is only one copy and it is merged into MIBiG true-positives because it was
 > >   originally a gene in the specialized metabolism. So it is important to know the seed enzymes.  
 > > 
 > {: .solution}
