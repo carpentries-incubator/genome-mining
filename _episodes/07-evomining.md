@@ -173,11 +173,16 @@ we are using the fasta files that CORASON converts from our gbk inputs.
 {: .code}  
 
 <a href="../fig/tree.png">
-  <img src="../fig/tree.png" alt="Aquí va el texto que describe a la imagen." />
+  <img src="../fig/tree.png" alt="EvoMining phylogenetic reconstruction providing evolutionary insights into the metabolic origin 
+                                  and fate of members of diverse EF from the Streptococcus example. 
+                                  Seed enzymes are labeled in orange. The most conserved copies or central metabolism copies are marked in red. 
+                                  Enzyme copies recruited into specialized metabolism, contained in MIBiG, are labelled in blue. 
+                                  Enzyme copies that are closer to blue enzyme recruitments than to red conserved enzymes are labeled in green 
+                                  and represent EvoMining Hits. Extra copies with an unknown metabolic fate are shown in grey." />
 </a>
 
 Finally, remember that `X` means your user-number and open your browser 
-at the adress: `http://132.248.196.38:80X/EvoMining/html/index.html`. Once there 
+at the adress: `http://132.248.196.38:80X/EvoMining/html/index.html`. Once there, 
 just click the start button and enjoy!
 
 When you finish using this container, please exit it. 
@@ -300,7 +305,14 @@ Here you can find the [MicroReact visualization](https://microreact.org/project/
 of this EvoMining run.  
 
 <a href="../fig/EvoMiningMicroReact.png">
-  <img src="../fig/EvoMiningMicroReact.png" alt="Aquí va el texto que describe a la imagen." />
+  <img src="../fig/EvoMiningMicroReact.png" alt="MicroReact visualization of the EvoMining run Streptococcus example. 
+                                                 At the left a bar-chart with the EF in the X axis and the number of entries in the Y axis. 
+                                                 At the right, the EvoMining phylogenetic tree using the same colour code as the chart. 
+                                                 Right of the tree the legend indicating the colours by metabolism; central metabolism enzymes in red, 
+                                                 expansion enzymes in grey, recruited enzymes contained in MIBiG in blue, 
+                                                 secondary metabolism enzymes (EvoMining hits) are marked in green, 
+                                                 and seed enzymes are colored in orange. Below appears the metadata from the run, 
+                                                 organized in a five row table including Id, metabolism, genome, function and copies." />
 </a>
   
 ## Other resources    
