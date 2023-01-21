@@ -173,7 +173,7 @@ $ scp (remoto)/corason-conda/EXAMPLE2/output/cpsg.query-output  Downloads/.
 
 
 > ## CORASON has several installation and a conda beta versions
-> CORASON has one [docker installation](https://github.com/nselem/corason) where you have to go inside the docker container, its input are RAST files. The script [run_corason](https://bigscape-corason.secondarymetabolites.org/index.html) belongs to other installation that accepts gbk as input files. And finally, this is a beta version of CORASON [conda container](https://github.com/miguel-mx/corason-conda).
+> CORASON has one [docker installation](https://github.com/nselem/corason) where you have to go inside the docker container, its input are RAST files. The script [run_corason](https://bigscape-corason.secondarymetabolites.org/index.html) belongs to another installation that accepts gbk as input files. And finally, this is a beta version of CORASON [conda container](https://github.com/miguel-mx/corason-conda).
 {: .callout}
 
 
