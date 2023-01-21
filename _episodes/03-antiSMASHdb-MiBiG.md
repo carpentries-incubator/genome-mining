@@ -48,7 +48,7 @@ For complex queries, the database also provides a sophisticated query builder th
 </a>
 
 > ## Exercise 1: 
-> You are going to do an experiment, you have two organisms one is likely to produce *themophilin 1277* and the other one *streptolysin S*, based on the table, which of these organisms is more likely to produce their respective secondary metabolite?
+> You are going to do an experiment, you have two organisms one is likely to produce *thermophilin 1277* and the other one *streptolysin S*. Based on the table, which of these organisms is more likely to produce their respective secondary metabolite?
 > 
 > > ## Solution
 > > Todavía no hay
@@ -89,7 +89,7 @@ this function, click on "Build a query"
 
 Use antiSMASH database to analyse the BGC contained in 
 the _Streptococcus_ genomes. Use R to visualize the data.  
-Firstly, ativate two libraries, `dplyr` for data manipulation 
+Firstly, activate two libraries, `dplyr` for data manipulation 
 and `ggplot2` for data visualization.      
   
 ~~~
@@ -142,7 +142,7 @@ ggsave(filename = "gm_workshop/results/agalactiae_plot.png", plot = agalactiae_p
 ~~~
 {: .language-r}
 
-Finally, since _S. pneumonia_ lets restrict ourselves 
+Finally, since _S. pneumonia_ let's restrict ourselves 
 to BGC predicted less than 200 times.   
 ~~~
 df2<-Streptococcus_antismash_df[!(Streptococcus_antismash_df$occurrences>200),]             
