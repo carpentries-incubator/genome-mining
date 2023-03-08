@@ -167,6 +167,48 @@ When you finish using this container, please exit it.
 ~~~
 {: .code}    
 
+## Visualize your results in MicroReact  
+
+Firstly, you have to run all the pipeline in the website:
+http://<yourip>/EvoMining/html/index.html, and then all the
+output files will be generated. You can use the EvoMining
+basic interface or take your results into MicroReact.  
+
+EvoMining outputs are stored in the directory `<conserved-db>_<natural-db>_<genomes-db>`  
+~~~
+$ ls
+~~~
+{: .language-bash}
+  
+  To explore EvoMining outputs, upload 1.nwk and 1.csv
+files to [microReact](https://microreact.org/).  There are two methods to download files from the server to your local computer.
+ You can use the export button in the file panel of R studio. To download the files, first in the files panel open in the directory /dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree, files 1.nwk and 1.csv in the directory /dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree  in  selecting `more` with the engine icon, antYOu can use `scp` to download files from the terminal, or 
+
+```
+scp betterlab@132.248.196.38:~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree/1.nwk ~/Downloads/.
+scp betterlab@132.248.196.38:~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree/1.csv ~/Downloads  
+```
+ 
+Here you can find the [MicroReact visualization](https://microreact.org/project/e8b7wWZkovtavPFFpBXRPp-evomining-streptococcus-example)
+of this EvoMining run.  
+
+<a href="../fig/EvoMiningMicroReact.png">
+  <img src="../fig/EvoMiningMicroReact.png" alt="MicroReact visualization of the EvoMining run Streptococcus example.
+                                             	At the left a bar-chart with the EF in the X axis and the number of entries in the Y axis.
+                                             	At the right, the EvoMining phylogenetic tree using the same color code as the chart.
+                                             	Right of the tree the legend indicating the colors by metabolism; central metabolism enzymes in red,
+                                             	expansion enzymes in gray, recruited enzymes contained in MIBiG in blue,
+                                             	secondary metabolism enzymes (EvoMining hits) are marked in green,
+                                             	and seed enzymes are colored in orange. Below appears the metadata from the run,
+                                             	organized in a five row table including Id, metabolism, genome, function and copies." />
+</a>
+ 
+## Other resources    
+To run EvoMining with a larger conserved-metabolite DB you can use
+[EvoMining Zenodo](https://zenodo.org/record/1219709#.YqEsFqjMLrc) data.
+
+To explore more EvoMining options, please explore [EvoMining wiki](https://github.com/nselem/evomining/wiki).
+
 ## Set the conserved-enzymes database
 
 When using EvoMining, oftenly you will desire to construct your own conserved enzymes database.
@@ -252,51 +294,11 @@ Use the website again and think about the results.
 > {: .solution}
 {: .discussion}
 
-## Visualize your results in MicroReact  
-
-Firstly, you have to run all the pipeline in the website:
-http://<yourip>/EvoMining/html/index.html, and then all the
-output files will be generated. You can use the EvoMining
-basic interface or take your results into MicroReact.  
-
-EvoMining outputs are stored in the directory `<conserved-db>_<natural-db>_<genomes-db>`  
-~~~
-$ ls
-~~~
-{: .language-bash}
-
 ~~~
 cpsg_cdb_MiBIG_DB.faa_GENOMES
 ~~~
 {: .output}
  
-```
-scp betterlab@132.248.196.38:~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree/1.nwk ~/Downloads/.
-scp betterlab@132.248.196.38:~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree/1.csv ~/Downloads  
-```
- 
-To explore EvoMining outputs, upload 1.nwk and 1.csv
-files to [microReact](https://microreact.org/).  
-Here you can find the [MicroReact visualization](https://microreact.org/project/e8b7wWZkovtavPFFpBXRPp-evomining-streptococcus-example)
-of this EvoMining run.  
-
-<a href="../fig/EvoMiningMicroReact.png">
-  <img src="../fig/EvoMiningMicroReact.png" alt="MicroReact visualization of the EvoMining run Streptococcus example.
-                                             	At the left a bar-chart with the EF in the X axis and the number of entries in the Y axis.
-                                             	At the right, the EvoMining phylogenetic tree using the same color code as the chart.
-                                             	Right of the tree the legend indicating the colors by metabolism; central metabolism enzymes in red,
-                                             	expansion enzymes in gray, recruited enzymes contained in MIBiG in blue,
-                                             	secondary metabolism enzymes (EvoMining hits) are marked in green,
-                                             	and seed enzymes are colored in orange. Below appears the metadata from the run,
-                                             	organized in a five row table including Id, metabolism, genome, function and copies." />
-</a>
- 
-## Other resources    
-To run EvoMining with a larger conserved-metabolite DB you can use
-[EvoMining Zenodo](https://zenodo.org/record/1219709#.YqEsFqjMLrc) data.
-
-To explore more EvoMining options, please explore [EvoMining wiki](https://github.com/nselem/evomining/wiki).
-
 [ARTS](https://arts.ziemertlab.com/) is another evolutionary
 genome mining software with its corresponding database
 [ARTS-db](https://arts-db.ziemertlab.com/) .
