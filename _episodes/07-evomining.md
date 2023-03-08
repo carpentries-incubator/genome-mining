@@ -41,7 +41,7 @@ keypoints:
  fail for the discovery of novel biosynthetic systems. Thus,
  [EvoMining](https://www.microbiologyresearch.org/content/journal/mgen/10.1099/mgen.0.000260) tries to circumvent this problem by detecting novel enzymes that may be implicated in the synthesis of new natural products in Bacteria.
  
- To know more about EvoMining you can read [Selem et al, Microbial Genomics 2020](https://www.microbiologyresearch.org/content/journal/mgen/10.1099/mgen.0.000260).   
+ To know more about EvoMining you can read [Selem et al, Microbial Genomics 2019](https://www.microbiologyresearch.org/content/journal/mgen/10.1099/mgen.0.000260).   
  
 EvoMining searches protein expansions that may have evolved from the conserved
 metabolism into a specialized metabolism. It builds phylogenetic
