@@ -127,30 +127,6 @@ $
 ~~~
 {: .language-bash}  
 
-
-To see the running container use `ps`  
-~~~
-$ docker ps
-~~~
-{: .language-bash}  
-
-~~~
-2f879ba6e337   nselem/evomining:latest   "/bin/bash"   11 hours ago   Up 11 hours   0.0.0.0:8014->80/tcp, :::8014->80/tcp   relaxed_dirac
-~~~
-{: .output}
-
-To stop the running container use `docker stop` and to remove them use `docker rm`  
-~~~
-$ docker stop relaxed_dirac  
-$ docker remove relaxed_dirac  
-~~~
-{: .language-bash}  
-
-~~~
-2f879ba6e337
-~~~
-{: .output}
-
 ## Set EvoMining genomic database
 Start the container again with your corresponding port.  
 ~~~
@@ -333,3 +309,30 @@ genome mining software with its corresponding database
 > [Chevrette et al, 2022](https://doi.org/10.1007/978-1-0716-2273-5_8)
 {: .callout}
 
+
+> ## More about docker
+> To see the running container use `ps`  
+> ~~~
+> $ docker ps
+> ~~~
+> {: .language-bash}  
+
+> If there are containers in use you will see a list of all of them.  
+> ~~~
+> 2f879ba6e337   nselem/evomining:latest   "/bin/bash"   11 hours ago   Up 11 hours   0.0.0.0:8014->80/tcp, :::8014->80/tcp   relaxed_dirac
+> ~~~
+> {: .output}
+
+> To stop the running container use `docker stop` and to remove them use `docker rm`  
+> ~~~
+> $ docker stop relaxed_dirac  
+> $ docker remove relaxed_dirac  
+> ~~~
+> {: .language-bash}  
+>
+> ~~~
+> 2f879ba6e337
+> ~~~
+> {: .output}
+>  can be downloaded by specifying our queries with `--format genbank`.
+{: .callout}
