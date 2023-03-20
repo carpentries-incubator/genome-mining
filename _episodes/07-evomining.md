@@ -180,10 +180,27 @@ $ ls
 ~~~
 {: .language-bash}
   
-  To explore EvoMining outputs, upload 1.nwk and 1.csv
-files to [microReact](https://microreact.org/).  There are two methods to download files from the server to your local computer.
- You can use the export button in the file panel of R studio. To download the files, first in the files panel open in the directory /dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree, files 1.nwk and 1.csv in the directory /dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree  in  selecting `more` with the engine icon, antYOu can use `scp` to download files from the terminal, or 
-
+  To explore EvoMining outputs, you need to upload 1.nwk and 1.csv
+files to [microReact](https://microreact.org/). 
+There are two methods to download files from the server to your local computer.
+You can use the export button in the file panel of R studio. 
+  To download the files, first in the files panel open in 
+  the directory `~/gm_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree`,  
+  <a href="../fig/ExportFiles1.jpg">
+  <img src="../fig/ExportFiles1.jpg" alt="Select the path to download file" />
+</a>
+  
+  Then, select files 1.nwk and 1.csv in that directory, click `more` 
+  in the engine icon, and select the `export` option in the menu. The files
+  will be downloaded to your local computer, and now you will be able to
+  upload them to MicroReact.  
+  
+  <a href="../fig/ExportFiles2.png">
+  <img src="../fig/ExportFiles2.png" alt="Select the path to download file" />
+</a>  
+  
+Alternatively, If your prefer to use the terminal to download files
+the `scp` protocol can download the files into your local machine. 
 ```
 scp betterlab@132.248.196.38:~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree/1.nwk ~/Downloads/.
 scp betterlab@132.248.196.38:~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree/1.csv ~/Downloads  
