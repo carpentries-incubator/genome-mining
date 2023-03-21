@@ -160,9 +160,12 @@ $ ../CORASON/corason.pl -q cpsg.query -s 100006  -rast_ids Corason_Rast.IDs
 
 Finally, we have all the genomic vicinities sorted phylogenetically according to 
 the genes in the core-cluster. We can either see the output directly on the server or
-download the resulting svg file to our local computer. To see it in the server
-we must first copy it into as html. The format svg stands for scalable vector graphics,
+download the resulting svg file to our local computer. The format svg stands for scalable vector graphics,
 we are save it as an html file in order to get the option of open it as html. 
+To see it in the server we must first copy the Joined.svg into Joined.html, then, go to 
+the EXAMPLE2 directory in the r-studio files panel located at the bottom right. Once
+there clik in the Joined.html file and chose the option View in Web Browser. The corason
+figure will output in a new tab.
 
 ~~~
 $ cp output/cpsg.query-output/Joined.svg  Joined.html
