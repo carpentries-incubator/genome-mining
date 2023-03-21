@@ -157,8 +157,25 @@ $ ../CORASON/corason.pl -q cpsg.query -s 100006  -rast_ids Corason_Rast.IDs
 ~~~
 {: .output}  
 
+
 Finally, we have all the genomic vicinities sorted phylogenetically according to 
-the genes in the core-cluster. We can download the resulting svg file to our local computer.
+the genes in the core-cluster. We can either see the output directly on the server or
+download the resulting svg file to our local computer. To see it in the server
+we must first copy it into as html. The format svg stands for scalable vector graphics,
+we are save it as an html file in order to get the option of open it as html. 
+
+~~~
+$ cp output/cpsg.query-output/Joined.svg  Joined.html
+~~~
+{: .language-bash}
+
+<a href="../fig/ViewOutput.jpg">
+  <img src="../fig/ViewOutput.jpg" alt="CORASON phylogenetic svg reconstruction using cpsG as query gene and _S. agalactiae_ 1000006 as query cluster. 
+                                    At the bottom, it is displayed the frequency of occurrence for each gene family from the reference BGC, 
+                                    each with a different color." />
+</a>
+
+You can also use `scp` in a local terminal to download the resulting svg file to your local computer.
 ~~~
 $ scp (remoto)/corason-conda/EXAMPLE2/output/cpsg.query-output  Downloads/.
 ~~~
