@@ -159,7 +159,7 @@ we are using the fasta files that CORASON converts from our gbk inputs.
 
 Finally, remember that `X` means your user-number and open your browser
 at the address: `http://132.248.196.38:80X/EvoMining/html/index.html`. Once there,
-just click the start button and enjoy!
+just click the start button and enjoy! (click on the submit buttons!) 
 
 When you finish using this container, please exit it.
 ~~~
