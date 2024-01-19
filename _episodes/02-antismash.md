@@ -95,7 +95,7 @@ Choose the annotated file ´agalactiae_A909_prokka.gbk´
 ~~~
 $ mkdir -p ~/gm_workshop/results/antismash  
 $ cd ~/gm_workshop/results/antismash  
-$ antismash --genefinding-tool=none ~/gm_workshop/results/annotated/Streptococcus_agalactiae_A909.prokka.gbk    
+$ antismash --genefinding-tool=none ~/pan_workshop/results/annotated/Streptococcus_agalactiae_A909.prokka.gbk    
 ~~~
 {: .language-bash}
 
