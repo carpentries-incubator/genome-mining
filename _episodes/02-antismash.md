@@ -80,7 +80,7 @@ You can run antiSMASH in two ways **Minimal and Full-featured run**, as follows:
 First, activate GenomeMining conda environment:
 ~~~
 $ conda deactivate
-$ conda activate GenomeMining_Global
+$ conda activate /miniconda3/envs/GenomeMining_Global
 ~~~
 {: .language-bash}
 
@@ -93,15 +93,15 @@ these three different cases:
 ### Running antiSMASH in a single file
 Choose the annotated file ´agalactiae_A909_prokka.gbk´
 ~~~
-$ mkdir -p ~/gm_workshop/results/antismash  
-$ cd ~/gm_workshop/results/antismash  
+$ mkdir -p ~/pan_workshop/results/antismash  
+$ cd ~/pan_workshop/results/antismash  
 $ antismash --genefinding-tool=none ~/pan_workshop/results/annotated/Streptococcus_agalactiae_A909.prokka.gbk    
 ~~~
 {: .language-bash}
 
 In order to see the antiSMASH generated outcomes do:
 ~~~
-$ tree -L 1 ~/gm_workshop/results/antismash/Streptococcus_agalactiae_A909.prokka
+$ tree -L 1 ~/pan_workshop/results/antismash/Streptococcus_agalactiae_A909.prokka
 ~~~
 {: .language-bash}
 
@@ -129,7 +129,7 @@ a `for` cycle and `*` as a wildcard to run antiSMASH
 over all files that start with "S" in the annotated directory.    
  
 ~~~
-$ for gbk_file in ~/gm_workshop/results/annotated/S*.gbk
+$ for gbk_file in ~/pan_workshop/results/annotated/S*.gbk
 > do
 >	antismash --genefinding-tool=none $gbk_file
 > done
@@ -145,7 +145,7 @@ $ pwd
 ~~~
 {: .language-bash}
 ~~~
-~/gm_workshop/results/antismash/Streptococcus_agalactiae_A909.prokka
+~/pan_workshop/results/antismash/Streptococcus_agalactiae_A909.prokka
 ~~~
 {: .output}
 
@@ -162,7 +162,7 @@ download the directory in your local computer.
 If using `scp` , on your local machine, open a GIT bash terminal in the
 **destiny** folder and execute the following command:
 ~~~
-$ scp -r user@bioinformatica.matmor.unam.mx:~/gm_workshop/results/antismash/S*A909.prokka/* ~/Downloads/.
+$ scp -r user@bioinformatica.matmor.unam.mx:~/pan_workshop/results/antismash/S*A909.prokka/* ~/Downloads/.
 ~~~
 {: .language-bash}
 
@@ -227,7 +227,7 @@ folder with the annotations.
 > > {: .language-bash}
 >
 > > ## Solution
-> >  1. First, we need to start the for cycle: `for mygenome in ~/gm_workshop/results/annotated/S*.gbk`  
+> >  1. First, we need to start the for cycle: `for mygenome in ~/pan_workshop/results/annotated/S*.gbk`  
 > >  note that we are using the name `mygenome` as the variable name in the for cycle.
 > >   	 
 > >  2. Then you need to use the reserved word `do`  to start the cycle.	 
@@ -237,7 +237,7 @@ folder with the annotations.
 > > 	 
 > >  4. Finally, use the reserved word `done` to finish the cycle.    
 > > ~~~
-> >  for variable in ~/gm_workshop/results/annotated/t*.gbk  
+> >  for variable in ~/pan_workshop/results/annotated/t*.gbk  
 > >	do  
 > > 	antismash --genefinding-tool=none $mygenome  
 > >	done   
@@ -263,7 +263,7 @@ folder with the annotations.
 > > ## Solution
 > >
 > > ~~~
-> > $ cd ~/gm_workshop/results/antismash  
+> > $ cd ~/pan_workshop/results/antismash  
 > > $ head Streptococcus_agalactiae_A909.prokka/CP000114.1.region001.gbk
 > > $ grep LOCUS Streptococcus_agalactiae_A909.prokka/CP000114.1.region001.gbk
 > > ~~~
