@@ -140,12 +140,12 @@ $ for gbk_file in ~/pan_workshop/results/annotated/*/S*.gbk
 In order to see the results after an antiSMASH run, we need to access to
 the `index.html` file. Where is this file located?   
 ~~~
-$ cd Streptococcus_agalactiae_A909.prokka
+$ cd Streptococcus_agalactiae_A909_prokka
 $ pwd
 ~~~
 {: .language-bash}
 ~~~
-~/pan_workshop/results/antismash/Streptococcus_agalactiae_A909.prokka
+~/pan_workshop/results/antismash/Streptococcus_agalactiae_A909_prokka
 ~~~
 {: .output}
 
