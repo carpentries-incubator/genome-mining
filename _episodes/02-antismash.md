@@ -95,13 +95,13 @@ Choose the annotated file ´agalactiae_A909_prokka.gbk´
 ~~~
 $ mkdir -p ~/pan_workshop/results/antismash  
 $ cd ~/pan_workshop/results/antismash  
-$ antismash --genefinding-tool=none ~/pan_workshop/results/annotated/Streptococcus_agalactiae_A909.prokka.gbk    
+$ antismash --genefinding-tool=none ~/pan_workshop/results/annotated/Streptococcus_agalactiae_A909_prokka/Streptococcus_agalactiae_A909_prokka.gbk    
 ~~~
 {: .language-bash}
 
 In order to see the antiSMASH generated outcomes do:
 ~~~
-$ tree -L 1 ~/pan_workshop/results/antismash/Streptococcus_agalactiae_A909.prokka
+$ tree -L 1 ~/pan_workshop/results/antismash/Streptococcus_agalactiae_A909_prokka
 ~~~
 {: .language-bash}
 
@@ -129,7 +129,7 @@ a `for` cycle and `*` as a wildcard to run antiSMASH
 over all files that start with "S" in the annotated directory.    
  
 ~~~
-$ for gbk_file in ~/pan_workshop/results/annotated/S*.gbk
+$ for gbk_file in ~/pan_workshop/results/annotated/*/S*.gbk
 > do
 >	antismash --genefinding-tool=none $gbk_file
 > done
