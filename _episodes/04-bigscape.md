@@ -44,11 +44,9 @@ In each of the antiSMASH output directories, we will find a single `.gbk`
 Move into the directory that has the antiSMASH results of each genome:
 ~~~
 $ conda deactivate  
-$ conda activate bigscape  
-$ cd ~/gm_workshop/results/antismash/
+$ conda activate /miniconda3/envs/bigscape/  
+$ cd ~/pan_workshop/results/antismash/
 $ ls
-$ mv  thermophilusLMD9.prokka  Streptococcus_thermophilus_LMD9.prokka
-$ mv thermophilusLMG18311.prokka  Streptococcus_thermophilus_LMG18311.prokka
 ~~~
 {: .language-bash}
 
@@ -56,12 +54,12 @@ Since we will put together in the same directory many files with similar names, 
 make sure that nothing is left behind or overwritten. For this, we
  will count all the `gbk` files of all the genomes.
 ~~~
-$ ls Streptococcus*/*region*gbk | wc -l
+$ ls Streptococcus_agalactiae_*/*region*gbk | wc -l
 ~~~
 {: .language-bash}
 
 ~~~
-24
+16
 ~~~
 {: .output}
 
@@ -102,7 +100,7 @@ ls -1 "$1"/*region*gbk | while read line # enlist the gbks of all regions in the
 
 Run the script for all the directory:
 ~~~
-$ for species in Streptococcus*
+$ for species in Streptococcus_agalactiae_*
 > do
 >   	 sh change-names.sh $species
 >    done
@@ -120,36 +118,28 @@ $ mkdir -p bigscape/bgcs_gbks/
 
 Now copy all the region `gbks`to this new directory, and look at its content:
 ~~~
-$ cp Streptococcus_*/*region*gbk bigscape/bgcs_gbks/
+$ cp Streptococcus_agalactiae_*/*region*gbk bigscape/bgcs_gbks/
 $ ls bigscape/bgcs_gbks/
 ~~~
 {: .language-bash}
 
 ~~~
-Streptococcus_agalactiae_18RS21-AAJO01000016.1.region001.gbk
-Streptococcus_agalactiae_18RS21-AAJO01000043.1.region001.gbk
-Streptococcus_agalactiae_18RS21-AAJO01000226.1.region001.gbk
-Streptococcus_agalactiae_515-AAJP01000027.1.region001.gbk
-Streptococcus_agalactiae_515-AAJP01000037.1.region001.gbk
-Streptococcus_agalactiae_A909-CP000114.1.region001.gbk
-Streptococcus_agalactiae_A909-CP000114.1.region002.gbk
-Streptococcus_agalactiae_CJB111-AAJQ01000010.1.region001.gbk
-Streptococcus_agalactiae_CJB111-AAJQ01000025.1.region001.gbk
-Streptococcus_agalactiae_COH1-AAJR01000002.1.region001.gbk
-Streptococcus_agalactiae_COH1-AAJR01000044.1.region001.gbk
-Streptococcus_agalactiae_H36B-AAJS01000020.1.region001.gbk
-Streptococcus_agalactiae_H36B-AAJS01000117.1.region001.gbk
-Streptococcus_thermophilus_LMD-9-CP000419.1.region001.gbk
-Streptococcus_thermophilus_LMD-9-CP000419.1.region002.gbk
-Streptococcus_thermophilus_LMD-9-CP000419.1.region003.gbk
-Streptococcus_thermophilus_LMD-9-CP000419.1.region004.gbk
-Streptococcus_thermophilus_LMD-9-CP000419.1.region005.gbk
-Streptococcus_thermophilus_LMG_18311-NC_006448.1.region001.gbk
-Streptococcus_thermophilus_LMG_18311-NC_006448.1.region002.gbk
-Streptococcus_thermophilus_LMG_18311-NC_006448.1.region003.gbk
-Streptococcus_thermophilus_LMG_18311-NC_006448.1.region004.gbk
-Streptococcus_thermophilus_LMG_18311-NC_006448.1.region005.gbk
-Streptococcus_thermophilus_LMG_18311-NC_006448.1.region006.gbk
+Streptococcus_agalactiae_18RS21_prokka-AAJO01000016.1.region001.gbk
+Streptococcus_agalactiae_18RS21_prokka-AAJO01000043.1.region001.gbk
+Streptococcus_agalactiae_2603V_prokka-NC_004116.1.region001.gbk
+Streptococcus_agalactiae_2603V_prokka-NC_004116.1.region002.gbk
+Streptococcus_agalactiae_515_prokka-NZ_CP051004.1.region001.gbk
+Streptococcus_agalactiae_515_prokka-NZ_CP051004.1.region002.gbk
+Streptococcus_agalactiae_A909_prokka-NC_007432.1.region001.gbk
+Streptococcus_agalactiae_A909_prokka-NC_007432.1.region002.gbk
+Streptococcus_agalactiae_CJB111_prokka-NZ_AAJQ01000010.region001.gbk
+Streptococcus_agalactiae_CJB111_prokka-NZ_AAJQ01000025.region001.gbk
+Streptococcus_agalactiae_COH1_prokka-NZ_HG939456.1.region001.gbk
+Streptococcus_agalactiae_COH1_prokka-NZ_HG939456.1.region002.gbk
+Streptococcus_agalactiae_H36B_prokka-AAJS01000020.1.region001.gbk
+Streptococcus_agalactiae_H36B_prokka-AAJS01000117.1.region001.gbk
+Streptococcus_agalactiae_NEM316_prokka-NC_004368.1.region001.gbk
+Streptococcus_agalactiae_NEM316_prokka-NC_004368.1.region002.gbk
 ~~~
 {: .output}
 
