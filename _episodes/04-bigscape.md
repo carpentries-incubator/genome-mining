@@ -197,7 +197,7 @@ cutoff value (0.3).
 
 Now we are ready to run BiG-SCAPE:
 ~~~
-$ bigscape -i bigscape/bgcs_gbks/ -o bigscape/output_100622 --mix --hybrids-off --mode auto --pfam_dir /opt/anaconda3/envs/bigscape/Pfam_database
+$ bigscape -i bigscape/bgcs_gbks/ -o bigscape/output_220124 --mix --hybrids-off --mode auto --pfam_dir /miniconda3/envs/bigscape/BiG-SCAPE-1.1.5/
 ~~~
 {: .language-bash}
 
@@ -219,14 +219,14 @@ to copy the text printed on the screen to a file. Use `nano` to paste all the te
 that BiG-SCAPE generated in a file named `bigscape.log` inside the folder `output_100722/logs/`.
 
 ~~~
-$ nano bigscape/output_100622/logs/bigscape.log
+$ nano bigscape/output_220124/logs/bigscape.log
 ~~~
 {: .language-bash}
 
 Take a look at the BiG-SCAPE outputs:
 
 ~~~
-$ ls -F bigscape/output_100622/
+$ ls -F bigscape/output_220124/
 ~~~
 {: .language-bash}
 ~~~
@@ -234,16 +234,15 @@ cache/  html_content/  index.html*  logs/  network_files/  SVG/
 ~~~
 {: .output}
 
-To keep ordered your directories, move your `bigscape/` directory to `genome_mining/`:
+To keep ordered your directories, move your `bigscape/` directory to `results/`:
 ~~~
 $ mv bigscape/ ../
 ~~~
 {: .language-bash}
 
-And make a new folder called `scripts/` in the `gm-workshop/`directory to save our little script:
+And move the file `change-names` to folder `scripts/` in the `pan_workshop/`directory to save our little script:
 ~~~
-$ mkdir ~/gm_workshop/scripts
-$ mv change-names.sh ~/gm_workshop/scripts/
+$ mv change-names.sh ~/pan_workshop/scripts/
 ~~~
 {: .language-bash}
 
