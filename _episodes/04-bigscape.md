@@ -255,7 +255,7 @@ and download it to your local machine.
 
 ~~~
 $ cd ~/pan_workshop/results/bigscape/
-$ zip output_220124.zip output_220124
+$ zip -r output_220124.zip output_220124
 $ ls
 ~~~
 {: .language-bash}
