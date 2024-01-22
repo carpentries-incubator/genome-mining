@@ -250,15 +250,21 @@ $ mv change-names.sh ~/pan_workshop/scripts/
 
 An easy way to prospect your results is by opening the `index.html` file with a browser
 (Firefox, Chrome, Safari, etc.). In order to do this, you need to go to your local machine
-and locate in the folder where you want to store your BiG-SCAPE results. Now copy your `output_100622/`
-folder to your local machine:
+and locate in the folder where you want to store your BiG-SCAPE results. Now we compress the folder `output_100622/`
+and download it to your local machine.
 
 ~~~
-$ scp -r <serveradress>:~/gm_workshop/results/genome_mining/bigscape/output_100622/ .
+$ cd ~/pan_workshop/results/bigscape/
+$ zip output_220124.zip output_220124
+$ ls
 ~~~
 {: .language-bash}
 
-Open your `index.html` with a browser:
+In the JupyterHub we navigate to the folders and go to `/pan_workshop/results/bigscape` and select the one we just created `output_220124.zip` and download it.
+
+On your local computer we unzip the files and open `output_220124/index.html` with a browser:
+
+
 ~~~
 $ firefox output_100622/index.html # If you have Firefox available, otherwise open it using the GUI.
 ~~~
