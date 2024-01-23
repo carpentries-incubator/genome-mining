@@ -226,6 +226,7 @@ folder with the annotations.
 
 
 > ## Exercise 3: Run antiSMASH over _thermophilus_
+> Try Download and annotate _S. thermophilus_ genomes strains LMD-9 (MiBiG), and strain CIRM-BIA 65 reference genome.
 > With the following information, generate the script to run antiSMASH only on the _S. thermophilus_ annotated genomes.   
 >  
 > ~~~
@@ -237,10 +238,19 @@ folder with the annotations.
 > > {: .language-bash}
 >
 > > ## Solution
-> >  1. First, we need to start the for cycle: `for mygenome in ~/pan_workshop/results/annotated/S*.gbk`  
+> > Guide to solve this problem 
+> > First download genomes with genome-download. Remember to activate the conda environment!
+> >
+> > Download the annotated genomes, and then the genbank files.
+> >  0. `ncbi-genome-download --formats genbank --genera "Streptococcus thermophilus"  -S "LMD-9"  -o thermophilus bacteria`
+> >   `ncbi-genome-download --formats fasta --genera "Streptococcus thermophilus"  -S "CIRM-BIA 65" -n bacteria`
+> > Then, move the genomes to the directory `~/pan_workshop/results/annotated/S*.gbk` 
+> >   
+> >  2. First, we need to start the for cycle: `for mygenome in ~/pan_workshop/results/annotated/S*.gbk`  
 > >  note that we are using the name `mygenome` as the variable name in the for cycle.
+> > 
 > >   	 
-> >  2. Then you need to use the reserved word `do`  to start the cycle.	 
+> >  3. Then you need to use the reserved word `do`  to start the cycle.	 
 > >    
 > >  3. Then you have to call antiSMASH over your variable `mygenome`. Remember the `$` before your variable
 > >  to indicate to bash that now you are using the value of the variable.
