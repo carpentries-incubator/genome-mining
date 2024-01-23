@@ -110,20 +110,20 @@ data
 
 Now, group the data by the variables Species and BGC type:  
 ~~~
-grouped = data.groupby(["Species", "BGC type"]).size().reset_index(name="Occurrences")
+occurences = data.groupby(["Species", "BGC type"]).size().reset_index(name="Occurrences")
 ~~~
 {: .language-python}
 
 And visualize the content of the Species column:  
 ~~~
-grouped["Species"] 
+occurences["Species"] 
 ~~~
 {: .language-python}  
 
 Let's see our first visualization of the BGC content on a heatmap.
 
 ~~~
-pivot = grouped.pivot(index="BGC type", columns="Species", values="Occurrences")
+pivot = occurences.pivot(index="BGC type", columns="Species", values="Occurrences")
 plt.figure(figsize=(8, 10))
 sns.heatmap(pivot)
 plt.show()
