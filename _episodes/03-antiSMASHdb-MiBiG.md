@@ -88,68 +88,75 @@ this function, click on "Build a query"
 </a>
 
 Use antiSMASH database to analyse the BGC contained in 
-the _Streptococcus_ genomes. Use R to visualize the data.  
-Firstly, activate two libraries, `dplyr` for data manipulation 
-and `ggplot2` for data visualization.      
+the _Streptococcus_ genomes. We'll use Python to visualize
+the data. First, import pandas, matplotlib.pyplot and seaborn
+libraries.
   
 ~~~
-library("dplyr")
-library("ggplot2")
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 ~~~
-{: .language-r}
+{: .language-python}
 
 Secondly, store in a dataframe variable the content of the
 _Streptococcus_ predicted BGC downloaded from antiSMASH-db.  
 
 ~~~
-df <- read.csv(file = "gm_workshop/data/antismash_db.csv", stringsAsFactors = TRUE)
+data = pd.read_csv("antismash_db.csv", sep="\t")
+data
 ~~~
-{: .language-r}
+{: .language-python}
 
-Now, group the data by the variables Species and BGC.type:  
+Now, group the data by the variables Species and BGC type:  
 ~~~
-Streptococcus_antismash_df<-df %>%  group_by(Species,BGC.type) %>%  summarize(occurrences = n()) 
+grouped = data.groupby(["Species", "BGC type"]).size().reset_index(name="Occurrences")
 ~~~
-{: .language-r}
+{: .language-python}
 
 And visualize the content of the Species column:  
 ~~~
-Streptococcus_antismash_df$Species 
+grouped["Species"] 
 ~~~
-{: .language-r}  
+{: .language-python}  
 
-Let's see our first visualization of the BGC content on a heatmap  .
-~~~
-Streptococcus_antismash_plot<-ggplot(Streptococcus_antismash_df, aes(x = Species, y = BGC.type, fill = occurrences)) + geom_tile() 
-ggsave(filename = "gm_workshop/results/Streptococcus_antismash_plot.png", plot = Streptococcus_antismash_plot, width = 20, height = 10, dpi = 300, units = "cm")
-~~~
-{: .language-r}  
-
-To improve legend legibility run the following command:
-~~~
-Streptococcus_antismash_plot<-ggplot(Streptococcus_antismash_df, aes(x = Species, y = BGC.type, fill = occurrences)) + geom_tile() 
-+ theme(axis.text.x=element_text(angle = 90))#+ scale_fill_gradient(low = "white", high = "steelblue")
-ggsave(filename = "gm_workshop/results/Streptococcus_antismash_plot.png", plot = Streptococcus_antismash_plot, width = 20, height = 10, dpi = 300, units = "cm")
+Let's see our first visualization of the BGC content on a heatmap.
 
 ~~~
-{: .language-r}
+pivot = occurences.pivot(index="BGC type", columns="Species", values="Occurrences")
+plt.figure(figsize=(8, 10))
+sns.heatmap(pivot)
+plt.show()
+~~~
+{: .language-python}  
 
-Now, let's restrict ourselves to _S. agalactiae_  
-~~~
-df_agalactiae<-Streptococcus_antismash_df[(Streptococcus_antismash_df$Species=="agalactiae"),]             
-agalactiae_plot<-ggplot(df_agalactiae, aes( x = BGC.type, y = occurrences)) + geom_point() + theme(axis.text.x=element_text(angle = 90))
-ggsave(filename = "gm_workshop/results/agalactiae_plot.png", plot = agalactiae_plot, width = 20, height = 10, dpi = 300, units = "cm")
-~~~
-{: .language-r}
+Now, let's restrict ourselves to _S. agalactiae_.
 
-Finally, since _S. pneumonia_ let's restrict ourselves 
-to BGC predicted less than 200 times.   
 ~~~
-df2<-Streptococcus_antismash_df[!(Streptococcus_antismash_df$occurrences>200),]             
-Streptococcus_smooth_plot<-ggplot(df2, aes(x = BGC.type, y = occurrences)) + geom_tile() + theme(axis.text.x=element_text(angle = 90))+ scale_fill_gradient(low = "white", high = "steelblue")
-ggsave(filename = "gm_workshop/results/Streptococcus_smooth_plot.png", plot = Streptococcus_smooth_plot, width = 20, height = 10, dpi = 300, units = "cm")
+agalactiae = occurences[occurences["Species"] == "agalactiae"]
+sns.scatterplot(agalactiae, x="BGC type", y="Occurrences")
+plt.xticks(rotation="vertical")
+plt.show()
+~~~
+{: .language-python}
 
-Streptococcus_smooth_plot2<-ggplot(df2, aes(x = Species, y = BGC.type, fill = occurrences)) + geom_tile() + theme(axis.text.x=element_text(angle = 90))#+ scale_fill_gradient(low = "white", high = "steelblue")
-ggsave(filename = "gm_workshop/results/Streptococcus_smooth_plot.png", plot = Streptococcus_smooth_plot, width = 20, height = 10, dpi = 300, units = "cm")
+Finally, let's restrict ourselves to BGC predicted less than 200 times.
+
 ~~~
-{: .language-r}
+filtered = occurences[occurences["Occurrences"] < 200]
+plt.figure(figsize=(15, 5))
+sns.scatterplot(filtered, x="BGC type", y="Occurrences")
+plt.xticks(rotation="vertical")
+plt.grid(axis="y")
+plt.show()
+~~~
+{: .language-python}
+
+~~~
+filtered_pivot = filtered.pivot(index="BGC type", columns="Species", values="Occurrences")
+plt.figure(figsize=(8, 10))
+sns.heatmap(filtered_pivot)
+plt.show()
+~~~
+{: .language-python}
+
