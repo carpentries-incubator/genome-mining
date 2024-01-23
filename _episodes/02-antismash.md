@@ -178,7 +178,7 @@ $ ls
 ~~~
 {: .language-bash}
 
-In the JupyterHub we navigatcd
+In the JupyterHub navigate to the pan_workshop/results/antismash/ folder and select the file we just created and press the download button at the top
 
 Once in your local machine, in the directory Streptococcus_agalactiae_A909.prokka
 open the `index.html` file on your local web browser.
