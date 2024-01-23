@@ -4,6 +4,6 @@ layout: reference
 
 ## Glossary
 
-FIXME
+: bash
 
 {% include links.md %}
