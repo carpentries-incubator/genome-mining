@@ -103,7 +103,7 @@ Secondly, store in a dataframe variable the content of the
 _Streptococcus_ predicted BGC downloaded from antiSMASH-db.  
 
 ~~~
-data = pd.read_csv("antismash_db.csv", sep="\t")
+data = pd.read_csv("https://raw.githubusercontent.com/AxelRamosGarcia/Genome-Mining/gh-pages/data/antismash_db.csv", sep="\t")
 data
 ~~~
 {: .language-python}
