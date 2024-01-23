@@ -123,7 +123,7 @@ grouped["Species"]
 Let's see our first visualization of the BGC content on a heatmap.
 
 ~~~
-pivot = occurences.pivot(index="BGC type", columns="Species", values="Occurrences")
+pivot = grouped.pivot(index="BGC type", columns="Species", values="Occurrences")
 plt.figure(figsize=(8, 10))
 sns.heatmap(pivot)
 plt.show()
