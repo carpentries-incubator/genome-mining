@@ -170,6 +170,16 @@ If using R-studio then in the left panel, chose the "more" option,
 and "export" your file to your local computer. Decompress the
  Streptococcus_agalactiae_A909.prokka.zip file.  
 
+Another way to download the data to your computer, you must first compress the folder and download the compressed file from JupyterHub
+~~~
+$ cd ~/pan_workshop/results/antismash
+$ zip -r Streptococcus_agalactiae_A909_prokka.zip Streptococcus_agalactiae_A909_prokka
+$ ls
+~~~
+{: .language-bash}
+
+In the JupyterHub we navigatcd
+
 Once in your local machine, in the directory Streptococcus_agalactiae_A909.prokka
 open the `index.html` file on your local web browser.
 
