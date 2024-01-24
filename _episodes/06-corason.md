@@ -48,7 +48,7 @@ with gbk as input-files. Firstly, activate the corason-conda environment.
 
 ~~~
 $ conda deactivate 
-$ conda activate corason  
+$ conda activate /miniconda3/envs/corason  
 ~~~
 {: .language-bash}
 
@@ -61,8 +61,8 @@ With the environment activated, all CORASON-dependencies are ready to be used.
 The next step is to clone CORASON-software from its GitHub repository. Firstly,
 place yourself at the results directory and then clone CORASON-code.
 ~~~
-$ mkdir -p ~/gm_workshop/results/genome-mining 
-$ cd ~/gm_workshop/results/genome-mining
+$ mkdir -p ~/pan_workshop/results/genome-mining 
+$ cd ~/pan_workshop/results/genome-mining
 $ git clone https://github.com/miguel-mx/corason-conda.git 
 $ ls
 ~~~
@@ -96,7 +96,7 @@ As genomic database we will use the prokka-annotated `gbk` files of _S. agalacti
 This database will be stored in the reserved directory `CORASON_GENOMES`.  
 ~~~
 $ mkdir  CORASON_GENOMES  
-$ cp ~/gm_workshop/results/annotated/*gbk CORASON_GENOMES  
+$ cp ~/pan_workshop/results/annotated/*gbk CORASON_GENOMES  
 ~~~
 {: .language-bash}
 
