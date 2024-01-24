@@ -96,7 +96,7 @@ As genomic database we will use the prokka-annotated `gbk` files of _S. agalacti
 This database will be stored in the reserved directory `CORASON_GENOMES`.  
 ~~~
 $ mkdir  CORASON_GENOMES  
-$ cp ~/pan_workshop/results/annotated/*gbk CORASON_GENOMES  
+$ cp ~/pan_workshop/results/annotated/Streptococcus_agalactiae_*/*gbk CORASON_GENOMES/  
 ~~~
 {: .language-bash}
 
