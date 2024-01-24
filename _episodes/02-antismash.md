@@ -17,16 +17,16 @@ keypoints:
 ---
 ## Introduction
 
-Within microbial genomes we can find some specific regions that
-take part of the biosynthesis of secondary metabolites, these
-sections are know as Biosynthetic Gene Clusters, which are relevant
+Within microbial genomes, we can find some specific regions that
+take part in the biosynthesis of secondary metabolites, these
+sections are known as Biosynthetic Gene Clusters, which are relevant
 due to the possible applications that they may have, for example:
-antimicrobials, antitumor, cholesterol-lowering, immunosuppressant,
-antiprotozoal, antihelminth, antiviral and anti-ageing activities.
+antimicrobials, antitumors, cholesterol-lowering, immunosuppressants,
+antiprotozoal, antihelminth, antiviral and anti-aging activities.
 
 antiSMASH is a pipeline based on
 [profile hidden Markov models](https://www.ebi.ac.uk/training/online/courses/pfam-creating-protein-families/what-are-profile-hidden-markov-models-hmms/#:~:text=Profile%20HMMs%20are%20probabilistic%20models,the%20alignment%2C%20see%20Figure%202)
-that allow us to identify the gene clusters contained within genome
+that allow us to identify the gene clusters contained within the genome
 sequences that encode secondary metabolites of all known broad
 chemical classes.
 
@@ -46,8 +46,8 @@ In summary, you will need to use your genome as the input. Then,
 antiSMASH will create an output folder for each of your genomes.
 Within this folder, you will find a single `.gbk` file for each of
 the detected Biosynthetic Gene Clusters (we will use these files
-for subsequent analyses) and a `.html` file, among other files.
-By opening the `.html` file you can explore the antiSMASH annotations.
+for subsequent analyses) and a `.html` file, among others.
+By opening the `.html` file, you can explore the antiSMASH annotations.
 
 You can run antiSMASH in two ways **Minimal and Full-featured run**, as follows:  
  
@@ -77,7 +77,7 @@ You can run antiSMASH in two ways **Minimal and Full-featured run**, as follows:
 
 ## Run your own antiSMASH analysis
 
-First, activate GenomeMining conda environment:
+First, activate the GenomeMining conda environment:
 ~~~
 $ conda deactivate
 $ conda activate /miniconda3/envs/GenomeMining_Global
@@ -99,7 +99,7 @@ $ antismash --genefinding-tool=none ~/pan_workshop/results/annotated/Streptococc
 ~~~
 {: .language-bash}
 
-In order to see the antiSMASH generated outcomes do:
+To see the antiSMASH generated outcomes do the following:
 ~~~
 $ tree -L 1 ~/pan_workshop/results/antismash/Streptococcus_agalactiae_A909_prokka
 ~~~
@@ -166,11 +166,11 @@ $ scp -r user@bioinformatica.matmor.unam.mx:~/pan_workshop/results/antismash/S*A
 ~~~
 {: .language-bash}
 
-If using R-studio then in the left panel, chose the "more" option,
+If using R-studio then in the left panel, choose the "more" option,
 and "export" your file to your local computer. Decompress the
  Streptococcus_agalactiae_A909.prokka.zip file.  
 
-Another way to download the data to your computer, you must first compress the folder and download the compressed file from JupyterHub
+Another way to download the data to your computer, you first compress the folder and download the compressed file from JupyterHub
 ~~~
 $ cd ~/pan_workshop/results/antismash
 $ zip -r Streptococcus_agalactiae_A909_prokka.zip Streptococcus_agalactiae_A909_prokka
@@ -178,22 +178,22 @@ $ ls
 ~~~
 {: .language-bash}
 
-In the JupyterHub navigate to the pan_workshop/results/antismash/ folder and select the file we just created and press the download button at the top
+In the JupyterHub, navigate to the pan_workshop/results/antismash/ folder, select the file we just created, and press the download button at the top
 
-Once in your local machine, in the directory Streptococcus_agalactiae_A909.prokka
+Once in your local machine, in the directory, Streptococcus_agalactiae_A909.prokka,
 open the `index.html` file on your local web browser.
 
 ## Understanding the output
 The visualization of the results includes many different options.
-To understand all the possibilities, we suggest to read the following [tutorial:](https://docs.antismash.secondarymetabolites.org/understanding_output/)
+To understand all the possibilities, we suggest reading the following [tutorial:](https://docs.antismash.secondarymetabolites.org/understanding_output/)
 
-Briefly, in the "overview" page ´.HTML´ you can find all the regions
+Briefly, in the "Overview" page ´.HTML´ you can find all the regions
 found within every analyzed record/contig (antiSMASH inputs), and
-summarized all these information in five main features:
+summarized all this information in five main features:
 
 * **Region:** The region number.
 * **Type:** Type of the product detected by antiSMASH.
-* **From,To:** The location of the region (nucleotides).
+* **From,To:** The region's location (nucleotides).
 * **Most similar known cluster:** The closest compound from th MIBiG database.
 * **Similarity:** Percentage of genes within the closest known
 compound that have significant BLAST hit (The last two columns
@@ -210,22 +210,22 @@ folder with the annotations.
 #### Exercises and discussion
 
 > ## Exercise 2: NCBI and antiSMASH webserver  
-> Run antiSMASH web server over _S. agalactiae_ A909. First explore the
+> Run antiSMASH web server over _S. agalactiae_ A909. First, explore the
 > NCBI assembly database to obtain the accession. Get the id of your results.   
 >
 > > ## Solution
 > > 1. Go to [NCBI](https://www.ncbi.nlm.nih.gov/) and search _S. agalactiae_ A909.  
-> > 2. Choose assembly database and copy the GenBank sequence Id in the bottom of the site.    
+> > 2. Choose the assembly database and copy the GenBank sequence ID at the bottom of the site.    
 > > 3. Go to [antiSMASH](https://antismash.secondarymetabolites.org/#!/start)    
 > > 4. Choose the accession from NCBI and paste `CP000114.1`    
-> > 5. Run antiSMASH and paste in the collaborative document your results id
+> > 5. Run antiSMASH and paste into the collaborative document your results id
 > >  example ` bacteria-cbd13a47-8095-495f-957c-dcf58c261529`  
 > > {: .output}
 > {: .solution}
 {: .challenge}
 
 
-> ## Exercise 3: Run antiSMASH over _thermophilus_
+> ## Exercise 3: (*Optional exercise ) Run antiSMASH over _thermophilus_
 > Try Download and annotate _S. thermophilus_ genomes strains LMD-9 (MiBiG), and strain CIRM-BIA 65 reference genome.
 > With the following information, generate the script to run antiSMASH only on the _S. thermophilus_ annotated genomes.   
 >  
