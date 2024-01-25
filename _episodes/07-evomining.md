@@ -182,7 +182,11 @@ $ ls
   
   To explore EvoMining outputs, you need to upload 1.nwk and 1.csv
 files to [microReact](https://microreact.org/). 
-There are two methods to download files from the server to your local computer.
+There are many methods to download files from the server to your local computer.
+
+If you are using JupyterHub you explore the file folders and select the files and then press the download button.
+
+
 You can use the export button in the file panel of R studio. 
   To download the files, first in the files panel open in 
   the directory `~/pan_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree`,  
@@ -254,9 +258,11 @@ $ nano cpsg_cdb
 {: .language-bash}  
 
 ~~~
-
+>SYSTEM1|1|phosphomannomutase|Saga
+MIFVTVGTHEQQFNRLIKEVDRLKGTGAIDQEVFIQTGYSDFEPQNCQWSKFLSYDDMNSYMKEAEIVITHGGPATFMSVISLGKLPVVVPRRKQFGEHINDHQIQFLKKIAHLYPLAWIED
 ~~~
-{: .language-bash}  
+{: .output}
+
 
 Run your EvoMining docker
 ~~~
