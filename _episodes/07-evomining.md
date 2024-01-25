@@ -60,7 +60,7 @@ the conserved (primary) metabolism.
 
 First, place yourself at your working directory.
 ~~~
-$ cd   ~/gm_workshop/results/genome-mining/corason-conda/EXAMPLE2  
+$ cd   ~/pan_workshop/results/genome-mining/corason-conda/EXAMPLE2  
 $ ls
 ~~~
 {: .language-bash}
