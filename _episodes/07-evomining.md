@@ -185,7 +185,7 @@ files to [microReact](https://microreact.org/).
 There are two methods to download files from the server to your local computer.
 You can use the export button in the file panel of R studio. 
   To download the files, first in the files panel open in 
-  the directory `~/gm_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree`,  
+  the directory `~/pan_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree`,  
   <a href="../fig/ExportFiles1.jpg">
   <img src="../fig/ExportFiles1.jpg" alt="Select the path to download file" />
 </a>
@@ -202,8 +202,8 @@ You can use the export button in the file panel of R studio.
 Alternatively, If your prefer to use the terminal to download files
 the `scp` protocol can download the files into your local machine. 
 ```
-scp betterlab@132.248.196.38:~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree/1.nwk ~/Downloads/.
-scp betterlab@132.248.196.38:~/dc_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree/1.csv ~/Downloads  
+scp betterlab@132.248.196.38:~/pan_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree/1.nwk ~/Downloads/.
+scp betterlab@132.248.196.38:~/pan_workshop/results/genome-mining/corason-conda/EXAMPLE2/ALL_curado.fasta_MiBIG_DB.faa_GENOMES/blast/seqf/tree/1.csv ~/Downloads  
 ```
  
 Here you can find the [MicroReact visualization](https://microreact.org/project/e8b7wWZkovtavPFFpBXRPp-evomining-streptococcus-example)
