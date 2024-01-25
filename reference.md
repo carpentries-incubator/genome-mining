@@ -4,6 +4,6 @@ layout: reference
 
 ## Glossary
 
-: bash
-
+: cd
+command to change directory
 {% include links.md %}
