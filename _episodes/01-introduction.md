@@ -15,12 +15,15 @@ keypoints:
 ---
 
 ## Genome mining aims to find BGCs
+<a href="{{ page.root }}/fig/Chapter1Fig1.png">
+  <img src="{{ page.root }}/fig/Chapter1Fig1.png" alt="Complete pipeline of genome mining. From a single genome, this example obtains their BGC and compares them with other BGC from related genomes" />
+</a>
+[Genome Mining Wikipedia](https://en.wikipedia.org/wiki/Genome_mining)
 
-Natural products are encoded in Biosynthetic Gene Clusters (BGCs) in Bacteria. These BGCs are clusters of genes placed together in the same genome region. These include not only the genes encoding the biosynthetic enzymes but also those related to the metabolite's transport or resistance against antibacterial metabolites.
+Natural products are encoded in Biosynthetic Gene Clusters (BGCs) in Bacteria. These BGCs are clusters of genes placed together in the same genome region. These include the genes encoding the biosynthetic enzymes and those related to the metabolite's transport or resistance against antibacterial metabolites.
 Genome mining is analyzing genomes with specialized algorithms
-designed to find some BGCs. Some of these clusters were diligently characterized
-by chemists last century. Currently, we have extensive databases that contain
-information about which genes belong to which BGCs, and some control sets of genes that does not. The use of genome mining methodologies facilitates the prioritization of BGCs for the search of novel metabolites.
+designed to find some BGCs. Chemists in the last century diligently characterized some of these clusters. We have extensive databases that contain
+information about which genes belong to which BGCs and some control sets of genes that do not. The use of genome mining methodologies facilitates the prioritization of BGCs for the search of novel metabolites.
 Since the era of next-generation sequencing, genomes have been explored
 as a source for discovering new BGCs.
 
@@ -44,14 +47,14 @@ that might be useful as a genome miner:
 
 - Think about a research question before starting to analyze the data.  
 - Remember, raw metadata should remain intact during all genome mining processes.
-It could be a good idea to change its file-permissions to read only.    
-- Gather as much information in the form of metadata of
-all the genomes that you are working with.  
+It could be a good idea to change its file permissions to read-only.    
+- Gather as much information as metadata of
+all the genomes you are working with.  
 - All your intermediate steps should be considered temporal
  and may be removed without risk.   
 - Save your scripts using a version manager, GitHub for example.
 - Share your data in public repositories.   
-- Give time to make your science repeatable, and help your community.    
+- Give time to make your science repeatable and help your community.    
 
 ## Starting a genome mining project
 Once you have chosen your set of genomes, you need to annotate the sequences. The process of genome annotation needs two steps. First, a gene calling approach (structural annotation), which looks for CDS or RNAs within the DNA sequences. Once these features have been detected, you need to assign a function for each CDS (functional annotation). This is usually done through comparison against protein databases. There are tens of bioinformatics tools to annotate genomes, but some of the most broadly used are; RAST (Aziz et al. 2008), and Prokka (Seeman, 2014). Here, we will start the genome mining lesson with  _S. agalactiae_ genomes already annotated by Prokka. You can download this data from this [repository](https://zenodo.org/record/6595388#.YtD9LsFBxUJ). The annotated genomes are written in GeneBank format (extension ".gbk"). To learn more about the basic annotation of genomes, see the lesson named ["Pangenome Analysis in Prokaryotes: Annotating Genomic Data"](https://paumayell.github.io/pangenomics/03-annotation-with-Prokka/index.html)These files are also accessible in the... **Insert introduction related to the access to the server??**
