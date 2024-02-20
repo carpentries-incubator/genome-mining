@@ -56,6 +56,13 @@ all the genomes you are working with.
 - Share your data in public repositories.   
 - Give time to make your science repeatable and help your community.    
 
+> ## Exercise 1: Describe your project
+> Tdoihasodihfo FIXME
+>
+> > ## Solution  
+> > a. FIX ME.     
+> {: .solution}
+{: .challenge}
 ## Starting a genome mining project
 Once you have chosen your set of genomes, you need to annotate the sequences. The process of genome annotation needs two steps. First, a gene calling approach (structural annotation), which looks for CDS or RNAs within the DNA sequences. Once these features have been detected, you need to assign a function for each CDS (functional annotation). This is usually done through comparison against protein databases. There are tens of bioinformatics tools to annotate genomes, but some of the most broadly used are; RAST (Aziz et al. 2008), and Prokka (Seeman, 2014). Here, we will start the genome mining lesson with  _S. agalactiae_ genomes already annotated by Prokka. You can download this data from this [repository](https://zenodo.org/record/6595388#.YtD9LsFBxUJ). The annotated genomes are written in GeneBank format (extension ".gbk"). To learn more about the basic annotation of genomes, see the lesson named ["Pangenome Analysis in Prokaryotes: Annotating Genomic Data"](https://paumayell.github.io/pangenomics/03-annotation-with-Prokka/index.html)These files are also accessible in the... **Insert introduction related to the access to the server??**
 
