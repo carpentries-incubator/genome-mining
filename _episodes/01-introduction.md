@@ -16,7 +16,7 @@ keypoints:
 
 ## Genome mining aims to find BGCs
 <a href="{{ page.root }}/fig/Chapter1Fig1.png">
-  <img src="{{ page.root }}/fig/Chapter1Fig1.png" alt="Complete pipeline of genome mining. From a single genome, this example obtains their BGC and compares them with other BGC from related genomes" />
+  <img src="{{ page.root }}/fig/Introduction01.png" alt="Complete pipeline of genome mining. From a single genome, this example obtains their BGC and compares them with other BGC from related genomes" />
 </a>
 [Genome Mining Wikipedia](https://en.wikipedia.org/wiki/Genome_mining)
 
