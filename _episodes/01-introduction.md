@@ -20,8 +20,9 @@ keypoints:
 </a>
 [Genome Mining Wikipedia](https://en.wikipedia.org/wiki/Genome_mining)
 
-Natural products are encoded in Biosynthetic Gene Clusters (BGCs) in Bacteria. These BGCs are clusters of genes placed together in the same genome region. These include the genes encoding the biosynthetic enzymes and those related to the metabolite's transport or resistance against antibacterial metabolites.
-Genome mining is analyzing genomes with specialized algorithms
+Natural products are encoded in [Biosynthetic Gene Clusters](https://en.wikipedia.org/wiki/Metabolic_gene_cluster
+) (BGCs) in Bacteria. These BGCs are clusters of genes placed together in the same genome region. These include the genes encoding the biosynthetic enzymes and those related to the metabolite's transport or resistance against antibacterial metabolites.
+[Genome mining](https://en.wikipedia.org/wiki/Genome_mining) consists in analyzing genomes with specialized algorithms
 designed to find some BGCs. Chemists in the last century diligently characterized some of these clusters. We have extensive databases that contain
 information about which genes belong to which BGCs and some control sets of genes that do not. The use of genome mining methodologies facilitates the prioritization of BGCs for the search of novel metabolites.
 Since the era of next-generation sequencing, genomes have been explored
