@@ -69,7 +69,11 @@ all the genomes you work with.
 > Tdoihasodihfo FIXME
 >
 > > ## Solution  
-> > a. FIX ME.     
+> > a. Genome Assembly,  functional annotation, Get pangenome, Specialized databases, Evomining, AntiSmash, BigScape, Corason.
+> > b. Genome Assembly,  functional annotation, Get pangenome, Specialized databases, Evomining, AntiSmash, BigScape, Corason.
+
+
+2. Donwload Genomes, Dat     
 > {: .solution}
 {: .challenge}
 
