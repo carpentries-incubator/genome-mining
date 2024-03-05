@@ -13,15 +13,10 @@ of command-line utilities, use of command-line tools to analyze sequence quality
 use of R studio and use of R libraries to compare diversity between samples, 
 and connecting to and using cloud computing. 
 
-This workshop is designed to be taught over two full days of instruction.
 
-<h2> Hackaton de desarrollo 06-10 Junio 2022 Morelia Michoacan UNAM Centro de Ciencias Matemáticas Morelia</h2>
-
-> ## Empresas y universidades invitadas
+> ## Prerequisitos
 > 
-> BetterLab: Empresa dedicada al analisis genomico y creación de software para problemas biologicos.   
-> Instituto Tecnológico de Estudios Superiores de Monterrey.  
-> Escuela Nacional de Estudios Superiores-León UNAM.
+> FIX ME
 >
 {: .prereq}
 
