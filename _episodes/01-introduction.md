@@ -83,8 +83,6 @@ all the genomes you work with.
 >
 > f. Sequence the extracted DNA using next-generation sequencing (NGS) techniques.
 >
-> ### Possible Solutions
->
 >> ## Solution
 >>
 >> 1. c. Extract DNA from samples of interest, such as microorganism-rich soils or specific bacterial cultures.
