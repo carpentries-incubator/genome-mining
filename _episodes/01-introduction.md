@@ -93,37 +93,6 @@ all the genomes you work with.
 > {: .solution}
 {: .challenge}
 
-> ## Exercise 1: Sort the Steps to Identify BGCs Similar to Clavulanic Acid
->
-> Below is a list of steps in disarray that are part of the process of identifying BGCs similar to clavulanic acid. Your task is to logically order them to establish a coherent methodology that allows the effective identification of such BGCs.
->
-> **Disordered Steps:**
->
-> a. Annotate the genes within the identified BGCs to predict their function.
->
-> b. Compare the identified BGCs against databases of known BGCs to find similarities to clavulanic acid.
->
-> c. Extract DNA from samples of interest, such as microorganism-rich soils or specific bacterial cultures.
->
-> d. Conduct phylogenetic analysis of the BGCs to explore their evolutionary relationship.
->
-> e. Use bioinformatics tools to assemble DNA sequences and detect potential BGCs.
->
-> f. Sequence the extracted DNA using next-generation sequencing (NGS) techniques.
->
->> ## Solution
->>
->> 1. c. Extract DNA from samples of interest, such as microorganism-rich soils or specific bacterial cultures.
->> 2. f. Sequence the extracted DNA using next-generation sequencing (NGS) techniques.
->> 3. e. Use bioinformatics tools to assemble DNA sequences and detect potential BGCs.
->> 4. a. Annotate the genes within the identified BGCs to predict their function.
->> 5. d. Conduct phylogenetic analysis of the BGCs to explore their evolutionary relationship.
->> 6. b. Compare the identified BGCs against databases of known BGCs to find similarities to clavulanic acid.
-> {: .solution}
-{: .challenge}
-
-
-
 2. Donwload Genomes, Dat     
 > {: .solution}
 {: .challenge}
