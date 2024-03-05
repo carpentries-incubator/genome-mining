@@ -24,7 +24,7 @@ Since the era of next-generation sequencing, genomes have been explored
 as a source for discovering new BGCs.
 
 <a href="{{ page.root }}/fig/Chapter1Fig1.png">
-  <img src="{{ page.root }}/fig/Introduction01.png" alt="Complete pipeline of genome mining. From a single genome, this example obtains their BGC and compares them with other BGC from related genomes" />
+  <img src="{{ page.root }}/fig/Introduction01.png" alt="Complete pipeline of genome mining. From a single genome, this example obtains their BGC and compares them with other BGC from related genomes" width="60%" height="60%" />
 </a>
 [Genome Mining Wikipedia](https://en.wikipedia.org/wiki/Genome_mining)
 ## Chloramphenicol is a known antibiotic produced in a BGC
@@ -32,7 +32,7 @@ as a source for discovering new BGCs.
 For example, let's look into the BGC responsible for chloramphenicol biosynthesis. This is a BGC described for the first time in a _Streptomyces venezuelae_ genome.
 
 <a href="{{ page.root }}/fig/episode1-fig1.PNG">
-  <img src="{{ page.root }}/fig/episode1-fig1.PNG" alt="MIBiG layout of the Chloramphenicol gene cluster from _Streptomyces venezuelae_ comprising 17 genes" />
+  <img src="{{ page.root }}/fig/episode1-fig1.PNG" alt="MIBiG layout of the Chloramphenicol gene cluster from _Streptomyces venezuelae_ comprising 17 genes"  />
 </a>
 [Explore the BGC](https://mibig.secondarymetabolites.org/repository/BGC0000893/index.html#r1c1)
 
