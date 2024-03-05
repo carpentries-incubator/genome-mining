@@ -15,11 +15,6 @@ keypoints:
 ---
 
 ## Genome mining aims to find BGCs
-<a href="{{ page.root }}/fig/Chapter1Fig1.png">
-  <img src="{{ page.root }}/fig/Introduction01.png" alt="Complete pipeline of genome mining. From a single genome, this example obtains their BGC and compares them with other BGC from related genomes" />
-</a>
-[Genome Mining Wikipedia](https://en.wikipedia.org/wiki/Genome_mining)
-
 Natural products are encoded in [Biosynthetic Gene Clusters](https://en.wikipedia.org/wiki/Metabolic_gene_cluster
 ) (BGCs) in Bacteria. These BGCs are clusters of genes placed together in the same genome region. These include the genes encoding the biosynthetic enzymes and those related to the metabolite's transport or resistance against antibacterial metabolites.
 [Genome mining](https://en.wikipedia.org/wiki/Genome_mining) consists in analyzing genomes with specialized algorithms
@@ -28,6 +23,10 @@ information about which genes belong to which BGCs and some control sets of gene
 Since the era of next-generation sequencing, genomes have been explored
 as a source for discovering new BGCs.
 
+<a href="{{ page.root }}/fig/Chapter1Fig1.png">
+  <img src="{{ page.root }}/fig/Introduction01.png" alt="Complete pipeline of genome mining. From a single genome, this example obtains their BGC and compares them with other BGC from related genomes" />
+</a>
+[Genome Mining Wikipedia](https://en.wikipedia.org/wiki/Genome_mining)
 ## Chloramphenicol is a known antibiotic produced in a BGC
 
 For example, let's look into the BGC responsible for chloramphenicol biosynthesis. This is a BGC described for the first time in a _Streptomyces venezuelae_ genome.
@@ -36,6 +35,35 @@ For example, let's look into the BGC responsible for chloramphenicol biosynthesi
   <img src="{{ page.root }}/fig/episode1-fig1.PNG" alt="MIBiG layout of the Chloramphenicol gene cluster from _Streptomyces venezuelae_ comprising 17 genes" />
 </a>
 [Explore the BGC](https://mibig.secondarymetabolites.org/repository/BGC0000893/index.html#r1c1)
+
+> ## Exercise 1: Sort the Steps to Identify BGCs Similar to Clavulanic Acid
+>
+> Below is a list of steps in disarray that are part of the process of identifying BGCs similar to clavulanic acid. Your task is to logically order them to establish a coherent methodology that allows the effective identification of such BGCs.
+>
+> **Disordered Steps:**
+>
+> a. Annotate the genes within the identified BGCs to predict their function.
+>
+> b. Compare the identified BGCs against databases of known BGCs to find similarities to clavulanic acid.
+>
+> c. Extract DNA from samples of interest, such as microorganism-rich soils or specific bacterial cultures.
+>
+> d. Conduct phylogenetic analysis of the BGCs to explore their evolutionary relationship.
+>
+> e. Use bioinformatics tools to assemble DNA sequences and detect potential BGCs.
+>
+> f. Sequence the extracted DNA using next-generation sequencing (NGS) techniques.
+>
+>> ## Solution
+>>
+>> 1. c. Extract DNA from samples of interest, such as microorganism-rich soils or specific bacterial cultures.
+>> 2. f. Sequence the extracted DNA using next-generation sequencing (NGS) techniques.
+>> 3. e. Use bioinformatics tools to assemble DNA sequences and detect potential BGCs.
+>> 4. a. Annotate the genes within the identified BGCs to predict their function.
+>> 5. d. Conduct phylogenetic analysis of the BGCs to explore their evolutionary relationship.
+>> 6. b. Compare the identified BGCs against databases of known BGCs to find similarities to clavulanic acid.
+> {: .solution}
+{: .challenge}
 
 ## Planning a genome mining project  
 Here we will provide tips and tricks to plan and execute a genome mining project.
