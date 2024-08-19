@@ -52,7 +52,14 @@ as a source for discovering new BGCs.
 <a href="{{ page.root }}/fig/Chapter1Fig1.png">
   <img src="{{ page.root }}/fig/Introduction01.png" alt="Complete pipeline of genome mining. From a single genome, this example obtains their BGC and compares them with other BGC from related genomes" width="60%" height="60%" />
 </a>
-[Genome Mining Wikipedia](https://en.wikipedia.org/wiki/Genome_mining)
+
+
+Each class of biosynthetic gene clusters (BGCs) is distinguished by the types of essential and accessory genes it contains. The most common classes of BGCs for natural products include polyketide synthases (PKSs), non-ribosomal peptide synthetases (NRPSs), ribosomally synthesized and post-translationally modified peptides (RiPPs), and terpenes. For example, non-ribosomal peptides (NRPs) are a class of metabolites characterized by the assembly of amino acid residues or their derivatives, with non-ribosomal peptide synthetases being the enzymes responsible for assembling these molecules. NRPSs are large enzymes organized into modules and domains, similar to other common classes of BGCs. Below, we show you an animation created by [Michael W. Mullowney](https://www.michaelmullowney.com/gallery) of the biosynthesis of a fictitious NP called "fakeomycin", which is of the NRPS class with a cyclization domain.
+
+<a href="{{ page.root }}/fig/NRPS-animation-Mullowney_16-9_0.08.gif">
+  <img src="{{ page.root }}/fig/NRPS-animation-Mullowney_16-9_0.08.gif" alt="NRPS animation of fakeomycin">
+</a>
+
 ## Chloramphenicol is a known antibiotic produced in a BGC
 
 For example, let's look into the BGC responsible for chloramphenicol biosynthesis. This is a BGC described for the first time in a _Streptomyces venezuelae_ genome.
@@ -62,12 +69,7 @@ For example, let's look into the BGC responsible for chloramphenicol biosynthesi
 </a>
 [Explore the BGC](https://mibig.secondarymetabolites.org/repository/BGC0000893/index.html#r1c1)
 
-
-Each class of biosynthetic gene clusters (BGCs) is distinguished by the types of essential and accessory genes it contains. The most common classes of BGCs for natural products include polyketide synthases (PKSs), non-ribosomal peptide synthetases (NRPSs), ribosomally synthesized and post-translationally modified peptides (RiPPs), and terpenes. For example, non-ribosomal peptides (NRPs) are a class of metabolites characterized by the assembly of amino acid residues or their derivatives, with non-ribosomal peptide synthetases being the enzymes responsible for assembling these molecules. NRPSs are large enzymes organized into modules and domains, similar to other common classes of BGCs.
-
-<a href="{{ page.root }}/fig/NRPS-animation-Mullowney_16-9_0.08.gif">
-  <img src="{{ page.root }}/fig/NRPS-animation-Mullowney_16-9_0.08.gif" alt="NRPS animation of fakeomycin" width="300" height="200">
-</a>
+[Genome Mining Wikipedia](https://en.wikipedia.org/wiki/Genome_mining)
 
 > ## Exercise 1: Sort the Steps to Identify BGCs Similar to Clavulanic Acid
 >
@@ -139,6 +141,9 @@ Once you have chosen your set of genomes, you need to annotate the sequences. Th
 - Aziz, R. K., Bartels, D., Best, A. A., DeJongh, M., Disz, T., Edwards, R. A., ... & Zagnitko, O. (2008). The RAST Server: rapid annotations using subsystems technology. BMC genomics, 9(1), 1-15.
 - Seemann, T. (2014). Prokka: rapid prokaryotic genome annotation. Bioinformatics, 30(14), 2068-2069.
 - Tettelin, H., Masignani, V., Cieslewicz, M. J., Donati, C., Medini, D., Ward, N. L., ... & Fraser, C. M. (2005). Genome analysis of multiple pathogenic isolates of Streptococcus agalactiae: implications for the microbial “pan-genome”. Proceedings of the National Academy of Sciences, 102(39), 13950-13955.
+- Nett, Markus (2014). Kinghorn, A. D., ed. Genome Mining: Concept and Strategies for Natural Product Discovery. Springer International Publishing. pp. 199-245. ISBN 978-3-319-04900-7. doi:10.1007/978-3-319-04900-7_4.
+-  Katz, Leonard; Baltz, Richard H. «Natural product discovery: past, present, and future». Journal of Industrial Microbiology and Biotechnology 43 (2-3): 155-176. ISSN 1476-5535. doi:10.1007/s10295-015-1723-5.
+
 
 {% include links.md %}
 
