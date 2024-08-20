@@ -45,18 +45,23 @@ Currently, more than 126,000 NPs are known to originate from various sources and
 
 ## Genome mining aims to find BGCs
 Natural products are encoded in [Biosynthetic Gene Clusters](https://en.wikipedia.org/wiki/Metabolic_gene_cluster
-) (BGCs) in Bacteria. These BGCs are clusters of genes placed together in the same genome region. These include the genes encoding the biosynthetic enzymes and those related to the metabolite's transport or resistance against antibacterial metabolites.
-[Genome mining](https://en.wikipedia.org/wiki/Genome_mining) consists in analyzing genomes with specialized algorithms
-designed to find some BGCs. Chemists in the last century diligently characterized some of these clusters. We have extensive databases that contain
-information about which genes belong to which BGCs and some control sets of genes that do not. The use of genome mining methodologies facilitates the prioritization of BGCs for the search of novel metabolites.
-Since the era of next-generation sequencing, genomes have been explored
-as a source for discovering new BGCs.
+) (BGCs) in Bacteria. These BGCs are clusters of genes generally placed together in the same genome region. These include the genes encoding the biosynthetic enzymes and those related to the metabolite's transport or resistance against antibacterial metabolites. Most BGCs are composed of several types of genes, so genome mining is based on the identification of these genes in a genome.
+
+<a href="{{ page.root }}/fig/08-20-24_BGC_arrange.png">
+  <img src="{{ page.root }}/fig/08-20-24_BGC_arrange.png" alt="BGC arrange example">
+</a>
 
 Each class of biosynthetic gene clusters (BGCs) is distinguished by the types of essential and accessory genes it contains. The most common classes of BGCs for natural products include polyketide synthases (PKSs), non-ribosomal peptide synthetases (NRPSs), ribosomally synthesized and post-translationally modified peptides (RiPPs), and terpenes. For example, non-ribosomal peptides (NRPs) are a class of metabolites characterized by the assembly of amino acid residues or their derivatives, with non-ribosomal peptide synthetases being the enzymes responsible for assembling these molecules. NRPSs are large enzymes organized into modules and domains, similar to other common classes of BGCs. Below, we show you an animation created by [Michael W. Mullowney](https://www.michaelmullowney.com/gallery) of the biosynthesis of a fictitious NP called "fakeomycin", which is of the NRPS class with a cyclization domain.
 
 <a href="{{ page.root }}/fig/NRPS-animation-Mullowney_16-9_0.08.gif">
   <img src="{{ page.root }}/fig/NRPS-animation-Mullowney_16-9_0.08.gif" alt="NRPS animation of fakeomycin">
 </a>
+
+[Genome mining](https://en.wikipedia.org/wiki/Genome_mining) consists in analyzing genomes with specialized algorithms
+designed to find some BGCs. Chemists in the last century diligently characterized some of these clusters. We have extensive databases that contain
+information about which genes belong to which BGCs and some control sets of genes that do not. The use of genome mining methodologies facilitates the prioritization of BGCs for the search of novel metabolites.
+Since the era of next-generation sequencing, genomes have been explored
+as a source for discovering new BGCs.
 
 ## Chloramphenicol is a known antibiotic produced in a BGC
 
@@ -140,7 +145,8 @@ Once you have chosen your set of genomes, you need to annotate the sequences. Th
 - Seemann, T. (2014). Prokka: rapid prokaryotic genome annotation. Bioinformatics, 30(14), 2068-2069.
 - Tettelin, H., Masignani, V., Cieslewicz, M. J., Donati, C., Medini, D., Ward, N. L., ... & Fraser, C. M. (2005). Genome analysis of multiple pathogenic isolates of Streptococcus agalactiae: implications for the microbial “pan-genome”. Proceedings of the National Academy of Sciences, 102(39), 13950-13955.
 - Nett, Markus (2014). Kinghorn, A. D., ed. Genome Mining: Concept and Strategies for Natural Product Discovery. Springer International Publishing. pp. 199-245. ISBN 978-3-319-04900-7. doi:10.1007/978-3-319-04900-7_4.
--  Katz, Leonard; Baltz, Richard H. «Natural product discovery: past, present, and future». Journal of Industrial Microbiology and Biotechnology 43 (2-3): 155-176. ISSN 1476-5535. doi:10.1007/s10295-015-1723-5.
+- Katz, Leonard; Baltz, Richard H. «Natural product discovery: past, present, and future». Journal of Industrial Microbiology and Biotechnology 43 (2-3): 155-176. ISSN 1476-5535. doi:10.1007/s10295-015-1723-5.
+- Mejía Ponce, Paulina M.(2017). Análisis filogenético de familias de enzimas que utilizan tRNA, indicios para el descubrimiento de productos naturales ocultos en Actinobacteria. Tesis (M.C.)--Centro de Investigación y de Estudios Avanzados del I.P.N. Unidad Irapuato. Laboratorio Nacional de Genómica para la Biodiversidad. 2020-08-13T02:57:32Z.
 
 
 {% include links.md %}
