@@ -31,10 +31,16 @@ Finally, to prioritize genomes or species, [autoMLST](https://automlst.ziemertla
 [Novelty Index](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9973853/)
 
 ### Visualize annotated genomes  
+[GenoVi](https://github.com/robotoD/GenoVi)
 [CGView](https://github.com/paulstothard/cgview)
 
 ### Specialized data bases
 - BGCs in human Microbiome [Humi](https://ccb-web.cs.uni-saarland.de/abc_humi/)
+
+### Genomic data databases
+- [NCBI Large dataset tool](https://www.ncbi.nlm.nih.gov/datasets/docs/v2/how-tos/genomes/large-download/)
+- [NPDC Natural Product Discovery Center](https://npdc.rc.ufl.edu/home)
+- [AllTheBacteria dataset](https://www.biorxiv.org/content/10.1101/2024.03.08.584059v1)
 
 ### MAssive studies
 - [Big FAM](https://pubmed.ncbi.nlm.nih.gov/33010170/)
