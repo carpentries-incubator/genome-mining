@@ -15,17 +15,20 @@ keypoints:
 ---
 ## What is Genome Mining?
 
-In bioinformatics, genomic mining is defined as the computational analysis of nucleotide sequence data based on the comparison and recognition of conserved patterns. Under this definition, any computational method that involves searching for and predicting physiological or metabolic properties is considered part of genomic mining. The specific focus of genomic mining, when applied to natural products (NPs), is centered on the identification of biosynthetic gene clusters (BGCs) of NPs.
-
-<a href="{{ page.root }}/fig/productos naturales.png">
-  <img src="{{ page.root }}/fig/productos naturales.png" alt="Natural products can be produced by bacteria, fungi, plants and animals"  />
+<a href="{{ page.root }}/fig/Chapter1Fig1.png">
+  <img src="{{ page.root }}/fig/Introduction01.png" alt="Complete pipeline of genome mining. From a single genome, this example obtains their BGC and compares them with other BGC from related genomes" width="60%" height="60%" />
 </a>
 
+In bioinformatics, genomic mining is defined as the computational analysis of nucleotide sequence data based on the comparison and recognition of conserved patterns. Under this definition, any computational method that involves searching for and predicting physiological or metabolic properties is considered part of genomic mining. The specific focus of genomic mining, when applied to natural products (NPs), is centered on the identification of biosynthetic gene clusters (BGCs) of NPs.
 
 Natural products (NPs) are low molecular weight organic molecules that encompass a wide and diverse range of chemical entities with multiple biological functions. These molecules can be produced by bacteria, fungi, plants, and animals. Natural products (NPs) thus play various roles that can be analyzed from two main perspectives:
 
 - **Biological function**: This refers to the role the molecule plays in the producing organism.
 - **Anthropocentric function**: This focuses on the utility of NPs for humans, including their use in medicine, agriculture, and other areas.
+
+<a href="{{ page.root }}/fig/productos naturales.png">
+  <img src="{{ page.root }}/fig/productos naturales.png" alt="Natural products can be produced by bacteria, fungi, plants and animals"  />
+</a>
 
 Currently, more than 126,000 NPs are known to originate from various sources and are classified into six main groups. These groups are defined based on their chemical structure, the enzymes involved in their synthesis, the precursors used, and the final modifications they undergo. 
 
@@ -48,11 +51,6 @@ designed to find some BGCs. Chemists in the last century diligently characterize
 information about which genes belong to which BGCs and some control sets of genes that do not. The use of genome mining methodologies facilitates the prioritization of BGCs for the search of novel metabolites.
 Since the era of next-generation sequencing, genomes have been explored
 as a source for discovering new BGCs.
-
-<a href="{{ page.root }}/fig/Chapter1Fig1.png">
-  <img src="{{ page.root }}/fig/Introduction01.png" alt="Complete pipeline of genome mining. From a single genome, this example obtains their BGC and compares them with other BGC from related genomes" width="60%" height="60%" />
-</a>
-
 
 Each class of biosynthetic gene clusters (BGCs) is distinguished by the types of essential and accessory genes it contains. The most common classes of BGCs for natural products include polyketide synthases (PKSs), non-ribosomal peptide synthetases (NRPSs), ribosomally synthesized and post-translationally modified peptides (RiPPs), and terpenes. For example, non-ribosomal peptides (NRPs) are a class of metabolites characterized by the assembly of amino acid residues or their derivatives, with non-ribosomal peptide synthetases being the enzymes responsible for assembling these molecules. NRPSs are large enzymes organized into modules and domains, similar to other common classes of BGCs. Below, we show you an animation created by [Michael W. Mullowney](https://www.michaelmullowney.com/gallery) of the biosynthesis of a fictitious NP called "fakeomycin", which is of the NRPS class with a cyclization domain.
 
