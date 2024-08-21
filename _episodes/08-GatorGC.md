@@ -21,7 +21,7 @@ keypoints:
 {% include links.md %}
 
 <a href="../fig/gator_gc_logo.jpg">
-  <img src="../fig/gator_gc_logo.jpg" alt="GATOR logo" />
+<img src="../fig/gator_gc_alogorithm.png" alt="GATOR methods" style="width: 60%; height: auto;" />
 </a>
 
 
