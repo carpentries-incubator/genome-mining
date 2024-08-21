@@ -116,9 +116,9 @@ occurences = data.groupby(["Species", "BGC type"]).size().reset_index(name="Occu
 ~~~
 {: .language-python}
 
-And visualize the content of the Species column:  
+And visualize the content of the ocurrences grouped by species column:  
 ~~~
-occurences["Species"] 
+occurences
 ~~~
 {: .language-python}  
 
