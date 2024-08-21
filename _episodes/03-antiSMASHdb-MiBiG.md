@@ -48,10 +48,12 @@ For complex queries, the database also provides a sophisticated query builder th
 </a>
 
 > ## Exercise 1: 
-> You are going to do an experiment, you have two organisms one is likely to produce *thermophilin 1277* and the other one *streptolysin S*. Based on the table, which of these organisms is more likely to produce their respective secondary metabolite?
+> Enter to [MIBiG](https://mibig.secondarymetabolites.org/) and search BGCs from *Streptococcus*. Search the BGCs that produce the products Thermophilin 1277 and Streptolysin S. Based on the table on MIBiG, which of these organisms has the most complete annotation?
 > 
 > > ## Solution
-> > Todavía no hay
+> > _Streptococcus thermophilus_ produce Thermophilin 1277 while _Streptococcus pyogenes_ M1 GAS produces Streptolysin S.
+> > According to MIBiG metadata Streptolysin S BGC is complete while Thermophilin 1277 is not.
+> > So Streptolysin S BGC is better annotated. 
 > {: .solution}
 {: .challenge}
 
