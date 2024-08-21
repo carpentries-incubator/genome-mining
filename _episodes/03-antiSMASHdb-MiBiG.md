@@ -127,7 +127,7 @@ Let's see our first visualization of the BGC content on a heatmap.
 ~~~
 pivot = occurences.pivot(index="BGC type", columns="Species", values="Occurrences")
 plt.figure(figsize=(8, 10))
-sns.heatmap(pivot)
+sns.heatmap(pivot, cmap="coolwarm")
 plt.show()
 ~~~
 {: .language-python}  
@@ -157,7 +157,7 @@ plt.show()
 ~~~
 filtered_pivot = filtered.pivot(index="BGC type", columns="Species", values="Occurrences")
 plt.figure(figsize=(8, 10))
-sns.heatmap(filtered_pivot)
+sns.heatmap(filtered_pivot, cmap="coolwarm")
 plt.show()
 ~~~
 {: .language-python}
