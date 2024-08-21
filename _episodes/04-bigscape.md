@@ -147,7 +147,7 @@ Streptococcus_agalactiae_NEM316_prokka-NC_004368.1.region002.gbk
 
 BiG-SCAPE can be executed in different ways, depending on the installation mode that you applied.
 You could call the program through `bigscape`, `run_bigscape`or `run_bigscape.py`. Here, based on our
-installation (see [Setup](setup.html)), we will use `run_bigscape`.
+installation (see [Setup](setup.html)), we will use `bigscape`.
 
 The options that we will use are described in the help page:
 
