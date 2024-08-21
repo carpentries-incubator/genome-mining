@@ -98,7 +98,7 @@ In addition, there is information relevant to the analysis, such as the names of
 
 At last, there is a file named MZMine_FBMN_batch.xml that collects all the information necessary for the analysis using MZMine
 
-** Analysis using MZMine
+## Analysis using MZMine
 
 Load batch file
 
@@ -180,7 +180,7 @@ The software will display the Total Ion Chromatogram (TIC) from both samples. In
 We can select a section of the chromatogram to inspect the differences of the metabolomic profiles of these samples
 
 <a href="../fig/chromatogram_04.jpg">
-  <img src="../figs/chromatogram_04.jpg" alt="Chromatogram" width="800"/>
+  <img src="../fig/chromatogram_04.jpg" alt="Chromatogram" width="800"/>
 </a>
 
 We can observe that several spectra are produced exclusively by strain H-KF8 in ISP2-ASW
@@ -316,7 +316,7 @@ Click on that folder. Then in the "File Drag and Drop", drag and drop the follow
 Return to the "Select Input Files" after uploading your files. You should be able to see the three uploaded files in your directory
 
 <a href="../fig/FBMN_05.jpg">
-  <img src="../figs/FBMN_05.jpg" alt="FBMN" width="800" />
+  <img src="../fig/FBMN_05.jpg" alt="FBMN" width="800" />
 </a>
 
 We are going to select the "GM_workshop_Featurelist_filtered.mgf" file as "MS2 file in MGF format"
@@ -346,9 +346,9 @@ Click on finish selection after checking everything is ok.
 
 After selecting the files, we need to adjust the parameters for our network
 Since our data was collected using a high-resolution LC-MS/MS, we could adjust the 
--"Precursor Ion Mass Tolerance" to 0.02 Da
+- "Precursor Ion Mass Tolerance" to 0.02 Da
     This value affects the clustering of nearly identical MS/MS spectra through MS-Cluster.
--"Fragment Ion Mass Tolerance" to 0.02 Da
+- "Fragment Ion Mass Tolerance" to 0.02 Da
     Sets the allowable deviation in m/z values for fragment ions when clustering MS/MS spectra
 
 <a href="../fig/FBMN_10.jpg">
@@ -357,9 +357,9 @@ Since our data was collected using a high-resolution LC-MS/MS, we could adjust t
 
 Then we need to select our thresholds to create the molecular network
 
--"min pair cos" to 0.7 
+- "min pair cos" to 0.7 
     The minimum cosine score required between a pair of consensus MS/MS spectra for an edge to be created in the molecular network.
--"Minimum matched fragment ions" to 6
+- "Minimum matched fragment ions" to 6
     Specify the minimum number of common fragment ions that two consensus MS/MS spectra must share to be connected by an edge in the molecular network.
 
 <a href="../fig/FBMN_11.jpg">
