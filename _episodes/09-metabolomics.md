@@ -516,9 +516,6 @@ We can observe that some nodes are detected mostly in ISP2. However, several ang
 </a>
 
 
-In the future it will include: 
-SIRIUS: Kai Dührkop, Markus Fleischauer, Marcus Ludwig, Alexander A. Aksenov, Alexey V. Melnik, Marvin Meusel, Pieter C. Dorrestein, Juho Rousu, and Sebastian Böcker, SIRIUS 4: Turning tandem mass spectra into metabolite structure information. Nature Methods 16, 299–302, 2019.
-
 ## References
 
 - Wang, M., Carver, J., Phelan, V. et al. Sharing and community curation of mass spectrometry data with Global Natural Products Social Molecular Networking. Nat Biotechnol 34, 828–837 (2016). https://doi.org/10.1038/nbt.3597.
@@ -532,5 +529,6 @@ SIRIUS: Kai Dührkop, Markus Fleischauer, Marcus Ludwig, Alexander A. Aksenov, A
 In the future it will include:
 - https://www.tfleao.com/general-8, 
 - [Paired omics](https://pairedomicsdata.bioinformatics.nl/)
-- [GNPS](https://gnps.ucsd.edu/ProteoSAFe/static/gnps-splash.jsp)
+- In the future it will include: SIRIUS: Kai Dührkop, Markus Fleischauer, Marcus Ludwig, Alexander A. Aksenov, Alexey V. Melnik, Marvin Meusel, Pieter C. Dorrestein, Juho Rousu, and Sebastian Böcker, SIRIUS 4: Turning tandem mass spectra into metabolite structure information. Nature Methods 16, 299–302, 2019.
+
 
