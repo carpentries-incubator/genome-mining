@@ -127,7 +127,7 @@ occurences
 {: .language-python}  
 
 <a href="{{ page.root }}/fig/21-08-24-chapter9-occurences.png">
-  <img src="{{ page.root }}fig/21-08-24-chapter9-occurences.png" alt="the content of the ocurrences grouped by species column" />
+  <img src="{{ page.root }}/fig/21-08-24-chapter9-occurences.png" alt="the content of the ocurrences grouped by species column" />
 </a>
 
 Let's see our first visualization of the BGC content on a heatmap.
@@ -140,8 +140,8 @@ plt.show()
 ~~~
 {: .language-python}  
 
-<a href="{{ page.root }}fig/21-08-24-chapter9-heatmap.png">
-  <img src="{{ page.root }}fig/21-08-24-chapter9-heatmap.png" alt="visualization of the BGC content on a heatmap." />
+<a href="{{ page.root }}/fig/21-08-24-chapter9-heatmap.png">
+  <img src="{{ page.root }}/fig/21-08-24-chapter9-heatmap.png" alt="visualization of the BGC content on a heatmap." />
 </a>
 
 
@@ -155,8 +155,8 @@ plt.show()
 ~~~
 {: .language-python}
 
-<a href="{{ page.root }}fig/21-08-24-chapter9.dotplot.png">
-  <img src="{{ page.root }}fig/21-08-24-chapter9.dotplot.png" alt="visualization of the BGC content of S. agalactiae. on a sctterplot" />
+<a href="{{ page.root }}/fig/21-08-24-chapter9.dotplot.png">
+  <img src="{{ page.root }}/fig/21-08-24-chapter9.dotplot.png" alt="visualization of the BGC content of S. agalactiae. on a sctterplot" />
 </a>
 
 Finally, let's restrict ourselves to BGC predicted less than 200 times.
@@ -171,8 +171,8 @@ plt.show()
 ~~~
 {: .language-python}
 
-<a href="{{ page.root }}fig/21-08-24-chapter9.dotplot2.png">
-  <img src="{{ page.root }}fig/21-08-24-chapter9.dotplot2.png" alt="visualization of the BGC content on a scatterplot" />
+<a href="{{ page.root }}/fig/21-08-24-chapter9.dotplot2.png">
+  <img src="{{ page.root }}/fig/21-08-24-chapter9.dotplot2.png" alt="visualization of the BGC content on a scatterplot" />
 </a>
 
 ~~~
@@ -183,7 +183,7 @@ plt.show()
 ~~~
 {: .language-python}
 
-<a href="{{ page.root }}fig/21-08-24-chapter9-pivot-filtered.png">
-  <img src="{{ page.root }}fig/21-08-24-chapter9-pivot-filtered.png" alt="filtered heatmap " />
+<a href="{{ page.root }}/fig/21-08-24-chapter9-pivot-filtered.png">
+  <img src="{{ page.root }}/fig/21-08-24-chapter9-pivot-filtered.png" alt="filtered heatmap " />
 </a>
 
