@@ -111,7 +111,7 @@ data
 {: .language-python}
 
 <a href="{{ page.root }}/fig/21-08-24-chapter9-table.png">
-  <img src="{{ page.root }}/fig/21-08-24-chapter9-table.png" alt="a dataframe variable the content of the Streptococcus predicted BGC" />
+  <img src="{{ page.root }}/fig/21-08-24-chapter9-table.png" alt="a dataframe variable the content of the Streptococcus predicted BGC" width="800" />
 </a>
 
 Now, group the data by the variables Species and BGC type:  
@@ -127,7 +127,7 @@ occurences
 {: .language-python}  
 
 <a href="{{ page.root }}/fig/21-08-24-chapter9-occurences.png">
-  <img src="{{ page.root }}/fig/21-08-24-chapter9-occurences.png" alt="the content of the ocurrences grouped by species column" />
+  <img src="{{ page.root }}/fig/21-08-24-chapter9-occurences.png" alt="the content of the ocurrences grouped by species column" width="500"/>
 </a>
 
 Let's see our first visualization of the BGC content on a heatmap.
@@ -141,7 +141,7 @@ plt.show()
 {: .language-python}  
 
 <a href="{{ page.root }}/fig/21-08-24-chapter9-heatmap.png">
-  <img src="{{ page.root }}/fig/21-08-24-chapter9-heatmap.png" alt="visualization of the BGC content on a heatmap." />
+  <img src="{{ page.root }}/fig/21-08-24-chapter9-heatmap.png" alt="visualization of the BGC content on a heatmap." width="800"/>
 </a>
 
 
@@ -156,7 +156,7 @@ plt.show()
 {: .language-python}
 
 <a href="{{ page.root }}/fig/21-08-24-chapter9.dotplot.png">
-  <img src="{{ page.root }}/fig/21-08-24-chapter9.dotplot.png" alt="visualization of the BGC content of S. agalactiae. on a sctterplot" />
+  <img src="{{ page.root }}/fig/21-08-24-chapter9.dotplot.png" alt="visualization of the BGC content of S. agalactiae. on a sctterplot" width="800"/>
 </a>
 
 Finally, let's restrict ourselves to BGC predicted less than 200 times.
@@ -172,7 +172,7 @@ plt.show()
 {: .language-python}
 
 <a href="{{ page.root }}/fig/21-08-24-chapter9.dotplot2.png">
-  <img src="{{ page.root }}/fig/21-08-24-chapter9.dotplot2.png" alt="visualization of the BGC content on a scatterplot" />
+  <img src="{{ page.root }}/fig/21-08-24-chapter9.dotplot2.png" alt="visualization of the BGC content on a scatterplot" width="800"/>
 </a>
 
 ~~~
@@ -184,6 +184,6 @@ plt.show()
 {: .language-python}
 
 <a href="{{ page.root }}/fig/21-08-24-chapter9-pivot-filtered.png">
-  <img src="{{ page.root }}/fig/21-08-24-chapter9-pivot-filtered.png" alt="filtered heatmap " />
+  <img src="{{ page.root }}/fig/21-08-24-chapter9-pivot-filtered.png" alt="filtered heatmap " width="800"/>
 </a>
 
