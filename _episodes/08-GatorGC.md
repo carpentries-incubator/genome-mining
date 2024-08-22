@@ -45,6 +45,13 @@ GATOR-GC is a user-friendly algorithm designed for targeted exploration of BGC a
 
 ## GATOR GC
 
+Before starting, make sure to activate the `gator-gc` environment.
+
+~~~
+$ conda activate /miniconda3/envs/gator-gc/
+~~~
+{: .language-bash}
+
 The first part of running GatorGC has to do with creating a database. To facilitate the process first we need to create a directory where we can find all Gator-GC results:
 
 ~~~
