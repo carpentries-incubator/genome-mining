@@ -373,28 +373,153 @@ After this, write your email, so you know when your network is finished. Then cl
 </a>
 
 For more information about the rest of the parameters used for molecular networking:
-- visit the GNPS documentation: https://ccms-ucsd.github.io/GNPSDocumentation/networking/
-- Also visit Aron, A.T., Gentry, E.C., McPhail, K.L. et al. Reproducible molecular networking of untargeted mass spectrometry data using GNPS. Nat Protoc 15, 1954–1991 (2020). https://doi.org/10.1038/s41596-020-0317-5
+- (visit the GNPS documentation)[https://ccms-ucsd.github.io/GNPSDocumentation/networking/]
+- Also visit (Aron, A.T., Gentry, E.C., McPhail, K.L. et al. Reproducible molecular networking of untargeted mass spectrometry data using GNPS. Nat Protoc 15, 1954–1991 (2020))[https://doi.org/10.1038/s41596-020-0317-5]
 
-## Visualize the network using cytoscape
+## Statistics analysis using FBMN STATS guide web server
+
+Now we want to observe how different are the metabolic profiles of our samples. For that, we are going to calculate a Principal Coordinate Analysis (PCoA)
+
+https://fbmn-statsguide.gnps2.org/
+
+Go into 
+[FBMN STATS guide](https://fbmn-statsguide.gnps2.org/)
+
+Select "Data Preparation"
+
+<a href="../fig/FBMN-STATS_01.jpg">
+  <img src="../fig/FBMN-STATS_01.jpg" alt="FBMN" width="800"/>
+</a>
+
+In file origin select "Quantification table and metadata files". 
+-In the Quantification Table section, select the MZMine output file "GM_workshop_Featurelist_complete_quant.csv" This table contains the information of the two strains and the media. We want to observe how different our samples' metabolomic profiles are, in comparison with the culture media. 
+- in the Meta Data Table section, include our metadata file "metadata_table.tsv"
+
+<a href="../fig/FBMN-STATS_02.jpg">
+  <img src="../fig/FBMN-STATS_02.jpg" alt="FBMN" width="800" />
+</a>
+
+After loading your files, click "Submit Data for Statistics!"
+
+<a href="../fig/FBMN-STATS_03.jpg">
+  <img src="../fig/FBMN-STATS_03.jpg" alt="FBMN" width="800"/>
+</a>
+
+Check that your data have been properly submitted by checking that you have the "Data preparation was successful!" 
+
+<a href="../fig/FBMN-STATS_04.jpg">
+  <img src="../fig/FBMN-STATS_04.jpg" alt="FBMN" width="800"/>
+</a>
+
+Now we should go to the "PERMANOVA & PCoA" section
+
+<a href="../fig/FBMN-STATS_05.jpg">
+  <img src="../fig/FBMN-STATS_05.jpg" alt="FBMN" width="300"/>
+</a>
+
+Select Principal Coordinate Analysis
+
+<a href="../fig/FBMN-STATS_06.jpg">
+  <img src="../fig/FBMN-STATS_06.jpg" alt="FBMN" width="600" />
+</a>
+
+Now we could change how we want to color our samples.
+Select "attribute for multivariate analysis" ATTRIBUTE_media. This will color our samples according to the media (ISP2 or ISP2-ASW)
+
+<a href="../fig/FBMN-STATS_07.jpg">
+  <img src="../fig/FBMN-STATS_07.jpg" alt="FBMN" width="600"/>
+</a>
+
+We can observe that there is a difference between the samples prepared with ISP2 and ISP2-ASW
 
 
+<a href="../fig/FBMN-STATS_08.jpg">
+  <img src="../fig/FBMN-STATS_08.jpg" alt="FBMN" width="800"/>
+</a>
+
+Now if we color our samples by strain, selecting ATTRIBUTE_strain in "attribute for multivariate analysis"
+
+We can observe that *Streptomyces* sp. Vc74B-19 metabolic profile is quite different than the ones from *Streptomyces* sp. H-KF8 and the culture media. 
+
+Also, it is possible to observe that *Streptomyces* sp. H-KF8 metabolomic profile differs more from the media when cultured in ISP2-ASW
+
+<a href="../fig/FBMN-STATS_09.jpg">
+  <img src="../fig/FBMN-STATS_09.jpg" alt="FBMN" width="800"/>
+</a>
+
+There are several statistics that you can do using FBMN STATS guide, you can check the preprint (here)[https://doi.org/10.26434/CHEMRXIV-2023-WWBT0].
 
 
+## Visualize the network using Cytoscape
+
+We need to check if our GNPS network is done processing. You might have received an email, otherwise, go to your GNPS account and click on "Jobs"
+
+<a href="../fig/cytoscape_01.jpg">
+  <img src="../fig/cytoscape_01.jpg" alt="FBMN" width="600"/>
+</a>
+
+If your network is Done, then click on it.
+Afterward, click on "Direct Cytoscape Preview/Download"
+
+<a href="../fig/cytoscape_02.jpg">
+  <img src="../fig/cytoscape_02.jpg" alt="FBMN" width="600"/>
+</a>
+
+If your network is not Done, then we could use a previously computed network, that holds the same data that we used in this workshop
+
+(Cytoscape)[https://cytoscape.gnps2.org/process?task=568cc93ed2e84f20b2b94bd186b48ee8#{}]
+
+Click on "Download Cytoscape File", and save it in your computer
+
+<a href="../fig/cytoscape_03.jpg">
+  <img src="../fig/cytoscape_03.jpg" alt="FBMN" width="600"/>
+</a>
+
+Open the network on Cytoscape.
+We want to change the style of the network and color the nodes according to the strains.
+Click on "Style"
+
+<a href="../fig/cytoscape_04.jpg">
+  <img src="../fig/cytoscape_04.jpg" alt="FBMN" width="600"/>
+</a>
+
+Select the pie chart icon on Image/Chart. This will help us figure out the abundance of each MS spectra, depending on the metadata parameter that we choose
+
+<a href="../fig/cytoscape_05.jpg">
+  <img src="../fig/cytoscape_05.jpg" alt="FBMN" width="600"/>
+</a>
+
+In this case, we will select the two strains, and also the media
+Although we removed all the MS spectra present in the media, there might still be some nodes with MS spectra detected in some of the media samples.
+
+<a href="../fig/cytoscape_06.jpg">
+  <img src="../fig/cytoscape_06.jpg" alt="FBMN" width="600"/>
+</a>
+
+If we click "Apply", we can observe the nodes present in each strain, and the media. In this case, the light blue means the MS spectra detected in *Streptomyces* sp. Vc74B-19
+
+In this Molecular Family, we can observe some MS spectra with annotations. Some are similar to Urdamycinone B, Dehydroxyaquayamycin, and other Angucycline-related compounds.
+
+<a href="../fig/cytoscape_07.jpg">
+  <img src="../fig/cytoscape_07.jpg" alt="FBMN" width="800"/>
+</a>
+
+We can color now the nodes depending on the media where they are detected.
+Select the pie chart again in "Image/Chart", and now select ISP2 and ISP2-ASW. This will color ISP2 in red, and ISP2-ASW in light blue
+
+<a href="../fig/cytoscape_08.jpg">
+  <img src="../fig/cytoscape_08.jpg" alt="FBMN" width="600"/>
+</a>
+
+We can observe that some nodes are detected mostly in ISP2. However, several angucycline-related compounds are detected almost exclusively in ISP2-ASW
+
+<a href="../fig/cytoscape_09.jpg">
+  <img src="../fig/cytoscape_09.jpg" alt="FBMN" width=800"/>
+</a>
 
 
-
-
-
-
-
-
-
-
-{% include links.md %}
-
-
-
+In the future it will include: 
+SIRIUS: Kai Dührkop, Markus Fleischauer, Marcus Ludwig, Alexander A. Aksenov, Alexey V. Melnik, Marvin Meusel, Pieter C. Dorrestein, Juho Rousu, and Sebastian Böcker, SIRIUS 4: Turning tandem mass spectra into metabolite structure information. Nature Methods 16, 299–302, 2019.
 
 ## References
 
@@ -402,6 +527,7 @@ For more information about the rest of the parameters used for molecular network
 - Schmid, R., Heuckeroth, S., Korf, A. et al. Integrative analysis of multimodal mass spectrometry data in MZmine 3. Nat Biotechnol 41, 447–449 (2023). https://doi.org/10.1038/s41587-023-01690-2.
 - Nothias, LF., Petras, D., Schmid, R. et al. Feature-based molecular networking in the GNPS analysis environment. Nat Methods 17, 905–908 (2020). https://doi.org/10.1038/s41592-020-0933-6
 - Aron, A.T., Gentry, E.C., McPhail, K.L. et al. Reproducible molecular networking of untargeted mass spectrometry data using GNPS. Nat Protoc 15, 1954–1991 (2020). https://doi.org/10.1038/s41596-020-0317-5
+- Shah, A. K. P., Walter, A., Ottosson, F., Russo, F., Navarro-Díaz, M., Boldt, J., Kalinski, J.-C., Kontou, E. E., Elofson, J., Polyzois, A., González-Marín, C., Farrell, S., Aggerbeck, M. R., Pruksatrakul, T., Chan, N., Wang, Y., Pöchhacker, M., Brungs, C., Cámara, B., … Petras, D. (2023). The Hitchhiker’s Guide to Statistical Analysis of Feature-based Molecular Networks from Non-Targeted Metabolomics Data. ChemRxiv, 1–83. https://doi.org/10.26434/CHEMRXIV-2023-WWBT0
 
 
 
