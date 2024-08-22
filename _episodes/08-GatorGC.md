@@ -76,13 +76,13 @@ $ mkdir   gbks/
 > We know that all the genbank files are in the following path `~/pan_workshop/results/annotated/` and inside the annotated folder, there is a folder for each genome and each folder contains the output files from prokka. You can use `tree ~/pan_workshop/results/annotated/`to confirm this. 
 >   Using `cp`, try to complete the gaps in the following command to copy all the genbank files from the previously processed genomes to the new directory you created `gbks`. Remember you can use `*` to match any symbol(s). 
 > ~~~
-> $ cp  ~/pan_workshop/results/annotated/_________prokka/_________  . 
+> $ cp  ~/pan_workshop/results/annotated/_________prokka/_________  gbks/. 
 > ~~~
 > >{: .language-bash}
 > > ## Solution
 > >
 > > ~~~
-> > cp ~/pan_workshop/results/annotated/*prokka/*gbk .
+> > cp ~/pan_workshop/results/annotated/*prokka/*gbk gbks/.
 > > ~~~
 > >
 > > {: .laguage-bash}
