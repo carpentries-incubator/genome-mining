@@ -374,7 +374,7 @@ After this, write your email, so you know when your network is finished. Then cl
 
 For more information about the rest of the parameters used for molecular networking:
 - [visit the GNPS documentation](https://ccms-ucsd.github.io/GNPSDocumentation/networking/)
-- Also visit [Aron, A.T., Gentry, E.C., McPhail, K.L. et al. Reproducible molecular networking of untargeted mass spectrometry data using GNPS. Nat Protoc 15, 1954–1991 (2020)](https://doi.org/10.1038/s41596-020-0317-5)
+- Also visit Aron, A.T., Gentry, E.C., McPhail, K.L. et al. [Reproducible molecular networking of untargeted mass spectrometry data using GNPS.](https://doi.org/10.1038/s41596-020-0317-5) Nat Protoc 15, 1954–1991 (2020).
 
 ## Statistics analysis using FBMN STATS guide web server
 
