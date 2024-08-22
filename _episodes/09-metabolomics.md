@@ -373,14 +373,12 @@ After this, write your email, so you know when your network is finished. Then cl
 </a>
 
 For more information about the rest of the parameters used for molecular networking:
-- (visit the GNPS documentation)[https://ccms-ucsd.github.io/GNPSDocumentation/networking/]
-- Also visit (Aron, A.T., Gentry, E.C., McPhail, K.L. et al. Reproducible molecular networking of untargeted mass spectrometry data using GNPS. Nat Protoc 15, 1954–1991 (2020))[https://doi.org/10.1038/s41596-020-0317-5]
+- [visit the GNPS documentation](https://ccms-ucsd.github.io/GNPSDocumentation/networking/)
+- Also visit [Aron, A.T., Gentry, E.C., McPhail, K.L. et al. Reproducible molecular networking of untargeted mass spectrometry data using GNPS. Nat Protoc 15, 1954–1991 (2020)](https://doi.org/10.1038/s41596-020-0317-5)
 
 ## Statistics analysis using FBMN STATS guide web server
 
 Now we want to observe how different are the metabolic profiles of our samples. For that, we are going to calculate a Principal Coordinate Analysis (PCoA)
-
-https://fbmn-statsguide.gnps2.org/
 
 Go into 
 [FBMN STATS guide](https://fbmn-statsguide.gnps2.org/)
@@ -392,32 +390,32 @@ Select "Data Preparation"
 </a>
 
 In file origin select "Quantification table and metadata files". 
--In the Quantification Table section, select the MZMine output file "GM_workshop_Featurelist_complete_quant.csv" This table contains the information of the two strains and the media. We want to observe how different our samples' metabolomic profiles are, in comparison with the culture media. 
-- in the Meta Data Table section, include our metadata file "metadata_table.tsv"
+- In the Quantification Table section, select the MZMine output file "GM_workshop_Featurelist_complete_quant.csv". This table contains the information of the two strains and the media. We want to observe how different our samples' metabolomic profiles are, in comparison with the culture media. 
+- in the Meta Data Table section, include our metadata file "metadata_table.tsv".
 
 <a href="../fig/FBMN-STATS_02.jpg">
   <img src="../fig/FBMN-STATS_02.jpg" alt="FBMN" width="800" />
 </a>
 
-After loading your files, click "Submit Data for Statistics!"
+After loading your files, click "Submit Data for Statistics!".
 
 <a href="../fig/FBMN-STATS_03.jpg">
   <img src="../fig/FBMN-STATS_03.jpg" alt="FBMN" width="800"/>
 </a>
 
-Check that your data have been properly submitted by checking that you have the "Data preparation was successful!" 
+Check that your data have been properly submitted by checking that you have the "Data preparation was successful!". 
 
 <a href="../fig/FBMN-STATS_04.jpg">
   <img src="../fig/FBMN-STATS_04.jpg" alt="FBMN" width="800"/>
 </a>
 
-Now we should go to the "PERMANOVA & PCoA" section
+Now we should go to the "PERMANOVA & PCoA" section.
 
 <a href="../fig/FBMN-STATS_05.jpg">
   <img src="../fig/FBMN-STATS_05.jpg" alt="FBMN" width="300"/>
 </a>
 
-Select Principal Coordinate Analysis
+Select Principal Coordinate Analysis.
 
 <a href="../fig/FBMN-STATS_06.jpg">
   <img src="../fig/FBMN-STATS_06.jpg" alt="FBMN" width="600" />
@@ -447,7 +445,7 @@ Also, it is possible to observe that *Streptomyces* sp. H-KF8 metabolomic profil
   <img src="../fig/FBMN-STATS_09.jpg" alt="FBMN" width="800"/>
 </a>
 
-There are several statistics that you can do using FBMN STATS guide, you can check the preprint (here)[https://doi.org/10.26434/CHEMRXIV-2023-WWBT0].
+There are several statistics that you can do using FBMN STATS guide, you can check the preprint [here](https://doi.org/10.26434/CHEMRXIV-2023-WWBT0).
 
 
 ## Visualize the network using Cytoscape
@@ -467,7 +465,7 @@ Afterward, click on "Direct Cytoscape Preview/Download"
 
 If your network is not Done, then we could use a previously computed network, that holds the same data that we used in this workshop
 
-(Cytoscape)[https://cytoscape.gnps2.org/process?task=568cc93ed2e84f20b2b94bd186b48ee8#{}]
+[Cytoscape](https://cytoscape.gnps2.org/process?task=568cc93ed2e84f20b2b94bd186b48ee8#{})
 
 Click on "Download Cytoscape File", and save it in your computer
 
@@ -514,7 +512,7 @@ Select the pie chart again in "Image/Chart", and now select ISP2 and ISP2-ASW. T
 We can observe that some nodes are detected mostly in ISP2. However, several angucycline-related compounds are detected almost exclusively in ISP2-ASW
 
 <a href="../fig/cytoscape_09.jpg">
-  <img src="../fig/cytoscape_09.jpg" alt="FBMN" width=800"/>
+  <img src="../fig/cytoscape_09.jpg" alt="FBMN" width="800"/>
 </a>
 
 
