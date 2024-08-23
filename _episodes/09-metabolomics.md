@@ -71,7 +71,7 @@ Cytoscape is a software frequently used to visualize networks, such as BGC netwo
 ## Download the metabolomics dataset
 
 First, we need to go to Zenodo and download all the mzML raw data collected from the described strains.
-   https://zenodo.org/api/records/13352458/files-archive
+   [https://zenodo.org/api/records/13352458/files-archive](https://zenodo.org/api/records/13352458/files-archive)
 
 After downloading the compressed file, we need to decompress it and store the files in a folder on our computer. 
 
